@@ -9,7 +9,7 @@ Formato de cada entrada: fecha, versión del paquete de la fase, documentos afec
 **Estado:** documentación de la Fase 1 sin cambios de contenido; se añade el resumen para la tutora.
 
 ### Añadido
-- `entregas/Resumen_Fase-1_Plataforma-Moodle_v1.pdf`: resumen de 7 páginas en lenguaje no técnico, basado en el paquete 0.5.
+- `entregas/Resumen_Fase-1_Plataforma-Moodle_v1.pdf`: resumen de 8 páginas en lenguaje no técnico, basado en el paquete 0.5, con los pasos dados en la fase y una explicación de por qué existe el repositorio.
 - `entregas/resumen-fase-1-tutora.html`: fuente editable del PDF.
 
 ### Motivo
