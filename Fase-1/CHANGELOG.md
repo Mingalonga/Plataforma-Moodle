@@ -7,7 +7,7 @@ Formato de cada entrada: fecha, versión del paquete de la fase, documentos afec
 ## [0.7.2] — 2026-10-30
 
 ### Cambiado
-- Resumen para la tutora v4 → v5: nuevo apartado 10, «Antes de iniciar la Fase 2», con la información de la organización que reforzaría los requisitos (contacto y datos agregados del servicio de atención). El glosario pasa a ser el último apartado. Sigue en 4 páginas más portada. El v4 se archiva.
+- Resumen para la tutora v4 → v5: nuevo apartado 9, «Antes de iniciar la Fase 2», justo después de las cuestiones para la revisión, que reúne la información que se pide a la organización (contacto, datos agregados del servicio de atención y preguntas prioritarias). La documentación de soporte pasa a ser el apartado 10 y el glosario cierra el documento. La portada nombra a Grupo ATU en el título y como organización. Sigue en 4 páginas más portada. El v4 se archiva.
 
 ## [0.7.1] — 2026-10-30
 

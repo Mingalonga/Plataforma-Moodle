@@ -14,7 +14,7 @@ Formato tomado de la sección «Validación y seguimiento — Registro de seguim
 | 2026-10-30 | Revisión del resumen v1 por el alumno | El alumno pide eliminar la sección de fases y las frases dirigidas a él, compactar el texto, añadir «marca» al glosario y explicar «aula Index». Se detecta que «Index» era una deducción presentada como marca; se corrige en el inventario y en el resumen. Resumen v2 (6 páginas). | Envío del resumen v2 a la tutora |
 | 2026-10-30 | Verificación visual de logotipos | El alumno captura los logotipos de los entornos 4, 8, 10, 11 y 12. Se corrigen «Studia» (es «Estudi@») y la marca del 4 («Index Business Intelligent», submarca de ATU). Se detecta idioma mezclado en las páginas de acceso (H-08). Paquete 0.7 y resumen v3. | Envío del resumen v3 a la tutora |
 | 2026-10-30 | Maquetación del resumen | El alumno pide una maquetación más sobria y legible, sin añadir información. Se rehace con Typst (resumen v4, mismo contenido). | Envío del resumen v4 a la tutora |
-| 2026-10-30 | Ampliación del resumen | A petición del alumno se añade el apartado «Antes de iniciar la Fase 2» (contacto con la organización y datos del servicio de atención). Resumen v5. | Envío del resumen v5 a la tutora |
+| 2026-10-30 | Ampliación del resumen | A petición del alumno se añade el apartado «Antes de iniciar la Fase 2» tras las cuestiones para la revisión, agrupando lo que se pide a la organización, y se nombra a Grupo ATU en la portada. Resumen v5. | Envío del resumen v5 a la tutora |
 
 ## Gestión de tareas
 
