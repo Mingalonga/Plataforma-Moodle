@@ -4,6 +4,23 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.4] — 2026-10-30
+
+**Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor.
+
+### Añadido
+- `evidencias/E-01_campus07_pagina-acceso_2026-10-30.png`: captura de la página de acceso del entorno 7, tomada por el alumno.
+- Versiones archivadas: plan v0.3, registro v0.3, inventario v0.1 y diagnóstico v0.1.
+
+### Cambiado
+- `03-inventario-campus.md` v0.1 → v0.2: ficha del entorno 7 y hallazgo H-05 reescrito.
+- `01-registro-preguntas-supuestos.md` v0.3 → v0.4: P-V05 resuelta; S-03 actualizado.
+- `02-fuentes-y-metodologia.md` v0.2 → v0.3: fuente F-17 y observación manual como método.
+- `00-plan-fase-1.md` v0.3 → v0.4 y `08-diagnostico-inicial.md` v0.1 → v0.2.
+
+### Motivo
+El alumno observó el entorno 7 en su navegador y aportó la captura.
+
 ## [0.3] — 2026-10-30
 
 **Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor.

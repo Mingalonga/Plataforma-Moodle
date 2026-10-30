@@ -7,6 +7,7 @@ Formato tomado de la sección «Validación y seguimiento — Registro de seguim
 | 2026-10-30 | Arranque de la Fase 1 (sin revisión del tutor) | Se lee la ficha y el prompt inicial. El propietario indica que no se avanza más allá de la Fase 1 hasta recibir el visto bueno, que todo se guarda en `Fase-1/` y que se conservan las versiones antiguas. Se presenta el plan de fase v0.1 y el registro de preguntas v0.1. | Revisión del plan por el propietario (fecha por acordar) |
 | 2026-10-30 | Revisión del plan v0.1 por el alumno (sin tutor) | El alumno se identifica (Carlos García Rallo), deja el tutor en blanco, decide trabajar solo con información pública y autoriza la observación pasiva de los doce entornos. Se crea la rama `main` y la PR #1. Se realiza la observación: 11 de 12 entornos observados. Plan y registro pasan a v0.2; v0.1 archivadas. | Revisión del inventario por el alumno |
 | 2026-10-30 | Paquete completo de la Fase 1 v0.3 (sin revisión del tutor) | Se añaden mapa de actores, situación actual con guion de entrevista, registro de riesgos, alcance preliminar y diagnóstico inicial. Consulta de la web corporativa sin resultado concluyente (P-V07). Quedan para el alumno P-V05 y P-V07. | Revisión del alumno; después, presentación al tutor (T10) |
+| 2026-10-30 | Observación manual del entorno 7 | El alumno aporta una captura del entorno 7 (E-01). Se completa el inventario (los doce entornos observados). Paquete v0.4. Sigue pendiente la web corporativa (P-V07). | Revisión del alumno; después, presentación al tutor (T10) |
 
 ## Gestión de tareas
 

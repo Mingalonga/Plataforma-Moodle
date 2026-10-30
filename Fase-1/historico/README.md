@@ -13,3 +13,7 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [00-plan-fase-1_v0.2.md](00-plan-fase-1_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: tareas T5 a T9 hechas |
 | [01-registro-preguntas-supuestos_v0.2.md](01-registro-preguntas-supuestos_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: preguntas P-V07 y P-V08 |
 | [02-fuentes-y-metodologia_v0.1.md](02-fuentes-y-metodologia_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: fuente F-16 |
+| [00-plan-fase-1_v0.3.md](00-plan-fase-1_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: entorno 7 completado |
+| [01-registro-preguntas-supuestos_v0.3.md](01-registro-preguntas-supuestos_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: P-V05 resuelta |
+| [03-inventario-campus_v0.1.md](03-inventario-campus_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: entorno 7 observado |
+| [08-diagnostico-inicial_v0.1.md](08-diagnostico-inicial_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: entorno 7 observado |

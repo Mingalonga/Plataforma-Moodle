@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (roles Analista y Redactor), a petición del alumno |
@@ -52,7 +52,7 @@ Esta fase **no** elige tecnología, arquitectura ni diseño. La ficha dice expre
 | T1 | Plan de fase y estructura de documentación | Coordinador / Redactor | Propietario | — | `00-plan-fase-1.md`, índice, changelog, seguimiento | Hecho (v0.1) |
 | T2 | Registro de preguntas, supuestos y dependencias | Analista | Propietario | — | `01-registro-preguntas-supuestos.md` | Hecho (v0.1) |
 | T3 | Metodología de observación y registro de fuentes | Analista / Especialista Moodle | Seguridad | T1 | `02-fuentes-y-metodologia.md` | Hecho (v0.1) |
-| T4 | Inventario de los doce entornos (observación pasiva) | Analista / Especialista Moodle | Seguridad | T3, P-A04 | `03-inventario-campus.md` | Hecho (v0.1); falta el entorno 7 (P-V05) |
+| T4 | Inventario de los doce entornos (observación pasiva) | Analista / Especialista Moodle | Seguridad | T3, P-A04 | `03-inventario-campus.md` | Hecho (v0.2, los doce entornos) |
 | T5 | Mapa inicial de actores y perfiles | Analista | UX | T2 | `04-mapa-actores-perfiles.md` | Hecho (v0.1) |
 | T6 | Situación actual, necesidades, problemas y guion de entrevistas | Analista | Propietario | T4, T5 | `05-situacion-actual.md` | Hecho (v0.1) |
 | T7 | Registro de riesgos inicial | Seguridad / Project Manager | Arquitecto | T4, T6 | `06-registro-riesgos.md` | Hecho (v0.1) |
@@ -105,4 +105,5 @@ La fase **no** se da por aprobada por haber producido estos documentos: queda ap
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista / Redactor) | Primera versión del plan de fase. [Archivada](historico/00-plan-fase-1_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista / Redactor) | Nombre del alumno, respuestas a P-A01, P-A04 y P-A05, T3 y T4 hechas. [Archivada](historico/00-plan-fase-1_v0.2.md) |
-| 0.3 | 2026-10-30 | Claude (Analista / Redactor) | T5 a T9 hechas; queda T10 (revisión del tutor) |
+| 0.3 | 2026-10-30 | Claude (Analista / Redactor) | T5 a T9 hechas; queda T10 (revisión del tutor). [Archivada](historico/00-plan-fase-1_v0.3.md) |
+| 0.4 | 2026-10-30 | Claude (Analista / Redactor) | T4 completa con el entorno 7 |

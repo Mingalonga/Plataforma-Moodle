@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -123,7 +123,7 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-V02 | ¿Por qué los entornos 2, 8, 10, 11 y 12 comparten el título «AULA VIRTUAL CENTRE LEARNING»? ¿Es intencionado (una marca paraguas) o un resto de plantilla? | Organización | Media | Abierta |
 | P-V03 | ¿Qué es el entorno 4 (Index, en inglés, con registro abierto y sin ayuda visible)? ¿Está en uso, en pruebas o en desuso? | Organización | Alta | Abierta |
 | P-V04 | ¿El entorno 1 (aulavirtualatu.com) es el campus principal? ¿Por qué tiene otro tema e idiomas distintos? | Organización | Media | Abierta |
-| P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | Abierta |
+| P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | **Resuelta** (2026-10-30): captura E-01; ver inventario H-05 **[D]** |
 | P-V06 | ¿Qué relación tienen con Grupo ATU las marcas que no llevan su nombre (Centre Learning, Takin, Tierra más ecológica, MoveOut, Studia, Almería Formación, Index)? ¿Son clientes, filiales o marcas propias? | Organización | Alta | Abierta (amplía P-O01) |
 | P-V07 | ¿La web corporativa (www.grupoatu.com) enlaza a los campus? Se genera con JavaScript y no se pudo leer de forma automatizada. Su descripción menciona «9 áreas formativas»: ¿corresponden a las marcas de los campus? | Alumno (revisión en navegador) / Organización | Alta | Abierta |
 | P-V08 | ¿La etiqueta `noindex` de las páginas de acceso es intencionada (que los campus no aparezcan en buscadores)? | Administradores | Media | Abierta |
@@ -203,7 +203,7 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 |---|---|---|---|---|
 | S-01 | Los campus pertenecen o los opera un mismo grupo (Grupo ATU) | v0.1: siete dominios contienen «atu». v0.2: los once observados comparten soporte, bloque «Acerca de ATU» y responsable del tratamiento | P-O01, P-V06 | **Indicio fuerte** (v0.2) |
 | S-02 | No se debe presuponer que todos los campus comparten versión, alojamiento, autenticación ni responsable | Ficha 01, página 5 (límites) | P-C01 a P-C03 | Se mantiene como regla |
-| S-03 | Todos los entornos son Moodle | v0.2: los once observados muestran «Desarrollado por Moodle» y la página de acceso estándar | P-V05 (entorno 7) | **Verificado en 11 de 12** (v0.2) |
+| S-03 | Todos los entornos son Moodle | v0.2: los once observados muestran «Desarrollado por Moodle» y la página de acceso estándar. v0.4: el entorno 7 muestra un formulario típico de Moodle, pero el pie no es visible | P-C01 | **Verificado en 11 de 12; indicio fuerte en el 7** |
 | S-04 | El problema principal es localizar y acceder al campus correcto, no gestionar contenidos | Redacción de la ficha | P-N01, P-U04 | Pendiente de confirmar |
 | S-05 | No existe hoy una identidad común para todos los campus | Ausencia de información. v0.2: ninguna página muestra acceso con Google, Microsoft u otro proveedor (H-06) | P-I01, P-C03 | Pendiente de confirmar; reforzado por la observación |
 | S-06 | La Fase 1 se hará con información pública y supuestos, sin entrevistas, salvo que el propietario indique lo contrario | Situación actual | P-A05 | **Confirmado** por el alumno (2026-10-30) |
@@ -226,4 +226,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: diez preguntas guía con respuesta provisional, 42 preguntas adicionales, 7 supuestos y 4 dependencias. [Archivada](historico/01-registro-preguntas-supuestos_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista) | Respuestas del alumno (P-A01, P-A04, P-A05). Resultados de la observación de los campus: PG-02 actualizada, 8 preguntas nuevas (P-V01 a P-V08), supuestos S-01, S-03, S-05 y S-06 actualizados, S-08 y S-09 nuevos. [Archivada](historico/01-registro-preguntas-supuestos_v0.2.md) (sin P-V07 ni P-V08) |
-| 0.3 | 2026-10-30 | Claude (Analista) | P-V07 y P-V08 añadidas tras consultar la web corporativa |
+| 0.3 | 2026-10-30 | Claude (Analista) | P-V07 y P-V08 añadidas tras consultar la web corporativa. [Archivada](historico/01-registro-preguntas-supuestos_v0.3.md) |
+| 0.4 | 2026-10-30 | Claude (Analista) | P-V05 resuelta con la captura del alumno; S-03 actualizado |

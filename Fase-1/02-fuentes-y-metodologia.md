@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.2 |
+| Versión | 0.3 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -34,6 +34,7 @@ El alumno autorizó el 2026-10-30 trabajar **solo con información pública** y 
 |---|---|---|
 | 1 | `curl` desde el entorno de trabajo en la nube | Bloqueado por la política de red del entorno (respuesta 403 del proxy de salida). No llegó a contactar con los campus. |
 | 2 | Herramienta de lectura web de Claude (WebFetch), una petición por URL, respetando `robots.txt` | 11 de 12 páginas leídas. El entorno 7 rechazó la lectura por su `robots.txt`. |
+| 3 | Observación manual del alumno en su navegador, con captura de pantalla | Entorno 7 observado. La captura se guarda en `evidencias/` |
 
 Limitación: la herramienta de lectura convierte la página a texto. Permite ver títulos, textos, formularios, enlaces y nombres de imágenes, pero no la apariencia visual exacta (colores, disposición). Esa revisión visual queda pendiente (P-V01).
 
@@ -73,6 +74,7 @@ Campos que se recogen de cada entorno, tal como pide el prompt inicial (sección
 | F-02 | *Prompt inicial del proyecto Plataforma Moodle* (DOCX facilitado) | Alumno | 2026-10-30 | Lista de los doce entornos, reglas de rigor, roles |
 | F-03 a F-14 | Página pública de acceso de cada entorno (URL en el inventario, F-03 = entorno 1 … F-14 = entorno 12) | Cada campus | 2026-10-30 | Todos los datos marcados como «verificado» en el inventario |
 | F-15 | *Releases*, Moodle Developer Resources — https://moodledev.io/general/releases | Moodle HQ | 2026-10-30 | Tabla «Moodle 4.1 (LTS)»: 2022112802 = Moodle 4.1.2 (13-03-2023); 2022112819 = Moodle 4.1.19 (09-06-2025). «Bug fixes for general core bugs in 4.1.x ended 11 December 2023» y «Bug fixes for security issues in 4.1.x ended 8 December 2025». En la fecha de consulta, las versiones con soporte listadas son 4.5 (LTS), 5.1, 5.2 y 5.3 (LTS). |
+| F-17 | Captura de pantalla de la página de acceso del entorno 7, tomada por el alumno en su navegador sin iniciar sesión — [E-01](evidencias/E-01_campus07_pagina-acceso_2026-10-30.png) | Alumno | 2026-10-30 | Ficha del entorno 7 en el inventario |
 | F-16 | Web corporativa de Grupo ATU — https://www.grupoatu.com/ | Grupo ATU | 2026-10-30 | Solo se obtuvo la cabecera (página generada con JavaScript): título y descripción «9 áreas formativas». No respalda nada sobre enlaces a campus (P-V07) |
 
 ## 7. Control de versiones
@@ -81,3 +83,4 @@ Campos que se recogen de cada entorno, tal como pide el prompt inicial (sección
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: autorización, método, herramientas, criterio de clasificación, esquema de ficha y fuentes. [Archivada](historico/02-fuentes-y-metodologia_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista) | Fuente F-16 (web corporativa) |
+| 0.3 | 2026-10-30 | Claude (Analista) | Fuente F-17 y herramienta 3 (observación manual del entorno 7) |

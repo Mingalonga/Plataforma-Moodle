@@ -5,7 +5,7 @@
 | Proyecto | Plataforma centralizada para los entornos Moodle (Ficha 01) |
 | Fase | 1 — Descubrimiento |
 | Hito | Alcance preliminar validado |
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario (pendiente de presentar al tutor) |
 | Alumno | Carlos García Rallo |
@@ -20,7 +20,7 @@ Etiquetas: **[H]** hecho comprobado · **[O]** observado en web pública · **[D
 
 ## 1. Resumen ejecutivo
 
-- La organización tiene al menos **doce entornos Moodle** en once dominios **[D]**. Se observaron once; todos son Moodle y se presentan con el soporte y el responsable del tratamiento de Grupo ATU **[O]**.
+- La organización tiene al menos **doce entornos Moodle** en once dominios **[D]**. Se observaron los doce (once de forma automatizada y uno manualmente); todos muestran el soporte común de Grupo ATU, once confirman Moodle y el restante tiene un formulario típico de Moodle **[O]**.
 - Se han observado **señales concretas del problema** que plantea la ficha: no hay un punto público que reúna los campus, las páginas no se indexan en buscadores y cinco campus de marcas distintas tienen el mismo título **[O]**.
 - **No está demostrado cuántos usuarios sufren el problema.** No hay datos de soporte ni de usuarios porque la fase se ha hecho solo con información pública, por decisión del alumno **[D]**. Es la principal limitación del diagnóstico.
 - Hay **indicios de que los campus usan Moodle 4.1**, sin soporte de seguridad desde el 08-12-2025 **[S]**. Condiciona cualquier integración futura y conviene comunicarlo a la organización.
@@ -37,8 +37,7 @@ Ver [03 — Inventario de los doce entornos](03-inventario-campus.md). Resultado
 | Resultado | Entornos |
 |---|---|
 | Observado, Moodle, tema «enlight», soporte Grupo ATU | 2, 3, 5, 6, 8, 9, 10, 11, 12 |
-| Observado con diferencias notables | 1 (otro tema y siete idiomas), 4 (inglés, sin ayuda, registro abierto) |
-| No observado (`robots.txt`) | 7 |
+| Observado con diferencias notables | 1 (otro tema y siete idiomas), 4 (inglés, sin ayuda, registro abierto), 7 (bloquea la lectura automatizada; diseño parecido al 1 con un bloque comercial; observado manualmente) |
 
 Hallazgos principales: H-01 títulos repetidos, H-02 entorno 4 sin completar, H-04 indicio de versión sin soporte, H-06 sin acceso común.
 
@@ -57,7 +56,7 @@ Respuestas provisionales; el detalle y su origen están en el [registro de pregu
 | Pregunta de la ficha | Respuesta breve | Estado |
 |---|---|---|
 | ¿Qué problema concreto se pretende resolver? | Localizar el campus correcto y llegar a él. Hay señales observadas; falta medir su tamaño | Provisional |
-| ¿Qué entornos existen, quién los gestiona y en qué se diferencian? | 12 listados, 11 observados; operador común probable; responsables sin confirmar | Provisional |
+| ¿Qué entornos existen, quién los gestiona y en qué se diferencian? | 12 listados y 12 observados; operador común probable; responsables sin confirmar | Provisional |
 | ¿Qué perfiles intervienen? | 7 perfiles hipotéticos | Provisional |
 | ¿Qué información puede ser pública, restringida o personalizada? | Catálogo público con lo que ya es público; personalización solo con identidad común | Provisional |
 | ¿Solo centralizar el acceso o también consultar o administrar? | Recomendado: empezar solo por el acceso | Abierta, pendiente de la organización |
@@ -74,13 +73,13 @@ Ver [07 — Alcance preliminar](07-alcance-preliminar.md). MVP hipotético: cat�
 ## 8. Limitaciones del diagnóstico
 
 1. Solo información pública: ningún dato de la organización, del CAU ni de usuarios.
-2. El entorno 7 y la web corporativa no se pudieron observar de forma automatizada.
+2. El entorno 7 solo se pudo observar manualmente, a partir de una captura; la web corporativa sigue pendiente (P-V07).
 3. La versión de Moodle es un indicio a partir de un parámetro técnico.
 4. Los perfiles y necesidades son hipótesis razonadas, no validadas.
 
 ## 9. Próximos pasos propuestos
 
-1. El alumno revisa en su navegador el entorno 7 y la web corporativa (P-V05, P-V07).
+1. El alumno revisa en su navegador la web corporativa (P-V07).
 2. Presentar este diagnóstico y el alcance preliminar al tutor (T10) y anotar sus acuerdos en el [registro de seguimiento](registro-seguimiento.md).
 3. Pedir al tutor datos agregados del CAU o un contacto en la organización (RP-01).
 4. Solo tras el visto bueno: iniciar la Fase 2 (requisitos).
@@ -89,7 +88,7 @@ Ver [07 — Alcance preliminar](07-alcance-preliminar.md). MVP hipotético: cat�
 
 | Criterio (plan, sección 7) | Estado |
 |---|---|
-| Doce entornos con ficha de observación | 11 de 12; el 7 pendiente de revisión manual |
+| Doce entornos con ficha de observación | Hecho (el 7, con observación manual) |
 | Mapa de actores | Hecho (hipotético) |
 | Situación actual y problemas separando hechos de supuestos | Hecho |
 | Diez preguntas guía con respuesta provisional y origen | Hecho |
@@ -104,4 +103,5 @@ Ver [07 — Alcance preliminar](07-alcance-preliminar.md). MVP hipotético: cat�
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Redactor) | Primera versión del diagnóstico inicial |
+| 0.1 | 2026-10-30 | Claude (Redactor) | Primera versión del diagnóstico inicial. [Archivada](historico/08-diagnostico-inicial_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Redactor) | Entorno 7 observado |

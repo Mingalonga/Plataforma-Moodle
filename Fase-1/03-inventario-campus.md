@@ -2,13 +2,13 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha de observación | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
 | Redacción | Claude (roles Analista y Especialista Moodle), a petición del alumno |
-| Método | Observación pasiva de la página pública de acceso, una petición por URL. Ver [02 — Fuentes y metodología](02-fuentes-y-metodologia.md). |
+| Método | Observación pasiva de la página pública de acceso, una petición por URL. El entorno 7 se observó de forma manual en navegador por el alumno (captura E-01). Ver [02 — Fuentes y metodología](02-fuentes-y-metodologia.md). |
 
 Estados: **V** = verificado (leído literalmente en la página) · **I** = indicio (deducido) · **P** = pendiente de confirmar.
 
@@ -26,7 +26,7 @@ Estados: **V** = verificado (leído literalmente en la página) · **I** = indic
 | 4 | https://aulavirtualindex.grupoatu.com/ | AULA VIRTUAL ATU | Index Business Intelligent | Sí (200) | **Inglés** | enlight | 4.1.2+ | V con indicios · anomalías |
 | 5 | https://aulavirtual.takin.es/login/index.php | AULA VIRTUAL TAKIN | Takin | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 6 | https://aulavirtual.clubaventuraatu.com | AULA VIRTUAL CLUB AVENTURA ATU | Club Aventura | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
-| 7 | https://aulavirtual.atutecnologiadigital.com | — | — | **No observado** | — | — | — | P |
+| 7 | https://aulavirtual.atutecnologiadigital.com | No visible en la captura | Grupo ATU Tecnología Digital | Sí (manual) | Español | Indicio: eguru, como el 1 | — | V parcial (captura) |
 | 8 | https://aulavirtualalmeria.grupoatu.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Almería Formación | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
 | 9 | https://aulavirtual.atuseguridadysalud.com/login/index.php | AULA VIRTUAL ATU SEGURIDAD Y SALUD | ATU Seguridad y Salud | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 10 | https://aulas.tierramasecologica.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Tierra más ecológica | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
@@ -97,12 +97,14 @@ Según la página oficial de versiones de Moodle (F-15), la rama 4.1 dejó de re
 - **Por qué importa para el proyecto:** si se confirma, condiciona cualquier integración con Moodle (funciones de la API, compatibilidad de plugins) y es un riesgo para la organización que conviene trasladar con discreción a su responsable. No se ha hecho ninguna comprobación de vulnerabilidades ni se hará: queda fuera de los límites del encargo.
 - Se recoge en el registro de riesgos (documento 06, pendiente).
 
-### H-05. El entorno 7 no se ha podido observar [V]
+### H-05. El entorno 7 bloquea la lectura automatizada y tiene un diseño propio [V]
 
-La herramienta de lectura web rechazó la URL porque el archivo `robots.txt` del sitio no permite la lectura automatizada. Por respeto a esa indicación no se ha insistido ni se ha probado otra vía.
+La herramienta de lectura web rechazó la URL porque el archivo `robots.txt` del sitio no permite la lectura automatizada. Por respeto a esa indicación no se insistió. El alumno la observó después en su navegador, sin iniciar sesión, y aportó una captura ([E-01](evidencias/E-01_campus07_pagina-acceso_2026-10-30.png)).
 
-- **Propuesta:** que el alumno abra la URL en su navegador, sin iniciar sesión, y anote los campos de la ficha (sección 4, entorno 7). Es observación pasiva igual que la del resto.
-- **Pregunta:** P-V05.
+- **Observado [V]:** logotipo «GRUPO atu TECNOLOGÍA DIGITAL»; formulario «Entrar» con «Nombre de usuario», «Contraseña», «Acceder» y «¿Olvidó su contraseña?»; bloque «CENTRO DE ATENCIÓN AL USUARIO (CAU)» con horario 08:30–20:30, teléfono 900 922 254 y correo `tutoriavirtual@grupoatu.com`; bloque «SOLICITUD DE INFORMACIÓN» con el botón «¿Quieres hacer algún curso?».
+- **Indicio [I]:** el diseño y el horario del CAU coinciden con el entorno 1 (tema «eguru»), no con los «enlight». La captura no muestra el pie de página, así que «Desarrollado por Moodle» y la versión no se han podido ver; que sea Moodle es un indicio fuerte (formulario y ruta de recuperación de contraseña típicos), no un hecho.
+- **Diferencial [V]:** es el único que incluye en la página de acceso una llamada comercial para pedir información de cursos.
+- **Accesibilidad [I]:** el botón «¿Quieres hacer algún curso?» muestra texto azul sobre fondo gris oscuro; a simple vista el contraste parece insuficiente. No se ha medido; se anota para la revisión de accesibilidad de la Fase 7 como referencia de lo que la plataforma debe evitar.
 
 ### H-06. Ningún entorno muestra acceso con proveedores externos [V]
 
@@ -211,9 +213,21 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 
 | Campo | Valor | Estado |
 |---|---|---|
-| Resultado | No observado: el `robots.txt` del sitio no permite la lectura automatizada | V |
-| Resto de campos | Pendientes de observación manual en navegador | P |
-| Preguntas | P-V05 | — |
+| URL facilitada | https://aulavirtual.atutecnologiadigital.com | V |
+| Resultado | Lectura automatizada rechazada por `robots.txt`. Observado manualmente por el alumno en navegador (captura [E-01](evidencias/E-01_campus07_pagina-acceso_2026-10-30.png)) | V |
+| Nombre visible | Título de la pestaña no visible en la captura | P |
+| Marca aparente | Grupo ATU Tecnología Digital (logotipo) | V |
+| Acceso público | Se ve la página de acceso sin identificarse | V |
+| Página de acceso | «Entrar», «Nombre de usuario», «Contraseña», «Acceder», «¿Olvidó su contraseña?» | V |
+| Idioma | Español (textos visibles); selector de idioma no visible | V / P |
+| Identidad visual | Azul corporativo de Grupo ATU, imagen de una persona estudiando con portátil. Diseño similar al entorno 1 | V / I |
+| Ayuda y contacto | CAU 08:30–20:30, 900 922 254, `tutoriavirtual@grupoatu.com` | V |
+| Señales de Moodle | Formulario y enlace de recuperación típicos de Moodle; pie no visible | I |
+| Versión | No observable | P |
+| Responsable del tratamiento | No visible en la captura | P |
+| Diferencial | Bloque comercial «Solicitud de información — ¿Quieres hacer algún curso?» | V |
+| Incidencias | Ninguna visible. Posible contraste insuficiente en el botón comercial | I |
+| Preguntas | P-C01; ¿por qué bloquea la lectura automatizada a diferencia del resto? | — |
 
 ### Entorno 8 — aulavirtualalmeria.grupoatu.com
 
@@ -280,4 +294,5 @@ Queda pendiente de la organización (registro de preguntas): quién administra c
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Primera observación pasiva de los doce entornos: 11 observados, 1 bloqueado por `robots.txt` |
+| 0.1 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Primera observación pasiva de los doce entornos: 11 observados, 1 bloqueado por `robots.txt`. [Archivada](historico/03-inventario-campus_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Entorno 7 completado con la observación manual del alumno (evidencia E-01) |
