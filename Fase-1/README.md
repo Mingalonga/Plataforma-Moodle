@@ -31,6 +31,7 @@
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-10-30 |
 | — | [Evidencias](evidencias/) (capturas y registros de observación) | — | Vivo | 2026-10-30 |
 | — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-1_Plataforma-Moodle_v5.pdf). Fuente editable en Typst: [`entregas/resumen-fase-1-tutora.typ`](entregas/resumen-fase-1-tutora.typ) | v5 (basado en el paquete 0.8) | Revisión del alumno | 2026-10-30 |
+| — | [Guion de preguntas para reuniones con Grupo ATU](entregas/guion-reunion-grupo-atu.txt) (versión práctica del guion del documento 05) | 1 | Para uso del alumno | 2026-10-30 |
 
 Estados posibles: Pendiente · En curso · Revisión del propietario · Revisión del tutor · Aprobado.
 

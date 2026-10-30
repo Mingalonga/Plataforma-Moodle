@@ -6,6 +6,9 @@ Formato de cada entrada: fecha, versión del paquete de la fase, documentos afec
 
 ## [0.8] — 2026-10-30
 
+### Añadido
+- `entregas/guion-reunion-grupo-atu.txt`: guion práctico de preguntas para reuniones con el CAU, el responsable técnico, la dirección y el alumnado (amplía el guion del documento 05).
+
 ### Cambiado
 - El alumno confirma que las doce aulas son de Grupo ATU **[D]**. `01-registro-preguntas-supuestos.md` v0.8 (S-01 confirmado, P-O01 resuelta en parte), `03-inventario-campus.md` v0.5 y `08-diagnostico-inicial.md` v0.4.
 - Resumen v5, ajustado antes de su revisión: título «Plataforma centralizada para los entornos Moodle pertenecientes a Grupo ATU» y la primera conclusión indica la pertenencia confirmada.
