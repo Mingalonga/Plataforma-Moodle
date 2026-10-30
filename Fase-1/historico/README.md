@@ -8,4 +8,5 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 
 | Archivo | Versión | Fecha | Motivo del cambio de versión |
 |---|---|---|---|
-| — | — | — | Todavía no hay versiones archivadas |
+| [00-plan-fase-1_v0.1.md](00-plan-fase-1_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: respuestas del alumno y avance de tareas |
+| [01-registro-preguntas-supuestos_v0.1.md](01-registro-preguntas-supuestos_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: respuestas del alumno y resultados de la observación |

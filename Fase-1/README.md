@@ -8,17 +8,19 @@
 | Evidencia de avance (según la ficha) | Mapa inicial, inventario y registro de preguntas |
 | Hito | Alcance preliminar validado |
 | Entregable asociado | 01 — Diagnóstico inicial (situación actual, inventario, perfiles, necesidades, problemas y alcance preliminar) |
-| Versión del paquete | 0.1 (borrador) |
+| Alumno | Carlos García Rallo |
+| Tutor/a | *(en blanco)* |
+| Versión del paquete | 0.2 (borrador) |
 | Estado | En curso |
 
 ## Índice de documentos
 
 | N.º | Documento | Versión | Estado | Última actualización |
 |---|---|---|---|---|
-| 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.1 | Revisión del propietario | 2026-10-30 |
-| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.1 | Revisión del propietario | 2026-10-30 |
-| 02 | Fuentes y metodología de observación | — | Pendiente | — |
-| 03 | Inventario de los doce entornos Moodle | — | Pendiente (requiere visto bueno para la observación pasiva) | — |
+| 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.2 | Revisión del propietario | 2026-10-30 |
+| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.2 | Revisión del propietario | 2026-10-30 |
+| 02 | [Fuentes y metodología de observación](02-fuentes-y-metodologia.md) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 03 | [Inventario de los doce entornos Moodle](03-inventario-campus.md) | 0.1 | Revisión del propietario (falta el entorno 7) | 2026-10-30 |
 | 04 | Mapa inicial de actores y perfiles | — | Pendiente | — |
 | 05 | Situación actual, necesidades y problemas | — | Pendiente | — |
 | 06 | Registro de riesgos inicial | — | Pendiente | — |

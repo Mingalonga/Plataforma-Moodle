@@ -2,10 +2,12 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
-| Redacción | Claude (rol Analista), a petición del propietario del proyecto |
+| Alumno | Carlos García Rallo |
+| Tutor/a | *(en blanco)* |
+| Redacción | Claude (rol Analista), a petición del alumno |
 
 Este registro es una de las evidencias de avance que pide la ficha para la Fase 1 («mapa inicial, inventario y registro de preguntas»). Es un documento vivo: las preguntas no se borran al resolverse, se marca su estado y se anota la respuesta y su origen.
 
@@ -26,6 +28,9 @@ Antes de las preguntas, conviene separar lo poco que es seguro hoy:
 - **[D]** Límites: sin credenciales reales ni datos personales sin autorización, sin modificar Moodle en producción, sin pruebas intrusivas, sin asumir configuraciones iguales en todos los entornos y sin presentar como real una integración simulada (Ficha 01, página 5).
 - **[D]** No se pueden iniciar actividades que requieran credenciales, acceso a sistemas, datos reales o intervención sobre servicios existentes sin autorización expresa del tutor (Ficha 01, página 9).
 - **[D]** El propietario ha indicado que no se avanza más allá de la Fase 1 hasta recibir el visto bueno.
+- **[D]** El alumno es Carlos García Rallo; el campo de tutor/a queda en blanco por ahora (2026-10-30).
+- **[D]** De momento se trabaja solo con información pública, y el alumno autoriza la observación pasiva de los doce entornos (2026-10-30).
+- **[O]** Once de los doce entornos son Moodle y se presentan con la marca, el soporte y el responsable del tratamiento de Grupo ATU / Academia Técnica Universitaria, S.L. (observación del 2026-10-30, ver [inventario](03-inventario-campus.md)).
 
 Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
@@ -41,8 +46,9 @@ Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
 ### PG-02. ¿Qué entornos Moodle existen, quién es responsable de cada uno y qué diferencias relevantes presentan?
 
-- **Respuesta provisional:** Existen al menos los doce de la lista **[D]**. De los propios nombres de dominio se deduce que siete contienen «atu» (aulavirtualatu.com, atuasesoria.com, dos subdominios de grupoatu.com, clubaventuraatu.com, atutecnologiadigital.com, atuseguridadysalud.com) y cinco no (centrelearning.net, takin.es, tierramasecologica.com, moveout.es, estudia-fp.com). Que pertenezcan a un mismo grupo empresarial es solo un **indicio [S]**. No sabemos quién administra cada uno, en qué versión están ni dónde se alojan.
-- **Qué falta:** observación pasiva (T4) y confirmación de responsables (P-O02, P-C01 a P-C05).
+- **Respuesta provisional (v0.2):** Existen al menos los doce de la lista **[D]**. Once se han observado y todos son Moodle **[O]**; el entorno 7 no se pudo observar (H-05). Los once comparten el canal de soporte y el responsable del tratamiento de Grupo ATU **[O]**, lo que es un indicio fuerte de un operador común **[S]**. Diferencias relevantes **[O]**: el entorno 1 usa otro tema y más idiomas; el 4 está en inglés, sin ayuda visible y con registro abierto; cinco entornos comparten el título «AULA VIRTUAL CENTRE LEARNING» aunque tienen marcas distintas. Indicio de Moodle 4.1 en todos, rama sin soporte de seguridad desde el 08-12-2025 **[S]**. Sigue sin saberse quién administra cada uno ni dónde se alojan.
+- **Qué falta:** observación del entorno 7 (P-V05) y confirmación de responsables y versiones (P-O02, P-C01 a P-C05).
+- *v0.1:* solo se conocían los nombres de dominio; ver [histórico](historico/01-registro-preguntas-supuestos_v0.1.md).
 - **Estado:** Respuesta provisional · **Prioridad:** Alta.
 
 ### PG-03. ¿Qué perfiles de usuario intervienen y qué tareas necesita realizar cada uno?
@@ -101,13 +107,24 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
-| P-A01 | ¿Qué nombres van en los campos «Alumno o alumna» y «Tutor o tutora» de la ficha? | Propietario | Baja | Abierta |
+| P-A01 | ¿Qué nombres van en los campos «Alumno o alumna» y «Tutor o tutora» de la ficha? | Propietario | Baja | **Resuelta** (2026-10-30): alumno Carlos García Rallo; tutor/a en blanco por ahora **[D]** |
 | P-A02 | ¿Hay fecha de revisión del hito de la Fase 1 o un calendario general del proyecto? | Propietario / Tutor | Media | Abierta |
 | P-A03 | ¿Cuál es el medio de entrega y el formato de revisión? ¿Basta con este repositorio o se necesita también PDF o Word? | Tutor | Media | Abierta |
-| P-A04 | ¿Se autoriza la observación pasiva de las páginas públicas de los doce entornos (cargar la página sin iniciar sesión y anotar lo visible)? | Propietario / Tutor | Alta | Abierta |
-| P-A05 | ¿Podremos hablar con algún responsable de los campus y con usuarios reales, o la Fase 1 se hará solo con información pública y supuestos? | Propietario | Alta | Abierta |
+| P-A04 | ¿Se autoriza la observación pasiva de las páginas públicas de los doce entornos (cargar la página sin iniciar sesión y anotar lo visible)? | Propietario / Tutor | Alta | **Resuelta** (2026-10-30): autorizada por el alumno **[D]**. Falta la del tutor, que no se ha pedido aún |
+| P-A05 | ¿Podremos hablar con algún responsable de los campus y con usuarios reales, o la Fase 1 se hará solo con información pública y supuestos? | Propietario | Alta | **Resuelta** (2026-10-30): de momento, solo información pública **[D]**. Se preparará igualmente un guion de entrevista por si cambia |
 | P-A06 | ¿El trabajo es individual o en equipo reducido? (la ficha admite ambas modalidades) | Propietario | Baja | Abierta |
 | P-A07 | ¿Qué sistema operativo se usará en el equipo local cuando llegue la fase de prototipo? (solo informativo, no se necesita ahora) | Propietario | Baja | Abierta |
+
+### 3.1 bis Surgidas de la observación de los campus (v0.2)
+
+| ID | Pregunta | Para | Prioridad | Estado |
+|---|---|---|---|---|
+| P-V01 | ¿Puede el alumno revisar visualmente (en navegador) las páginas de acceso para completar la identidad visual (colores, disposición, versión móvil)? | Alumno | Baja | Abierta |
+| P-V02 | ¿Por qué los entornos 2, 8, 10, 11 y 12 comparten el título «AULA VIRTUAL CENTRE LEARNING»? ¿Es intencionado (una marca paraguas) o un resto de plantilla? | Organización | Media | Abierta |
+| P-V03 | ¿Qué es el entorno 4 (Index, en inglés, con registro abierto y sin ayuda visible)? ¿Está en uso, en pruebas o en desuso? | Organización | Alta | Abierta |
+| P-V04 | ¿El entorno 1 (aulavirtualatu.com) es el campus principal? ¿Por qué tiene otro tema e idiomas distintos? | Organización | Media | Abierta |
+| P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | Abierta |
+| P-V06 | ¿Qué relación tienen con Grupo ATU las marcas que no llevan su nombre (Centre Learning, Takin, Tierra más ecológica, MoveOut, Studia, Almería Formación, Index)? ¿Son clientes, filiales o marcas propias? | Organización | Alta | Abierta (amplía P-O01) |
 
 ### 3.2 Organización
 
@@ -182,12 +199,14 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 
 | ID | Supuesto | Base | Pregunta que lo confirma | Estado |
 |---|---|---|---|---|
-| S-01 | Algunos de los doce campus podrían pertenecer a un mismo grupo empresarial | Siete dominios contienen «atu» y dos son subdominios de grupoatu.com (solo el texto de las URL) | P-O01 | Indicio |
+| S-01 | Los campus pertenecen o los opera un mismo grupo (Grupo ATU) | v0.1: siete dominios contienen «atu». v0.2: los once observados comparten soporte, bloque «Acerca de ATU» y responsable del tratamiento | P-O01, P-V06 | **Indicio fuerte** (v0.2) |
 | S-02 | No se debe presuponer que todos los campus comparten versión, alojamiento, autenticación ni responsable | Ficha 01, página 5 (límites) | P-C01 a P-C03 | Se mantiene como regla |
-| S-03 | Seis URL apuntan directamente a `/login/index.php`, ruta habitual de la página de acceso de Moodle; que todos sean Moodle se considera indicio hasta observarlo | Texto de las URL | T4 | Indicio |
+| S-03 | Todos los entornos son Moodle | v0.2: los once observados muestran «Desarrollado por Moodle» y la página de acceso estándar | P-V05 (entorno 7) | **Verificado en 11 de 12** (v0.2) |
 | S-04 | El problema principal es localizar y acceder al campus correcto, no gestionar contenidos | Redacción de la ficha | P-N01, P-U04 | Pendiente de confirmar |
-| S-05 | No existe hoy una identidad común para todos los campus | Ausencia de información; se asume el escenario más restrictivo | P-I01, P-C03 | Pendiente de confirmar |
-| S-06 | La Fase 1 se hará con información pública y supuestos, sin entrevistas, salvo que el propietario indique lo contrario | Situación actual | P-A05 | Pendiente de confirmar |
+| S-05 | No existe hoy una identidad común para todos los campus | Ausencia de información. v0.2: ninguna página muestra acceso con Google, Microsoft u otro proveedor (H-06) | P-I01, P-C03 | Pendiente de confirmar; reforzado por la observación |
+| S-06 | La Fase 1 se hará con información pública y supuestos, sin entrevistas, salvo que el propietario indique lo contrario | Situación actual | P-A05 | **Confirmado** por el alumno (2026-10-30) |
+| S-08 | Los entornos usan Moodle 4.1, rama sin soporte de seguridad desde el 08-12-2025 | Parámetro de versión en el enlace de la app móvil (H-04) y página oficial de versiones (F-15) | P-C01 | Indicio |
+| S-09 | La organización usa Microsoft 365 | Ayuda alojada en grupoatu365.sharepoint.com (H-07) | P-I01 | Indicio |
 | S-07 | El nombre «aulavirtualalmeria» sugiere que algún campus se organiza por ubicación geográfica | Texto de la URL | P-N04 | Indicio |
 
 ## 5. Dependencias
@@ -195,12 +214,13 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | ID | Dependencia | Afecta a | Responsable | Estado |
 |---|---|---|---|---|
 | D-01 | Visto bueno del tutor para pasar de fase | Todo el proyecto | Tutor | Pendiente |
-| D-02 | Autorización para la observación pasiva de los doce entornos | T4 (inventario) | Propietario / Tutor | Pendiente (P-A04) |
-| D-03 | Contacto con responsables de campus y usuarios | Confirmación de supuestos | Organización | Pendiente (P-A05) |
+| D-02 | Autorización para la observación pasiva de los doce entornos | T4 (inventario) | Propietario / Tutor | Resuelta por el alumno (P-A04) |
+| D-03 | Contacto con responsables de campus y usuarios | Confirmación de supuestos | Organización | Descartado por ahora (P-A05): los supuestos quedarán abiertos para el tutor |
 | D-04 | Colaboración de los administradores de cada campus para cualquier integración | Fases 3 en adelante | Organización | No necesaria aún |
 
 ## 6. Control de versiones
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: diez preguntas guía con respuesta provisional, 42 preguntas adicionales, 7 supuestos y 4 dependencias |
+| 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: diez preguntas guía con respuesta provisional, 42 preguntas adicionales, 7 supuestos y 4 dependencias. [Archivada](historico/01-registro-preguntas-supuestos_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Analista) | Respuestas del alumno (P-A01, P-A04, P-A05). Resultados de la observación de los campus: PG-02 actualizada, 6 preguntas nuevas (P-V01 a P-V06), supuestos S-01, S-03, S-05 y S-06 actualizados, S-08 y S-09 nuevos |

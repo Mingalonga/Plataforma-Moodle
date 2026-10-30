@@ -2,12 +2,12 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
-| Redacción | Claude (roles Analista y Redactor), a petición del propietario del proyecto |
-| Responsable del proyecto (alumno/a) | *Pendiente de indicar* (ver P-A01) |
-| Tutor/a | *Pendiente de indicar* (ver P-A01) |
+| Redacción | Claude (roles Analista y Redactor), a petición del alumno |
+| Alumno | Carlos García Rallo |
+| Tutor/a | *(en blanco)* |
 
 ## 1. Objetivo de la fase
 
@@ -21,7 +21,7 @@ Esta fase **no** elige tecnología, arquitectura ni diseño. La ficha dice expre
 |---|---|
 | Ficha 01, *Plataforma centralizada para los entornos Moodle* (PDF, 9 páginas) | Documento rector: fases, entregables, límites, evaluación y plantilla de seguimiento |
 | *Prompt inicial del proyecto Plataforma Moodle* (DOCX) | Inventario de los doce entornos, reglas de rigor, roles y estructura de trabajo |
-| Páginas públicas de los doce entornos | Solo observación pasiva, tras el visto bueno (ver P-A04) |
+| Páginas públicas de los doce entornos | Solo observación pasiva, autorizada por el alumno el 2026-10-30 (P-A04) |
 | Documentación oficial de Moodle y normativa | Solo cuando haga falta para respaldar una afirmación; se registrará en el documento 02 |
 
 ## 3. Alcance de la fase
@@ -51,8 +51,8 @@ Esta fase **no** elige tecnología, arquitectura ni diseño. La ficha dice expre
 |---|---|---|---|---|---|---|
 | T1 | Plan de fase y estructura de documentación | Coordinador / Redactor | Propietario | — | `00-plan-fase-1.md`, índice, changelog, seguimiento | Hecho (v0.1) |
 | T2 | Registro de preguntas, supuestos y dependencias | Analista | Propietario | — | `01-registro-preguntas-supuestos.md` | Hecho (v0.1) |
-| T3 | Metodología de observación y registro de fuentes | Analista / Especialista Moodle | Seguridad | T1 | `02-fuentes-y-metodologia.md` | Pendiente |
-| T4 | Inventario de los doce entornos (observación pasiva) | Analista / Especialista Moodle | Seguridad | T3, P-A04 | `03-inventario-campus.md` | Pendiente |
+| T3 | Metodología de observación y registro de fuentes | Analista / Especialista Moodle | Seguridad | T1 | `02-fuentes-y-metodologia.md` | Hecho (v0.1) |
+| T4 | Inventario de los doce entornos (observación pasiva) | Analista / Especialista Moodle | Seguridad | T3, P-A04 | `03-inventario-campus.md` | Hecho (v0.1); falta el entorno 7 (P-V05) |
 | T5 | Mapa inicial de actores y perfiles | Analista | UX | T2 | `04-mapa-actores-perfiles.md` | Pendiente |
 | T6 | Situación actual, necesidades, problemas y guion de entrevistas | Analista | Propietario | T4, T5 | `05-situacion-actual.md` | Pendiente |
 | T7 | Registro de riesgos inicial | Seguridad / Project Manager | Arquitecto | T4, T6 | `06-registro-riesgos.md` | Pendiente |
@@ -74,11 +74,11 @@ Prioridad: todas las tareas son necesarias para el hito; el orden de la tabla es
 
 | ID | Decisión o dato necesario | Quién | Bloquea |
 |---|---|---|---|
-| P-A01 | Nombres del alumno/a y del tutor/a para la cabecera de la ficha | Propietario | Nada (se deja en blanco mientras tanto) |
+| P-A01 | Nombres del alumno/a y del tutor/a para la cabecera de la ficha | Propietario | Resuelta: alumno Carlos García Rallo; tutor/a en blanco |
 | P-A02 | Calendario y fecha de revisión del hito | Propietario / Tutor | Fechas previstas de las tareas |
 | P-A03 | Medio de entrega y formato de la revisión (¿basta el repositorio?) | Tutor | T10 |
-| P-A04 | Autorización para observar las páginas públicas de los doce entornos | Propietario / Tutor | T4 |
-| P-A05 | Contacto con responsables de los campus o con usuarios para entrevistas | Propietario / Organización | Confirmación de supuestos en T5 y T6 |
+| P-A04 | Autorización para observar las páginas públicas de los doce entornos | Propietario / Tutor | Resuelta por el alumno |
+| P-A05 | Contacto con responsables de los campus o con usuarios para entrevistas | Propietario / Organización | Resuelta: de momento solo información pública. T5 y T6 trabajarán con supuestos explícitos y un guion de entrevista preparado para cuando sea posible |
 
 El detalle de estas y del resto de preguntas está en el [registro de preguntas](01-registro-preguntas-supuestos.md).
 
@@ -103,4 +103,5 @@ La fase **no** se da por aprobada por haber producido estos documentos: queda ap
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Analista / Redactor) | Primera versión del plan de fase |
+| 0.1 | 2026-10-30 | Claude (Analista / Redactor) | Primera versión del plan de fase. [Archivada](historico/00-plan-fase-1_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Analista / Redactor) | Nombre del alumno, respuestas a P-A01, P-A04 y P-A05, T3 y T4 hechas |
