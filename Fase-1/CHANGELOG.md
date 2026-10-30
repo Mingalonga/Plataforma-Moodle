@@ -4,6 +4,17 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.6] — 2026-10-30
+
+**Estado:** documentación de la Fase 1 sin cambios de contenido; se añade el resumen para la tutora.
+
+### Añadido
+- `entregas/Resumen_Fase-1_Plataforma-Moodle_v1.pdf`: resumen de 7 páginas en lenguaje no técnico, basado en el paquete 0.5.
+- `entregas/resumen-fase-1-tutora.html`: fuente editable del PDF.
+
+### Motivo
+La tutora es pedagoga. El alumno prefiere entregarle un PDF breve en lugar de la carpeta de documentos técnicos, que siguen siendo la referencia completa.
+
 ## [0.5] — 2026-10-30
 
 **Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor. Todas las observaciones públicas previstas están hechas.

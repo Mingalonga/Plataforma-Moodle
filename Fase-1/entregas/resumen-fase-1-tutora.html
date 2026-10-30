@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Resumen Fase 1 · Plataforma centralizada Moodle</title>
+<style>
+@page { size: A4; margin: 20mm 18mm 18mm 18mm; }
+body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color:#1f2937; }
+h1 { font-size: 22pt; color:#1e3a8a; margin: 0 0 4mm; }
+h2 { font-size: 14pt; color:#1e3a8a; border-bottom: 2px solid #c7d2fe; padding-bottom: 1.5mm; margin: 8mm 0 3mm; page-break-after: avoid; }
+h3 { font-size: 11pt; color:#1e3a8a; margin: 4mm 0 1.5mm; page-break-after: avoid; }
+p { margin: 0 0 2.5mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; } li { margin-bottom: 1mm; }
+table { width:100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #d1d5db; padding: 1.6mm 2mm; text-align: left; vertical-align: top; }
+th { background:#eef2ff; color:#1e3a8a; }
+.cover { height: 245mm; display:flex; flex-direction:column; justify-content:center; page-break-after: always; }
+.cover .kicker { font-size: 11pt; color:#4b5563; letter-spacing: .5px; text-transform: uppercase; }
+.cover .sub { font-size: 13pt; color:#374151; margin-bottom: 12mm; }
+.meta td { border: none; padding: 1mm 0; font-size: 11pt; } .meta td:first-child { color:#6b7280; width: 45mm; }
+.box { background:#f8fafc; border-left: 4px solid #1e3a8a; padding: 3mm 4mm; margin: 3mm 0 4mm; page-break-inside: avoid; }
+.warn { border-left-color:#b45309; background:#fffbeb; }
+.ask { border-left-color:#047857; background:#ecfdf5; }
+.phases { display:flex; gap:1.5mm; margin: 3mm 0 4mm; }
+.phases div { flex:1; border:1px solid #c7d2fe; border-radius: 2mm; padding: 2mm 1mm; text-align:center; font-size: 8.5pt; color:#4b5563; }
+.phases .now { background:#1e3a8a; color:white; border-color:#1e3a8a; font-weight:bold; }
+.tag { display:inline-block; font-size: 8pt; padding: 0 1.5mm; border-radius: 1mm; background:#e5e7eb; }
+.small { font-size: 9pt; color:#4b5563; }
+.pb { page-break-before: always; }
+</style></head><body>
+
+<div class="cover">
+  <div class="kicker">Ficha de proyecto 01 · Proyecto de prácticas</div>
+  <h1>Plataforma centralizada para los entornos Moodle</h1>
+  <div class="sub">Resumen de la Fase 1 — Descubrimiento<br>Documento para la revisión del hito «Alcance preliminar validado»</div>
+  <table class="meta">
+    <tr><td>Alumno</td><td>Carlos García Rallo</td></tr>
+    <tr><td>Tutora</td><td>&nbsp;</td></tr>
+    <tr><td>Fecha</td><td>30 de octubre de 2026</td></tr>
+    <tr><td>Versión</td><td>Resumen 1 · corresponde a la documentación de la Fase 1 en su versión 0.5</td></tr>
+    <tr><td>Estado</td><td>Pendiente de revisión por la tutora</td></tr>
+  </table>
+</div>
+
+<h2>1. En pocas palabras</h2>
+<p>Grupo ATU tiene al menos <strong>doce aulas virtuales</strong> (plataformas Moodle), cada una con su propia dirección web y su propio usuario y contraseña. El proyecto estudia si conviene crear una <strong>puerta de entrada común</strong> desde la que cualquier alumno o alumna encuentre su aula y llegue a ella sin dudas, y en qué condiciones.</p>
+<p>Esta primera fase no diseña ni programa nada: sirve para <strong>entender la situación actual</strong> antes de proponer una solución.</p>
+<div class="box">
+<strong>Conclusiones principales de la Fase 1</strong>
+<ul>
+<li>Las doce aulas pertenecen, con mucha probabilidad, al mismo grupo: todas comparten el mismo servicio de atención al usuario.</li>
+<li><strong>No existe ningún sitio que las reúna</strong>, ni siquiera la web de Grupo ATU, y los buscadores no las muestran.</li>
+<li>Cinco aulas de marcas distintas tienen el mismo nombre en la pestaña del navegador, por lo que es fácil confundirlas.</li>
+<li><strong>Falta un dato clave</strong>: cuántas personas tienen realmente dificultades para encontrar su aula. Solo la empresa puede aportarlo.</li>
+<li>Se propone empezar por algo sencillo: un <strong>catálogo con buscador</strong> que lleve a cada aula, sin pedir contraseñas ni guardar datos personales.</li>
+</ul>
+</div>
+
+<h2>2. Dónde estamos dentro del proyecto</h2>
+<p>La ficha divide el proyecto en ocho fases. Cada una termina con una revisión de la tutora antes de pasar a la siguiente.</p>
+<div class="phases">
+<div class="now">1<br>Descubrimiento</div><div>2<br>Requisitos</div><div>3<br>Alternativas</div><div>4<br>Diseño</div>
+<div>5<br>Viabilidad</div><div>6<br>Prototipo</div><div>7<br>Validación</div><div>8<br>Cierre</div>
+</div>
+<p>La Fase 1 tiene que producir, según la ficha: un <strong>mapa inicial</strong> (quién está implicado), un <strong>inventario</strong> (qué aulas existen), un <strong>registro de preguntas</strong> y un <strong>alcance preliminar</strong>. Con ello se elabora el primer entregable, el <em>Diagnóstico inicial</em>.</p>
+
+<h2>3. Cómo se ha trabajado</h2>
+<ul>
+<li><strong>Solo con información pública.</strong> Se ha mirado la página de entrada de cada aula, la misma que ve cualquier persona antes de identificarse. No se ha entrado en ninguna aula, no se han usado contraseñas ni se han recogido datos de personas.</li>
+<li><strong>Sin entrevistas, de momento.</strong> Por decisión del alumno, no se ha contactado con la empresa ni con usuarios. Por eso varias conclusiones son todavía hipótesis.</li>
+<li><strong>Distinguiendo lo seguro de lo supuesto.</strong> Cada afirmación de la documentación indica si está comprobada, si se ha visto en una web, si es un supuesto o si es una recomendación, tal como pide la ficha.</li>
+<li><strong>Guardando todas las versiones.</strong> Cada cambio queda registrado con su fecha y su motivo, y las versiones anteriores se conservan.</li>
+</ul>
+
+<h2>4. Qué aulas hay (inventario)</h2>
+<p>Se revisaron las doce direcciones facilitadas. Resumen:</p>
+<table>
+<tr><th>N.º</th><th>Aula (marca que muestra)</th><th>Qué se ha visto</th></tr>
+<tr><td>1</td><td>Campus Virtual – ATU</td><td>Diseño distinto al resto y siete idiomas. Podría ser el aula principal.</td></tr>
+<tr><td>2</td><td>Centre Learning</td><td>Su nombre lo repiten otras cuatro aulas de marcas distintas.</td></tr>
+<tr><td>3</td><td>ATU Asesoría de Formación</td><td>Sin incidencias.</td></tr>
+<tr><td>4</td><td>Index (Aula Virtual ATU)</td><td>En inglés, sin datos de ayuda, permite que cualquiera se registre y tiene textos de plantilla sin completar.</td></tr>
+<tr><td>5</td><td>Takin</td><td>Sin incidencias.</td></tr>
+<tr><td>6</td><td>Club Aventura ATU</td><td>Temática de viajes.</td></tr>
+<tr><td>7</td><td>ATU Tecnología Digital</td><td>Revisada a mano (no permite la lectura automática). Incluye un botón comercial con poco contraste.</td></tr>
+<tr><td>8</td><td>Almería Formación</td><td>Lleva el nombre «Centre Learning».</td></tr>
+<tr><td>9</td><td>ATU Seguridad y Salud</td><td>Sin incidencias.</td></tr>
+<tr><td>10</td><td>Tierra más ecológica</td><td>Lleva el nombre «Centre Learning».</td></tr>
+<tr><td>11</td><td>MoveOut</td><td>Lleva el nombre «Centre Learning».</td></tr>
+<tr><td>12</td><td>Studia (Estudia FP)</td><td>Lleva el nombre «Centre Learning».</td></tr>
+</table>
+<p><strong>Rasgos comunes:</strong> todas usan Moodle y muestran el mismo teléfono y correo de atención al usuario de Grupo ATU, la misma empresa como responsable de los datos y el acceso con usuario y contraseña propios de cada aula. Ninguna ofrece entrar con una cuenta común (por ejemplo, de Google o Microsoft).</p>
+<div class="box warn"><strong>Indicio técnico a confirmar.</strong> Los datos técnicos de las páginas sugieren que las aulas usan una versión de Moodle que ya no recibe actualizaciones de seguridad (desde diciembre de 2025). Es solo un indicio: debe confirmarlo quien administra las aulas. No se ha hecho ninguna prueba de seguridad, porque queda fuera de lo permitido.</div>
+
+<h2>5. Quién está implicado</h2>
+<table>
+<tr><th>Grupo</th><th>Qué necesitaría</th></tr>
+<tr><td>Alumnado (de una o varias aulas)</td><td>Encontrar su aula rápido y estar seguro de que es la correcta.</td></tr>
+<tr><td>Profesorado y tutores</td><td>Un enlace único y fiable que dar al alumnado.</td></tr>
+<tr><td>Empresas clientes</td><td>Saber a qué aula enviar a sus trabajadores.</td></tr>
+<tr><td>Servicio de atención al usuario</td><td>Una lista actualizada de aulas para orientar a quien llama.</td></tr>
+<tr><td>Quien administre las aulas</td><td>Que la nueva plataforma no le obligue a cambiar las aulas.</td></tr>
+<tr><td>Quien mantenga el catálogo (puesto nuevo)</td><td>Una forma sencilla de añadir, cambiar o retirar aulas.</td></tr>
+<tr><td>Dirección de Grupo ATU</td><td>Decidir con datos si merece la pena y cuánto cuesta.</td></tr>
+</table>
+<p class="small">Estos perfiles son hipótesis razonadas: no se han podido confirmar con la organización.</p>
+
+<h2>6. Problemas detectados</h2>
+<ol>
+<li><strong>No hay un punto de entrada común.</strong> Ni las aulas ni la web de Grupo ATU enlazan a las demás aulas. La web corporativa está pensada para captar alumnado nuevo, no para quien ya está matriculado.</li>
+<li><strong>Las aulas no aparecen en los buscadores.</strong> Las páginas están configuradas para no salir en Google. Puede ser intencionado; hay que preguntarlo.</li>
+<li><strong>Varias aulas no se distinguen entre sí</strong> por su nombre.</li>
+<li><strong>La configuración no es homogénea</strong>: una aula en inglés, otra con otro diseño, otra con textos sin completar.</li>
+<li><strong>Cada aula tiene su propio usuario y contraseña.</strong> Quien estudie en varias tendrá varias cuentas.</li>
+<li><strong>La web organiza los cursos en 9 áreas temáticas</strong> (salud, tecnología, hostelería…), pero las aulas van por marcas, y no hay forma de saber qué área corresponde a qué aula.</li>
+</ol>
+<div class="box warn"><strong>Limitación importante.</strong> No sabemos cuántas personas sufren realmente estos problemas. Para demostrarlo harían falta, por ejemplo, datos del servicio de atención al usuario sobre consultas del tipo «no encuentro mi aula».</div>
+
+<h2>7. Principales riesgos</h2>
+<ul>
+<li><strong>Basar el proyecto en suposiciones</strong> por falta de datos de la empresa. Se mitiga dejándolo escrito y pidiendo esos datos.</li>
+<li><strong>Que el catálogo se quede desactualizado</strong> si nadie se encarga de mantenerlo, con enlaces que ya no funcionan.</li>
+<li><strong>Querer abarcar demasiado</strong> (por ejemplo, entrar en todas las aulas con una sola contraseña) sin que esté demostrado que se necesita.</li>
+<li><strong>Tratar datos personales sin necesidad.</strong> La propuesta inicial evita guardar datos de personas.</li>
+<li><strong>Accesibilidad</strong>: la plataforma debe poder usarla cualquier persona, también desde el móvil o con lector de pantalla.</li>
+</ul>
+
+<h2>8. Propuesta de alcance (el hito a validar)</h2>
+<table>
+<tr><th style="width:28%">Prioridad</th><th>Qué incluiría</th></tr>
+<tr><td><strong>Imprescindible</strong><br><span class="small">(primera versión)</span></td><td>Catálogo de las aulas con nombre claro y breve descripción · buscador · acceso directo a cada aula avisando de que se cambia de sitio · que funcione bien en el móvil y sea accesible · un procedimiento para mantener el catálogo · ningún dato personal ni contraseña.</td></tr>
+<tr><td><strong>Conveniente</strong></td><td>Filtros (por ejemplo, por área formativa) si la empresa los considera útiles · comprobación periódica de que los enlaces funcionan · página de ayuda con el servicio de atención.</td></tr>
+<tr><td><strong>Más adelante</strong><br><span class="small">(solo si se demuestra necesario y viable)</span></td><td>Ver solo «mis aulas» · entrar una sola vez para todas las aulas · mostrar información de los cursos.</td></tr>
+<tr><td><strong>Fuera del proyecto</strong></td><td>Modificar o actualizar las aulas actuales · unirlas en una sola · gestionar matrículas o contenidos.</td></tr>
+</table>
+<p>La elección de la tecnología concreta se hará en la Fase 3, comparando varias opciones, incluida la de <strong>no desarrollar nada</strong> y mejorar lo que ya existe.</p>
+
+<h2>9. Qué se pide a la tutora</h2>
+<div class="box ask">
+<ol>
+<li>¿Valida el <strong>problema</strong> y el <strong>objetivo</strong> descritos, sabiendo que el tamaño real del problema aún no está medido?</li>
+<li>¿Está de acuerdo con la <strong>primera versión</strong> propuesta (catálogo, buscador y acceso directo) y con dejar para más adelante el acceso con una sola contraseña?</li>
+<li>¿Es posible obtener <strong>datos de la empresa</strong> (por ejemplo, número de consultas de alumnos que no encuentran su aula) o un contacto para resolver las preguntas pendientes?</li>
+<li>¿Prefiere recibir la documentación de las siguientes fases también en formato PDF resumido?</li>
+</ol>
+</div>
+
+<h2>10. Preguntas principales para la empresa</h2>
+<p>La documentación recoge más de cincuenta preguntas. Las imprescindibles son:</p>
+<ul>
+<li>¿Quién se encarga de cada aula y quién decidiría poner en marcha la plataforma?</li>
+<li>¿Qué relación hay entre Grupo ATU y las marcas de cada aula? ¿Pueden aparecer juntas?</li>
+<li>¿Cómo llegan hoy los alumnos a su aula? ¿Hay quejas o consultas por no encontrarla?</li>
+<li>¿Hay alumnos con cuenta en varias aulas?</li>
+<li>¿Quién mantendría el catálogo si se pone en marcha?</li>
+<li>¿Qué es exactamente el aula «Index», que está en inglés y abierta al registro?</li>
+</ul>
+
+<h2>11. Dónde está toda la documentación</h2>
+<p>Todo el trabajo está guardado y versionado en el repositorio del proyecto, carpeta <strong>Fase-1</strong>:<br>
+<span class="small">https://github.com/Mingalonga/Plataforma-Moodle/tree/main/Fase-1</span></p>
+<table>
+<tr><th>Documento</th><th>Contenido</th></tr>
+<tr><td>00 Plan de la fase</td><td>Tareas, orden de trabajo y criterios para dar la fase por terminada</td></tr>
+<tr><td>01 Registro de preguntas</td><td>Las diez preguntas de la ficha con su respuesta provisional, más preguntas pendientes y supuestos</td></tr>
+<tr><td>02 Fuentes y método</td><td>Cómo se observaron las aulas y qué fuentes se consultaron</td></tr>
+<tr><td>03 Inventario</td><td>Ficha detallada de cada una de las doce aulas</td></tr>
+<tr><td>04 Actores y perfiles</td><td>Quién está implicado y qué necesita cada perfil</td></tr>
+<tr><td>05 Situación actual</td><td>Necesidades, problemas y guion de entrevista para la empresa</td></tr>
+<tr><td>06 Riesgos</td><td>Registro inicial de riesgos</td></tr>
+<tr><td>07 Alcance preliminar</td><td>Propuesta de alcance (hito de la fase)</td></tr>
+<tr><td>08 Diagnóstico inicial</td><td>Entregable 01 de la ficha</td></tr>
+<tr><td>Registro de seguimiento</td><td>Revisiones y acuerdos, con el formato de la ficha</td></tr>
+<tr><td>Registro de cambios e histórico</td><td>Qué ha cambiado en cada versión y las versiones anteriores</td></tr>
+</table>
+
+<h3>Pequeño glosario</h3>
+<table>
+<tr><td style="width:30%"><strong>Moodle</strong></td><td>Programa gratuito muy usado para crear aulas virtuales.</td></tr>
+<tr><td><strong>Aula virtual / campus</strong></td><td>Cada una de las plataformas Moodle donde se imparten los cursos.</td></tr>
+<tr><td><strong>Catálogo</strong></td><td>Lista organizada de las aulas con su descripción y enlace.</td></tr>
+<tr><td><strong>Acceso único (SSO)</strong></td><td>Entrar una sola vez y poder pasar a todas las aulas sin volver a identificarse.</td></tr>
+<tr><td><strong>MVP o primera versión</strong></td><td>La versión más pequeña que permite comprobar si la idea funciona.</td></tr>
+<tr><td><strong>MoSCoW</strong></td><td>Método para ordenar prioridades: imprescindible, conveniente, más adelante y fuera.</td></tr>
+<tr><td><strong>WCAG 2.2</strong></td><td>Pautas internacionales de accesibilidad web.</td></tr>
+<tr><td><strong>Repositorio</strong></td><td>Carpeta en internet (GitHub) donde se guarda el proyecto con todas sus versiones.</td></tr>
+</table>
+</body></html>

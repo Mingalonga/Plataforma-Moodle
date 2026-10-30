@@ -10,6 +10,7 @@ Formato tomado de la sección «Validación y seguimiento — Registro de seguim
 | 2026-10-30 | Observación manual del entorno 7 | El alumno aporta una captura del entorno 7 (E-01). Se completa el inventario (los doce entornos observados). Paquete v0.4. Sigue pendiente la web corporativa (P-V07). | Revisión del alumno; después, presentación al tutor (T10) |
 | 2026-10-30 | Revisión manual de la web corporativa | El alumno aporta cuatro capturas (E-02 a E-05): la web no enlaza a ningún campus y organiza la oferta en 9 áreas temáticas. PR-01 pasa a observado; nuevo PR-08. Paquete v0.5. Todas las observaciones públicas previstas están hechas. | Revisión del alumno; después, presentación al tutor (T10) |
 | 2026-10-30 | Revisión del paquete v0.5 por el alumno | El alumno da su conformidad al paquete completo. Se fusiona la PR #1 en `main`. La Fase 1 queda preparada para la revisión del tutor; no se inicia la Fase 2 hasta su visto bueno. | Presentación al tutor (fecha por acordar) |
+| 2026-10-30 | Preparación de la entrega a la tutora | El alumno indica que la tutora es pedagoga y pide un PDF resumido en lenguaje sencillo. Se crea el resumen v1 (7 páginas) en `entregas/`. Los documentos técnicos siguen siendo la referencia completa. | Revisión del PDF por el alumno y envío a la tutora |
 
 ## Gestión de tareas
 
