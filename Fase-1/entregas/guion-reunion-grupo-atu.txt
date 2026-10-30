@@ -1,0 +1,68 @@
+GUION DE PREGUNTAS PARA REUNIONES CON GRUPO ATU
+Proyecto: Plataforma centralizada para los entornos Moodle (Fase 1 -> Fase 2)
+Alumno: Carlos García Rallo · Versión 1 · 30/10/2026
+
+Consejos rápidos
+- Duración: 20-30 minutos por persona. Empieza explicando el objetivo en una frase:
+  "Estoy estudiando si tendría sentido un punto de acceso común a las aulas virtuales."
+- Pide cifras aproximadas, nunca datos de alumnos concretos (nombres, correos, etc.).
+- Apunta quién responde (cargo, no hace falta nombre) y la fecha.
+- Si no saben algo, pregunta quién lo sabría.
+
+
+1. RESPONSABLE DEL CAU / TUTORÍA VIRTUAL (900 922 254, tutoriavirtual@grupoatu.com)
+----------------------------------------------------------------------------------
+1.1 ¿Cuáles son las 5 consultas que más recibís?
+1.2 Aproximadamente, ¿cuántas consultas al mes son del tipo "no sé cuál es mi aula"
+    o "no encuentro la dirección para entrar"?
+1.3 ¿Y del tipo "no puedo entrar / he olvidado la contraseña"?
+1.4 Cuando alguien no sabe cuál es su aula, ¿cómo lo averiguáis vosotros?
+    ¿Tenéis una lista de aulas? ¿Quién la mantiene?
+1.5 ¿Hay alumnos que estudien en más de un aula a la vez? ¿Es frecuente?
+1.6 ¿Cómo recibe el alumno la dirección de su aula? (correo de bienvenida, empresa, web...)
+1.7 Si existiera una página con todas las aulas y un buscador, ¿os ayudaría? ¿Qué echaríais en falta?
+
+
+2. RESPONSABLE TÉCNICO DE LAS AULAS MOODLE
+-----------------------------------------
+2.1 ¿Las doce aulas son instalaciones separadas o comparten servidor?
+2.2 ¿Qué versión de Moodle tienen y cuándo se actualizaron por última vez?
+    (las páginas sugieren la 4.1; preguntar con tacto, solo para confirmar)
+2.3 ¿Cómo entran los usuarios? ¿Cuentas creadas a mano, importadas, otro sistema?
+2.4 ¿Existe algún directorio común de usuarios (por ejemplo, Microsoft 365)?
+2.5 ¿Con qué frecuencia se crea, cambia de dirección o se cierra un aula?
+2.6 ¿El aula 4 (Index Business Intelligent, en inglés y con registro abierto) está en uso?
+2.7 ¿Las páginas mezclan inglés y español a propósito? ¿El "no indexar en Google" es intencionado?
+2.8 ¿Hay algún entorno de pruebas? ¿Hay más aulas aparte de estas doce?
+
+
+3. DIRECCIÓN / PERSONA QUE IMPULSA EL PROYECTO
+---------------------------------------------
+3.1 ¿Por qué surge ahora la idea de una plataforma común? ¿Ha pasado algo concreto?
+3.2 ¿Qué esperaríais de ella: solo un sitio con enlaces y buscador, o algo más
+    (entrar una sola vez en todas, ver los cursos...)?
+3.3 ¿Qué relación tiene cada marca con Grupo ATU (Takin, MoveOut, Estudi@,
+    Tierra Más Ecológica, Centre Learning, Almería Formación...)? ¿Pueden aparecer juntas?
+3.4 ¿Debería ser pública o solo para alumnos identificados?
+3.5 ¿Bajo qué imagen se presentaría: Grupo ATU o algo neutro?
+3.6 ¿Quién podría encargarse de mantener la lista de aulas actualizada?
+3.7 ¿Hay presupuesto orientativo o algún plazo que condicione el proyecto?
+3.8 ¿Qué tendría que pasar dentro de un año para considerarlo un éxito?
+
+
+4. ALUMNADO O PROFESORADO (si se puede hablar con 3-5 personas)
+--------------------------------------------------------------
+4.1 ¿Cómo llegaste la última vez a tu aula? (marcador, correo, Google, te lo dijeron...)
+4.2 ¿Alguna vez has dudado de si estabas en el aula correcta?
+4.3 ¿Tienes cursos en más de un aula? ¿Con la misma contraseña?
+4.4 ¿Desde dónde entras normalmente: ordenador o móvil?
+4.5 Pequeña prueba: "Busca el aula de [marca] empezando desde Google".
+    Anota cuánto tarda, si lo consigue y dónde duda.
+
+
+5. AL TERMINAR CADA REUNIÓN, ANOTAR
+-----------------------------------
+- Fecha, cargo de la persona y respuestas principales.
+- Datos numéricos obtenidos (aunque sean aproximados).
+- Qué preguntas quedan sin respuesta y a quién dirigirlas.
+- Pásame las notas y las incorporo al registro de preguntas y al seguimiento.
