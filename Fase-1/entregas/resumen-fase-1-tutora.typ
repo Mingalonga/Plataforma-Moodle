@@ -4,7 +4,7 @@
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v4"
+#let version = "v5"
 
 #set document(title: "Resumen de la Fase 1 — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -165,7 +165,7 @@ La solución técnica se decidirá en la Fase 3 comparando alternativas, incluid
 #nota[][
 + ¿Se valida el problema y el objetivo, con la limitación indicada sobre la falta de datos?
 + ¿Se valida la primera versión propuesta y dejar el acceso único como evolución futura?
-+ ¿Es posible obtener datos de la organización o un contacto para resolver las preguntas pendientes?
++ ¿Es posible obtener la información de la organización indicada en el apartado 10?
 ]
 
 *Preguntas prioritarias para la organización:* responsables de cada aula y de la decisión; relación entre Grupo ATU y las marcas; cómo acceden hoy los usuarios y si hay incidencias por no encontrar el aula; usuarios con cuenta en varias aulas; quién mantendría el catálogo; finalidad del aula 4.
@@ -188,7 +188,20 @@ La documentación completa, con versiones, cambios y evidencias, está en el rep
   [Seguimiento, cambios, histórico y evidencias], [Revisiones, versiones anteriores y capturas],
 )
 
-== Glosario
+= 10. Antes de iniciar la Fase 2
+
+Si se valida la Fase 1, la Fase 2 (requisitos) ganaría solidez con la siguiente información de la organización. No es imprescindible: sin ella se continuará trabajando con supuestos, indicados como tales.
+
+#table(columns: (0.55fr, 1.45fr),
+  [Qué se necesita], [Detalle],
+  [Contacto con la organización], [Una conversación breve (20–30 minutos) con alguna de estas personas: responsable del servicio de atención al usuario (CAU), responsable técnico de las aulas Moodle y persona que impulsa o aprobaría el proyecto.],
+  [Datos del servicio de atención], [Cifras aproximadas y sin datos personales: consultas mensuales del tipo «no sé cuál es mi aula» o «no encuentro la dirección», consultas más frecuentes y existencia de alumnado con cursos en varias aulas.],
+  [Finalidad], [Confirmar y medir el problema principal, que hoy se basa en observación externa, y fijar objetivos verificables para los requisitos.],
+)
+
+Las preguntas para cada entrevista ya están preparadas (documento 05 del repositorio).
+
+= Glosario
 
 #table(columns: (0.55fr, 1.45fr),
   [Término], [Significado],

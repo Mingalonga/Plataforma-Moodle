@@ -30,7 +30,7 @@
 | — | [Registro de cambios](CHANGELOG.md) | — | Vivo | 2026-10-30 |
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-10-30 |
 | — | [Evidencias](evidencias/) (capturas y registros de observación) | — | Vivo | 2026-10-30 |
-| — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-1_Plataforma-Moodle_v4.pdf). Fuente editable en Typst: [`entregas/resumen-fase-1-tutora.typ`](entregas/resumen-fase-1-tutora.typ) | v4 (basado en el paquete 0.7) | Revisión del alumno | 2026-10-30 |
+| — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-1_Plataforma-Moodle_v5.pdf). Fuente editable en Typst: [`entregas/resumen-fase-1-tutora.typ`](entregas/resumen-fase-1-tutora.typ) | v5 (basado en el paquete 0.7) | Revisión del alumno | 2026-10-30 |
 
 Estados posibles: Pendiente · En curso · Revisión del propietario · Revisión del tutor · Aprobado.
 

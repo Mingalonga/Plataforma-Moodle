@@ -4,6 +4,11 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.7.2] — 2026-10-30
+
+### Cambiado
+- Resumen para la tutora v4 → v5: nuevo apartado 10, «Antes de iniciar la Fase 2», con la información de la organización que reforzaría los requisitos (contacto y datos agregados del servicio de atención). El glosario pasa a ser el último apartado. Sigue en 4 páginas más portada. El v4 se archiva.
+
 ## [0.7.1] — 2026-10-30
 
 ### Cambiado
