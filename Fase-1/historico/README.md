@@ -27,6 +27,7 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [01-registro-preguntas-supuestos_v0.5.md](01-registro-preguntas-supuestos_v0.5.md) | 0.5 | 2026-10-30 | Sustituida por la v0.6: «Index» deja de tratarse como marca |
 | [04-mapa-actores-perfiles_v0.1.md](04-mapa-actores-perfiles_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: «Index» retirado de la lista de marcas |
 | [Resumen_Fase-1_Plataforma-Moodle_v2.pdf](Resumen_Fase-1_Plataforma-Moodle_v2.pdf) y [resumen-fase-1-tutora_v2.html](resumen-fase-1-tutora_v2.html) | Resumen v2 | 2026-10-30 | Sustituido por el v3: marcas verificadas con capturas |
+| [Resumen_Fase-1_Plataforma-Moodle_v3.pdf](Resumen_Fase-1_Plataforma-Moodle_v3.pdf) y [resumen-fase-1-tutora_v3.html](resumen-fase-1-tutora_v3.html) | Resumen v3 | 2026-10-30 | Sustituido por el v4: mismo contenido, maquetado con Typst (más sobrio, 4 páginas) |
 | [03-inventario-campus_v0.3.md](03-inventario-campus_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: logotipos verificados y H-08 |
 | [01-registro-preguntas-supuestos_v0.6.md](01-registro-preguntas-supuestos_v0.6.md) | 0.6 | 2026-10-30 | Sustituida por la v0.7: P-V01 en parte y P-V11 |
 | [04-mapa-actores-perfiles_v0.2.md](04-mapa-actores-perfiles_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: marcas verificadas |

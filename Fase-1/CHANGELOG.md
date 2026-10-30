@@ -4,6 +4,14 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.7.1] — 2026-10-30
+
+### Cambiado
+- Resumen para la tutora v3 → v4: mismo contenido, maquetado con Typst (herramienta de composición tipográfica) para un resultado más sobrio y legible, sin espacios ni saltos de página irregulares. Pasa de 6 a 4 páginas más portada. La fuente editable es ahora `entregas/resumen-fase-1-tutora.typ`; el v3 (PDF y HTML) se archiva.
+
+### Cómo regenerar el PDF
+`pip install typst` y después `python3 -c "import typst; typst.compile('resumen-fase-1-tutora.typ', output='Resumen_Fase-1_Plataforma-Moodle_v4.pdf')"` desde `Fase-1/entregas/`, o `typst compile resumen-fase-1-tutora.typ` si está instalada la herramienta de línea de comandos. Usa la fuente Carlito.
+
 ## [0.7] — 2026-10-30
 
 **Estado:** borrador completo de la Fase 1 y resumen v3 para la tutora.
