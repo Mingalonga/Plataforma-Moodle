@@ -4,6 +4,19 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.7] — 2026-10-30
+
+**Estado:** borrador completo de la Fase 1 y resumen v3 para la tutora.
+
+### Añadido
+- `evidencias/E-06` a `E-10`: logotipos de los entornos 8, 10, 11, 12 y 4, capturados por el alumno. Se recortaron las pestañas y la barra del navegador para no guardar información privada.
+- Hallazgo H-08 (páginas de acceso con inglés y español mezclados) y pregunta P-V11.
+
+### Cambiado
+- `03-inventario-campus.md` v0.3 → v0.4: marcas verificadas. Correcciones: el entorno 12 es «Estudi@ Formación Profesional» (antes «Studia»); el 10 se presenta como sociedad cooperativa; en el 4, «Index Business Intelligent» aparece en el logotipo como submarca de ATU.
+- `01-registro-preguntas-supuestos.md` v0.6 → v0.7, `02-fuentes-y-metodologia.md` v0.4 → v0.5 y `04-mapa-actores-perfiles.md` v0.2 → v0.3.
+- Resumen para la tutora v2 → v3 con las marcas verificadas; v2 archivado.
+
 ## [0.6.1] — 2026-10-30
 
 **Estado:** resumen para la tutora revisado por el alumno; corrección en el inventario.

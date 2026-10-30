@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha de observación | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -23,15 +23,15 @@ Estados: **V** = verificado (leído literalmente en la página) · **I** = indic
 | 1 | https://aulavirtualatu.com/ | Entrar al sitio \| Campus Virtual - ATU | Grupo ATU (logo «Eguru») | Sí (200) | Español | eguru | 4.1.19 | V con indicios |
 | 2 | https://aulavirtual.centrelearning.net | AULA VIRTUAL CENTRE LEARNING | Centre Learning | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 3 | https://aulavirtual.atuasesoria.com | AULA VIRTUAL ATU ASESORÍA DE FORMACIÓN | ATU (logo «ATU-DOS») | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
-| 4 | https://aulavirtualindex.grupoatu.com/ | AULA VIRTUAL ATU | Sin marca visible en el texto; «Index» solo en la dirección y en el nombre del archivo del logotipo (I) | Sí (200) | **Inglés** | enlight | 4.1.2+ | V con indicios · anomalías |
+| 4 | https://aulavirtualindex.grupoatu.com/ | AULA VIRTUAL ATU | **ATU Index Business Intelligent** (logotipo, E-10) | Sí (200) | **Inglés** | enlight | 4.1.2+ | V con indicios · anomalías |
 | 5 | https://aulavirtual.takin.es/login/index.php | AULA VIRTUAL TAKIN | Takin | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 6 | https://aulavirtual.clubaventuraatu.com | AULA VIRTUAL CLUB AVENTURA ATU | Club Aventura | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 7 | https://aulavirtual.atutecnologiadigital.com | No visible en la captura | Grupo ATU Tecnología Digital | Sí (manual) | Español | Indicio: eguru, como el 1 | — | V parcial (captura) |
-| 8 | https://aulavirtualalmeria.grupoatu.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Almería Formación | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
+| 8 | https://aulavirtualalmeria.grupoatu.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Grupo Almería Formación (logotipo, E-06) | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
 | 9 | https://aulavirtual.atuseguridadysalud.com/login/index.php | AULA VIRTUAL ATU SEGURIDAD Y SALUD | ATU Seguridad y Salud | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
-| 10 | https://aulas.tierramasecologica.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Tierra más ecológica | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
-| 11 | https://aulavirtual.moveout.es/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | MoveOut | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
-| 12 | https://aulavirtual.estudia-fp.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Studia (logo «studia») | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
+| 10 | https://aulas.tierramasecologica.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Tierra Más Ecológica, Sociedad Cooperativa (logotipo, E-07) | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
+| 11 | https://aulavirtual.moveout.es/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | MoveOut (logotipo, E-08) | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
+| 12 | https://aulavirtual.estudia-fp.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | **Estudi@ Formación Profesional** (logotipo, E-09) | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
 
 En negrita, lo que llama la atención y se explica en la sección 3.
 
@@ -42,6 +42,8 @@ En negrita, lo que llama la atención y se explica en la sección 3.
 > - En los entornos 1 y 7 el alumno ha visto la página (o el texto lo indica) **[V]**.
 >
 > Confirmarlo es tan sencillo como abrir cada página y mirar el logotipo (P-V01).
+>
+> **Actualización v0.4:** el alumno capturó los logotipos de los entornos 4, 8, 10, 11 y 12 (E-06 a E-10). Las marcas quedan **verificadas**, con dos correcciones: el entorno 12 es «Estudi@ Formación Profesional» (no «Studia») y el entorno 10 se presenta como «Sociedad Cooperativa». En el entorno 4, el logotipo muestra «atu INDEX BUSINESS INTELLIGENT»: «Index Business Intelligent» es una línea o submarca de ATU, como suponía el nombre del archivo.
 
 ---
 
@@ -68,7 +70,7 @@ En los entornos 2, 3, 5, 6, 8, 9, 10, 11 y 12 (nueve de los once observados) se 
 
 ### H-01. Cinco entornos comparten el título «AULA VIRTUAL CENTRE LEARNING» [V]
 
-Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo texto alternativo del logotipo, aunque cada uno usa un archivo de logotipo distinto (por su nombre: Centre Learning, Almería Formación, Tierra más ecológica, MoveOut, Studia), que coincide con su dirección web. Los entornos 2 y 8 usan además la misma imagen de fondo.
+Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo texto alternativo del logotipo, aunque cada uno muestra un logotipo distinto: Centre Learning, Grupo Almería Formación, Tierra Más Ecológica, MoveOut y Estudi@ (verificado con las capturas E-06 a E-09). Los entornos 2 y 8 usan además la misma imagen de fondo.
 
 - **Por qué importa:** el título es lo que aparece en la pestaña del navegador, en marcadores, en el historial y lo que lee un lector de pantalla. Un usuario que tenga abiertos o guardados dos de estos campus no puede distinguirlos por el título. Es una **evidencia observada** a favor del problema que plantea la ficha (localizar el espacio correcto), aunque no prueba que los usuarios se confundan en la práctica.
 - **Indicio [I]:** parece que los entornos se crearon a partir de una misma plantilla (posiblemente una copia del entorno 2) y solo se cambió el logotipo.
@@ -80,7 +82,7 @@ Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo tex
 - Copyright «© 2017 - Your Company Name ®. All rights reserved.», que es el texto por defecto del tema.
 - Es el único con **registro propio visible** («Create new account», que permite a cualquiera crearse una cuenta).
 - No muestra canal de ayuda ni responsable del tratamiento.
-- **Indicio [I]:** podría ser un entorno menos mantenido, en pruebas o con otra finalidad (la dirección contiene «index» y el archivo del logotipo se llama «Index-Business-Inteligent.png»; no se ha visto la imagen, por lo que no consta que «Index» sea el nombre de una marca).
+- **Indicio [I]:** podría ser un entorno menos mantenido, en pruebas o con otra finalidad (el logotipo, visto en la captura E-10, es «atu INDEX BUSINESS INTELLIGENT», y la imagen de fondo es un edificio con el lema «atu Digitalización y Formación — Más de 40 años de formación a tu medida»).
 - **Pregunta:** P-V03.
 
 ### H-03. El entorno 1 es distinto al resto [V]
@@ -113,6 +115,13 @@ La herramienta de lectura web rechazó la URL porque el archivo `robots.txt` del
 - **Indicio [I]:** el diseño y el horario del CAU coinciden con el entorno 1 (tema «eguru»), no con los «enlight». La captura no muestra el pie de página, así que «Desarrollado por Moodle» y la versión no se han podido ver; que sea Moodle es un indicio fuerte (formulario y ruta de recuperación de contraseña típicos), no un hecho.
 - **Diferencial [V]:** es el único que incluye en la página de acceso una llamada comercial para pedir información de cursos.
 - **Accesibilidad [I]:** el botón «¿Quieres hacer algún curso?» muestra texto azul sobre fondo gris oscuro; a simple vista el contraste parece insuficiente. No se ha medido; se anota para la revisión de accesibilidad de la Fase 7 como referencia de lo que la plataforma debe evitar.
+
+### H-08. El idioma de la interfaz no es coherente [V]
+
+En la lectura automatizada, las páginas aparecían en español (salvo la del entorno 4). En el navegador del alumno, los entornos 4, 8, 10, 11 y 12 muestran el selector en «English (en)» y mezclan etiquetas en inglés («Username», «Password», «Lost password?», «Log in», «Cookies notice») con textos en español («Acceda con sus credenciales por favor», «Contraseña») (capturas E-06 a E-10).
+
+- **Causa no determinada [P].** Puede depender del idioma del navegador o de la configuración de cada aula; no se ha investigado.
+- **Por qué importa:** una misma persona puede ver la página de acceso en dos idiomas a la vez, lo que dificulta la comprensión y es un punto a revisar en accesibilidad.
 
 ### H-06. Ningún entorno muestra acceso con proveedores externos [V]
 
@@ -185,7 +194,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL ATU: Log in to the site» | V |
-| Marca aparente | Título «AULA VIRTUAL ATU» (V). «Index» procede solo del subdominio y del nombre del archivo del logotipo «Index-Business-Inteligent.png»; la imagen no se ha visto, así que no consta como nombre de marca | V / I |
+| Marca aparente | Título «AULA VIRTUAL ATU»; logotipo «atu INDEX BUSINESS INTELLIGENT» (captura E-10) | V |
 | Página de acceso | «Username», «Password», «Log in», «Create new account» (registro propio) | V |
 | Idiomas | English (por defecto), Español - Internacional | V |
 | Ayuda y contacto | **Ninguno visible** | V |
@@ -243,7 +252,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL CENTRE LEARNING» | V |
-| Marca aparente | Almería Formación (logo) | V |
+| Marca aparente | Grupo Almería Formación, «Consultoría · Gestión · Formación · Empleo» (logotipo, E-06) | V |
 | Versión | Indicio de 4.1.2+ | I |
 | Diferencial | Título de otra marca (H-01); mismo fondo que el entorno 2. El nombre del subdominio sugiere organización por ubicación (S-07) | V / I |
 | Incidencias | Ninguna visible | V |
@@ -265,7 +274,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL CENTRE LEARNING» | V |
-| Marca aparente | Tierra más ecológica (logo) | V |
+| Marca aparente | Tierra Más Ecológica, Sociedad Cooperativa (logotipo, E-07) | V |
 | Versión | Indicio de 4.1.2+ | I |
 | Diferencial | Único subdominio «aulas.» en lugar de «aulavirtual.»; título de otra marca (H-01) | V |
 | Incidencias | Ninguna visible | V |
@@ -276,7 +285,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL CENTRE LEARNING» | V |
-| Marca aparente | MoveOut (logo) | V |
+| Marca aparente | MoveOut, con un avión en el logotipo (E-08) | V |
 | Versión | Indicio de 4.1.2+ | I |
 | Diferencial | Título de otra marca (H-01) | V |
 | Incidencias | Ninguna visible | V |
@@ -287,7 +296,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL CENTRE LEARNING» | V |
-| Marca aparente | Studia (logo `logo-studia`), con dominio «estudia-fp» | V |
+| Marca aparente | Estudi@ Formación Profesional (logotipo, captura E-09) | V |
 | Versión | Indicio de 4.1.2+ | I |
 | Diferencial | Título de otra marca (H-01). El dominio sugiere formación profesional | V / I |
 | Incidencias | Ninguna visible | V |
@@ -304,4 +313,5 @@ Queda pendiente de la organización (registro de preguntas): quién administra c
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Primera observación pasiva de los doce entornos: 11 observados, 1 bloqueado por `robots.txt`. [Archivada](historico/03-inventario-campus_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Entorno 7 completado con la observación manual del alumno (evidencia E-01). [Archivada](historico/03-inventario-campus_v0.2.md) |
-| 0.3 | 2026-10-30 | Claude (Analista) | Corrección a raíz de una pregunta del alumno: en el entorno 4, «Index» es una deducción a partir de la dirección y del nombre del archivo del logotipo, no un nombre de marca observado |
+| 0.3 | 2026-10-30 | Claude (Analista) | Corrección a raíz de una pregunta del alumno: en el entorno 4, «Index» es una deducción a partir de la dirección y del nombre del archivo del logotipo, no un nombre de marca observado. [Archivada](historico/03-inventario-campus_v0.3.md) |
+| 0.4 | 2026-10-30 | Claude (Analista) | Logotipos de los entornos 4, 8, 10, 11 y 12 verificados con capturas del alumno (E-06 a E-10): «Estudi@» en lugar de «Studia», «Sociedad Cooperativa» en el 10 e «Index Business Intelligent» confirmado como submarca de ATU. Nuevo hallazgo H-08 (idioma mezclado) |
