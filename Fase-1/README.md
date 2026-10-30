@@ -10,22 +10,22 @@
 | Entregable asociado | 01 — Diagnóstico inicial (situación actual, inventario, perfiles, necesidades, problemas y alcance preliminar) |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
-| Versión del paquete | 0.2 (borrador) |
+| Versión del paquete | 0.3 (borrador completo, pendiente del tutor) |
 | Estado | En curso |
 
 ## Índice de documentos
 
 | N.º | Documento | Versión | Estado | Última actualización |
 |---|---|---|---|---|
-| 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.2 | Revisión del propietario | 2026-10-30 |
-| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.2 | Revisión del propietario | 2026-10-30 |
-| 02 | [Fuentes y metodología de observación](02-fuentes-y-metodologia.md) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.3 | Revisión del propietario | 2026-10-30 |
+| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.3 | Revisión del propietario | 2026-10-30 |
+| 02 | [Fuentes y metodología de observación](02-fuentes-y-metodologia.md) | 0.2 | Revisión del propietario | 2026-10-30 |
 | 03 | [Inventario de los doce entornos Moodle](03-inventario-campus.md) | 0.1 | Revisión del propietario (falta el entorno 7) | 2026-10-30 |
-| 04 | Mapa inicial de actores y perfiles | — | Pendiente | — |
-| 05 | Situación actual, necesidades y problemas | — | Pendiente | — |
-| 06 | Registro de riesgos inicial | — | Pendiente | — |
-| 07 | Alcance preliminar | — | Pendiente | — |
-| 08 | Diagnóstico inicial (entregable 01) | — | Pendiente | — |
+| 04 | [Mapa inicial de actores y perfiles](04-mapa-actores-perfiles.md) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 05 | [Situación actual, necesidades y problemas](05-situacion-actual.md) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 06 | [Registro de riesgos inicial](06-registro-riesgos.md) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 07 | [Alcance preliminar](07-alcance-preliminar.md) (hito de la fase) | 0.1 | Revisión del propietario | 2026-10-30 |
+| 08 | [**Diagnóstico inicial (entregable 01)**](08-diagnostico-inicial.md) | 0.1 | Revisión del propietario | 2026-10-30 |
 | — | [Registro de seguimiento](registro-seguimiento.md) | — | Vivo | 2026-10-30 |
 | — | [Registro de cambios](CHANGELOG.md) | — | Vivo | 2026-10-30 |
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-10-30 |

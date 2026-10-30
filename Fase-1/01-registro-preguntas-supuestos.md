@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.2 |
+| Versión | 0.3 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -125,6 +125,8 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-V04 | ¿El entorno 1 (aulavirtualatu.com) es el campus principal? ¿Por qué tiene otro tema e idiomas distintos? | Organización | Media | Abierta |
 | P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | Abierta |
 | P-V06 | ¿Qué relación tienen con Grupo ATU las marcas que no llevan su nombre (Centre Learning, Takin, Tierra más ecológica, MoveOut, Studia, Almería Formación, Index)? ¿Son clientes, filiales o marcas propias? | Organización | Alta | Abierta (amplía P-O01) |
+| P-V07 | ¿La web corporativa (www.grupoatu.com) enlaza a los campus? Se genera con JavaScript y no se pudo leer de forma automatizada. Su descripción menciona «9 áreas formativas»: ¿corresponden a las marcas de los campus? | Alumno (revisión en navegador) / Organización | Alta | Abierta |
+| P-V08 | ¿La etiqueta `noindex` de las páginas de acceso es intencionada (que los campus no aparezcan en buscadores)? | Administradores | Media | Abierta |
 
 ### 3.2 Organización
 
@@ -223,4 +225,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: diez preguntas guía con respuesta provisional, 42 preguntas adicionales, 7 supuestos y 4 dependencias. [Archivada](historico/01-registro-preguntas-supuestos_v0.1.md) |
-| 0.2 | 2026-10-30 | Claude (Analista) | Respuestas del alumno (P-A01, P-A04, P-A05). Resultados de la observación de los campus: PG-02 actualizada, 6 preguntas nuevas (P-V01 a P-V06), supuestos S-01, S-03, S-05 y S-06 actualizados, S-08 y S-09 nuevos |
+| 0.2 | 2026-10-30 | Claude (Analista) | Respuestas del alumno (P-A01, P-A04, P-A05). Resultados de la observación de los campus: PG-02 actualizada, 8 preguntas nuevas (P-V01 a P-V08), supuestos S-01, S-03, S-05 y S-06 actualizados, S-08 y S-09 nuevos. [Archivada](historico/01-registro-preguntas-supuestos_v0.2.md) (sin P-V07 ni P-V08) |
+| 0.3 | 2026-10-30 | Claude (Analista) | P-V07 y P-V08 añadidas tras consultar la web corporativa |

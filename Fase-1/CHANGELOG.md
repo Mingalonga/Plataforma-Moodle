@@ -4,6 +4,26 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.3] — 2026-10-30
+
+**Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor.
+
+### Añadido
+- `04-mapa-actores-perfiles.md` v0.1: 12 actores, matriz de influencia e interés y 7 perfiles hipotéticos.
+- `05-situacion-actual.md` v0.1: situación actual, 10 necesidades (N-01 a N-10), 7 problemas (PR-01 a PR-07) y guion de entrevista.
+- `06-registro-riesgos.md` v0.1: 6 riesgos del proyecto, 9 de la futura plataforma y 2 observaciones de seguridad sobre los campus.
+- `07-alcance-preliminar.md` v0.1: problema, objetivo, alcance MoSCoW (AL-01 a AL-14), alternativas para la Fase 3 y preguntas al tutor.
+- `08-diagnostico-inicial.md` v0.1: entregable 01, con respuesta a las diez preguntas guía y comprobación de criterios de salida.
+- Versiones archivadas: plan v0.2, registro v0.2 y metodología v0.1.
+
+### Cambiado
+- `00-plan-fase-1.md` v0.2 → v0.3: tareas T5 a T9 hechas.
+- `01-registro-preguntas-supuestos.md` v0.2 → v0.3: P-V07 (web corporativa) y P-V08 (`noindex`).
+- `02-fuentes-y-metodologia.md` v0.1 → v0.2: fuente F-16.
+
+### Incidencias
+- La web corporativa se genera con JavaScript y no se pudo leer completa; queda para revisión manual (P-V07).
+
 ## [0.2] — 2026-10-30
 
 **Estado:** borrador para revisión del alumno.
