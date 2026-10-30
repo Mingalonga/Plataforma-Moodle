@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.4 |
+| Versión | 0.5 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -76,6 +76,7 @@ Campos que se recogen de cada entorno, tal como pide el prompt inicial (sección
 | F-15 | *Releases*, Moodle Developer Resources — https://moodledev.io/general/releases | Moodle HQ | 2026-10-30 | Tabla «Moodle 4.1 (LTS)»: 2022112802 = Moodle 4.1.2 (13-03-2023); 2022112819 = Moodle 4.1.19 (09-06-2025). «Bug fixes for general core bugs in 4.1.x ended 11 December 2023» y «Bug fixes for security issues in 4.1.x ended 8 December 2025». En la fecha de consulta, las versiones con soporte listadas son 4.5 (LTS), 5.1, 5.2 y 5.3 (LTS). |
 | F-17 | Captura de pantalla de la página de acceso del entorno 7, tomada por el alumno en su navegador sin iniciar sesión — [E-01](evidencias/E-01_campus07_pagina-acceso_2026-10-30.png) | Alumno | 2026-10-30 | Ficha del entorno 7 en el inventario |
 | F-16 | Web corporativa de Grupo ATU — https://www.grupoatu.com/ | Grupo ATU | 2026-10-30 | Lectura automatizada: solo la cabecera (página generada con JavaScript). Además, un navegador desde el entorno de trabajo fue bloqueado por la política de red |
+| F-19 | Capturas de los logotipos de los entornos 4, 8, 10, 11 y 12 tomadas por el alumno — E-06 a E-10 en [`evidencias/`](evidencias/). Se recortaron las pestañas y la barra del navegador para no guardar información privada del alumno | Alumno | 2026-10-30 | Marcas verificadas y hallazgo H-08 |
 | F-18 | Capturas de la web corporativa tomadas por el alumno en su navegador — [E-02](evidencias/E-02_web-corporativa_area01_2026-10-30.png), [E-03](evidencias/E-03_web-corporativa_formulario-y-pie_2026-10-30.png), [E-04](evidencias/E-04_web-corporativa_menu-areas_2026-10-30.png), [E-05](evidencias/E-05_web-corporativa_menu-trabajadores_2026-10-30.png) | Alumno | 2026-10-30 | Ausencia de enlaces a campus en menú y pie; lista de las 9 áreas formativas (PR-01, PR-08, P-V07) |
 
 ## 7. Control de versiones
@@ -85,4 +86,5 @@ Campos que se recogen de cada entorno, tal como pide el prompt inicial (sección
 | 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: autorización, método, herramientas, criterio de clasificación, esquema de ficha y fuentes. [Archivada](historico/02-fuentes-y-metodologia_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista) | Fuente F-16 (web corporativa) |
 | 0.3 | 2026-10-30 | Claude (Analista) | Fuente F-17 y herramienta 3 (observación manual del entorno 7). [Archivada](historico/02-fuentes-y-metodologia_v0.3.md) |
-| 0.4 | 2026-10-30 | Claude (Analista) | Fuente F-18 (capturas de la web corporativa) |
+| 0.4 | 2026-10-30 | Claude (Analista) | Fuente F-18 (capturas de la web corporativa). [Archivada](historico/02-fuentes-y-metodologia_v0.4.md) |
+| 0.5 | 2026-10-30 | Claude (Analista) | Fuente F-19 (logotipos de cinco entornos) |

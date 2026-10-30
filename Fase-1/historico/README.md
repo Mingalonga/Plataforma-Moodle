@@ -22,3 +22,12 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [05-situacion-actual_v0.1.md](05-situacion-actual_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: PR-01 observado, PR-08 nuevo |
 | [07-alcance-preliminar_v0.1.md](07-alcance-preliminar_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: web corporativa y áreas formativas |
 | [08-diagnostico-inicial_v0.2.md](08-diagnostico-inicial_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: web corporativa revisada |
+| [Resumen_Fase-1_Plataforma-Moodle_v1.pdf](Resumen_Fase-1_Plataforma-Moodle_v1.pdf) y [resumen-fase-1-tutora_v1.html](resumen-fase-1-tutora_v1.html) | Resumen v1 | 2026-10-30 | Sustituido por el v2: más compacto, sin explicaciones dirigidas al alumno, glosario con «marca» y aclaración sobre el aula 4 |
+| [03-inventario-campus_v0.2.md](03-inventario-campus_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: origen de la «marca aparente» y corrección sobre «Index» |
+| [01-registro-preguntas-supuestos_v0.5.md](01-registro-preguntas-supuestos_v0.5.md) | 0.5 | 2026-10-30 | Sustituida por la v0.6: «Index» deja de tratarse como marca |
+| [04-mapa-actores-perfiles_v0.1.md](04-mapa-actores-perfiles_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: «Index» retirado de la lista de marcas |
+| [Resumen_Fase-1_Plataforma-Moodle_v2.pdf](Resumen_Fase-1_Plataforma-Moodle_v2.pdf) y [resumen-fase-1-tutora_v2.html](resumen-fase-1-tutora_v2.html) | Resumen v2 | 2026-10-30 | Sustituido por el v3: marcas verificadas con capturas |
+| [03-inventario-campus_v0.3.md](03-inventario-campus_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: logotipos verificados y H-08 |
+| [01-registro-preguntas-supuestos_v0.6.md](01-registro-preguntas-supuestos_v0.6.md) | 0.6 | 2026-10-30 | Sustituida por la v0.7: P-V01 en parte y P-V11 |
+| [04-mapa-actores-perfiles_v0.2.md](04-mapa-actores-perfiles_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: marcas verificadas |
+| [02-fuentes-y-metodologia_v0.4.md](02-fuentes-y-metodologia_v0.4.md) | 0.4 | 2026-10-30 | Sustituida por la v0.5: fuente F-19 |
