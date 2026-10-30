@@ -52,7 +52,7 @@
   #v(5.5cm)
   #text(9.5pt, fill: gris, tracking: 0.5pt)[FICHA DE PROYECTO 01 · PROYECTO DE PRÁCTICAS]
   #v(0.4cm)
-  #text(24pt, weight: "bold", fill: azul)[Plataforma centralizada para \ los entornos Moodle de Grupo ATU]
+  #text(24pt, weight: "bold", fill: azul)[Plataforma centralizada para los entornos \ Moodle pertenecientes a Grupo ATU]
   #v(0.5cm)
   #text(13pt, fill: gris)[Fase 1 — Descubrimiento \ Resumen para la revisión del hito «Alcance preliminar validado»]
   #v(1fr)
@@ -63,7 +63,7 @@
     text(fill: gris)[Alumno], [Carlos García Rallo],
     text(fill: gris)[Tutora], [],
     text(fill: gris)[Fecha], [30 de octubre de 2026],
-    text(fill: gris)[Versión], [Resumen #version (documentación de la fase en versión 0.7)],
+    text(fill: gris)[Versión], [Resumen #version (documentación de la fase en versión 0.8)],
     text(fill: gris)[Estado], [Pendiente de revisión],
   )
   #v(1.5cm)
@@ -75,7 +75,7 @@
 Grupo ATU dispone de al menos doce aulas virtuales Moodle, cada una con su propia dirección web y su propio acceso. El proyecto estudia la viabilidad de un punto de acceso común desde el que cada usuario localice su aula y llegue a ella con seguridad.
 
 #nota[Conclusiones de la fase][
-- Las doce aulas comparten servicio de atención al usuario y responsable de datos, lo que indica un mismo operador.
+- Las doce aulas pertenecen a Grupo ATU y comparten servicio de atención al usuario y responsable de datos.
 - No existe ningún punto que las reúna: ni las aulas ni la web corporativa enlazan a las demás, y no aparecen en buscadores.
 - Cinco aulas de marcas distintas se presentan con el mismo nombre, lo que facilita la confusión.
 - Falta un dato clave: cuántos usuarios tienen realmente dificultades para encontrar su aula.

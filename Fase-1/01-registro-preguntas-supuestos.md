@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.7 |
+| Versión | 0.8 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -28,6 +28,7 @@ Antes de las preguntas, conviene separar lo poco que es seguro hoy:
 - **[D]** Límites: sin credenciales reales ni datos personales sin autorización, sin modificar Moodle en producción, sin pruebas intrusivas, sin asumir configuraciones iguales en todos los entornos y sin presentar como real una integración simulada (Ficha 01, página 5).
 - **[D]** No se pueden iniciar actividades que requieran credenciales, acceso a sistemas, datos reales o intervención sobre servicios existentes sin autorización expresa del tutor (Ficha 01, página 9).
 - **[D]** El propietario ha indicado que no se avanza más allá de la Fase 1 hasta recibir el visto bueno.
+- **[D]** El alumno confirma que las doce aulas son de Grupo ATU (2026-10-30).
 - **[D]** El alumno es Carlos García Rallo; el campo de tutor/a queda en blanco por ahora (2026-10-30).
 - **[D]** De momento se trabaja solo con información pública, y el alumno autoriza la observación pasiva de los doce entornos (2026-10-30).
 - **[O]** Once de los doce entornos son Moodle y se presentan con la marca, el soporte y el responsable del tratamiento de Grupo ATU / Academia Técnica Universitaria, S.L. (observación del 2026-10-30, ver [inventario](03-inventario-campus.md)).
@@ -135,7 +136,7 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
-| P-O01 | ¿Qué relación hay entre las entidades o marcas de los doce campus? ¿Son un mismo grupo, empresas asociadas o clientes? | Organización | Alta | Abierta |
+| P-O01 | ¿Qué relación hay entre las entidades o marcas de los doce campus? ¿Son un mismo grupo, empresas asociadas o clientes? | Organización | Alta | **Resuelta en parte** (2026-10-30): el alumno confirma que las doce aulas son de Grupo ATU **[D]**. Queda por saber la relación concreta de cada marca con el grupo (P-V06) |
 | P-O02 | ¿Quién es el responsable técnico y quién el responsable de negocio de cada campus? | Organización | Alta | Abierta |
 | P-O03 | ¿Quién impulsa el proyecto y quién tomará la decisión final de implantarlo? | Organización | Alta | Abierta |
 | P-O04 | Si la plataforma se implanta, ¿quién mantendría el catálogo? ¿Hay personal disponible para ello? | Organización | Media | Abierta |
@@ -204,7 +205,7 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 
 | ID | Supuesto | Base | Pregunta que lo confirma | Estado |
 |---|---|---|---|---|
-| S-01 | Los campus pertenecen o los opera un mismo grupo (Grupo ATU) | v0.1: siete dominios contienen «atu». v0.2: los once observados comparten soporte, bloque «Acerca de ATU» y responsable del tratamiento | P-O01, P-V06 | **Indicio fuerte** (v0.2) |
+| S-01 | Los campus pertenecen o los opera un mismo grupo (Grupo ATU) | v0.1: siete dominios contienen «atu». v0.2: los once observados comparten soporte, bloque «Acerca de ATU» y responsable del tratamiento. v0.8: confirmado por el alumno | P-O01 | **Confirmado [D]** (2026-10-30) |
 | S-02 | No se debe presuponer que todos los campus comparten versión, alojamiento, autenticación ni responsable | Ficha 01, página 5 (límites) | P-C01 a P-C03 | Se mantiene como regla |
 | S-03 | Todos los entornos son Moodle | v0.2: los once observados muestran «Desarrollado por Moodle» y la página de acceso estándar. v0.4: el entorno 7 muestra un formulario típico de Moodle, pero el pie no es visible | P-C01 | **Verificado en 11 de 12; indicio fuerte en el 7** |
 | S-04 | El problema principal es localizar y acceder al campus correcto, no gestionar contenidos | Redacción de la ficha | P-N01, P-U04 | Pendiente de confirmar |
@@ -233,4 +234,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | 0.4 | 2026-10-30 | Claude (Analista) | P-V05 resuelta con la captura del alumno; S-03 actualizado. [Archivada](historico/01-registro-preguntas-supuestos_v0.4.md) |
 | 0.5 | 2026-10-30 | Claude (Analista) | P-V07 resuelta en parte con las capturas de la web corporativa; nuevas P-V09 y P-V10. [Archivada](historico/01-registro-preguntas-supuestos_v0.5.md) |
 | 0.6 | 2026-10-30 | Claude (Analista) | «Index» deja de tratarse como marca (ver inventario v0.3). [Archivada](historico/01-registro-preguntas-supuestos_v0.6.md) |
-| 0.7 | 2026-10-30 | Claude (Analista) | Marcas verificadas con capturas (P-V01 en parte); nueva P-V11 sobre el idioma mezclado |
+| 0.7 | 2026-10-30 | Claude (Analista) | Marcas verificadas con capturas (P-V01 en parte); nueva P-V11 sobre el idioma mezclado. [Archivada](historico/01-registro-preguntas-supuestos_v0.7.md) |
+| 0.8 | 2026-10-30 | Claude (Analista) | El alumno confirma que las doce aulas son de Grupo ATU: S-01 confirmado, P-O01 resuelta en parte |

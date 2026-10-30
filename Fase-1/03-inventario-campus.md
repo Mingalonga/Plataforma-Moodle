@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.4 |
+| Versión | 0.5 |
 | Fecha de observación | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -62,7 +62,7 @@ En los entornos 2, 3, 5, 6, 8, 9, 10, 11 y 12 (nueve de los once observados) se 
 - Metaetiqueta `robots` con valor `noindex` (los buscadores no deben indexar la página).
 - Sin botones de acceso con Google, Microsoft u otros proveedores, sin acceso de invitados y sin registro propio visible.
 
-**Indicio [I]:** todos los entornos observados se presentan con la marca, el soporte y el responsable del tratamiento de Grupo ATU / Academia Técnica Universitaria, S.L., aunque varios lleven el logotipo de otra marca. Es un indicio fuerte de que existe un único operador o un único equipo que los mantiene, pero **no** permite saber si son instalaciones de Moodle independientes o compartidas, ni quién las administra técnicamente (P-O01, P-O02).
+**Confirmado por el alumno [D] (v0.5):** las doce aulas son de Grupo ATU. Antes era un indicio: todos los entornos observados se presentan con la marca, el soporte y el responsable del tratamiento de Grupo ATU / Academia Técnica Universitaria, S.L., aunque varios lleven el logotipo de otra marca. Es un indicio fuerte de que existe un único operador o un único equipo que los mantiene, pero **no** permite saber si son instalaciones de Moodle independientes o compartidas, ni quién las administra técnicamente (P-O01, P-O02).
 
 ---
 
@@ -314,4 +314,5 @@ Queda pendiente de la organización (registro de preguntas): quién administra c
 | 0.1 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Primera observación pasiva de los doce entornos: 11 observados, 1 bloqueado por `robots.txt`. [Archivada](historico/03-inventario-campus_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Entorno 7 completado con la observación manual del alumno (evidencia E-01). [Archivada](historico/03-inventario-campus_v0.2.md) |
 | 0.3 | 2026-10-30 | Claude (Analista) | Corrección a raíz de una pregunta del alumno: en el entorno 4, «Index» es una deducción a partir de la dirección y del nombre del archivo del logotipo, no un nombre de marca observado. [Archivada](historico/03-inventario-campus_v0.3.md) |
-| 0.4 | 2026-10-30 | Claude (Analista) | Logotipos de los entornos 4, 8, 10, 11 y 12 verificados con capturas del alumno (E-06 a E-10): «Estudi@» en lugar de «Studia», «Sociedad Cooperativa» en el 10 e «Index Business Intelligent» confirmado como submarca de ATU. Nuevo hallazgo H-08 (idioma mezclado) |
+| 0.4 | 2026-10-30 | Claude (Analista) | Logotipos de los entornos 4, 8, 10, 11 y 12 verificados con capturas del alumno (E-06 a E-10): «Estudi@» en lugar de «Studia», «Sociedad Cooperativa» en el 10 e «Index Business Intelligent» confirmado como submarca de ATU. Nuevo hallazgo H-08 (idioma mezclado). [Archivada](historico/03-inventario-campus_v0.4.md) |
+| 0.5 | 2026-10-30 | Claude (Analista) | Pertenencia a Grupo ATU confirmada por el alumno |

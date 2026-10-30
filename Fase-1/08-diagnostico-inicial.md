@@ -5,7 +5,7 @@
 | Proyecto | Plataforma centralizada para los entornos Moodle (Ficha 01) |
 | Fase | 1 — Descubrimiento |
 | Hito | Alcance preliminar validado |
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario (pendiente de presentar al tutor) |
 | Alumno | Carlos García Rallo |
@@ -56,7 +56,7 @@ Respuestas provisionales; el detalle y su origen están en el [registro de pregu
 | Pregunta de la ficha | Respuesta breve | Estado |
 |---|---|---|
 | ¿Qué problema concreto se pretende resolver? | Localizar el campus correcto y llegar a él. Hay señales observadas; falta medir su tamaño | Provisional |
-| ¿Qué entornos existen, quién los gestiona y en qué se diferencian? | 12 listados y 12 observados; operador común probable; responsables sin confirmar | Provisional |
+| ¿Qué entornos existen, quién los gestiona y en qué se diferencian? | 12 listados y 12 observados; todos de Grupo ATU (confirmado por el alumno); responsables de cada aula sin confirmar | Provisional |
 | ¿Qué perfiles intervienen? | 7 perfiles hipotéticos | Provisional |
 | ¿Qué información puede ser pública, restringida o personalizada? | Catálogo público con lo que ya es público; personalización solo con identidad común | Provisional |
 | ¿Solo centralizar el acceso o también consultar o administrar? | Recomendado: empezar solo por el acceso | Abierta, pendiente de la organización |
@@ -104,4 +104,5 @@ Ver [07 — Alcance preliminar](07-alcance-preliminar.md). MVP hipotético: cat�
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Redactor) | Primera versión del diagnóstico inicial. [Archivada](historico/08-diagnostico-inicial_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Redactor) | Entorno 7 observado. [Archivada](historico/08-diagnostico-inicial_v0.2.md) |
-| 0.3 | 2026-10-30 | Claude (Redactor) | Web corporativa revisada: no enlaza a los campus |
+| 0.3 | 2026-10-30 | Claude (Redactor) | Web corporativa revisada: no enlaza a los campus. [Archivada](historico/08-diagnostico-inicial_v0.3.md) |
+| 0.4 | 2026-10-30 | Claude (Redactor) | Pertenencia a Grupo ATU confirmada |

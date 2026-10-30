@@ -4,6 +4,12 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.8] — 2026-10-30
+
+### Cambiado
+- El alumno confirma que las doce aulas son de Grupo ATU **[D]**. `01-registro-preguntas-supuestos.md` v0.8 (S-01 confirmado, P-O01 resuelta en parte), `03-inventario-campus.md` v0.5 y `08-diagnostico-inicial.md` v0.4.
+- Resumen v5, ajustado antes de su revisión: título «Plataforma centralizada para los entornos Moodle pertenecientes a Grupo ATU» y la primera conclusión indica la pertenencia confirmada.
+
 ## [0.7.2] — 2026-10-30
 
 ### Cambiado
