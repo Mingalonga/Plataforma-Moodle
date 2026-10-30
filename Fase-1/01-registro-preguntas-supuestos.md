@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.4 |
+| Versión | 0.5 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -125,7 +125,9 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-V04 | ¿El entorno 1 (aulavirtualatu.com) es el campus principal? ¿Por qué tiene otro tema e idiomas distintos? | Organización | Media | Abierta |
 | P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | **Resuelta** (2026-10-30): captura E-01; ver inventario H-05 **[D]** |
 | P-V06 | ¿Qué relación tienen con Grupo ATU las marcas que no llevan su nombre (Centre Learning, Takin, Tierra más ecológica, MoveOut, Studia, Almería Formación, Index)? ¿Son clientes, filiales o marcas propias? | Organización | Alta | Abierta (amplía P-O01) |
-| P-V07 | ¿La web corporativa (www.grupoatu.com) enlaza a los campus? Se genera con JavaScript y no se pudo leer de forma automatizada. Su descripción menciona «9 áreas formativas»: ¿corresponden a las marcas de los campus? | Alumno (revisión en navegador) / Organización | Alta | Abierta |
+| P-V07 | ¿La web corporativa (www.grupoatu.com) enlaza a los campus? Se genera con JavaScript y no se pudo leer de forma automatizada. Su descripción menciona «9 áreas formativas»: ¿corresponden a las marcas de los campus? | Alumno (revisión en navegador) / Organización | Alta | **Resuelta en parte** (2026-10-30): la web no enlaza a ningún campus (E-02 a E-05). Las 9 áreas son temáticas: 01 Salud, cuidados y bienestar · 02 Educación, deporte y comunidad · 03 Empresa, administración y comercio · 04 Tecnología y comunicación digital · 05 Hostelería, turismo y alimentación · 06 Industria, instalaciones y energía · 07 Construcción, movilidad y transporte · 08 Campo, mar y recursos naturales · 09 Imagen, diseño y oficios creativos. No coinciden una a una con las marcas de los campus; la relación queda en P-V09 **[O]** |
+| P-V09 | ¿Qué relación hay entre las 9 áreas formativas de la web y los campus? (Por ejemplo, ¿un curso del área 04 se imparte en el campus «ATU Tecnología Digital»?) Si existe, podría servir para clasificar el catálogo | Organización | Media | Abierta |
+| P-V10 | La web corporativa tiene un enlace «Accesibilidad» en el pie. ¿Existe una declaración de accesibilidad de Grupo ATU que la plataforma deba seguir? (amplía P-L04; pendiente de leer) | Alumno / Organización | Baja | Abierta |
 | P-V08 | ¿La etiqueta `noindex` de las páginas de acceso es intencionada (que los campus no aparezcan en buscadores)? | Administradores | Media | Abierta |
 
 ### 3.2 Organización
@@ -227,4 +229,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: diez preguntas guía con respuesta provisional, 42 preguntas adicionales, 7 supuestos y 4 dependencias. [Archivada](historico/01-registro-preguntas-supuestos_v0.1.md) |
 | 0.2 | 2026-10-30 | Claude (Analista) | Respuestas del alumno (P-A01, P-A04, P-A05). Resultados de la observación de los campus: PG-02 actualizada, 8 preguntas nuevas (P-V01 a P-V08), supuestos S-01, S-03, S-05 y S-06 actualizados, S-08 y S-09 nuevos. [Archivada](historico/01-registro-preguntas-supuestos_v0.2.md) (sin P-V07 ni P-V08) |
 | 0.3 | 2026-10-30 | Claude (Analista) | P-V07 y P-V08 añadidas tras consultar la web corporativa. [Archivada](historico/01-registro-preguntas-supuestos_v0.3.md) |
-| 0.4 | 2026-10-30 | Claude (Analista) | P-V05 resuelta con la captura del alumno; S-03 actualizado |
+| 0.4 | 2026-10-30 | Claude (Analista) | P-V05 resuelta con la captura del alumno; S-03 actualizado. [Archivada](historico/01-registro-preguntas-supuestos_v0.4.md) |
+| 0.5 | 2026-10-30 | Claude (Analista) | P-V07 resuelta en parte con las capturas de la web corporativa; nuevas P-V09 y P-V10 |

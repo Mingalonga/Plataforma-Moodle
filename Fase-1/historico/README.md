@@ -17,3 +17,8 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [01-registro-preguntas-supuestos_v0.3.md](01-registro-preguntas-supuestos_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: P-V05 resuelta |
 | [03-inventario-campus_v0.1.md](03-inventario-campus_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: entorno 7 observado |
 | [08-diagnostico-inicial_v0.1.md](08-diagnostico-inicial_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: entorno 7 observado |
+| [01-registro-preguntas-supuestos_v0.4.md](01-registro-preguntas-supuestos_v0.4.md) | 0.4 | 2026-10-30 | Sustituida por la v0.5: web corporativa revisada |
+| [02-fuentes-y-metodologia_v0.3.md](02-fuentes-y-metodologia_v0.3.md) | 0.3 | 2026-10-30 | Sustituida por la v0.4: fuente F-18 |
+| [05-situacion-actual_v0.1.md](05-situacion-actual_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: PR-01 observado, PR-08 nuevo |
+| [07-alcance-preliminar_v0.1.md](07-alcance-preliminar_v0.1.md) | 0.1 | 2026-10-30 | Sustituida por la v0.2: web corporativa y áreas formativas |
+| [08-diagnostico-inicial_v0.2.md](08-diagnostico-inicial_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: web corporativa revisada |

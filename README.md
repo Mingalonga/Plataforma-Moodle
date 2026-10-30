@@ -6,7 +6,7 @@ Proyecto de análisis, diseño, viabilidad, prototipo y validación de una plata
 
 | Fase | Nombre | Estado |
 |---|---|---|
-| 1 | Descubrimiento | **Borrador completo** (v0.4), pendiente de revisión del tutor |
+| 1 | Descubrimiento | **Borrador completo** (v0.5), pendiente de revisión del tutor |
 | 2–8 | Requisitos, Alternativas, Diseño, Viabilidad, Prototipo, Validación, Cierre | No iniciadas. No se avanza hasta el visto bueno de la Fase 1. |
 
 ## Dónde está cada cosa

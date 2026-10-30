@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -13,7 +13,7 @@
 
 ## 1. Problema que se propone abordar
 
-Las personas usuarias de los entornos Moodle de la organización no disponen de un punto común donde identificar qué campus les corresponde y llegar a él con seguridad. Hay al menos doce campus en once dominios distintos, varios no se distinguen por su título y no son localizables en buscadores (necesidades N-01 a N-03, problemas PR-01 a PR-04).
+Las personas usuarias de los entornos Moodle de la organización no disponen de un punto común donde identificar qué campus les corresponde y llegar a él con seguridad. Hay al menos doce campus en once dominios distintos, varios no se distinguen por su título, no son localizables en buscadores y ni siquiera la web corporativa enlaza a ellos (necesidades N-01 a N-03, problemas PR-01 a PR-04 y PR-08).
 
 **Condición:** el tamaño real del problema no está demostrado (PR-07). El alcance se propone para poder validar esa hipótesis, no da por hecho que exista.
 
@@ -40,7 +40,7 @@ Método: **MoSCoW** (*Must, Should, Could, Won't*), porque permite separar con c
 
 | ID | Capacidad | Necesidad |
 |---|---|---|
-| AL-07 | Filtros por marca, temática o ubicación, solo si la organización confirma que son útiles y los mantiene (P-N04) | N-01 |
+| AL-07 | Filtros por marca, temática o ubicación, solo si la organización confirma que son útiles y los mantiene (P-N04). Candidata: las 9 áreas formativas que ya usa la web corporativa, si se confirma su relación con los campus (P-V09) | N-01 |
 | AL-08 | Comprobación periódica y no abusiva de que los enlaces responden | N-06, N-10 |
 | AL-09 | Página de ayuda con el canal del CAU | N-05 |
 | AL-10 | Vista para el CAU con estado y contacto de escalado de cada campus | N-05 |
@@ -68,7 +68,7 @@ Para no prejuzgar la solución, se dejan anotadas, sin evaluar, las opciones que
 1. No desarrollar nada y mejorar lo existente (títulos, indexación, comunicación al alumnado).
 2. Página o catálogo estático de enlaces, de bajo mantenimiento.
 3. Aplicación web con gestión del catálogo.
-4. Usar la web corporativa o una herramienta ya contratada (P-R03).
+4. Usar la web corporativa (hoy sin acceso a los campus) o una herramienta ya contratada (P-R03).
 5. Integración con servicios web de Moodle.
 6. Autenticación federada o inicio de sesión único.
 7. Solución por etapas que combine las anteriores.
@@ -93,4 +93,5 @@ Indicadores provisionales (ver PG-10 en el registro de preguntas): proporción d
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Coordinador / Arquitecto / UX) | Primera versión del alcance preliminar |
+| 0.1 | 2026-10-30 | Claude (Coordinador / Arquitecto / UX) | Primera versión del alcance preliminar. [Archivada](historico/07-alcance-preliminar_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Coordinador) | Web corporativa sin enlaces a campus (PR-08) y áreas formativas como posible clasificación |

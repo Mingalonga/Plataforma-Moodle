@@ -4,6 +4,23 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.5] — 2026-10-30
+
+**Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor. Todas las observaciones públicas previstas están hechas.
+
+### Añadido
+- `evidencias/E-02` a `E-05`: capturas de la web corporativa tomadas por el alumno (área 01, formulario y pie, menú de áreas formativas, menú de formación para trabajadores).
+- Versiones archivadas: registro v0.4, metodología v0.3, situación actual v0.1, alcance v0.1 y diagnóstico v0.2.
+
+### Cambiado
+- `05-situacion-actual.md` v0.1 → v0.2: la web corporativa no enlaza a los campus; PR-01 pasa a observado y se añade PR-08 (áreas temáticas frente a campus por marcas).
+- `01-registro-preguntas-supuestos.md` v0.4 → v0.5: P-V07 resuelta en parte; nuevas P-V09 y P-V10.
+- `02-fuentes-y-metodologia.md` v0.3 → v0.4: fuente F-18.
+- `07-alcance-preliminar.md` v0.1 → v0.2 y `08-diagnostico-inicial.md` v0.2 → v0.3.
+
+### Incidencias
+- Un navegador sin interfaz lanzado desde el entorno de trabajo tampoco pudo abrir la web corporativa (bloqueo de la política de red).
+
 ## [0.4] — 2026-10-30
 
 **Estado:** borrador completo de la Fase 1, pendiente de revisión del alumno y del tutor.

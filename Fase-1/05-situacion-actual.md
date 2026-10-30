@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -16,7 +16,7 @@ Etiquetas: **[O]** observado · **[D]** dato de la organización o del alumno ·
 1. Hay al menos doce entornos Moodle en doce direcciones distintas, repartidas en once dominios diferentes (dos son subdominios de grupoatu.com) **[D]**.
 2. Los once observados se presentan como servicio de Grupo ATU: mismo soporte, mismo bloque corporativo y mismo responsable del tratamiento **[O]**.
 3. Cada campus tiene su propia página de acceso con usuario y contraseña. No se ve ningún acceso común **[O]**.
-4. No se ha encontrado ninguna página pública que liste todos los campus. Los campus enlazan a la web corporativa (grupoatu.com), pero no a los otros campus **[O]**. La web corporativa se consultó el 2026-10-30, pero su contenido se genera con JavaScript y la herramienta de lectura solo obtuvo la cabecera: título «GRUPO ATU — Enfoca tu futuro» y la descripción «Descubre las 9 áreas formativas de Grupo ATU» **[O]**. No se pudo ver si enlaza a los campus; queda para revisión manual en navegador (P-V07).
+4. No se ha encontrado ninguna página pública que liste todos los campus. Los campus enlazan a la web corporativa (grupoatu.com), pero no a los otros campus **[O]**. **La web corporativa (www.grupoatu.com) tampoco enlaza a ningún campus [O].** El alumno la revisó en su navegador ([E-02 a E-05](evidencias/)): ni el menú superior (Formación gratuita, Formación por CCAA, Oposiciones, Extranjería, Empresas, Conoce Grupo ATU, Formación trabajadores, Infórmate) ni el pie de página (los mismos apartados más «Agencia de colocación» y los enlaces legales) tienen «Aula virtual», «Campus» ni «Acceso alumnos». La web está orientada a captar alumnado (formularios «Infórmate»), no a dar acceso al que ya está matriculado **[S]**.
 5. Las páginas de acceso piden a los buscadores que no las indexen (`noindex`) **[O]**. Un usuario que busque «aula virtual + marca» probablemente no llegue a su campus desde un buscador **[S]**.
 6. Cinco campus con marcas distintas comparten el mismo título; uno está en inglés y con textos de plantilla sin completar **[O]** (inventario, H-01 y H-02).
 7. Hay indicios de que los campus usan una versión de Moodle sin soporte de seguridad **[S]** (inventario, H-04).
@@ -43,12 +43,13 @@ Cada necesidad lleva un identificador que se reutilizará en la Fase 2 para la t
 
 | ID | Problema | Evidencia | Necesidad afectada | Estado |
 |---|---|---|---|---|
-| PR-01 | No hay un punto público que reúna todos los campus | No encontrado en las páginas de los campus **[O]**; la web corporativa no se pudo leer completa (P-V07) | N-01, N-02, N-05 | Indicio |
+| PR-01 | No hay un punto público que reúna todos los campus, ni siquiera en la web corporativa | Ni los campus ni la web corporativa enlazan a los demás campus **[O]** (E-02 a E-05) | N-01, N-02, N-05 | **Observado** (v0.2) |
 | PR-02 | Los campus no son localizables desde buscadores | `robots: noindex` en todas las páginas observadas **[O]** | N-02 | Observado. Puede ser intencionado (P-V08) |
 | PR-03 | Cinco campus no se distinguen por el título | H-01 **[O]** | N-03 | Observado |
 | PR-04 | Configuración incoherente entre campus (idioma, plantilla, ayuda) | H-02, H-03 **[O]** | N-03, N-08 | Observado |
 | PR-05 | Cuentas separadas por campus | H-06 **[O]** + supuesto sobre usuarios de varios campus **[S]** | N-04 | Indicio |
 | PR-06 | Posible versión de Moodle sin soporte de seguridad | H-04 **[S]** | N-07, N-10 | Indicio. Fuera del alcance del proyecto resolverlo; sí condiciona integraciones |
+| PR-08 | La clasificación pública de la oferta (9 áreas formativas) no coincide con la organización de los campus por marcas | Las áreas de la web (E-04) son temáticas; los campus llevan nombres de marca **[O]**. Un usuario que conoce su área no puede deducir su campus **[S]** | N-01, N-03 | Indicio |
 | PR-07 | No sabemos cuántos usuarios sufren realmente el problema de localización | Sin datos de soporte ni de uso | Todas | Laguna de información (P-U04) |
 
 > PR-07 es el problema más importante para el proyecto: **sin datos del CAU o de los usuarios no se puede demostrar que el problema principal existe ni medir su tamaño.** El diagnóstico debe decirlo así y no darlo por supuesto.
@@ -100,4 +101,5 @@ Por decisión del alumno no se harán entrevistas ahora (P-A05). El guion queda 
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: situación actual, 10 necesidades, 7 problemas, límites del problema y guion de entrevista |
+| 0.1 | 2026-10-30 | Claude (Analista) | Primera versión: situación actual, 10 necesidades, 7 problemas, límites del problema y guion de entrevista. [Archivada](historico/05-situacion-actual_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Analista) | Revisión de la web corporativa por el alumno: PR-01 pasa a observado; nuevo PR-08 |
