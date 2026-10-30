@@ -4,7 +4,7 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 
 **Cuándo se archiva una versión:** cuando un documento que ya se ha compartido para revisión (con el propietario o con el tutor) recibe una versión nueva. Los borradores intermedios que nadie ha revisado quedan solo en Git.
 
-**Cómo se nombra:** `<nombre-del-documento>_v<X.Y>.md`, por ejemplo `00-plan-fase-1_v0.1.md`. El archivo se copia tal cual estaba; no se edita después.
+**Cómo se nombra:** `<nombre-del-documento>_v<X.Y>.md`, por ejemplo `00-plan-fase-1_v0.1.md`. El archivo se copia tal cual estaba; no se edita después. Por eso, algunos enlaces internos de las copias archivadas apuntan a rutas de la carpeta original y no funcionan desde aquí; para navegar, usa la versión vigente.
 
 | Archivo | Versión | Fecha | Motivo del cambio de versión |
 |---|---|---|---|
