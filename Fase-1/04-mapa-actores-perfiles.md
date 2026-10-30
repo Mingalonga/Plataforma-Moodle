@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
+| Versión | 0.2 |
 | Fecha | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -48,7 +48,7 @@ Se agrupan según su relación con una posible plataforma central: quién la usa
 | A-05 | Administradores técnicos de cada campus | Mantienen los campus; serían necesarios para cualquier integración | No añadir carga ni riesgo a sus plataformas | Alta en lo técnico | **[S]** No sabemos si es una persona, un equipo o un proveedor externo (P-O02) |
 | A-06 | Gestor/a del catálogo de la plataforma | Perfil nuevo: alta, baja y revisión de campus en la plataforma | Herramienta sencilla y que no se desactualice | Media | **[R]** Lo crea el propio proyecto; hay que confirmar quién lo asumiría (P-O04) |
 | A-07 | Dirección o responsable de negocio de Grupo ATU | Patrocinador y decisor | Imagen de marca, coste, eficiencia del soporte | Muy alta | **[S]** (P-O03) |
-| A-08 | Marcas asociadas (Centre Learning, Takin, Club Aventura, Almería Formación, Tierra más ecológica, MoveOut, Studia, Index) | Afectados | Mantener su identidad o, al contrario, no aparecer junto a otras | Media | **[O]** Logotipos propios; relación con ATU desconocida (P-V06, P-O05) |
+| A-08 | Marcas asociadas (Centre Learning, Takin, Club Aventura, Almería Formación, Tierra más ecológica, MoveOut, Studia) | Afectados | Mantener su identidad o, al contrario, no aparecer junto a otras | Media | **[O]** Logotipos propios; relación con ATU desconocida (P-V06, P-O05) |
 | A-09 | Responsable del tratamiento de datos (Academia Técnica Universitaria, S.L.) y su delegado/a de protección de datos | Cumplimiento | Que la plataforma no trate datos sin base legal | Alta en lo legal | **[O]** Nombrado en los avisos de los campus; delegado/a sin confirmar (P-L01) |
 | A-10 | Entidades financiadoras (SEPE, fondos europeos) | Afectados indirectos | Posibles requisitos de publicidad, accesibilidad o trazabilidad | Baja / desconocida | **[O]** Logotipos en los campus. Requisitos concretos sin investigar **[S]** |
 | A-11 | Tutor/a del proyecto | Revisa y valida cada hito | Rigor, evidencias, cumplimiento de la ficha | Muy alta en el proyecto | **[D]** Ficha 01 |
@@ -115,4 +115,5 @@ Los perfiles describen necesidades, no personas reales. Ninguno se ha validado c
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-10-30 | Claude (Analista / UX) | Primera versión: 12 actores, matriz de influencia e interés y 7 perfiles hipotéticos |
+| 0.1 | 2026-10-30 | Claude (Analista / UX) | Primera versión: 12 actores, matriz de influencia e interés y 7 perfiles hipotéticos. [Archivada](historico/04-mapa-actores-perfiles_v0.1.md) |
+| 0.2 | 2026-10-30 | Claude (Analista) | «Index» retirado de la lista de marcas (ver inventario v0.3) |

@@ -4,6 +4,18 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.6.1] — 2026-10-30
+
+**Estado:** resumen para la tutora revisado por el alumno; corrección en el inventario.
+
+### Cambiado
+- Resumen para la tutora v1 → v2 (`entregas/Resumen_Fase-1_Plataforma-Moodle_v2.pdf`, 6 páginas): tono más sobrio, se eliminan la sección sobre las ocho fases y las explicaciones pensadas para el alumno, se añade «marca» al glosario y una nota sobre el aula 4. El v1 se archiva en `historico/`.
+- `03-inventario-campus.md` v0.2 → v0.3: se aclara de dónde sale la «marca aparente» de cada aula y se corrige el entorno 4: «Index» es una deducción a partir de la dirección y del nombre del archivo del logotipo, no un nombre de marca observado.
+- `01-registro-preguntas-supuestos.md` v0.5 → v0.6 y `04-mapa-actores-perfiles.md` v0.1 → v0.2: «Index» retirado de la lista de marcas.
+
+### Motivo
+Revisión del alumno: el resumen debe dirigirse solo a la tutora, y el alumno preguntó de dónde salía «aula Index».
+
 ## [0.6] — 2026-10-30
 
 **Estado:** documentación de la Fase 1 sin cambios de contenido; se añade el resumen para la tutora.

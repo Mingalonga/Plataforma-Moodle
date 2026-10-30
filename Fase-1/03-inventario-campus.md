@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.2 |
+| Versión | 0.3 |
 | Fecha de observación | 2026-10-30 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -23,7 +23,7 @@ Estados: **V** = verificado (leído literalmente en la página) · **I** = indic
 | 1 | https://aulavirtualatu.com/ | Entrar al sitio \| Campus Virtual - ATU | Grupo ATU (logo «Eguru») | Sí (200) | Español | eguru | 4.1.19 | V con indicios |
 | 2 | https://aulavirtual.centrelearning.net | AULA VIRTUAL CENTRE LEARNING | Centre Learning | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 3 | https://aulavirtual.atuasesoria.com | AULA VIRTUAL ATU ASESORÍA DE FORMACIÓN | ATU (logo «ATU-DOS») | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
-| 4 | https://aulavirtualindex.grupoatu.com/ | AULA VIRTUAL ATU | Index Business Intelligent | Sí (200) | **Inglés** | enlight | 4.1.2+ | V con indicios · anomalías |
+| 4 | https://aulavirtualindex.grupoatu.com/ | AULA VIRTUAL ATU | Sin marca visible en el texto; «Index» solo en la dirección y en el nombre del archivo del logotipo (I) | Sí (200) | **Inglés** | enlight | 4.1.2+ | V con indicios · anomalías |
 | 5 | https://aulavirtual.takin.es/login/index.php | AULA VIRTUAL TAKIN | Takin | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 6 | https://aulavirtual.clubaventuraatu.com | AULA VIRTUAL CLUB AVENTURA ATU | Club Aventura | Sí (200) | Español | enlight | 4.1.2+ | V con indicios |
 | 7 | https://aulavirtual.atutecnologiadigital.com | No visible en la captura | Grupo ATU Tecnología Digital | Sí (manual) | Español | Indicio: eguru, como el 1 | — | V parcial (captura) |
@@ -34,6 +34,14 @@ Estados: **V** = verificado (leído literalmente en la página) · **I** = indic
 | 12 | https://aulavirtual.estudia-fp.com/login/index.php | **AULA VIRTUAL CENTRE LEARNING** | Studia (logo «studia») | Sí (200) | Español | enlight | 4.1.2+ | V con indicios · anomalía de título |
 
 En negrita, lo que llama la atención y se explica en la sección 3.
+
+> **De dónde sale la «marca aparente» (aclaración v0.3).** La lectura automatizada no ve las imágenes, solo su nombre de archivo y su texto alternativo. Por eso:
+> - En los entornos 2, 3, 5, 6 y 9 la marca coincide con el título de la página o el texto alternativo del logotipo **[V]**.
+> - En los entornos 8, 10, 11 y 12 (título «AULA VIRTUAL CENTRE LEARNING») la marca se deduce del **nombre del archivo del logotipo** y de la **dirección web** (por ejemplo, `MoveOut-negro.png` en `aulavirtual.moveout.es`) **[I]**.
+> - En el entorno 4 no se ha identificado ninguna marca; «index» solo aparece en la dirección y en el nombre del archivo del logotipo **[I]**.
+> - En los entornos 1 y 7 el alumno ha visto la página (o el texto lo indica) **[V]**.
+>
+> Confirmarlo es tan sencillo como abrir cada página y mirar el logotipo (P-V01).
 
 ---
 
@@ -60,7 +68,7 @@ En los entornos 2, 3, 5, 6, 8, 9, 10, 11 y 12 (nueve de los once observados) se 
 
 ### H-01. Cinco entornos comparten el título «AULA VIRTUAL CENTRE LEARNING» [V]
 
-Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo texto alternativo del logotipo, aunque cada uno muestra un logotipo distinto (Centre Learning, Almería Formación, Tierra más ecológica, MoveOut, Studia). Los entornos 2 y 8 usan además la misma imagen de fondo.
+Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo texto alternativo del logotipo, aunque cada uno usa un archivo de logotipo distinto (por su nombre: Centre Learning, Almería Formación, Tierra más ecológica, MoveOut, Studia), que coincide con su dirección web. Los entornos 2 y 8 usan además la misma imagen de fondo.
 
 - **Por qué importa:** el título es lo que aparece en la pestaña del navegador, en marcadores, en el historial y lo que lee un lector de pantalla. Un usuario que tenga abiertos o guardados dos de estos campus no puede distinguirlos por el título. Es una **evidencia observada** a favor del problema que plantea la ficha (localizar el espacio correcto), aunque no prueba que los usuarios se confundan en la práctica.
 - **Indicio [I]:** parece que los entornos se crearon a partir de una misma plantilla (posiblemente una copia del entorno 2) y solo se cambió el logotipo.
@@ -72,7 +80,7 @@ Los entornos 2, 8, 10, 11 y 12 tienen el mismo título de página y el mismo tex
 - Copyright «© 2017 - Your Company Name ®. All rights reserved.», que es el texto por defecto del tema.
 - Es el único con **registro propio visible** («Create new account», que permite a cualquiera crearse una cuenta).
 - No muestra canal de ayuda ni responsable del tratamiento.
-- **Indicio [I]:** podría ser un entorno menos mantenido, en pruebas o con otra finalidad (el logotipo es «Index Business Intelligent»).
+- **Indicio [I]:** podría ser un entorno menos mantenido, en pruebas o con otra finalidad (la dirección contiene «index» y el archivo del logotipo se llama «Index-Business-Inteligent.png»; no se ha visto la imagen, por lo que no consta que «Index» sea el nombre de una marca).
 - **Pregunta:** P-V03.
 
 ### H-03. El entorno 1 es distinto al resto [V]
@@ -177,7 +185,7 @@ Formato de cada ficha según el esquema del documento 02. Se omiten los rasgos c
 |---|---|---|
 | Resultado | HTTP 200 | V |
 | Nombre visible | «AULA VIRTUAL ATU: Log in to the site» | V |
-| Marca aparente | Index Business Intelligent (logo) con título «AULA VIRTUAL ATU» | V |
+| Marca aparente | Título «AULA VIRTUAL ATU» (V). «Index» procede solo del subdominio y del nombre del archivo del logotipo «Index-Business-Inteligent.png»; la imagen no se ha visto, así que no consta como nombre de marca | V / I |
 | Página de acceso | «Username», «Password», «Log in», «Create new account» (registro propio) | V |
 | Idiomas | English (por defecto), Español - Internacional | V |
 | Ayuda y contacto | **Ninguno visible** | V |
@@ -295,4 +303,5 @@ Queda pendiente de la organización (registro de preguntas): quién administra c
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 0.1 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Primera observación pasiva de los doce entornos: 11 observados, 1 bloqueado por `robots.txt`. [Archivada](historico/03-inventario-campus_v0.1.md) |
-| 0.2 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Entorno 7 completado con la observación manual del alumno (evidencia E-01) |
+| 0.2 | 2026-10-30 | Claude (Analista / Especialista Moodle) | Entorno 7 completado con la observación manual del alumno (evidencia E-01). [Archivada](historico/03-inventario-campus_v0.2.md) |
+| 0.3 | 2026-10-30 | Claude (Analista) | Corrección a raíz de una pregunta del alumno: en el entorno 4, «Index» es una deducción a partir de la dirección y del nombre del archivo del logotipo, no un nombre de marca observado |
