@@ -6,6 +6,7 @@ Formato de la Ficha 01 (página 7). Se añade una fila por cada revisión, aunqu
 |---|---|---|---|
 | 2026-11-03 | Inicio de la Fase 2 (sin validación formal de la Fase 1) | La tutora acusa recibo del resumen de la Fase 1 sin validar el alcance. El alumno decide empezar la Fase 2 con la información disponible, sobre supuestos explícitos. Se redacta el paquete 0.1 completo: plan, supuestos, escenarios, requisitos funcionales y no funcionales, trazabilidad con casos de prueba y especificación (entregable 02). | Revisión del alumno; después, informar a la tutora |
 | 2026-11-03 | Revisión del paquete 0.1 por el alumno | El alumno da su conformidad y se fusiona la PR #5. Pide un resumen para la tutora y una guía detallada para él. Se crean ambos PDF en `entregas/`. | Envío del resumen a la tutora |
+| 2026-11-03 | Preguntas para la organización | A petición del alumno se prepara un PDF de 2 páginas con las 16 preguntas imprescindibles para las fases siguientes, en lenguaje no técnico y sin pedir datos personales. | Envío a Grupo ATU (a través de la tutora o del contacto que se obtenga) |
 
 ## Gestión de tareas
 
