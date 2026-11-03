@@ -4,6 +4,11 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.8.1] — 2026-11-03
+
+### Cambiado
+- `registro-seguimiento.md`: respuesta de la tutora (acuse de recibo, sin validación formal) y decisión del alumno de iniciar la Fase 2 sobre supuestos. `README.md`: estado de la fase. Los documentos no cambian de versión.
+
 ## [0.8] — 2026-10-30
 
 ### Añadido

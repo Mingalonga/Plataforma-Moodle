@@ -10,8 +10,8 @@
 | Entregable asociado | 01 — Diagnóstico inicial (situación actual, inventario, perfiles, necesidades, problemas y alcance preliminar) |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
-| Versión del paquete | 0.8 (borrador completo, pendiente del tutor) |
-| Estado | En curso |
+| Versión del paquete | 0.8 (borrador completo, entregado a la tutora sin validación formal) |
+| Estado | Entregada; hito abierto. La Fase 2 se inicia el 2026-11-03 por decisión del alumno (ver [registro de seguimiento](registro-seguimiento.md)) |
 
 ## Índice de documentos
 
