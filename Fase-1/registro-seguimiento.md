@@ -16,6 +16,7 @@ Formato tomado de la sección «Validación y seguimiento — Registro de seguim
 | 2026-10-30 | Maquetación del resumen | El alumno pide una maquetación más sobria y legible, sin añadir información. Se rehace con Typst (resumen v4, mismo contenido). | Envío del resumen v4 a la tutora |
 | 2026-10-30 | Ampliación del resumen | A petición del alumno se añade el apartado «Antes de iniciar la Fase 2» tras las cuestiones para la revisión, agrupando lo que se pide a la organización, y se nombra a Grupo ATU en la portada. Resumen v5. | Envío del resumen v5 a la tutora |
 | 2026-10-30 | Dato del alumno | El alumno confirma que las doce aulas son de Grupo ATU. Se actualizan registro, inventario, diagnóstico y resumen v5. Queda abierta la relación concreta de cada marca con el grupo (P-V06). | Envío del resumen v5 a la tutora |
+| 2026-11-03 | Respuesta de la tutora al envío del resumen v5 | La tutora acusa recibo y pide que el alumno la vaya informando («la ficha de trabajo ya ves que es una tarea que va llevar algo de tiempo… así que me vas contando»). No hay validación formal del alcance ni respuesta a las cuestiones planteadas. **Decisión del alumno:** iniciar la Fase 2 con la información disponible, trabajando sobre supuestos marcados como pendientes de validar. La documentación de la Fase 1 se mantiene en 0.x (sin aprobar); el hito «alcance preliminar validado» queda abierto. | Informar a la tutora del avance de la Fase 2 |
 
 ## Gestión de tareas
 

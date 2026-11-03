@@ -6,12 +6,14 @@ Proyecto de análisis, diseño, viabilidad, prototipo y validación de una plata
 
 | Fase | Nombre | Estado |
 |---|---|---|
-| 1 | Descubrimiento | **Borrador completo** (v0.5), pendiente de revisión del tutor |
-| 2–8 | Requisitos, Alternativas, Diseño, Viabilidad, Prototipo, Validación, Cierre | No iniciadas. No se avanza hasta el visto bueno de la Fase 1. |
+| 1 | Descubrimiento | **Entregada** a la tutora (paquete 0.8, resumen v5). Sin validación formal; hito abierto |
+| 2 | Requisitos | **Borrador completo** (paquete 0.1). Iniciada el 2026-11-03 por decisión del alumno, sobre supuestos explícitos |
+| 3–8 | Alternativas, Diseño, Viabilidad, Prototipo, Validación, Cierre | No iniciadas |
 
 ## Dónde está cada cosa
 
 - [`Fase-1/`](Fase-1/README.md): toda la documentación de la fase de descubrimiento, con su índice, registro de cambios, registro de seguimiento e histórico de versiones. Para una visión rápida, empieza por el [Diagnóstico inicial](Fase-1/08-diagnostico-inicial.md).
+- [`Fase-2/`](Fase-2/README.md): requisitos. Para una visión rápida, empieza por la [Especificación](Fase-2/06-especificacion.md).
 
 ## Reglas básicas
 
