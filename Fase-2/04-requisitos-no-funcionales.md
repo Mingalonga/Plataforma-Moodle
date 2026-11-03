@@ -54,7 +54,7 @@ Cuatro grupos de la ficha, cada uno con su forma de comprobación:
 | RNF-REN-01 | La página principal debe cargar rápido en un móvil | Contenido principal visible en 2,5 s o menos con conexión móvil simulada [R] (umbral «bueno» de las métricas web de Google) | M | Medición con una herramienta de rendimiento en modo móvil | SF-08 · ES-04 |
 | RNF-REN-02 | La búsqueda debe responder casi al instante | Resultados en menos de 1 s desde que se termina de escribir [R] | M | Medición en la prueba funcional | ES-01 |
 | RNF-REN-03 | La plataforma debe soportar la carga prevista | Al menos 10 veces el pico supuesto sin degradarse [S] (SF-09) | S | Prueba de carga proporcionada, solo contra la plataforma propia, nunca contra los campus | SF-09 |
-| RNF-REN-04 | La plataforma debe estar disponible casi siempre | 99,5 % mensual [R] (unas 3,5 h de caída al mes como máximo) | S | Supervisión de disponibilidad durante la validación | N-10 |
+| RNF-REN-04 | La plataforma debe estar disponible casi siempre | 99,5 % mensual [R] (unas 3,6 h de caída al mes como máximo) | S | Supervisión de disponibilidad durante la validación | N-10 |
 | RNF-REN-05 | Una caída de la plataforma no debe impedir el acceso a ningún campus | La plataforma no se interpone en el acceso: los campus siguen funcionando con su dirección directa | M | Revisión del diseño (Fase 4) y prueba de caída (CP-REN-05) | N-10 · ES-13 |
 | RNF-REN-06 | La plataforma debe poder recuperarse en poco tiempo | Restaurar el servicio en 1 día laborable como máximo, sin perder más que el último cambio no guardado del catálogo [R] | M | Prueba de restauración desde copia (CP-MAN-03) | N-10 · ES-13 |
 
