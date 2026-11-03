@@ -2,6 +2,11 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.1.2] — 2026-11-03
+
+### Añadido
+- `entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v1.pdf` y su fuente Typst: 16 preguntas para la organización, seleccionadas del registro de la Fase 1 (P-O03 a P-O07, P-U02 a P-U06, P-N01 a P-N03, P-C01 a P-C07, P-I01, P-R01 a P-R03, P-L02 a P-L04) por ser las que más condicionan los supuestos de la Fase 2 y las fases 3 a 5. Cada una indica para qué sirve.
+
 ## [0.1.1] — 2026-11-03
 
 ### Añadido

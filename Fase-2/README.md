@@ -29,6 +29,7 @@
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-11-03 |
 | — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-2_Plataforma-Moodle_v1.pdf). Fuente Typst: [`entregas/resumen-fase-2-tutora.typ`](entregas/resumen-fase-2-tutora.typ) | v1 (basado en el paquete 0.1) | Para enviar | 2026-11-03 |
 | — | [Guía de la Fase 2 para el alumno (PDF)](entregas/Guia-alumno_Fase-2_Plataforma-Moodle_v1.pdf), explicación detallada para uso interno. Fuente: [`entregas/guia-fase-2-alumno.typ`](entregas/guia-fase-2-alumno.typ) | v1 | Uso del alumno | 2026-11-03 |
+| — | [Preguntas para Grupo ATU (PDF)](entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v1.pdf): las 16 preguntas imprescindibles para las fases siguientes. Fuente: [`entregas/preguntas-grupo-atu.typ`](entregas/preguntas-grupo-atu.typ) | v1 | Para enviar a la organización | 2026-11-03 |
 
 ## Identificadores
 
