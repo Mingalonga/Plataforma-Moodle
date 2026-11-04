@@ -1,13 +1,15 @@
 # Plataforma Moodle
 
-Proyecto de análisis, diseño, viabilidad, prototipo y validación de una plataforma centralizada de acceso a los distintos entornos Moodle de la organización, según la *Ficha de proyecto 01 — Plataforma centralizada para los entornos Moodle*.
+Proyecto de análisis, diseño, viabilidad, prototipo y validación de una plataforma centralizada para los distintos entornos Moodle de la organización, según la *Ficha de proyecto 01 — Plataforma centralizada para los entornos Moodle*.
+
+**Enfoque (desde el 2026-11-04, indicado por la tutora):** herramienta interna para que el Departamento de Pedagogía y e-learning gestione las doce aulas desde un único punto, sin entrar y salir de cada una. El alumnado ya entra en su curso con una URL. La implementación correspondería a Informática, después de estudiar la viabilidad.
 
 ## Estado actual
 
 | Fase | Nombre | Estado |
 |---|---|---|
-| 1 | Descubrimiento | **Entregada** a la tutora (paquete 0.8, resumen v5). Sin validación formal; hito abierto |
-| 2 | Requisitos | **Borrador completo** (paquete 0.1). Iniciada el 2026-11-03 por decisión del alumno, sobre supuestos explícitos |
+| 1 | Descubrimiento | **Entregada** a la tutora (paquete 0.8, resumen v5). Reorientada tras su respuesta (paquete 0.9, cambio de alcance registrado); hito abierto |
+| 2 | Requisitos | **Borrador completo** (paquete 0.2, enfoque de gestión interna). Iniciada el 2026-11-03 por decisión del alumno, sobre supuestos explícitos |
 | 3–8 | Alternativas, Diseño, Viabilidad, Prototipo, Validación, Cierre | No iniciadas |
 
 ## Dónde está cada cosa

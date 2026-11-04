@@ -2,8 +2,8 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.8 |
-| Fecha | 2026-10-30 |
+| Versión | 0.9 |
+| Fecha | 2026-11-04 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
@@ -29,6 +29,13 @@ Antes de las preguntas, conviene separar lo poco que es seguro hoy:
 - **[D]** No se pueden iniciar actividades que requieran credenciales, acceso a sistemas, datos reales o intervención sobre servicios existentes sin autorización expresa del tutor (Ficha 01, página 9).
 - **[D]** El propietario ha indicado que no se avanza más allá de la Fase 1 hasta recibir el visto bueno.
 - **[D]** El alumno confirma que las doce aulas son de Grupo ATU (2026-10-30).
+- **[D]** **Respuesta de la tutora (2026-11-04)** a las preguntas enviadas por el alumno. Texto literal en el [registro de seguimiento](registro-seguimiento.md). Lo que se deduce de ella:
+  - El enfoque es la **gestión interna de las plataformas**: que el personal no tenga que «andar saliendo y entrando» de un aula a otra. La plataforma se orienta al **rol de administración y gestión**, no al alumnado.
+  - El alumnado **ya accede a su curso con una URL que se le facilita**, así que su acceso no es el problema que hay que resolver.
+  - El entorno lo **gestionaría el Departamento de Pedagogía y e-learning**, y la **implementación la ejecutaría Informática**.
+  - **Antes de nada hay que estudiar si es viable** y cómo se gestionaría.
+  - Con este enfoque, las preguntas pensadas para el alumnado y la atención al usuario **pierden relevancia**.
+  - La frase «y ya estaría, por así decirlo, lo del tema de entorno de pruebas» **no queda clara** (ver P-T01).
 - **[D]** El alumno es Carlos García Rallo; el campo de tutor/a queda en blanco por ahora (2026-10-30).
 - **[D]** De momento se trabaja solo con información pública, y el alumno autoriza la observación pasiva de los doce entornos (2026-10-30).
 - **[O]** Once de los doce entornos son Moodle y se presentan con la marca, el soporte y el responsable del tratamiento de Grupo ATU / Academia Técnica Universitaria, S.L. (observación del 2026-10-30, ver [inventario](03-inventario-campus.md)).
@@ -43,7 +50,8 @@ Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
 - **Respuesta provisional:** La ficha habla de usuarios que necesitan «localizar y acceder de forma clara a los espacios que les correspondan» **[D]**. Con doce entornos en dominios distintos, la hipótesis es que un usuario no sabe a qué campus debe ir, no recuerda la URL o confunde campus con nombres parecidos **[S]**. No tenemos todavía ninguna evidencia de cómo se manifiesta: ni incidencias de soporte, ni quejas, ni datos de uso.
 - **Qué falta:** ejemplos reales del problema (P-U03, P-U04).
-- **Estado:** Respuesta provisional · **Prioridad:** Alta.
+- **v0.9 (2026-11-04):** la tutora reorienta el problema **[D]**: no es que el alumnado no encuentre su aula (recibe la URL de su curso), sino que **la gestión de las doce aulas está dispersa** y obliga al personal a entrar y salir de cada una. Falta saber qué tareas de gestión se repiten y cuánto tiempo cuestan (P-G01, P-G02).
+- **Estado:** Respuesta provisional (reorientada) · **Prioridad:** Alta.
 
 ### PG-02. ¿Qué entornos Moodle existen, quién es responsable de cada uno y qué diferencias relevantes presentan?
 
@@ -56,19 +64,22 @@ Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
 - **Respuesta provisional:** Perfiles habituales en un entorno de formación con Moodle: alumnado, profesorado o tutores, personal de coordinación o secretaría, administradores de cada campus, soporte técnico y dirección que decide **[S]**. Habrá además un perfil nuevo: quien mantenga el catálogo de la plataforma central **[S]**. Tarea principal hipotética del alumnado: encontrar su campus y entrar en él **[S]**.
 - **Qué falta:** confirmar perfiles reales, volúmenes y si hay personas que usan varios campus a la vez (P-U01, P-U02, P-U05).
-- **Estado:** Respuesta provisional · **Prioridad:** Alta.
+- **v0.9 (2026-11-04):** los perfiles principales pasan a ser el **personal del Departamento de Pedagogía y e-learning** (gestión de las aulas) e **Informática** (implementación y parte técnica) **[D]**. El alumnado, el profesorado y las empresas dejan de ser usuarios de la plataforma. Falta saber cuántas personas gestionan y qué hace cada una (P-G01, P-G02).
+- **Estado:** Respuesta provisional (reorientada) · **Prioridad:** Alta.
 
 ### PG-04. ¿Qué información puede mostrarse de forma pública, restringida o personalizada?
 
 - **Respuesta provisional:** Lo que hoy ya es público en cada campus (nombre, URL, página de acceso) podría mostrarse en un catálogo público **[S]**. Cualquier información personalizada (por ejemplo, «tus cursos») exigiría saber quién es el usuario y, por tanto, una fuente de identidad común, que no sabemos si existe **[S]**. Recomendación de trabajo: no mostrar nada que no sea ya público hasta confirmar lo contrario **[R]**.
 - **Qué falta:** P-O05 (marcas que no deben aparecer juntas), P-I01 (identidad común), P-L01 (responsable del tratamiento).
-- **Estado:** Respuesta provisional · **Prioridad:** Alta.
+- **v0.9 (2026-11-04):** al ser una herramienta interna de gestión, **no hay parte pública**: todo es de acceso restringido al personal autorizado **[D]** (deducido de la respuesta de la tutora). La información de gestión de las aulas puede incluir datos personales del alumnado (matrículas, usuarios), por lo que hay que limitar qué se muestra (RS-03, RS-10).
+- **Estado:** Respuesta provisional (reorientada) · **Prioridad:** Alta.
 
 ### PG-05. ¿Se necesita únicamente centralizar el acceso o también consultar, intercambiar o administrar información?
 
 - **Respuesta provisional:** No está decidido. La ficha pide estudiarlo, no darlo por hecho **[D]**. La hipótesis de menor riesgo es empezar por centralizar el acceso (localizar y redirigir) y tratar el resto como evolución futura condicionada a necesidad, permisos y viabilidad **[R]**.
 - **Qué falta:** P-N01 y P-N02.
-- **Estado:** Abierta · **Prioridad:** Alta (define el alcance preliminar).
+- **v0.9 (2026-11-04):** la tutora indica que se busca una **operativa de gestión centralizada**, para no entrar y salir de cada aula **[D]**. Es decir, algo más que centralizar el acceso del alumnado. Queda por concretar hasta dónde: accesos directos a la gestión de cada aula, consulta de información de todas las aulas desde un único sitio o incluso realizar tareas de gestión desde la plataforma (P-G03, P-G04).
+- **Estado:** Resuelta en parte · **Prioridad:** Alta (define el alcance preliminar).
 
 ### PG-06. ¿Qué requisitos de accesibilidad, adaptación a móviles, rendimiento y disponibilidad son necesarios?
 
@@ -85,7 +96,8 @@ Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
 - **Respuesta provisional:** Hoy no existe ningún procedimiento conocido **[S]**. Hará falta definir quién avisa de un cambio, quién lo aplica en el catálogo, quién lo revisa y con qué frecuencia se comprueba que los enlaces siguen funcionando **[R]**. Se concretará en las Fases 2 y 4.
 - **Qué falta:** P-O04 (quién mantendría el catálogo), P-C06 (frecuencia de cambios).
-- **Estado:** Abierta · **Prioridad:** Media.
+- **v0.9 (2026-11-04):** la gestión del entorno corresponde al **Departamento de Pedagogía y e-learning**, y la parte técnica a **Informática** **[D]**. Falta concretar quién avisa de los cambios y quién los aplica (P-G06).
+- **Estado:** Resuelta en parte · **Prioridad:** Media.
 
 ### PG-09. ¿Qué riesgos técnicos, organizativos, legales y de seguridad deben controlarse?
 
@@ -96,7 +108,8 @@ Todo lo demás es, por ahora, supuesto o pregunta abierta.
 
 - **Respuesta provisional:** Propuesta de indicadores para validar con el tutor **[R]**: porcentaje de usuarios de prueba que encuentran su campus sin ayuda; tiempo hasta llegar a la página de acceso correcta; errores de elección de campus; enlaces válidos en el catálogo; resultado de la revisión de accesibilidad; y, si la organización puede medirlo, reducción de consultas a soporte del tipo «no encuentro mi campus». Los valores objetivo se fijarán en la Fase 2.
 - **Qué falta:** P-U04 (datos de soporte actuales como línea base).
-- **Estado:** Respuesta provisional · **Prioridad:** Media.
+- **v0.9 (2026-11-04):** con el nuevo enfoque, los indicadores se refieren al **personal de gestión**: tiempo y número de pasos para llegar a una tarea de gestión de cualquier aula, número de inicios de sesión necesarios, información que se puede consultar sin entrar en cada aula y opinión del personal. La línea base sería cómo se hace hoy (P-G02).
+- **Estado:** Respuesta provisional (reorientada) · **Prioridad:** Media.
 
 ---
 
@@ -116,13 +129,27 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-A06 | ¿El trabajo es individual o en equipo reducido? (la ficha admite ambas modalidades) | Propietario | Baja | Abierta |
 | P-A07 | ¿Qué sistema operativo se usará en el equipo local cuando llegue la fase de prototipo? (solo informativo, no se necesita ahora) | Propietario | Baja | Abierta |
 
+### 3.0 Surgidas de la respuesta de la tutora (v0.9, 2026-11-04)
+
+Estas preguntas sustituyen en importancia a las del alumnado y la atención al usuario. Las de gestión van dirigidas al Departamento de Pedagogía y e-learning (DPE) y a Informática.
+
+| ID | Pregunta | Para | Prioridad | Estado |
+|---|---|---|---|---|
+| P-T01 | ¿Qué quería decir con «y ya estaría, por así decirlo, lo del tema de entorno de pruebas»? ¿Que no hace falta un entorno de pruebas para el alumnado, o que el proyecto podría trabajar con un aula de pruebas? | Tutora | Alta | Abierta |
+| P-G01 | ¿Qué tareas de gestión realiza el DPE en las aulas (crear cursos, matricular, dar de alta usuarios, revisar informes, copias…) y cuáles se repiten más? | DPE | Alta | Abierta |
+| P-G02 | ¿Cuántas personas gestionan las aulas, en cuántas trabaja cada una y cuánto tiempo pierden hoy entrando y saliendo de ellas? | DPE | Alta | Abierta |
+| P-G03 | ¿Tiene cada persona del DPE una cuenta distinta en cada aula? ¿Con qué rol (administración del sitio, gestor, creador de cursos)? | DPE / Informática | Alta | Abierta |
+| P-G04 | ¿Qué información necesitarían ver de todas las aulas a la vez (cursos activos, matrículas, actividad, estado técnico…)? ¿Bastaría con consultarla o querrían también hacer cambios desde la plataforma? | DPE | Alta | Abierta |
+| P-G05 | ¿Quién decide si el proyecto es viable y con qué criterios (coste, plazo, seguridad, esfuerzo de Informática)? | Tutora / Dirección | Alta | Abierta (amplía P-O03) |
+| P-G06 | ¿Qué parte asumiría Informática (instalación, servicios web de Moodle, seguridad, mantenimiento técnico) y con qué disponibilidad? | Informática | Media | Abierta |
+
 ### 3.1 bis Surgidas de la observación de los campus (v0.2)
 
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
 | P-V01 | ¿Puede el alumno revisar visualmente (en navegador) las páginas de acceso para completar la identidad visual (colores, disposición, versión móvil)? | Alumno | Baja | **Resuelta en parte** (2026-10-30): logotipos de los entornos 4, 8, 10, 11 y 12 verificados (E-06 a E-10). Falta la versión móvil |
 | P-V11 | ¿Por qué varias páginas de acceso mezclan inglés y español (H-08)? ¿Depende del navegador o de la configuración de cada aula? | Administradores | Media | Abierta |
-| P-V02 | ¿Por qué los entornos 2, 8, 10, 11 y 12 comparten el título «AULA VIRTUAL CENTRE LEARNING»? ¿Es intencionado (una marca paraguas) o un resto de plantilla? | Organización | Media | Abierta |
+| P-V02 | ¿Por qué los entornos 2, 8, 10, 11 y 12 comparten el título «AULA VIRTUAL CENTRE LEARNING»? ¿Es intencionado (una marca paraguas) o un resto de plantilla? | Organización | Media | Abierta. Menos relevante para el alumnado; sigue confundiendo al personal que gestiona varias aulas |
 | P-V03 | ¿Qué es el entorno 4 (aulavirtualindex, en inglés, con registro abierto y sin ayuda visible)? ¿Está en uso, en pruebas o en desuso? | Organización | Alta | Abierta |
 | P-V04 | ¿El entorno 1 (aulavirtualatu.com) es el campus principal? ¿Por qué tiene otro tema e idiomas distintos? | Organización | Media | Abierta |
 | P-V05 | El entorno 7 no se deja leer de forma automatizada. ¿Puede el alumno abrirlo en su navegador, sin iniciar sesión, y anotar lo que ve? | Alumno | Alta | **Resuelta** (2026-10-30): captura E-01; ver inventario H-05 **[D]** |
@@ -130,7 +157,7 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-V07 | ¿La web corporativa (www.grupoatu.com) enlaza a los campus? Se genera con JavaScript y no se pudo leer de forma automatizada. Su descripción menciona «9 áreas formativas»: ¿corresponden a las marcas de los campus? | Alumno (revisión en navegador) / Organización | Alta | **Resuelta en parte** (2026-10-30): la web no enlaza a ningún campus (E-02 a E-05). Las 9 áreas son temáticas: 01 Salud, cuidados y bienestar · 02 Educación, deporte y comunidad · 03 Empresa, administración y comercio · 04 Tecnología y comunicación digital · 05 Hostelería, turismo y alimentación · 06 Industria, instalaciones y energía · 07 Construcción, movilidad y transporte · 08 Campo, mar y recursos naturales · 09 Imagen, diseño y oficios creativos. No coinciden una a una con las marcas de los campus; la relación queda en P-V09 **[O]** |
 | P-V09 | ¿Qué relación hay entre las 9 áreas formativas de la web y los campus? (Por ejemplo, ¿un curso del área 04 se imparte en el campus «ATU Tecnología Digital»?) Si existe, podría servir para clasificar el catálogo | Organización | Media | Abierta |
 | P-V10 | La web corporativa tiene un enlace «Accesibilidad» en el pie. ¿Existe una declaración de accesibilidad de Grupo ATU que la plataforma deba seguir? (amplía P-L04; pendiente de leer) | Alumno / Organización | Baja | Abierta |
-| P-V08 | ¿La etiqueta `noindex` de las páginas de acceso es intencionada (que los campus no aparezcan en buscadores)? | Administradores | Media | Abierta |
+| P-V08 | ¿La etiqueta `noindex` de las páginas de acceso es intencionada (que los campus no aparezcan en buscadores)? | Administradores | Media | **Pierde relevancia** (2026-11-04): con el alumnado entrando por URL, no indexar puede ser intencionado y no afecta a la plataforma interna |
 
 ### 3.2 Organización
 
@@ -138,33 +165,33 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 |---|---|---|---|---|
 | P-O01 | ¿Qué relación hay entre las entidades o marcas de los doce campus? ¿Son un mismo grupo, empresas asociadas o clientes? | Organización | Alta | **Resuelta en parte** (2026-10-30): el alumno confirma que las doce aulas son de Grupo ATU **[D]**. Queda por saber la relación concreta de cada marca con el grupo (P-V06) |
 | P-O02 | ¿Quién es el responsable técnico y quién el responsable de negocio de cada campus? | Organización | Alta | Abierta |
-| P-O03 | ¿Quién impulsa el proyecto y quién tomará la decisión final de implantarlo? | Organización | Alta | Abierta |
-| P-O04 | Si la plataforma se implanta, ¿quién mantendría el catálogo? ¿Hay personal disponible para ello? | Organización | Media | Abierta |
-| P-O05 | ¿Hay marcas o campus que no deban aparecer juntos públicamente, por motivos comerciales o legales? | Organización | Alta | Abierta |
-| P-O06 | ¿Bajo qué marca o identidad visual se presentaría la plataforma central? | Organización | Media | Abierta |
+| P-O03 | ¿Quién impulsa el proyecto y quién tomará la decisión final de implantarlo? | Organización | Alta | **Resuelta en parte** (2026-11-04): el entorno lo gestionaría el Departamento de Pedagogía y e-learning y la implementación la haría Informática **[D]**. Falta quién decide la viabilidad (P-G05) |
+| P-O04 | Si la plataforma se implanta, ¿quién mantendría el catálogo? ¿Hay personal disponible para ello? | Organización | Media | **Resuelta en parte** (2026-11-04): Departamento de Pedagogía y e-learning **[D]**. Falta saber qué personas y con qué dedicación (P-G02) |
+| P-O05 | ¿Hay marcas o campus que no deban aparecer juntos públicamente, por motivos comerciales o legales? | Organización | Alta | **Pierde relevancia** (2026-11-04): la plataforma es interna, no se muestra al público |
+| P-O06 | ¿Bajo qué marca o identidad visual se presentaría la plataforma central? | Organización | Media | **Pierde relevancia** (2026-11-04): herramienta interna |
 | P-O07 | ¿Hay más entornos Moodle (u otras plataformas de formación) que no estén en la lista de doce? | Organización | Alta | Abierta |
 
 ### 3.3 Usuarios y problema actual
 
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
-| P-U01 | ¿Qué perfiles usan cada campus (alumnado, profesorado, empresas, personal interno…)? | Organización | Alta | Abierta |
-| P-U02 | ¿Cuántos usuarios activos tiene aproximadamente cada campus? (rangos, sin datos personales) | Organización | Media | Abierta |
-| P-U03 | ¿Cómo llegan hoy los usuarios a su campus? (correo de bienvenida, web corporativa, marcador, buscador…) | Organización | Alta | Abierta |
-| P-U04 | ¿Hay incidencias de soporte o quejas relacionadas con no encontrar el campus o confundirse de campus? ¿Se pueden cuantificar? | Organización | Alta | Abierta |
-| P-U05 | ¿Hay usuarios que tengan cuenta en más de un campus? ¿Con el mismo usuario y contraseña o con cuentas distintas? | Organización | Alta | Abierta |
-| P-U06 | ¿Desde qué dispositivos acceden principalmente (ordenador, móvil, app Moodle)? | Organización | Media | Abierta |
-| P-U07 | ¿Hay usuarios con necesidades de accesibilidad conocidas o colectivos específicos (por ejemplo, personas mayores o con baja competencia digital)? | Organización | Media | Abierta |
+| P-U01 | ¿Qué perfiles usan cada campus (alumnado, profesorado, empresas, personal interno…)? | Organización | Alta | **Resuelta en parte** (2026-11-04): la plataforma la usaría el personal de gestión, no el alumnado **[D]** |
+| P-U02 | ¿Cuántos usuarios activos tiene aproximadamente cada campus? (rangos, sin datos personales) | Organización | Media | **Pierde relevancia** (2026-11-04): el alumnado no es usuario de la plataforma. Puede servir como dato de contexto del tamaño de cada aula |
+| P-U03 | ¿Cómo llegan hoy los usuarios a su campus? (correo de bienvenida, web corporativa, marcador, buscador…) | Organización | Alta | **Resuelta** (2026-11-04): el alumnado entra en su curso con una URL que se le facilita **[D]** |
+| P-U04 | ¿Hay incidencias de soporte o quejas relacionadas con no encontrar el campus o confundirse de campus? ¿Se pueden cuantificar? | Organización | Alta | **Pierde relevancia** (2026-11-04): el problema ya no es que el alumnado no encuentre su aula |
+| P-U05 | ¿Hay usuarios que tengan cuenta en más de un campus? ¿Con el mismo usuario y contraseña o con cuentas distintas? | Organización | Alta | **Pierde relevancia** para el alumnado (2026-11-04). La misma pregunta, aplicada al personal de gestión, pasa a P-G03 |
+| P-U06 | ¿Desde qué dispositivos acceden principalmente (ordenador, móvil, app Moodle)? | Organización | Media | **Pierde relevancia** (2026-11-04): el personal de gestión trabajará previsiblemente desde ordenador **[S]** |
+| P-U07 | ¿Hay usuarios con necesidades de accesibilidad conocidas o colectivos específicos (por ejemplo, personas mayores o con baja competencia digital)? | Organización | Media | **Reorientada** (2026-11-04): se aplica al personal de gestión. La accesibilidad sigue siendo un requisito de la ficha |
 | P-U08 | ¿En qué idiomas debe estar la plataforma? | Organización | Media | Abierta |
 
 ### 3.4 Necesidad y alcance
 
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
-| P-N01 | ¿Qué esperaría la organización de la plataforma: solo un punto de entrada con enlaces, o también ver cursos, notificaciones o datos de los campus? | Organización | Alta | Abierta |
+| P-N01 | ¿Qué esperaría la organización de la plataforma: solo un punto de entrada con enlaces, o también ver cursos, notificaciones o datos de los campus? | Organización | Alta | **Resuelta en parte** (2026-11-04): se busca una gestión centralizada de las aulas, no solo enlaces **[D]**. El grado de integración queda abierto (P-G04) |
 | P-N02 | ¿Se espera inicio de sesión único (entrar una vez y acceder a todos los campus)? ¿Es un deseo o un requisito? | Organización | Alta | Abierta |
-| P-N03 | ¿La plataforma sería pública (cualquiera puede ver el catálogo) o solo para usuarios identificados? | Organización | Alta | Abierta |
-| P-N04 | ¿Qué atributos serían útiles para buscar o filtrar campus (entidad, temática, ubicación, modalidad…)? ¿Quién mantendría esos datos? | Organización | Media | Abierta |
+| P-N03 | ¿La plataforma sería pública (cualquiera puede ver el catálogo) o solo para usuarios identificados? | Organización | Alta | **Resuelta** (2026-11-04): uso interno, restringido al personal autorizado **[D]** (deducido de la respuesta de la tutora) |
+| P-N04 | ¿Qué atributos serían útiles para buscar o filtrar campus (entidad, temática, ubicación, modalidad…)? ¿Quién mantendría esos datos? | Organización | Media | **Reorientada** (2026-11-04): atributos útiles para el personal de gestión (marca, estado, responsable, versión) |
 | P-N05 | ¿Hay algún plazo o evento que condicione cuándo debería estar disponible? | Organización | Media | Abierta |
 
 ### 3.5 Campus y aspectos técnicos
@@ -174,8 +201,8 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-C01 | ¿Qué versión de Moodle tiene cada campus? | Administradores | Media | Abierta |
 | P-C02 | ¿Dónde se aloja cada campus y quién da el servicio (propio, proveedor, MoodleCloud…)? | Administradores | Media | Abierta |
 | P-C03 | ¿Qué método de autenticación usa cada campus (cuentas manuales, Google, Microsoft, LDAP, otro)? | Administradores | Alta | Abierta |
-| P-C04 | ¿Tienen habilitados servicios web o la API de Moodle? ¿Se permitiría habilitarlos? | Administradores | Baja | Abierta |
-| P-C05 | ¿Existe algún entorno de pruebas (no producción) que se pueda usar más adelante? | Administradores | Baja | Abierta |
+| P-C04 | ¿Tienen habilitados servicios web o la API de Moodle? ¿Se permitiría habilitarlos? | Administradores | Alta | Abierta. **Sube de importancia** (2026-11-04): consultar o gestionar varias aulas desde un único sitio depende de los servicios web |
+| P-C05 | ¿Existe algún entorno de pruebas (no producción) que se pueda usar más adelante? | Administradores | Alta | Abierta. **Sube de importancia** (2026-11-04): cualquier prueba de integración tendría que hacerse en un aula de pruebas. Ver también P-T01 |
 | P-C06 | ¿Con qué frecuencia se crean, cambian o retiran campus? | Organización | Media | Abierta |
 | P-C07 | ¿Existe un dominio corporativo común donde podría alojarse la plataforma? | Organización | Baja | Abierta |
 
@@ -186,7 +213,7 @@ Agrupadas por destinatario. Las de prioridad Alta son las imprescindibles para c
 | P-I01 | ¿Existe un directorio de usuarios común a todos o a varios campus (por ejemplo, Google Workspace, Microsoft Entra ID, LDAP)? | Organización | Alta | Abierta |
 | P-L01 | ¿Quién es el responsable del tratamiento de datos de cada campus? ¿Hay delegado de protección de datos? | Organización | Media | Abierta |
 | P-L02 | ¿Hay política de cookies o de analítica web corporativa que la plataforma deba seguir? | Organización | Baja | Abierta |
-| P-L03 | ¿Hay restricciones de uso de logotipos o marcas de las entidades en la plataforma? | Organización | Media | Abierta |
+| P-L03 | ¿Hay restricciones de uso de logotipos o marcas de las entidades en la plataforma? | Organización | Media | **Pierde relevancia** (2026-11-04): herramienta interna |
 | P-L04 | ¿Alguna de las entidades tiene obligación legal específica de accesibilidad digital? (se investigará la normativa aplicable y se pedirá confirmación, sin emitir conclusiones jurídicas) | Organización | Media | Abierta |
 
 ### 3.7 Recursos
@@ -208,11 +235,13 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | S-01 | Los campus pertenecen o los opera un mismo grupo (Grupo ATU) | v0.1: siete dominios contienen «atu». v0.2: los once observados comparten soporte, bloque «Acerca de ATU» y responsable del tratamiento. v0.8: confirmado por el alumno | P-O01 | **Confirmado [D]** (2026-10-30) |
 | S-02 | No se debe presuponer que todos los campus comparten versión, alojamiento, autenticación ni responsable | Ficha 01, página 5 (límites) | P-C01 a P-C03 | Se mantiene como regla |
 | S-03 | Todos los entornos son Moodle | v0.2: los once observados muestran «Desarrollado por Moodle» y la página de acceso estándar. v0.4: el entorno 7 muestra un formulario típico de Moodle, pero el pie no es visible | P-C01 | **Verificado en 11 de 12; indicio fuerte en el 7** |
-| S-04 | El problema principal es localizar y acceder al campus correcto, no gestionar contenidos | Redacción de la ficha | P-N01, P-U04 | Pendiente de confirmar |
+| S-04 | El problema principal es localizar y acceder al campus correcto, no gestionar contenidos | Redacción de la ficha | P-N01, P-U04 | **Descartado** (2026-11-04): la tutora indica que el enfoque es la gestión interna de las aulas; el alumnado ya accede por URL. Lo sustituye S-10 |
 | S-05 | No existe hoy una identidad común para todos los campus | Ausencia de información. v0.2: ninguna página muestra acceso con Google, Microsoft u otro proveedor (H-06) | P-I01, P-C03 | Pendiente de confirmar; reforzado por la observación |
 | S-06 | La Fase 1 se hará con información pública y supuestos, sin entrevistas, salvo que el propietario indique lo contrario | Situación actual | P-A05 | **Confirmado** por el alumno (2026-10-30) |
 | S-08 | Los entornos usan Moodle 4.1, rama sin soporte de seguridad desde el 08-12-2025 | Parámetro de versión en el enlace de la app móvil (H-04) y página oficial de versiones (F-15) | P-C01 | Indicio |
 | S-09 | La organización usa Microsoft 365 | Ayuda alojada en grupoatu365.sharepoint.com (H-07) | P-I01 | Indicio |
+| S-10 | La plataforma es una herramienta interna para el personal que gestiona las aulas (Departamento de Pedagogía y e-learning), y su objetivo es evitar entrar y salir de cada aula | Respuesta de la tutora (2026-11-04) | P-G01, P-G04 | **Confirmado en lo general [D]**; el grado de integración está por concretar |
+| S-11 | Cada persona que gestiona tiene hoy una cuenta propia en cada aula, y debe iniciar sesión por separado en cada una | Doce aulas sin acceso común (H-06, S-05) | P-G03 | Supuesto |
 | S-07 | El nombre «aulavirtualalmeria» sugiere que algún campus se organiza por ubicación geográfica | Texto de la URL | P-N04 | Indicio |
 
 ## 5. Dependencias
@@ -222,7 +251,9 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | D-01 | Visto bueno del tutor para pasar de fase | Todo el proyecto | Tutor | Pendiente |
 | D-02 | Autorización para la observación pasiva de los doce entornos | T4 (inventario) | Propietario / Tutor | Resuelta por el alumno (P-A04) |
 | D-03 | Contacto con responsables de campus y usuarios | Confirmación de supuestos | Organización | Descartado por ahora (P-A05): los supuestos quedarán abiertos para el tutor |
-| D-04 | Colaboración de los administradores de cada campus para cualquier integración | Fases 3 en adelante | Organización | No necesaria aún |
+| D-04 | Colaboración de los administradores de cada campus para cualquier integración | Fases 3 en adelante | Organización (Informática) | No necesaria aún. **Sube de importancia** (2026-11-04): la gestión centralizada depende más de la integración |
+| D-05 | Implementación por Informática si el proyecto resulta viable | Fases 5 en adelante | Informática | Indicada por la tutora (2026-11-04) **[D]** |
+| D-06 | Decisión sobre la viabilidad antes de cualquier implementación | Fase 5 | Por confirmar (P-G05) | Indicada por la tutora (2026-11-04) **[D]** |
 
 ## 6. Control de versiones
 
@@ -235,4 +266,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | 0.5 | 2026-10-30 | Claude (Analista) | P-V07 resuelta en parte con las capturas de la web corporativa; nuevas P-V09 y P-V10. [Archivada](historico/01-registro-preguntas-supuestos_v0.5.md) |
 | 0.6 | 2026-10-30 | Claude (Analista) | «Index» deja de tratarse como marca (ver inventario v0.3). [Archivada](historico/01-registro-preguntas-supuestos_v0.6.md) |
 | 0.7 | 2026-10-30 | Claude (Analista) | Marcas verificadas con capturas (P-V01 en parte); nueva P-V11 sobre el idioma mezclado. [Archivada](historico/01-registro-preguntas-supuestos_v0.7.md) |
-| 0.8 | 2026-10-30 | Claude (Analista) | El alumno confirma que las doce aulas son de Grupo ATU: S-01 confirmado, P-O01 resuelta en parte |
+| 0.8 | 2026-10-30 | Claude (Analista) | El alumno confirma que las doce aulas son de Grupo ATU: S-01 confirmado, P-O01 resuelta en parte. [Archivada](historico/01-registro-preguntas-supuestos_v0.8.md) |
+| 0.9 | 2026-11-04 | Claude (Analista) | Respuesta de la tutora: enfoque de gestión interna. PG-01, PG-03, PG-04, PG-05, PG-08 y PG-10 reorientadas; nuevas P-T01 y P-G01 a P-G06; estados de P-O, P-U, P-N, P-V, P-C y P-L actualizados; S-04 descartado; nuevos S-10 y S-11; nuevas D-05 y D-06 |

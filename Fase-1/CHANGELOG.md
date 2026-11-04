@@ -4,6 +4,23 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.9] — 2026-11-04
+
+**Motivo:** respuesta de la tutora. El enfoque pasa a ser la **gestión interna** de las aulas por parte del Departamento de Pedagogía y e-learning, con implementación de Informática y estudio de viabilidad previo. El alumnado ya entra en su curso con la URL que se le facilita. Se registra como cambio de alcance.
+
+### Cambiado
+- `01-registro-preguntas-supuestos.md` v0.9: la respuesta de la tutora como dato; PG-01, PG-03, PG-04, PG-05, PG-08 y PG-10 reorientadas; nuevas P-T01 y P-G01 a P-G06; preguntas del alumnado y del público marcadas como «pierde relevancia»; P-C04 y P-C05 suben de prioridad; S-04 descartado; nuevos S-10, S-11, D-05 y D-06.
+- `04-mapa-actores-perfiles.md` v0.4: nuevos actores A-13 (DPE) y A-14 (Informática); perfiles PU-08 a PU-10; los perfiles del alumnado, profesorado y empresas quedan fuera del enfoque.
+- `05-situacion-actual.md` v0.3: necesidades N-11 a N-15, problemas PR-09 y PR-10 y relevancia de los anteriores.
+- `06-registro-riesgos.md` v0.2: nuevos RP-10, RP-11, RS-10 a RS-12; revisión de RP-03, RP-05, RS-03 a RS-07 y RS-09.
+- `07-alcance-preliminar.md` v0.3: alcance rehecho (AL-15 a AL-27), nuevas alternativas y correspondencia con la v0.2.
+- `08-diagnostico-inicial.md` v0.5: resumen, recomendación, preguntas guía y próximos pasos.
+- `registro-seguimiento.md`: respuesta literal de la tutora y cambio de alcance.
+- `entregas/guion-reunion-grupo-atu.txt` v2: guion para el DPE, Informática y quien decida la viabilidad. El v1 se archiva.
+
+### Sin cambios
+- `entregas/Resumen_Fase-1_Plataforma-Moodle_v5.pdf`: ya entregado a la tutora; el cambio de enfoque se explica en el resumen de la Fase 2 v2.
+
 ## [0.8.1] — 2026-11-03
 
 ### Cambiado

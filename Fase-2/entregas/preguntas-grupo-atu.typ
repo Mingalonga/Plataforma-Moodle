@@ -1,10 +1,10 @@
 // Preguntas para Grupo ATU · fuente Typst
-// Compilar: python3 -c "import typst; typst.compile('preguntas-grupo-atu.typ', output='Preguntas_Grupo-ATU_Plataforma-Moodle_v1.pdf')"
+// Compilar: python3 -c "import typst; typst.compile('preguntas-grupo-atu.typ', output='Preguntas_Grupo-ATU_Plataforma-Moodle_v2.pdf')"
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v1"
+#let version = "v2"
 
 #set document(title: "Preguntas para Grupo ATU — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -65,39 +65,26 @@
 
 #v(0.4cm)
 
-El proyecto estudia la viabilidad de un punto de acceso común a las doce aulas virtuales Moodle de Grupo ATU. Hasta ahora se ha trabajado solo con información pública. Las siguientes preguntas permitirían confirmar el problema, ajustar los requisitos y comparar soluciones con datos reales. Bastan respuestas aproximadas, y en ningún caso se necesitan datos personales.
+El proyecto estudia la viabilidad de una herramienta interna para que el Departamento de Pedagogía y e-learning gestione las doce aulas virtuales Moodle desde un único punto, sin tener que entrar y salir de cada una. Informática se encargaría de la implementación. Estas preguntas permitirían ajustar los requisitos y estudiar la viabilidad con datos reales. Bastan respuestas aproximadas y en ningún caso se necesitan datos personales ni contraseñas.
 
-= Organización y decisión
+= Departamento de Pedagogía y e-learning
 
-#pregunta(1, [¿Quién impulsa el proyecto, quién decidiría su implantación y quién podría ser la persona de contacto?], [Para validar el alcance con quien decide.])
-#pregunta(2, [Si la plataforma se pusiera en marcha, ¿qué persona o departamento mantendría la lista de aulas (altas, cambios y bajas)?], [Sin una persona responsable, ninguna solución es sostenible.])
-#pregunta(3, [¿Hay marcas o aulas que no deban aparecer juntas públicamente? ¿Con qué imagen se presentaría la plataforma y se pueden usar los logotipos de cada marca?], [Condiciona la organización del catálogo y su diseño.])
-#pregunta(4, [¿Existen más aulas Moodle u otras plataformas de formación además de las doce identificadas? ¿Con qué frecuencia se crean, cambian o retiran?], [Para dimensionar el catálogo y su mantenimiento.])
+#pregunta(1, [¿Qué tareas realizáis en las aulas (crear cursos, matricular, dar de alta usuarios, revisar informes, copias de cursos…) y cuáles se repiten más?], [Para decidir a qué páginas de gestión debe llevar la plataforma.])
+#pregunta(2, [¿Cuántas personas gestionáis las aulas, en cuántas trabaja cada una y cuánto tiempo se dedica hoy a entrar y salir de ellas?], [Para medir el problema y comparar después con la plataforma.])
+#pregunta(3, [¿Tenéis una cuenta distinta en cada aula? ¿Con qué permisos?], [Determina si tendría sentido un acceso único para el personal.])
+#pregunta(4, [¿Qué os gustaría ver de todas las aulas a la vez? ¿Bastaría con consultarlo o querríais también hacer cambios desde la plataforma?], [Define cuánto debe conectarse la plataforma con Moodle.])
 
-= Usuarios y atención al usuario
+= Informática
 
-#pregunta(5, [¿Recibe el servicio de atención consultas del tipo «no sé cuál es mi aula» o «no encuentro la dirección»? ¿Cuántas al mes, aproximadamente?], [Es el dato que confirma y mide el problema.])
-#pregunta(6, [¿Cómo llegan hoy los usuarios a su aula (correo de bienvenida, enlace de la empresa, buscador…)?], [Para saber dónde falla el recorrido actual.])
-#pregunta(7, [¿Hay usuarios con cursos en varias aulas? ¿Usan el mismo usuario y contraseña o cuentas distintas?], [Indica si tendría sentido un acceso común en el futuro.])
-#pregunta(8, [¿Cuántos usuarios activos hay aproximadamente y desde qué dispositivos entran (ordenador o móvil)?], [Para fijar los objetivos de rendimiento y las pruebas.])
+#pregunta(5, [¿Qué versión de Moodle tiene cada aula y dónde está alojada?], [Los indicios apuntan a una versión sin actualizaciones de seguridad, lo que condiciona cualquier conexión.])
+#pregunta(6, [¿Se podrían activar los servicios web de Moodle, al menos en modo de solo lectura? ¿Existe un aula o un entorno de pruebas?], [Las pruebas de conexión nunca se harían sobre las aulas reales.])
+#pregunta(7, [¿Existe un directorio común para el personal (por ejemplo, Microsoft 365)? ¿Hay normas internas de seguridad para herramientas internas?], [Para la identificación del personal y los requisitos de seguridad.])
+#pregunta(8, [¿Qué parte del proyecto podría asumir Informática (instalación, permisos, claves de acceso, mantenimiento) y con qué disponibilidad?], [Necesario para repartir tareas y para el estudio de viabilidad.])
 
-= Alcance esperado
+= Viabilidad
 
-#pregunta(9, [¿Se espera solo un punto de acceso a las aulas, o también ver información de los cursos o entrar una sola vez en todas?], [Cambia por completo la complejidad de la solución.])
-#pregunta(10, [¿La lista de aulas puede ser pública o debe verla solo quien se identifique?], [Si es privada, la plataforma tendría que tratar datos personales.])
-
-= Aspectos técnicos
-
-#pregunta(11, [¿Qué versión de Moodle tiene cada aula y dónde está alojada (servidor propio, proveedor…)?], [Los indicios apuntan a una versión sin actualizaciones de seguridad, lo que limita cualquier integración.])
-#pregunta(12, [¿Existe un directorio de usuarios común (por ejemplo, Microsoft 365) o cada aula gestiona sus propias cuentas?], [Determina si es viable un acceso único.])
-#pregunta(13, [¿Hay un dominio o alojamiento disponible para la plataforma, o herramientas ya contratadas que convenga reutilizar (web corporativa, gestor de contenidos)?], [Influye en las alternativas y en el coste.])
-#pregunta(14, [¿Existe un entorno de pruebas o un aula de pruebas que se pudiera usar más adelante?], [Las pruebas nunca se harán sobre las aulas reales.])
-
-= Recursos y normativa
-
-#pregunta(15, [¿Hay un presupuesto orientativo o un coste mensual máximo aceptable? ¿Qué conocimientos técnicos tiene el personal que la mantendría?], [Necesario para el estudio de viabilidad.])
-#pregunta(16, [¿Existe una política corporativa de accesibilidad, privacidad o cookies que la plataforma deba seguir?], [Para ajustar los requisitos legales.])
+#pregunta(9, [¿Quién decidiría si el proyecto es viable, con qué criterios (coste, plazo, seguridad, esfuerzo) y con qué presupuesto orientativo?], [Para orientar el estudio de viabilidad a lo que se va a valorar.])
 
 #v(0.5cm)
 #line(length: 100%, stroke: 0.6pt + linea)
-#text(9pt, fill: gris)[Las respuestas se pueden enviar por correo o tratar en una conversación breve de 20 a 30 minutos. Documentación del proyecto: #link("https://github.com/Mingalonga/Plataforma-Moodle")[github.com/Mingalonga/Plataforma-Moodle]]
+#text(9pt, fill: gris)[Sustituye a la versión 1 (16 preguntas pensadas para el alumnado y la atención al usuario). Las respuestas se pueden enviar por correo o tratar en una conversación breve de 20 a 30 minutos. Documentación del proyecto: #link("https://github.com/Mingalonga/Plataforma-Moodle")[github.com/Mingalonga/Plataforma-Moodle]]

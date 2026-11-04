@@ -1,10 +1,10 @@
 // Guía de la Fase 2 para el alumno · fuente Typst
-// Compilar: python3 -c "import typst; typst.compile('guia-fase-2-alumno.typ', output='Guia-alumno_Fase-2_Plataforma-Moodle_v1.pdf')"  (o: typst compile ...)
+// Compilar: python3 -c "import typst; typst.compile('guia-fase-2-alumno.typ', output='Guia-alumno_Fase-2_Plataforma-Moodle_v2.pdf')"  (o: typst compile ...)
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v1"
+#let version = "v2"
 
 #set document(title: "Guía de la Fase 2 para el alumno — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -59,14 +59,14 @@
   #v(0.4cm)
   #text(24pt, weight: "bold", fill: azul)[Guía de la Fase 2: \ Requisitos]
   #v(0.5cm)
-  #text(13pt, fill: gris)[Qué se ha hecho, por qué y cómo defenderlo]
+  #text(13pt, fill: gris)[Qué se ha hecho, por qué y cómo defenderlo \ Versión 2: enfoque de gestión interna]
   #v(1fr)
   #line(length: 100%, stroke: 0.6pt + linea)
   #v(0.2cm)
   #grid(columns: (3.2cm, 1fr), row-gutter: 0.55em,
     text(fill: gris)[Para], [Carlos García Rallo (uso interno, no es para entregar)],
-    text(fill: gris)[Fecha], [3 de noviembre de 2026],
-    text(fill: gris)[Basada en], [Documentación de la Fase 2, versión 0.1],
+    text(fill: gris)[Fecha], [4 de noviembre de 2026],
+    text(fill: gris)[Basada en], [Documentación de la Fase 2, versión 0.2. Sustituye a la guía v1],
   )
   #v(1.5cm)
 ]
@@ -75,239 +75,151 @@
 
 #pagebreak()
 
-= 1. Qué es la Fase 2 y por qué importa
+= 1. Qué ha cambiado y por qué
 
-En la Fase 1 averiguamos *qué pasa*: hay doce aulas Moodle dispersas, nadie las reúne y la gente puede perderse. En la Fase 2 decidimos *qué tiene que hacer la plataforma* para resolverlo, con tanta precisión que luego se pueda comprobar si lo hace o no. Todavía no elegimos *cómo* construirla (eso es la Fase 3).
+La tutora contestó el 4 de noviembre. En resumen, dijo cinco cosas:
 
-Según la ficha:
-
-#table(columns: (0.5fr, 1.5fr),
-  [Concepto], [Lo que dice la ficha],
-  [Trabajo principal], [Definir usuarios, escenarios de uso, requisitos funcionales y no funcionales, prioridades y criterios de aceptación.],
-  [Evidencia], [Documento de requisitos trazable.],
-  [Hito], [Requisitos aprobados (por la tutora).],
-  [Entregable], [02 — Especificación: requisitos priorizados, escenarios de uso, criterios de aceptación y trazabilidad.],
-  [Peso en la nota], [El criterio «Requisitos y trazabilidad» vale un 15 %. Valora claridad, que se puedan verificar, la priorización y la conexión entre necesidades, requisitos y pruebas.],
+#table(columns: (0.9fr, 1.1fr),
+  [Lo que dijo], [Lo que significa para el proyecto],
+  [«El enfoque es la gestión de las plataformas a nivel interno, para no andar saliendo y entrando en una página y otra»], [La plataforma es para *el personal que gestiona las aulas*, no para el alumnado.],
+  [«Ya que estos […] lo hacen mediante una URL que se les facilita»], [El alumnado no tiene el problema de encontrar su aula. *El catálogo para el alumnado se descarta.*],
+  [«Lo llevaría el Departamento de Pedagogía y e-learning»], [El *DPE* es el usuario principal y mantiene la información.],
+  [«La parte de implementación […] la ejecutaría informática»], [*Informática* es el perfil técnico: instala, da permisos, custodia claves.],
+  [«Antes de todo esto habría que ver […] si es viable»], [Lo que dependa de conectar con Moodle queda *condicionado a la viabilidad* (Fase 5).],
 )
 
-Además, la ficha dice que el prototipo (Fase 6) debe cubrir los requisitos imprescindibles, y que el resto debe quedar «planificado, justificado o descartado de manera expresa». Por eso cada requisito tiene una prioridad y los descartes están escritos.
+Hay una frase que no está clara: «y ya estaría, por así decirlo, lo del tema de entorno de pruebas». La he interpretado como que, para el alumnado, no hace falta nada más. Pero *el proyecto sí necesita un aula de pruebas* para demostrar cualquier conexión con Moodle, así que conviene preguntárselo (P-T01).
 
-#caja[Lo más importante que debes saber.][La organización no ha contestado y la tutora no ha validado la Fase 1. Por eso todo se apoya en *supuestos escritos*. Esto no es un fallo si se dice claramente: la ficha valora que «la propuesta reconoce sus límites» y penaliza «no distinguir los supuestos de los hechos». Nuestra defensa es que cada supuesto está identificado y sabemos qué requisitos cambiarían si fallara.]
+#caja[Lo más importante que debes saber.][Esto *no* es un fallo del proyecto. La ficha dice que una revisión puede cambiar el enfoque, y lo que valora es que el cambio quede registrado y justificado. Está todo: la respuesta literal en el registro de seguimiento, el cambio de alcance anotado, las versiones antiguas guardadas en `historico/` y una tabla de correspondencia entre los requisitos viejos y los nuevos.]
 
-= 2. Dónde está cada cosa
+= 2. Qué documentos han cambiado
 
-Todo está en la carpeta `Fase-2/` del repositorio. Orden recomendado de lectura:
-
-#table(columns: (0.7fr, 1.3fr, 0.6fr),
-  [Documento], [Qué contiene], [Léelo si…],
-  [06 Especificación], [El resumen de todo: el entregable 02], [Solo tienes 10 minutos],
-  [01 Supuestos], [Los 14 supuestos y su efecto], [Te preguntan «¿y esto de dónde sale?»],
-  [02 Escenarios], [13 situaciones de uso contadas como historias], [Quieres entender para quién es cada requisito],
-  [03 Funcionales], [18 requisitos con sus criterios de aceptación], [Quieres el detalle de qué hace la plataforma],
-  [04 No funcionales], [30 requisitos de calidad con valores], [Te preguntan por accesibilidad, seguridad o rendimiento],
-  [05 Trazabilidad], [Tablas que conectan todo y los 33 casos de prueba], [Te preguntan cómo se comprobará algo],
-  [00 Plan], [Método, tareas y criterios de salida], [Te preguntan cómo has trabajado],
+#table(columns: (0.9fr, 1.1fr),
+  [Documento], [Cambio],
+  [Fase 1: registro de preguntas (0.9)], [La respuesta de la tutora como dato. Preguntas nuevas P-T01 y P-G01 a P-G06. Las del alumnado, marcadas como «pierde relevancia».],
+  [Fase 1: actores y perfiles (0.4)], [Nuevos actores: DPE (A-13) e Informática (A-14). Nuevos perfiles PU-08 a PU-10. El alumnado pasa a afectado indirecto.],
+  [Fase 1: situación actual (0.3)], [Necesidades nuevas N-11 a N-15 y problema principal PR-09 (gestión dispersa).],
+  [Fase 1: riesgos (0.2)], [Suben los de seguridad: la plataforma concentra accesos a doce aulas (RS-10).],
+  [Fase 1: alcance (0.3) y diagnóstico (0.5)], [Alcance rehecho (AL-15 a AL-27) y registrado como cambio de alcance.],
+  [Fase 1: guion de reunión (v2)], [Preguntas para el DPE, Informática y quien decida la viabilidad.],
+  [Fase 2: todo el paquete (0.2)], [Rehecho. Los identificadores se han renumerado.],
+  [Entregas], [Resumen para la tutora v2, esta guía v2 y preguntas v2 (de 16 a 9).],
+  [Sin cambios], [El resumen de la Fase 1 (v5), porque ya está entregado. El inventario de las aulas sigue siendo válido.],
 )
 
-También están el `registro-seguimiento.md` (con la respuesta de la tutora y la decisión de seguir), el `CHANGELOG.md` y la carpeta `entregas/` con el PDF para la tutora y esta guía.
+= 3. La idea en una frase
 
-= 3. Conceptos clave
+#caja[][Una *herramienta interna*, solo para personal autorizado, con la *lista de las doce aulas* y *accesos directos a la gestión de cada una* (cursos, usuarios, matriculaciones, informes), mantenida por el DPE e instalada por Informática. Si resulta viable, además permitiría *consultar datos de varias aulas a la vez* sin entrar en ellas.]
 
-== Requisito funcional y no funcional
+Piensa en ello como un «panel de mandos»: no sustituye a Moodle (la gestión se sigue haciendo en cada aula), pero te ahorra buscar la dirección, navegar por el menú y confundirte de aula.
 
-- *Funcional:* algo que la plataforma *hace*. Ejemplo: «buscar un aula escribiendo parte de su nombre».
-- *No funcional:* *cómo* lo hace o qué cualidades tiene. Ejemplo: «la página carga en 2,5 segundos o menos en un móvil» o «se puede usar solo con el teclado».
+== Los tres bloques
 
-Regla útil: si puedes describirlo como una acción del usuario, es funcional; si es un adjetivo (rápido, seguro, accesible, mantenible), es no funcional.
-
-== Prioridad MoSCoW
-
-#table(columns: (0.45fr, 1.55fr),
-  [Letra], [Significado en este proyecto],
-  [M (Must)], [Imprescindible. Sin esto la plataforma no resuelve el problema. Entra en el prototipo.],
-  [S (Should)], [Conveniente. Aporta mucho pero se puede vivir sin ello al principio. Queda planificado.],
-  [C (Could)], [Futuro. Solo si se cumplen condiciones que hoy no sabemos (por ejemplo, que exista una cuenta común).],
-  [W (Won't)], [Descartado en este proyecto, con el motivo escrito.],
+#table(columns: (0.5fr, 1fr, 0.6fr),
+  [Bloque], [Qué incluye], [¿Necesita tocar Moodle?],
+  [Base (*Must*)], [Acceso restringido y roles, inventario de aulas, accesos directos, búsqueda, mantenimiento, registros.], [*No.* Solo son enlaces y una lista. Siempre es viable.],
+  [Consulta (*Should*)], [Datos agregados de varias aulas, buscar un curso en todas, estado técnico.], [*Sí, para leer.* Necesita los servicios web de Moodle activados por Informática.],
+  [Acciones (*Could*)], [Crear cursos o matricular desde el panel, entrar una vez en todas, buscar personas.], [*Sí, para escribir* o cambiar la autenticación. Más riesgo.],
 )
 
-Usamos MoSCoW porque ya lo usamos en la Fase 1 y la ficha pide «un método que puedas explicar». Es el más fácil de explicar.
+Este reparto es tu mejor defensa ante «¿y si no es viable?»: el bloque base funciona siempre. La viabilidad decide hasta dónde se llega.
 
-== Criterio de aceptación
+= 4. Conceptos clave (repaso)
 
-Es la condición que permite decir *sí o no* a «¿se cumple este requisito?», sin opiniones. Para los funcionales usamos el formato *Dado / Cuando / Entonces*:
-
-#caja[Ejemplo (RF-03, buscador).][*Dado* el aula «Tierra Más Ecológica», *cuando* alguien busca «ECOLÓGICA» o «ecologica», *entonces* aparece en los resultados. Si no aparece, el requisito no se cumple. No hay discusión posible.]
-
-Para los no funcionales, el criterio es un *valor medible* y un *método*: «2,5 segundos o menos, medido con una herramienta de rendimiento en modo móvil».
-
-== Trazabilidad
-
-Es poder seguir el hilo de cada requisito *hacia atrás* (¿qué necesidad lo justifica?) y *hacia delante* (¿qué prueba lo comprobará?). Ejemplo completo:
+- *Requisito funcional:* algo que la plataforma *hace* («ofrecer un acceso directo a la gestión de cursos de cada aula»).
+- *Requisito no funcional:* *cómo* lo hace («con doble factor», «en 2 segundos»).
+- *MoSCoW:* M imprescindible (prototipo), S conveniente (aquí, si es viable), C futuro, W descartado con motivo.
+- *Criterio de aceptación:* condición de sí o no. Formato *Dado / Cuando / Entonces*.
+- *Trazabilidad:* poder seguir cada requisito hasta su necesidad y hasta su prueba.
+- *Servicios web de Moodle:* la vía oficial de Moodle para que otro programa lea o cambie datos sin entrar en el aula. Funciona con una *clave de servicio* (token). Por eso hay requisitos sobre quién guarda esas claves.
+- *Aula de pruebas:* un Moodle sin datos reales. Si la empresa no tiene, se monta uno en tu ordenador. La ficha prohíbe probar sobre las aulas reales y presentar como real algo simulado.
 
 #caja[Un hilo de principio a fin.][
-*Problema PR-03* (cinco aulas se llaman igual) → *necesidad N-03* (distinguir un aula de otra) → *escenario ES-03* (Marta entra en un aula y duda si es la suya) → *requisito RF-02* (cada aula muestra marca, nombre propio, logotipo y dominio, y no hay dos nombres iguales) → *caso de prueba CP-F-02* (revisar el catálogo real y comprobar que no hay nombres repetidos y que el dominio coincide).
+*Problema PR-09* (hay que entrar y salir de cada aula) → *necesidad N-11* (gestionar cualquier aula desde un único punto) → *escenario ES-02* (Ana tiene que crear un curso en el aula de Tierra Más Ecológica) → *requisito RF-04* (accesos directos a la gestión de cada aula) → *caso de prueba CP-UX-01* (personas del DPE hacen la tarea con la plataforma y por el camino actual, y se comparan pasos y tiempo).
 ]
 
-La ficha valora esto expresamente: «las decisiones pueden rastrearse hasta requisitos, evidencias o restricciones concretas».
+= 5. Datos de la tutora y supuestos
 
-== Identificadores
-
-Cada cosa tiene un código para poder citarla: SF (supuesto), ES (escenario), RF (requisito funcional), RNF-UX/SEG/REN/MAN (no funcional por grupo: usabilidad, seguridad, rendimiento, mantenimiento), W (descartado), CP (caso de prueba). De la Fase 1 se reutilizan N (necesidad), PR (problema), PU (perfil de usuario), AL (alcance), RS (riesgo) y P (pregunta).
-
-= 4. Los 14 supuestos, uno a uno
-
-Un supuesto es algo que damos por bueno *para poder avanzar*, sabiendo que puede ser falso. Para cada uno: qué suponemos, por qué es razonable y qué pasaría si fuera falso.
+Ahora se separan dos cosas: lo que *ha dicho la tutora* (DT-01 a DT-06, son datos) y lo que *suponemos* (SF-01 a SF-14). Los supuestos que más pesan:
 
 #table(columns: (auto, 0.9fr, 0.8fr, 0.9fr),
   [ID], [Qué suponemos], [Por qué], [Si es falso…],
-  [SF-01], [El problema es encontrar el aula, no gestionar cursos], [Es lo que plantea la ficha y lo que observamos], [Habría que añadir funciones (ver cursos, avisos) y revisar prioridades],
-  [SF-02], [No hay una cuenta común para todas las aulas], [Ninguna aula ofrece entrar con Google, Microsoft u otra cuenta común], [Se podría ofrecer «mis aulas» antes],
-  [SF-03], [El catálogo puede ser público], [Solo enseña lo que ya es público: nombre y página de entrada], [Habría que poner un acceso con usuario y la plataforma trataría datos personales],
-  [SF-04], [Todas las marcas pueden salir juntas], [Todas son de Grupo ATU (lo confirmaste tú)], [Habría que separar el catálogo por marcas],
-  [SF-05], [Alguien de la empresa mantendrá el catálogo], [Sin eso nada funciona a largo plazo], [Ninguna solución sería sostenible; saldría en la conclusión de viabilidad],
-  [SF-06], [Las aulas cambian pocas veces al año], [Las doce parecen estables], [La gestión debería ser más ágil y la comprobación de enlaces más frecuente],
-  [SF-07], [El idioma principal es el español], [Público hispanohablante; solo el aula 4 está en inglés], [Habría que hacer la plataforma en varios idiomas],
-  [SF-08], [Mucha gente entra desde el móvil], [Formación online y para el empleo], [No cambia la prioridad (la ficha lo exige), pero sí el peso de las pruebas],
-  [SF-09], [Poca carga: cientos de visitas al día], [Doce aulas de un grupo de formación], [Habría que revisar el alojamiento en la Fase 3],
-  [SF-10], [La primera versión no se conecta con Moodle], [Indicio de Moodle sin soporte; menos riesgo], [Se podría valorar traer datos de cursos],
-  [SF-11], [Se busca por marca y, si encaja, por área formativa], [Las aulas tienen marca; la web usa 9 áreas], [El filtro sería solo por marca],
-  [SF-12], [Se puede mostrar el contacto común del servicio de atención (CAU)], [Ya está publicado en las aulas], [Se pondría el canal que diga la empresa],
-  [SF-13], [La referencia de accesibilidad es WCAG 2.2 AA], [Lo pide el prompt inicial; es el estándar habitual], [Se ajustaría a la norma que aplique],
-  [SF-14], [Sin cookies de seguimiento ni analítica], [Menos datos personales, sin banner de consentimiento], [La analítica tendría que seguir la política de la empresa],
+  [SF-02], [Las tareas que más se repiten son las típicas de Moodle: cursos, matrículas, usuarios, informes, copias], [Son las funciones de administración estándar], [Cambian los accesos directos],
+  [SF-03], [Cada persona del DPE tiene una cuenta distinta en cada aula], [No se ve ningún acceso común en las aulas], [Si ya hay acceso común, el panel se centra en la lista y la consulta],
+  [SF-05], [No se tocan las aulas reales; se prueba en un aula de pruebas], [Límite de la ficha], [Si no hay aula de pruebas de la empresa, se monta una propia],
+  [SF-06], [Informática puede activar los servicios web en modo lectura], [Moodle los trae de serie], [El panel se queda en el bloque base],
+  [SF-07], [Las aulas usan Moodle 4.1 sin soporte], [Indicio de la Fase 1], [Si están actualizadas, conectar es menos arriesgado],
+  [SF-12], [Basta con cifras agregadas, sin datos del alumnado], [Menos riesgo legal (RGPD)], [Hay que justificar el tratamiento (RF-17)],
+  [SF-14], [El proyecto acaba en viabilidad, prototipo y recomendación], [La implementación es de Informática], [Cambia el plan de las fases 5 a 8],
 )
 
-#caja[Cómo defenderlo.][«No he inventado datos: he escrito qué supongo, por qué, y qué requisitos revisaría si me equivoco. La matriz de trazabilidad (sección 5 del documento 05) lo dice supuesto por supuesto.»]
+= 6. Usuarios y escenarios
 
-= 5. Los 13 escenarios
+*Usuarios:* gestor/a de e-learning del DPE (PU-08, el principal), técnico/a de Informática (PU-09), responsable del DPE (PU-10) y el CAU solo para consultar (PU-05). El alumnado, el profesorado y las empresas quedan fuera.
 
-Un escenario es una pequeña historia: una persona concreta, en una situación concreta, quiere conseguir algo. Sirven para que los requisitos no salgan de la nada. Los nombres (Lucía, Antonio…) son inventados y no corresponden a personas reales.
-
-#table(columns: (auto, 0.9fr, 1.1fr),
+#table(columns: (auto, 1fr, 1fr),
   [ID], [Escenario], [Por qué está],
-  [ES-01], [Encontrar el aula sabiendo la marca], [Es el caso más común y el núcleo del problema],
-  [ES-02], [Encontrarla sin saber la marca], [La web organiza por áreas y las aulas por marcas (PR-08)],
-  [ES-03], [Distinguir aulas con el mismo nombre], [Cinco aulas se llaman «Centre Learning» (PR-03)],
-  [ES-04], [Entrar desde el móvil], [Lo pide la ficha («adaptable a dispositivos»)],
-  [ES-05], [Alumno con cursos en varias aulas], [Muestra el límite: sin cuenta común no hay «mis aulas»],
-  [ES-06], [Profesor que comparte un enlace], [Justifica tener un enlace fijo por aula (RF-14)],
-  [ES-07], [Empresa cliente que informa a su plantilla], [Grupo ATU trabaja con empresas],
-  [ES-08], [El CAU atiende «no sé cuál es mi aula»], [El CAU es común a todas las aulas],
-  [ES-09], [Dar de alta un aula nueva], [La ficha pide estudiar cómo se incorporan cambios],
-  [ES-10], [Cambiar, poner en mantenimiento o retirar un aula], [Lo mismo, y no perder el historial],
-  [ES-11], [Detectar un enlace roto], [El mayor riesgo es que el catálogo se quede viejo (RS-01)],
-  [ES-12], [Usar la plataforma con lector de pantalla], [Lo pide la ficha («necesidades de acceso»)],
-  [ES-13], [La plataforma se cae], [Lo pide la ficha («continuidad»): si se cae, las aulas deben seguir funcionando],
+  [ES-01], [Vista de conjunto al empezar la jornada], [Saber qué aulas funcionan sin abrir ninguna],
+  [ES-02], [Ir directamente a la gestión de cursos de un aula], [Es el núcleo del enfoque (PR-09)],
+  [ES-03], [Matricular a un grupo], [Muestra el límite: la matrícula se sigue haciendo en el aula],
+  [ES-04], [No confundir aulas con el mismo título], [Cinco aulas se llaman igual (PR-03)],
+  [ES-05], [Saber en qué aula está un curso], [Depende de los servicios web],
+  [ES-06], [Resumen de varias aulas], [Ídem; solo cifras agregadas],
+  [ES-07, ES-08], [Alta, cambio o retirada de un aula], [El inventario hay que mantenerlo (DPE + Informática)],
+  [ES-09, ES-10], [Aula caída y estado técnico], [Lo necesita Informática],
+  [ES-11], [Altas y bajas de personal], [Una herramienta con acceso a la gestión debe controlar quién entra],
+  [ES-12], [Lector de pantalla o teclado], [La ficha lo exige para cualquier usuario],
+  [ES-13], [La plataforma se cae], [Si se cae, se gestiona como hoy],
 )
 
-Hay tres escenarios *descartados* a propósito: entrar una vez en todas las aulas, ver cursos o notas desde la plataforma, y recuperar contraseñas. Están escritos para que se vea que se pensaron y por qué se dejan fuera.
+= 7. Los requisitos funcionales
 
-= 6. Los requisitos funcionales, uno a uno
+== Imprescindibles (10)
 
-== Imprescindibles (entran en el prototipo)
+RF-01 solo entra el personal autorizado · RF-02 roles (gestión, técnico, consulta) · RF-03 inventario de aulas con nombre propio, estado y responsables · RF-04 *accesos directos a la gestión* · RF-05 búsqueda y filtros · RF-06 altas y cambios con dominios permitidos · RF-07 ocultar sin borrar · RF-08 registro de cambios · RF-09 aviso a los 90 días sin revisar · RF-10 registro de entradas y permisos.
 
-#table(columns: (auto, 0.9fr, 1.1fr),
-  [ID], [Qué hace], [Por qué y cómo se comprueba],
-  [RF-01], [Muestra la lista de aulas sin pedir usuario], [No existe ningún sitio que las reúna (PR-01). Se comprueba que salen todas las visibles y ninguna oculta.],
-  [RF-02], [Identifica cada aula: marca, nombre propio, logotipo, dominio e idioma si no es español], [Cinco aulas se llaman igual y una está en inglés. Se comprueba que no hay nombres repetidos.],
-  [RF-03], [Buscador por parte del nombre, palabras clave o dominio, sin importar mayúsculas ni tildes], [La gente recuerda trozos («centre», «ecológica»). Se prueba con búsquedas concretas.],
-  [RF-04], [Lleva a la página de entrada del aula avisando de que se sale y a qué dominio], [Que nadie crea que ya ha iniciado sesión (RS-05). Nunca pide contraseñas.],
-  [RF-05], [Si no hay resultados, dice qué hacer y da el contacto del CAU], [Que nadie se quede sin salida (ES-02).],
-  [RF-06], [Alta y modificación de aulas sin programar, con campos obligatorios y solo dominios autorizados], [El catálogo tiene que poder mantenerse. Lo de los dominios evita que alguien cuele un enlace falso (RS-02).],
-  [RF-07], [Ocultar o retirar un aula sin borrarla], [Aulas que cierran, o marcas que no deban salir con otras. Se puede deshacer.],
-  [RF-08], [Registro de cada cambio: quién, cuándo y qué], [Detectar errores o manipulaciones y poder volver atrás.],
-  [RF-09], [Avisa de las aulas que llevan más de 90 días sin revisar], [Evitar que el catálogo se quede viejo sin que nadie lo note.],
-)
+#caja[Detalle importante de RF-04.][El acceso directo te lleva a la página de gestión del aula, pero *no te mete dentro*: si no tienes la sesión abierta en esa aula, el aula te pedirá usuario y contraseña, como hoy. Meterte dentro automáticamente sería el inicio de sesión único (RF-16, futuro), y guardar tus contraseñas para hacerlo está prohibido (W-03). Si te preguntan «¿entonces qué ahorra?», la respuesta es: buscar la dirección, navegar por el menú y equivocarte de aula. Y es la base sobre la que se añadiría lo demás.]
 
-== Convenientes (planificados)
+== Convenientes (4), si es viable
 
-- *RF-10 Filtros* por marca y, si se confirma su relación con las aulas, por área formativa.
-- *RF-11 Comprobación automática de enlaces*: como mucho una vez al día por aula, solo cargando la página pública. No es intrusivo, que es un límite de la ficha. En las pruebas se usará una dirección nuestra, nunca un aula real.
-- *RF-12 Página de ayuda* con preguntas frecuentes y el contacto del CAU.
-- *RF-13 Vista para el CAU* con el estado de cada aula y a quién escalar. Si esos contactos son internos, esta vista no puede ser pública.
-- *RF-14 Enlace fijo por aula*, que sigue funcionando aunque el aula cambie de dirección.
+RF-11 datos agregados de varias aulas · RF-12 buscar un curso en todas · RF-13 estado técnico (versión) · RF-14 comprobar que las aulas responden.
 
-== Futuros (solo si se cumplen condiciones)
+== Futuros (4) y descartados (6)
 
-«Mis aulas» (RF-15), acceso único a todas (RF-16), datos de cursos desde Moodle (RF-17) y estadísticas de uso (RF-18). No tienen criterios de aceptación porque no se van a construir ahora; cada uno dice qué condición tendría que cumplirse.
+Futuros: acciones desde el panel (RF-15), acceso único (RF-16), buscar personas (RF-17), indicadores (RF-18). Descartados: tocar las aulas reales (W-01), unificarlas (W-02), contraseñas (W-03), portal para el alumnado (W-04), hacer un «segundo Moodle» (W-05) y arreglar la versión de Moodle (W-06).
 
-== Descartados
+= 8. Los requisitos no funcionales (34)
 
-W-01 tocar las aulas · W-02 unificarlas en un solo Moodle · W-03 tratar contraseñas · W-04 matrículas o contenidos · W-05 arreglar la versión de Moodle (se avisa a la empresa, pero no es nuestro trabajo).
+Lo que más ha cambiado respecto a la v1:
 
-= 7. Los requisitos no funcionales
+- *Seguridad (11):* antes era una página pública sin datos; ahora es una herramienta que da acceso a la gestión de doce aulas. Por eso: doble factor, permisos mínimos, claves de servicio custodiadas por Informática y nunca en el repositorio, nada público y registro de quién entra.
+- *Privacidad:* nada de datos del alumnado guardados; en la consulta, solo cifras.
+- *Eficiencia (RNF-UX-03):* el 90 % de las tareas llega a la página de gestión en 3 acciones y 20 segundos o menos, *y más rápido que hoy*. La comparación con la forma actual es lo que demuestra el valor. Los números son propuesta nuestra [R].
+- *SUS 70:* el cuestionario SUS es un estándar de 10 preguntas; 68 es la media habitual, así que 70 es «por encima de la media».
+- *Dispositivos:* el ordenador pasa a ser el principal; en el móvil basta con consultar.
+- *Carga de las aulas (RNF-REN-07):* si el panel consulta las aulas, que sea poco y espaciado, para no ralentizarlas.
+- *Mantenimiento:* 4 h/mes entre el DPE e Informática (antes 2 h, porque ahora puede haber integración).
 
-La ficha pide cuatro grupos, cada uno con su forma de comprobarlo. Aquí van los valores importantes y *de dónde sale cada número*, porque es lo primero que te pueden preguntar.
+= 9. Trazabilidad y pruebas
 
-== Usabilidad y accesibilidad (8 requisitos)
-
-- *WCAG 2.2 AA:* el estándar internacional de accesibilidad web. AA es el nivel que se suele exigir. No decimos que se cumpla hasta probarlo.
-- *Desde 320 píxeles de ancho y con zoom al 200 %:* 320 px es el ancho de los móviles más pequeños, y el 200 % lo pide la propia WCAG. Se comprueba con una matriz de dispositivos.
-- *80 % encuentra su aula sin ayuda en menos de 1 minuto:* es una propuesta nuestra [R]. Encontrar un enlace en una lista con buscador debería costar segundos; el margen hasta 1 minuto y el 80 % dejan sitio a personas con menos soltura. Se mide con 5 a 8 personas: en usabilidad se suele decir que con unas cinco personas ya aparecen la mayoría de los problemas.
-- *Teclado y lector de pantalla:* se prueba con NVDA (Windows, gratis) o VoiceOver (Mac o iPhone).
-- *Lenguaje claro, idioma declarado, consistencia y respeto a las marcas.*
-
-== Seguridad y privacidad (9 requisitos)
-
-- *Sin datos personales, sin contraseñas, sin cookies de seguimiento:* es la decisión más importante. Si no tratamos datos personales, nos ahorramos casi todas las obligaciones del RGPD y casi todo el riesgo.
-- *Solo HTTPS* y *solo dominios autorizados* para los enlaces: evita que alguien convierta el catálogo en una trampa que lleve a una página falsa (phishing).
-- *Solo personas autorizadas cambian el catálogo*, y ninguna clave en el repositorio.
-- *Doble revisión de los cambios de dirección* (conveniente) y *cabeceras de seguridad* (conveniente).
-- *Información legal visible*, coherente con la de las aulas.
-
-== Rendimiento y disponibilidad (6 requisitos)
-
-- *2,5 segundos en el móvil:* es el umbral que Google considera «bueno» para que aparezca el contenido principal (métrica LCP). Es una referencia pública y fácil de medir.
-- *Búsqueda en menos de 1 segundo:* propuesta nuestra; con una docena de aulas, debería ser instantáneo.
-- *Soportar 10 veces el pico supuesto:* margen de seguridad sobre una carga que no conocemos.
-- *99,5 % de disponibilidad al mes:* unas 3,6 horas de caída al mes como máximo. Es un objetivo modesto, adecuado para un servicio que no es crítico, porque las aulas siguen funcionando sin él.
-- *Si la plataforma se cae, las aulas siguen accesibles:* la plataforma solo enlaza, no se interpone. Es un requisito de diseño muy importante y fácil de defender.
-- *Recuperación en 1 día laborable* sin perder más que el último cambio.
-
-== Mantenimiento (7 requisitos)
-
-- *Alta de un aula en 15 minutos por alguien no técnico* siguiendo la guía. Se prueba con una persona ajena al proyecto («prueba de transferencia», que la ficha pide).
-- *Guía de operación, copias con versiones, responsable designado y revisión cada 90 días.*
-- *Componentes de terceros con licencia revisada*: es un límite de la ficha.
-- *2 horas al mes o menos* de mantenimiento: supuesto que se validará en la Fase 5 (viabilidad).
-- *Que otra persona pueda continuar el proyecto*: la ficha lo pone como indicador de trabajo excelente.
-
-= 8. Trazabilidad y pruebas
-
-El documento 05 tiene cinco tablas:
-
-+ *Necesidad → escenario → requisito → prueba.* Las 10 necesidades de la Fase 1 están cubiertas. La única «débil» es N-04 (ver juntas todas tus aulas), que solo tiene requisitos futuros, porque depende de una cuenta común que no consta. Está justificado.
-+ *Problema → requisito.* Los 8 problemas tienen respuesta. Dos (configuración distinta entre aulas y versión de Moodle) solo se señalan, porque arreglarlos supondría tocar las aulas.
-+ *Requisito → prueba.* 33 casos de prueba en cinco tipos: funcionales (14), usabilidad y accesibilidad (5), seguridad (4), rendimiento (5) y mantenimiento (5). Los 44 requisitos imprescindibles y convenientes tienen al menos una prueba.
-+ *Comprobación de cobertura*, con el recuento anterior.
-+ *Si cae un supuesto*: qué requisitos revisar.
-
-Las pruebas *solo se definen* ahora. Se ejecutan en la Fase 7. Todas las de seguridad y rendimiento se hacen contra *nuestra* plataforma, nunca contra las aulas reales.
-
-= 9. Decisiones mías que debes conocer
-
-Para que no te pillen por sorpresa, estas son las cosas en las que fui un paso más allá de lo que había en la Fase 1. Todas son razonables, pero son *propuestas*, no datos:
-
-- *Todos los números* (80 %, 1 minuto, 2,5 s, 1 s, 99,5 %, 1 día, 15 minutos, 90 días, 2 h/mes, 5 a 8 personas). Si alguno no te convence, se cambia en un minuto.
-- *Separé en varios requisitos* algunas capacidades del alcance de la Fase 1. Por ejemplo, el procedimiento de mantenimiento (AL-05) son ahora RF-06 a RF-09. No cambia el alcance, solo lo detalla.
-- *Añadí dos cosas que no estaban como tales en la Fase 1:* el mensaje de «sin resultados» como imprescindible (RF-05) y el enlace fijo por aula (RF-14, conveniente). Las dos salen de los escenarios.
-- *La caída de la plataforma no debe impedir entrar en las aulas* (RNF-REN-05). Condiciona la Fase 3: descarta soluciones que se pongan «en medio» del acceso.
-- *Catálogo público*: lo propongo para no tratar datos personales. Si la empresa quiere que sea privado, cambia bastante (SF-03).
+- 11 necesidades dentro del enfoque, todas cubiertas. 4 fuera (N-01, N-02, N-04, N-09), con motivo.
+- 36 casos de prueba: 14 funcionales, 5 de usabilidad, 6 de seguridad, 5 de rendimiento y 6 de mantenimiento.
+- *Regla de oro:* todo lo que exija entrar en un aula o usar sus servicios web se prueba en el aula de pruebas, nunca en las reales.
 
 = 10. Preguntas que te puede hacer la tutora
 
 #table(columns: (0.8fr, 1.2fr),
   [Pregunta], [Respuesta posible],
-  [¿Por qué has seguido sin mi visto bueno?], [Porque me pediste que te fuera informando y la ficha dice que una revisión «no implica que el trabajo esté terminado». Lo he dejado registrado, y la Fase 2 no cambia el alcance de la Fase 1, solo lo concreta. Si corriges algo, se aplica sin rehacerlo todo.],
-  [¿De dónde salen estos números?], [Unos son referencias públicas (2,5 s de Google, WCAG) y otros son propuestas razonadas. Todos están marcados como tales y se ajustarán con datos reales.],
-  [¿Cómo sabes que el problema existe?], [No lo sé con certeza, y lo digo. Por eso hay una prueba con usuarios (CP-UX-01) que dará la primera medida real, y la analítica como requisito futuro.],
-  [¿Por qué no un acceso único a todas las aulas?], [Porque no hay necesidad demostrada, no consta una cuenta común y supondría tocar las aulas y tratar datos personales. Queda como futuro con sus condiciones.],
-  [¿Qué es un criterio de aceptación?], [Una condición que permite decir sí o no a si se cumple un requisito, sin opiniones. Por ejemplo: si busco «ecologica» sin tilde, tiene que salir «Tierra Más Ecológica».],
-  [¿Qué es la trazabilidad?], [Poder seguir cada requisito desde el problema que lo origina hasta la prueba que lo comprueba. Puedo enseñarte un ejemplo completo.],
-  [¿Cómo has priorizado?], [Con MoSCoW, igual que en la Fase 1. Imprescindible es lo mínimo para resolver el problema; el resto queda planificado, condicionado o descartado con motivo.],
+  [¿Por qué has rehecho todo?], [Porque me indicaste que el enfoque era la gestión interna. He guardado la versión anterior y hay una tabla que dice qué pasa con cada requisito antiguo.],
+  [¿Qué gana el departamento con unos enlaces?], [No tener que buscar direcciones, navegar por doce menús ni equivocarse de aula. Y es la base: si Informática activa los servicios web, se puede consultar información de todas las aulas sin entrar.],
+  [¿Por qué no entrar una sola vez en todas las aulas?], [Porque exige un directorio común y cambiar la autenticación de cada aula, lo que hace Informática y depende de la versión de Moodle. Lo dejo como futuro y lo estudio en la viabilidad.],
+  [¿Y si no es viable conectar con Moodle?], [El bloque base funciona igual. La viabilidad decide hasta dónde se llega, no si hay proyecto.],
+  [¿Cómo vas a probarlo sin tocar las aulas?], [Con un aula de pruebas sin datos reales. Por eso le pregunto si existe una.],
+  [¿Qué pasa con la seguridad?], [Es lo que más ha crecido: doble factor, permisos por rol, claves custodiadas por Informática, nada público y registro de accesos.],
 )
 
 = 11. Qué viene ahora
 
-+ *Informar a la tutora* con el resumen de la Fase 2 (el PDF de `entregas/`).
-+ *Si llegan respuestas de la empresa*, se actualizan los supuestos y, si hace falta, los requisitos. Cada cambio queda en el registro.
-+ *Fase 3 — Alternativas:* comparar al menos dos formas de resolverlo (la ficha exige incluir la opción de no desarrollar nada), con criterios y pesos fijados *antes* de puntuar. Las opciones apuntadas en la Fase 1 son: no hacer nada y mejorar lo existente, una página estática de enlaces, una aplicación web con gestión, usar la web corporativa o una herramienta ya contratada, integrar con Moodle, acceso único o una combinación por etapas. Los requisitos de esta fase son la vara de medir: la opción elegida debe cumplir los imprescindibles.
++ *Enviar a la tutora* el resumen v2, preguntándole si la interpretación es correcta y qué quería decir con lo del entorno de pruebas.
++ *Pedir una conversación* con el DPE y con Informática (preguntas v2 y guion de reunión v2).
++ *Fase 3 — Alternativas:* comparar al menos dos opciones, incluida la de no desarrollar nada, con criterios y pesos fijados antes de puntuar. Las apuntadas: no hacer nada y organizar mejor los accesos; una página interna en una herramienta ya contratada (por ejemplo, SharePoint); una aplicación web interna; un panel conectado a los servicios web; acceso único con el directorio corporativo; herramientas existentes para gestionar varios Moodle; unificar las aulas (solo como referencia); o una combinación por etapas.

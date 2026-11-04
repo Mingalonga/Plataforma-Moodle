@@ -2,135 +2,139 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.1 |
-| Fecha | 2026-11-03 |
+| Versión | 0.2 |
+| Fecha | 2026-11-04 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (roles Analista y UX), a petición del alumno |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
 
+> **v0.2.** Con el enfoque de gestión interna (DT-01 a DT-06), los usuarios son el personal que gestiona las aulas y los escenarios describen su trabajo. Los escenarios de la v0.1, centrados en el alumnado, están en el [histórico](historico/02-usuarios-escenarios_v0.1.md).
+
 ## 1. Usuarios
 
-Se usan los siete perfiles de la Fase 1 ([documento 04](../Fase-1/04-mapa-actores-perfiles.md#4-perfiles-de-usuario-hipótesis)). Siguen siendo **hipótesis**: ninguno se ha validado con usuarios reales (P-U01).
+Se usan los perfiles de la Fase 1 en su versión 0.4 ([documento 04](../Fase-1/04-mapa-actores-perfiles.md#4-perfiles-de-usuario-hipótesis)). Siguen siendo **hipótesis**: ninguno se ha validado con personas reales (P-G01).
 
 | Perfil | Quién | Qué necesita de la plataforma | Tipo |
 |---|---|---|---|
-| PU-01 | Alumno/a de un solo campus | Encontrar su campus y llegar a la página de acceso con seguridad | Usuario final |
-| PU-02 | Alumno/a de varios campus | Ver en un sitio en qué campus está cada curso | Usuario final |
-| PU-03 | Profesor/a o tutor/a | Un enlace estable que compartir con el alumnado | Usuario final |
-| PU-04 | Contacto de una empresa cliente | Saber qué campus corresponde a la formación contratada | Usuario final |
-| PU-05 | Agente del CAU / tutoría virtual | Una lista fiable de campus, con estado y a quién escalar | Soporte |
-| PU-06 | Gestor/a del catálogo (perfil nuevo) | Dar de alta, cambiar, ocultar y revisar campus con poco esfuerzo | Mantenimiento |
-| PU-07 | Administrador/a de un campus | Avisar de cambios sin tener que tocar su Moodle | Mantenimiento |
+| PU-08 | Gestor/a de e-learning (DPE) | Llegar a la gestión de cualquier aula desde un único punto y, si es viable, consultar información de varias aulas sin entrar en ellas | **Principal** |
+| PU-09 | Técnico/a de Informática | Instalar y mantener la plataforma, dar y quitar permisos, conocer el estado técnico de las aulas | **Principal (técnico)** |
+| PU-10 | Responsable del DPE | Vista de conjunto de las aulas y, si se aprueba, indicadores | Principal |
+| PU-05 | Agente del CAU / tutoría virtual | Consultar en qué aula está un curso y su estado | Secundario (solo consulta) |
 
-Además, la ficha pide tener en cuenta las **necesidades de acceso** («distintas capacidades»): en todos los escenarios de usuario final se asume que puede haber personas que usen lector de pantalla, solo teclado, ampliación o un móvil pequeño (ES-12).
+**Fuera del enfoque:** el alumnado, el profesorado y las empresas (PU-01 a PU-04) no usan la plataforma, porque reciben la URL de su curso (DT-03).
+
+**Necesidades de acceso.** La ficha pide tener en cuenta «distintas capacidades» para cualquier persona usuaria. Aunque la herramienta sea interna, se asume que alguien del personal puede usar lector de pantalla, solo teclado o ampliación (ES-12).
 
 ## 2. Escenarios de uso
 
-Cada escenario describe una situación concreta, sin decidir pantallas ni tecnología. Los pasos dicen *qué* hace la persona, no *dónde pulsa*.
+Cada escenario describe una situación concreta, sin decidir pantallas ni tecnología. Los nombres son inventados y no corresponden a personas reales. Las tareas de gestión que aparecen son las habituales en Moodle (SF-02); se confirmarán con el DPE (P-G01).
 
-### ES-01. Encontrar el campus conociendo la marca
+### ES-01. Empezar la jornada con una vista de conjunto
 
-- **Perfil:** PU-01 · **Necesidades:** N-01, N-02 · **Base:** [S]
-- **Contexto:** Lucía empieza un curso. En el correo de bienvenida aparecía «Centre Learning», pero lo ha borrado y no recuerda la dirección. Buscar en Google no sirve porque los campus no se indexan (PR-02).
-- **Pasos:** entra en la plataforma central → escribe «centre» → ve los campus que coinciden → elige el suyo → sale a la página de acceso de su campus.
-- **Resultado esperado:** llega a la página de acceso correcta sin ayuda, sabiendo en todo momento a qué sitio va.
+- **Perfil:** PU-08, PU-10 · **Necesidades:** N-12 · **Base:** [S]
+- **Contexto:** Ana, del DPE, empieza el día y quiere saber si todas las aulas funcionan y si alguna está en mantenimiento.
+- **Pasos:** se identifica en la plataforma → ve la lista de las doce aulas con su estado, su responsable y la fecha de la última revisión.
+- **Resultado esperado:** sabe en segundos qué aulas están operativas, sin abrir ninguna.
 
-### ES-02. Encontrar el campus sin conocer la marca
+### ES-02. Ir directamente a la gestión de cursos de un aula
 
-- **Perfil:** PU-01 · **Necesidades:** N-01 · **Problemas:** PR-08 · **Base:** [S]
-- **Contexto:** Antonio sabe que hace «un curso de agricultura ecológica», pero no qué marca lo imparte. (Ejemplo ilustrativo: no se sabe qué cursos imparte cada campus.)
-- **Pasos:** escribe «agricultura» o «ecológica» → la plataforma le muestra los campus relacionados → si no hay coincidencias, le indica cómo pedir ayuda.
-- **Resultado esperado:** encuentra su campus o, si no, sabe a quién preguntar.
-- **Nota:** depende de que cada campus tenga palabras clave o área (SF-11).
+- **Perfil:** PU-08 · **Necesidades:** N-11 · **Problemas:** PR-09 · **Base:** DT-01 [D]
+- **Contexto:** Ana tiene que crear un curso en el aula de Tierra Más Ecológica. Hoy tendría que buscar la dirección, entrar y navegar hasta el menú de cursos.
+- **Pasos:** en la plataforma, busca «tierra» → elige el acceso «Gestión de cursos» de esa aula → llega a la página de gestión de cursos del aula (si no tiene la sesión abierta en esa aula, el aula le pide identificarse).
+- **Resultado esperado:** llega a la página de gestión correcta en pocas acciones, sabiendo en todo momento en qué aula está.
 
-### ES-03. Distinguir dos campus con el mismo título
+### ES-03. Matricular a un grupo en un aula
 
-- **Perfil:** PU-01 · **Necesidades:** N-03 · **Problemas:** PR-03 · **Base:** H-01 [O]
-- **Contexto:** cinco campus se llaman «AULA VIRTUAL CENTRE LEARNING». Marta entra en uno y duda de si es el suyo.
-- **Pasos:** busca su marca en la plataforma → ve el logotipo, el nombre de la marca y el dominio de destino → comprueba que coincide con lo que tiene en su correo.
-- **Resultado esperado:** puede distinguir su campus de los demás por algo más que el título.
+- **Perfil:** PU-08 · **Necesidades:** N-11 · **Base:** [S]
+- **Contexto:** una empresa ha contratado un curso y hay que matricular a 15 trabajadores.
+- **Pasos:** en la plataforma, elige el aula → acceso «Matriculaciones» o «Usuarios» → realiza la matrícula **en el aula**, como hasta ahora.
+- **Resultado esperado:** ahorra la búsqueda y la navegación. Hacer la matrícula desde la propia plataforma, sin entrar en el aula, queda como futuro (RF-15).
 
-### ES-04. Entrar desde el móvil
+### ES-04. No confundir dos aulas con el mismo título
 
-- **Perfil:** PU-01 · **Necesidades:** N-02, N-08 · **Base:** SF-08 [S]
-- **Contexto:** Javier abre la plataforma desde el enlace de un mensaje, con el móvil y datos móviles.
-- **Pasos:** la página carga rápido → busca su campus → pulsa para ir a él.
-- **Resultado esperado:** todo se lee y se usa sin ampliar ni desplazarse en horizontal.
+- **Perfil:** PU-08 · **Necesidades:** N-03 · **Problemas:** PR-03 · **Base:** H-01 [O]
+- **Contexto:** cinco aulas se llaman «AULA VIRTUAL CENTRE LEARNING». Luis va a cambiar la configuración de un curso y no quiere hacerlo en el aula equivocada.
+- **Pasos:** en la plataforma cada aula tiene un nombre propio, su marca y su dominio → al usar un acceso directo, la plataforma indica a qué aula y a qué dominio lleva.
+- **Resultado esperado:** Luis sabe siempre en qué aula está actuando (RS-11).
 
-### ES-05. Alumno de varios campus
+### ES-05. Saber en qué aula está un curso
 
-- **Perfil:** PU-02 · **Necesidades:** N-04 · **Base:** [S]
-- **Contexto:** Rosa hace un curso en dos marcas distintas.
-- **Pasos:** busca cada campus por separado y entra en cada uno con sus propias credenciales.
-- **Resultado esperado:** encuentra los dos. La plataforma **no** le muestra «sus» campus de forma personalizada, porque no hay identidad común (SF-02); eso queda como evolución futura (RF-15).
+- **Perfil:** PU-08, PU-05 · **Necesidades:** N-13, N-05 · **Base:** [S]
+- **Contexto:** llaman al CAU preguntando por el curso «Prevención de riesgos laborales básico», pero no saben en qué aula está.
+- **Pasos:** busca el nombre del curso en la plataforma → ve en qué aula o aulas aparece → abre su página de gestión.
+- **Resultado esperado:** lo encuentra sin entrar en las doce aulas una por una.
+- **Nota:** depende de los servicios web (RF-12, *Should*, SF-06).
 
-### ES-06. Compartir el enlace de un campus
+### ES-06. Preparar un resumen de varias aulas
 
-- **Perfil:** PU-03, PU-04 · **Necesidades:** N-01, N-02 · **Base:** [S]
-- **Contexto:** un tutor quiere dar a su grupo un enlace que no cambie aunque cambie la dirección del campus.
-- **Pasos:** busca el campus → copia el enlace de su ficha en la plataforma → lo comparte.
-- **Resultado esperado:** el enlace lleva siempre a la información actualizada de ese campus.
+- **Perfil:** PU-10 · **Necesidades:** N-13 · **Base:** [S]
+- **Contexto:** la responsable del DPE quiere saber cuántos cursos activos y cuántas matrículas hay en cada aula este mes.
+- **Pasos:** consulta en la plataforma los datos agregados de cada aula, con la fecha de su última actualización.
+- **Resultado esperado:** tiene el resumen sin entrar en cada aula ni pedirlo a varias personas.
+- **Nota:** depende de los servicios web (RF-11, *Should*). No muestra datos de personas concretas (SF-12).
 
-### ES-07. Orientar a los trabajadores de una empresa cliente
+### ES-07. Dar de alta un aula nueva en la plataforma
 
-- **Perfil:** PU-04 · **Necesidades:** N-01 · **Base:** [S]
-- **Contexto:** la responsable de formación de una empresa debe indicar a la plantilla dónde hacer el curso contratado.
-- **Pasos:** busca por marca o tipo de formación → copia el enlace del campus (ES-06).
-- **Resultado esperado:** envía a la plantilla un enlace correcto sin consultar al CAU.
+- **Perfil:** PU-08, PU-09 · **Necesidades:** N-06, N-15 · **Base:** DT-04, DT-05 [D]
+- **Contexto:** Informática pone en marcha una nueva aula para una marca.
+- **Pasos:** Informática avisa al DPE con los datos técnicos → el DPE añade el aula con los datos obligatorios y sus accesos directos → la plataforma comprueba que las direcciones pertenecen a un dominio permitido → el cambio queda registrado.
+- **Resultado esperado:** el alta se hace en pocos minutos, sin programar y sin tocar el aula.
 
-### ES-08. Atender «no sé cuál es mi campus» en el CAU
+### ES-08. Cambiar, poner en mantenimiento o retirar un aula
 
-- **Perfil:** PU-05 · **Necesidades:** N-05 · **Base:** soporte común [O]; necesidad [S]
-- **Contexto:** llama un alumno que no sabe a qué campus entrar.
-- **Pasos:** el agente consulta el catálogo → ve qué campus están activos, si alguno está en mantenimiento y a quién escalar → indica al alumno el campus o le envía el enlace de su ficha.
-- **Resultado esperado:** resuelve la consulta con información actualizada y sin preguntar a los administradores.
+- **Perfil:** PU-08, PU-09 · **Necesidades:** N-06, N-10 · **Base:** [R]
+- **Contexto:** un aula cambia de dirección, entra en mantenimiento o se cierra.
+- **Pasos:** se actualiza la dirección, se marca el estado o se oculta → el cambio queda registrado con fecha y autor.
+- **Resultado esperado:** todo el personal ve la información correcta; un aula retirada no se borra, se oculta.
 
-### ES-09. Dar de alta un campus nuevo
+### ES-09. Detectar un aula que no responde
 
-- **Perfil:** PU-06, PU-07 · **Necesidades:** N-06 · **Base:** [R]
-- **Contexto:** se abre un nuevo campus para una marca.
-- **Pasos:** el administrador avisa a la persona gestora → esta añade el campus con los datos obligatorios → la plataforma comprueba que la dirección pertenece a un dominio permitido → el cambio queda registrado → el campus aparece en el catálogo.
-- **Resultado esperado:** el alta se hace en pocos minutos, sin programar y sin tocar el Moodle.
+- **Perfil:** PU-09 · **Necesidades:** N-10 · **Base:** [R]
+- **Contexto:** un aula deja de responder un domingo.
+- **Pasos:** la comprobación periódica detecta que no responde → avisa a Informática → Informática la revisa y la marca en mantenimiento.
+- **Resultado esperado:** el DPE lo sabe antes de intentar trabajar en ella.
 
-### ES-10. Cambiar, poner en mantenimiento o retirar un campus
+### ES-10. Revisar el estado técnico de las aulas
 
-- **Perfil:** PU-06, PU-07 · **Necesidades:** N-06, N-10 · **Base:** [R]
-- **Contexto:** un campus cambia de dirección, entra en mantenimiento o se cierra.
-- **Pasos:** la persona gestora actualiza la dirección, marca el estado o lo oculta → el cambio queda registrado con fecha y autor.
-- **Resultado esperado:** los usuarios ven la información correcta; un campus retirado no se borra, se oculta, para poder recuperarlo y para conservar el historial.
+- **Perfil:** PU-09 · **Necesidades:** N-12 · **Problemas:** PR-10 · **Base:** H-04 [S]
+- **Contexto:** Informática quiere saber qué aulas siguen en una versión de Moodle sin soporte.
+- **Pasos:** consulta en la plataforma la versión y el estado técnico de cada aula.
+- **Resultado esperado:** tiene la lista para planificar actualizaciones (RF-13).
 
-### ES-11. Detectar un enlace roto
+### ES-11. Dar acceso a una persona nueva y retirarlo cuando se va
 
-- **Perfil:** PU-06 · **Necesidades:** N-06, N-10 · **Riesgo:** RS-01 · **Base:** [R]
-- **Contexto:** un campus deja de responder o cambia de dirección sin avisar.
-- **Pasos:** la comprobación periódica detecta que no responde → avisa a la persona gestora → esta revisa y corrige o marca el campus en mantenimiento.
-- **Resultado esperado:** el error se detecta antes de que lo comuniquen los usuarios.
+- **Perfil:** PU-09 · **Necesidades:** N-14, N-15 · **Base:** [R]
+- **Contexto:** se incorpora una persona al DPE y otra deja el departamento.
+- **Pasos:** Informática da de alta a la nueva persona con el rol que le corresponde → retira el acceso a la que se va → los dos cambios quedan registrados.
+- **Resultado esperado:** solo el personal autorizado entra en la plataforma, y cada persona ve y hace solo lo que le corresponde.
 
 ### ES-12. Usar la plataforma con lector de pantalla o solo con teclado
 
-- **Perfil:** cualquier usuario final · **Necesidades:** N-08 · **Base:** Ficha 01, «Experiencia de uso» [D]
-- **Contexto:** Pedro es ciego y usa un lector de pantalla.
-- **Pasos:** recorre la página con el teclado → el lector anuncia el buscador, el número de resultados y el nombre de cada campus → sabe que el enlace le lleva a otro sitio.
-- **Resultado esperado:** completa ES-01 en las mismas condiciones que cualquier otra persona.
+- **Perfil:** cualquiera · **Necesidades:** N-08 · **Base:** Ficha 01, «Experiencia de uso» [D]
+- **Contexto:** Pedro, del DPE, tiene baja visión y usa un lector de pantalla.
+- **Pasos:** recorre la plataforma con el teclado → el lector anuncia el buscador, el número de resultados, el nombre de cada aula y a qué lleva cada acceso.
+- **Resultado esperado:** completa ES-02 en las mismas condiciones que cualquier otra persona.
 
-### ES-13. La plataforma central no está disponible
+### ES-13. La plataforma no está disponible
 
-- **Perfil:** cualquier usuario final, PU-05 · **Necesidades:** N-10 · **Base:** Ficha 01, «Continuidad» [D]
+- **Perfil:** todos · **Necesidades:** N-10 · **Base:** Ficha 01, «Continuidad» [D]
 - **Contexto:** la plataforma cae o se está actualizando.
-- **Pasos:** el usuario que ya conoce su campus entra directamente por su dirección; el CAU usa la copia del catálogo para orientar; la persona responsable restaura el servicio con el procedimiento documentado.
-- **Resultado esperado:** la caída **no impide** entrar en ningún campus (la plataforma no se interpone en el acceso) y el servicio se recupera en el plazo fijado (RNF-REN-06).
+- **Pasos:** el personal entra en las aulas por su dirección directa, como hasta ahora (la guía incluye la lista de direcciones) → Informática restaura el servicio con el procedimiento documentado.
+- **Resultado esperado:** la caída **no impide** gestionar ninguna aula y el servicio se recupera en el plazo fijado (RNF-REN-06).
 
 ## 3. Escenarios descartados en esta fase
 
 | Escenario | Motivo | Dónde queda |
 |---|---|---|
-| Entrar una sola vez y acceder a todos los campus (inicio de sesión único) | No hay necesidad demostrada ni identidad común (P-N02, SF-02) | RF-16, *Could* |
-| Ver cursos, notas o avisos de los campus en la plataforma | Exige integrar con Moodle; indicio de versión sin soporte (SF-10) | RF-17, *Could* |
-| Recuperar la contraseña de un campus desde la plataforma | La plataforma nunca trata credenciales de los campus (RS-04) | W-03, *Won't* |
+| Un alumno busca su aula en la plataforma | El alumnado entra con la URL de su curso (DT-03) | W-04, *Won't* |
+| Entrar una sola vez y acceder a la gestión de todas las aulas (inicio de sesión único) | Requiere un directorio común y cambios en la autenticación de cada aula (SF-04, SF-05) | RF-16, *Could* |
+| Crear un curso o matricular desde la plataforma, sin entrar en el aula | Requiere permisos de escritura en las aulas; más riesgo (RS-10, RS-11) | RF-15, *Could* |
+| Buscar a una persona en todas las aulas | Trata datos personales del alumnado; necesita una finalidad y base legal (RS-03) | RF-17, *Could* |
 
 ## 4. Control de versiones
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
-| 0.1 | 2026-11-03 | Claude (Analista / UX) | Primera versión: 13 escenarios y 3 descartados |
+| 0.1 | 2026-11-03 | Claude (Analista / UX) | Primera versión: 13 escenarios y 3 descartados. [Archivada](historico/02-usuarios-escenarios_v0.1.md) |
+| 0.2 | 2026-11-04 | Claude (Analista / UX) | Enfoque de gestión interna: perfiles PU-08, PU-09, PU-10 y PU-05; 13 escenarios nuevos y 4 descartados |
