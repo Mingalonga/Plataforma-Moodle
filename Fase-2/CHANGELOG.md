@@ -2,6 +2,11 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.2.1] — 2026-11-04
+
+### Cambiado
+- `entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v3.pdf`: a petición del alumno, solo aparecen las preguntas agrupadas por departamento. Se quitan la introducción, la nota de cada pregunta y el párrafo final. Las preguntas no cambian. La v2 se archiva.
+
 ## [0.2] — 2026-11-04
 
 **Motivo:** respuesta de la tutora. El proyecto se orienta a la **gestión interna** de las aulas: una herramienta para que el Departamento de Pedagogía y e-learning (DPE) gestione las doce aulas desde un único punto, sin entrar y salir de cada una. El alumnado ya entra en su curso con una URL. Implementa Informática; antes, estudio de viabilidad. Toda la fase se rehace; las versiones 0.1 se archivan en `historico/`.
