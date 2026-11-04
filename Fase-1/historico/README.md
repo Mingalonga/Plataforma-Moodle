@@ -36,3 +36,10 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [01-registro-preguntas-supuestos_v0.6.md](01-registro-preguntas-supuestos_v0.6.md) | 0.6 | 2026-10-30 | Sustituida por la v0.7: P-V01 en parte y P-V11 |
 | [04-mapa-actores-perfiles_v0.2.md](04-mapa-actores-perfiles_v0.2.md) | 0.2 | 2026-10-30 | Sustituida por la v0.3: marcas verificadas |
 | [02-fuentes-y-metodologia_v0.4.md](02-fuentes-y-metodologia_v0.4.md) | 0.4 | 2026-10-30 | Sustituida por la v0.5: fuente F-19 |
+| [01-registro-preguntas-supuestos_v0.8.md](01-registro-preguntas-supuestos_v0.8.md) | 0.8 | 2026-11-04 | Sustituida por la v0.9: respuesta de la tutora (enfoque de gestión interna) |
+| [04-mapa-actores-perfiles_v0.3.md](04-mapa-actores-perfiles_v0.3.md) | 0.3 | 2026-11-04 | Sustituida por la v0.4: DPE e Informática como actores principales |
+| [05-situacion-actual_v0.2.md](05-situacion-actual_v0.2.md) | 0.2 | 2026-11-04 | Sustituida por la v0.3: necesidades y problemas de gestión |
+| [06-registro-riesgos_v0.1.md](06-registro-riesgos_v0.1.md) | 0.1 | 2026-11-04 | Sustituida por la v0.2: riesgos de una herramienta de gestión |
+| [07-alcance-preliminar_v0.2.md](07-alcance-preliminar_v0.2.md) | 0.2 | 2026-11-04 | Sustituida por la v0.3: cambio de alcance hacia la gestión interna |
+| [08-diagnostico-inicial_v0.4.md](08-diagnostico-inicial_v0.4.md) | 0.4 | 2026-11-04 | Sustituida por la v0.5: enfoque de gestión interna |
+| [guion-reunion-grupo-atu_v1.txt](guion-reunion-grupo-atu_v1.txt) | Guion v1 | 2026-11-04 | Sustituido por el v2: dirigido al DPE y a Informática |

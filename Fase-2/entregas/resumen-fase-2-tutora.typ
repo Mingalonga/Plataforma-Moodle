@@ -1,10 +1,10 @@
 // Resumen de la Fase 2 para la tutora · fuente Typst
-// Compilar: python3 -c "import typst; typst.compile('resumen-fase-2-tutora.typ', output='Resumen_Fase-2_Plataforma-Moodle_v1.pdf')"  (o: typst compile ...)
+// Compilar: python3 -c "import typst; typst.compile('resumen-fase-2-tutora.typ', output='Resumen_Fase-2_Plataforma-Moodle_v2.pdf')"  (o: typst compile ...)
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v1"
+#let version = "v2"
 
 #set document(title: "Resumen de la Fase 2 — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -62,111 +62,87 @@
     text(fill: gris)[Organización], [Grupo ATU],
     text(fill: gris)[Alumno], [Carlos García Rallo],
     text(fill: gris)[Tutora], [],
-    text(fill: gris)[Fecha], [3 de noviembre de 2026],
-    text(fill: gris)[Versión], [Resumen #version (documentación de la fase en versión 0.1)],
+    text(fill: gris)[Fecha], [4 de noviembre de 2026],
+    text(fill: gris)[Versión], [Resumen #version (documentación de la fase en versión 0.2). Sustituye al v1 del 3 de noviembre],
     text(fill: gris)[Estado], [Pendiente de revisión],
   )
   #v(1.5cm)
 ]
 
 // ---------- Contenido ----------
-= 1. Resumen
+= 1. Cambio de enfoque
 
-La Fase 2 traduce el diagnóstico de la Fase 1 en una descripción precisa de lo que debería hacer la plataforma, cómo debería comportarse y cómo se comprobará que lo cumple. No decide todavía la solución técnica, que se elegirá en la Fase 3 comparando alternativas.
+Siguiendo sus indicaciones, el proyecto se orienta a la *gestión interna* de las aulas. La plataforma será una herramienta para que el *Departamento de Pedagogía y e-learning* gestione las doce aulas desde un único punto, sin tener que entrar y salir de cada una. El alumnado no la usará, porque ya entra en su curso con la URL que se le facilita. *Informática* se encargaría de la implementación y de la parte técnica, y antes de nada se estudiará si es viable.
+
+#nota[Qué ha cambiado.][La versión anterior de este resumen (v1) describía un catálogo de aulas para el alumnado. Ese enfoque se ha sustituido; se conserva en el histórico del repositorio. El análisis de las aulas de la Fase 1 sigue siendo válido: doce direcciones, sin acceso común, cinco aulas con el mismo título y una versión de Moodle probablemente sin soporte. Ahora se mira desde el punto de vista de quien las gestiona.]
+
+= 2. Resumen
+
+La Fase 2 describe con precisión qué debe hacer la plataforma, cómo debe comportarse y cómo se comprobará que lo cumple. No decide todavía la solución técnica, que se elegirá en la Fase 3 comparando alternativas.
 
 #nota[Resultado de la fase][
-- 13 escenarios de uso que describen situaciones reales de alumnado, profesorado, empresas, atención al usuario y mantenimiento.
-- 18 requisitos de funcionamiento: 9 imprescindibles, 5 convenientes y 4 para el futuro, además de 5 exclusiones expresas.
-- 30 requisitos de calidad sobre accesibilidad, seguridad, rendimiento y mantenimiento.
-- 33 pruebas definidas. Cada requisito se relaciona con la necesidad de la que procede y con la prueba que lo comprobará.
+- 13 escenarios de uso del personal de gestión, de Informática y, para consultas, del servicio de atención al usuario.
+- 18 requisitos de funcionamiento: 10 imprescindibles, 4 convenientes y 4 para el futuro, además de 6 exclusiones expresas.
+- 34 requisitos de calidad sobre accesibilidad, seguridad, rendimiento y mantenimiento.
+- 36 pruebas definidas, cada una relacionada con la necesidad y el requisito que comprueba.
 ]
 
-#nota[Punto de partida.][La organización no ha respondido todavía a las preguntas de la Fase 1. Para avanzar se han fijado 14 supuestos explícitos, y en cada uno se indica qué requisitos habría que revisar si no se confirmara.]
+= 3. Qué haría la plataforma
 
-= 2. Metodología
+Los requisitos se agrupan en tres bloques según cuánto dependen de que sea viable conectar la plataforma con Moodle:
 
-#table(columns: (auto, 1fr, 0.8fr),
-  [], [Paso], [Resultado],
-  [1], [Fijar los supuestos de partida], [14 supuestos con su efecto],
-  [2], [Describir situaciones de uso a partir de los perfiles de la Fase 1], [13 escenarios],
-  [3], [Redactar los requisitos con prioridad y criterio de aceptación], [48 requisitos],
-  [4], [Relacionar necesidades, requisitos y pruebas], [Matriz de trazabilidad y 33 pruebas],
-  [5], [Reunir todo en la especificación], [Entregable 02],
+#table(columns: (0.55fr, 1.1fr, 0.75fr),
+  [Bloque], [Contenido], [Prioridad],
+  [*Base*], [Acceso solo para el personal autorizado, con permisos según el rol. Lista de las doce aulas con un nombre propio que las distinga, su estado y sus responsables. *Accesos directos a la gestión de cada aula* (cursos, usuarios, matriculaciones, informes), indicando siempre en qué aula se entra. Búsqueda y mantenimiento de la lista por el departamento.], [Imprescindible. Siempre viable: no necesita tocar las aulas],
+  [*Consulta*], [Ver datos de varias aulas a la vez sin entrar en ellas (cursos activos, número de matrículas), buscar un curso en todas las aulas y conocer el estado técnico de cada una.], [Conveniente, si es viable],
+  [*Acciones*], [Crear cursos o matricular desde la plataforma, entrar una sola vez en todas las aulas, buscar a una persona en todas ellas.], [Futuro, si se justifica],
 )
 
-La prioridad se asigna con el método MoSCoW, el mismo que en la Fase 1. Cada requisito imprescindible tiene un criterio de aceptación que permite decir, sin interpretación, si se cumple o no.
-
-= 3. Escenarios de uso
-
-#table(columns: (0.6fr, 1.4fr),
-  [Grupo], [Situaciones descritas],
-  [Encontrar el aula], [Conociendo la marca; sin conocerla; distinguiendo aulas con el mismo nombre; desde el móvil; con lector de pantalla o solo con teclado.],
-  [Orientar a otros], [Alumnado con cursos en varias aulas; profesorado que comparte un enlace; empresa cliente que informa a su plantilla; atención al usuario ante «no sé cuál es mi aula».],
-  [Mantener], [Alta de un aula nueva; cambio, mantenimiento o retirada; enlace que deja de funcionar; caída de la propia plataforma.],
-)
+#nota[Exclusiones.][No habrá portal para el alumnado. No se modificarán las aulas reales ni se guardarán contraseñas. La plataforma no sustituye a Moodle: la gestión completa se sigue haciendo en cada aula. Cualquier prueba de conexión con Moodle se hará en un aula de pruebas, nunca en las reales.]
 
 #pagebreak(weak: true)
-= 4. Requisitos imprescindibles
-
-Constituyen la primera versión que se construirá como prototipo.
-
-#table(columns: (0.55fr, 1.45fr),
-  [Ámbito], [Requisito],
-  [Consulta], [Catálogo público de las aulas, sin necesidad de identificarse. Cada aula se identifica por su marca, un nombre propio, su logotipo y la dirección a la que lleva.],
-  [Búsqueda], [Buscador que encuentra el aula aunque se escriba solo una parte del nombre, sin tener en cuenta mayúsculas ni tildes. Si no hay resultados, indica qué hacer y cómo contactar con atención al usuario.],
-  [Acceso], [Paso directo a la página de entrada de cada aula, avisando de que se sale a otro sitio.],
-  [Mantenimiento], [Altas, cambios y retiradas sin necesidad de programar; registro de cada cambio; aviso de las aulas sin revisar en 90 días.],
-)
+= 4. Requisitos de calidad imprescindibles
 
 #table(columns: (0.55fr, 1.45fr),
   [Calidad], [Requisito y valor de referencia],
-  [Accesibilidad], [Pautas WCAG 2.2 nivel AA; uso completo con teclado y lector de pantalla; adaptación a cualquier pantalla desde el móvil.],
-  [Facilidad de uso], [Al menos el 80 % de las personas de prueba encuentra su aula sin ayuda y en menos de un minuto.],
-  [Seguridad y privacidad], [Sin datos personales, contraseñas, cookies de seguimiento ni rastreadores; conexión cifrada; solo se admiten direcciones de dominios autorizados.],
-  [Rendimiento y continuidad], [Carga en el móvil en 2,5 segundos o menos; si la plataforma falla, las aulas siguen accesibles por su dirección; recuperación en un día laborable.],
-  [Mantenimiento], [Una persona sin conocimientos técnicos da de alta un aula en 15 minutos o menos con la guía; copias y responsable designado.],
+  [Eficiencia], [En las pruebas, el 90 % de las tareas llega a la página de gestión correcta en 3 acciones y 20 segundos o menos, y más rápido que hoy. Siempre queda claro en qué aula se está actuando.],
+  [Accesibilidad], [Pautas WCAG 2.2 nivel AA; uso completo con teclado y lector de pantalla; uso en ordenador y tableta y consulta desde el móvil.],
+  [Seguridad], [Identificación con doble factor; permisos mínimos por rol; ninguna contraseña de las aulas guardada; claves de conexión, si las hay, custodiadas por Informática; plataforma no accesible al público; registro de entradas y cambios.],
+  [Privacidad], [Ningún dato personal del alumnado guardado; en la consulta, solo cifras agregadas.],
+  [Continuidad], [Si la plataforma falla, las aulas se siguen gestionando como hoy; recuperación en un día laborable.],
+  [Mantenimiento], [El departamento da de alta un aula en 15 minutos o menos con la guía; reparto escrito de tareas entre el departamento e Informática; copias de seguridad.],
 )
 
-Los valores numéricos son propuestas razonadas, ya que no se dispone de datos de uso. Se ajustarán cuando la organización los facilite.
+Los valores numéricos son propuestas razonadas, ya que no se dispone de datos. Se ajustarán con la información del departamento y de Informática.
 
-= 5. Otros requisitos
+= 5. Comprobación
 
-#table(columns: (0.55fr, 1.45fr),
-  [Prioridad], [Contenido],
-  [*Conveniente*], [Filtros por marca y área formativa; comprobación periódica de enlaces; página de ayuda; vista para atención al usuario; enlace estable para cada aula.],
-  [*Futuro, si se justifica*], [Vista personalizada «mis aulas»; acceso único a todas las aulas; información de cursos procedente de Moodle; estadísticas de uso.],
-  [*Excluido*], [Modificar o unificar las aulas; gestionar contraseñas, matrículas o contenidos; resolver la versión de Moodle de las aulas.],
-)
+Cada requisito se relaciona con la necesidad de la que procede y con la prueba que lo comprobará. Por ejemplo, la necesidad «gestionar cualquier aula desde un único punto» da lugar a los accesos directos, que se comprueban con una prueba con tareas: personal del departamento, o personas con un perfil parecido, llega a una tarea de gestión con la plataforma y por el camino actual, y se comparan el tiempo y los pasos. Todas las necesidades del nuevo enfoque quedan cubiertas, y los requisitos imprescindibles y convenientes tienen al menos una prueba.
 
-#pagebreak(weak: true)
-= 6. Comprobación
+= 6. Supuestos principales
 
-Cada requisito se relaciona con la necesidad de la que procede y con la prueba que lo comprobará. Por ejemplo, la necesidad «saber qué aula le corresponde» da lugar al requisito del buscador, que se comprueba con una prueba con usuarios: tienen que encontrar su aula sin ayuda. Todas las necesidades de la Fase 1 quedan cubiertas, y los requisitos imprescindibles y convenientes tienen al menos una prueba. Las pruebas se realizarán en la Fase 7: funcionales, con usuarios, de accesibilidad, en distintos dispositivos, de seguridad y de mantenimiento.
+- Cada persona del departamento tiene una cuenta distinta en cada aula y debe entrar en cada una por separado.
+- Informática podría activar en las aulas la conexión de solo lectura que ofrece Moodle (servicios web). Si no fuera posible, la plataforma se quedaría en el bloque base.
+- Basta con cifras agregadas; no hace falta guardar datos del alumnado.
+- El proyecto termina con el estudio de viabilidad, un prototipo y una recomendación; la implantación real correspondería a Informática.
 
-= 7. Supuestos principales
-
-- El problema principal es encontrar el aula, no gestionar contenidos.
-- No existe una cuenta común para todas las aulas.
-- El catálogo puede ser público, porque solo muestra lo que ya es público en cada aula.
-- Una persona de la organización se encargará de mantener el catálogo.
-- La primera versión no se conecta con Moodle.
-
-= 8. Cuestiones para la revisión
+= 7. Cuestiones para la revisión
 
 #nota[][
-+ ¿Se considera adecuado continuar con supuestos explícitos mientras no haya respuesta de la organización?
-+ ¿Se validan los requisitos imprescindibles como contenido de la primera versión?
-+ ¿Se consideran razonables los valores de referencia propuestos?
++ ¿Es correcta esta interpretación del enfoque?
++ ¿Se validan los requisitos imprescindibles (bloque base) y que la consulta y las acciones dependan de la viabilidad?
++ Cuando indicó «y ya estaría, por así decirlo, lo del tema de entorno de pruebas», ¿se refería a que el alumnado no necesita nada más, o a que el proyecto puede contar con un aula de pruebas?
++ ¿Sería posible una conversación breve con alguien del departamento y de Informática? Las preguntas, reducidas a nueve, están preparadas.
 ]
 
-= 9. Documentación de soporte
+= 8. Documentación de soporte
 
 La documentación completa está en el repositorio del proyecto: #link("https://github.com/Mingalonga/Plataforma-Moodle/tree/main/Fase-2")[#text(fill: azul)[github.com/Mingalonga/Plataforma-Moodle/tree/main/Fase-2]]
 
 #table(columns: (0.7fr, 1.3fr),
   [Documento], [Contenido],
   [00 Plan de la fase], [Método, tareas y criterios de finalización],
-  [01 Supuestos de partida], [Supuestos y efecto de cada uno],
+  [01 Supuestos de partida], [Lo indicado por la tutora y los supuestos, con su efecto],
   [02 Usuarios y escenarios], [Perfiles y situaciones de uso],
   [03 Requisitos funcionales], [Qué debe hacer la plataforma, con criterios de aceptación],
   [04 Requisitos no funcionales], [Accesibilidad, seguridad, rendimiento y mantenimiento],
@@ -178,13 +154,15 @@ La documentación completa está en el repositorio del proyecto: #link("https://
 
 #table(columns: (0.55fr, 1.45fr),
   [Término], [Significado],
+  [Acceso directo], [Enlace que lleva a una página concreta de gestión de un aula, por ejemplo, a su gestión de cursos.],
   [Escenario de uso], [Situación concreta en la que una persona utiliza la plataforma para conseguir algo.],
-  [Requisito funcional], [Algo que la plataforma debe hacer (por ejemplo, buscar un aula).],
+  [Requisito funcional], [Algo que la plataforma debe hacer.],
   [Requisito no funcional], [Cómo debe hacerlo: accesible, seguro, rápido, fácil de mantener.],
   [Criterio de aceptación], [Condición comprobable que indica si un requisito se cumple.],
   [Trazabilidad], [Relación que permite seguir cada requisito desde la necesidad que lo origina hasta la prueba que lo comprueba.],
-  [Supuesto], [Hipótesis de trabajo que se da por buena mientras no se confirme.],
+  [Servicios web de Moodle], [Conexión que ofrece Moodle para que otro programa consulte o cambie datos del aula sin entrar en ella.],
+  [Aula de pruebas], [Copia de Moodle sin datos reales, donde se puede probar sin riesgo.],
+  [Doble factor], [Identificación que, además de la contraseña, pide una segunda comprobación, como un código en el móvil.],
   [MoSCoW], [Método de priorización: imprescindible, conveniente, futuro y excluido.],
   [WCAG 2.2], [Pautas internacionales de accesibilidad web.],
-  [Lector de pantalla], [Programa que lee en voz alta el contenido de la pantalla a personas ciegas o con baja visión.],
 )

@@ -2,6 +2,20 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.2] — 2026-11-04
+
+**Motivo:** respuesta de la tutora. El proyecto se orienta a la **gestión interna** de las aulas: una herramienta para que el Departamento de Pedagogía y e-learning (DPE) gestione las doce aulas desde un único punto, sin entrar y salir de cada una. El alumnado ya entra en su curso con una URL. Implementa Informática; antes, estudio de viabilidad. Toda la fase se rehace; las versiones 0.1 se archivan en `historico/`.
+
+### Cambiado
+- `00-plan-fase-2.md` v0.2: condiciones de partida, nueva numeración, tareas T11 y T12, criterios de salida y RP-10.
+- `01-supuestos-de-partida.md` v0.2: 6 datos de la tutora (DT-01 a DT-06) y 14 supuestos nuevos.
+- `02-usuarios-escenarios.md` v0.2: perfiles de gestión (PU-08, PU-09, PU-10 y PU-05) y 13 escenarios nuevos; 4 descartados.
+- `03-requisitos-funcionales.md` v0.2: 18 requisitos (10 *Must*, 4 *Should*, 4 *Could*), 6 descartes, dependencia de la viabilidad y correspondencia con la v0.1.
+- `04-requisitos-no-funcionales.md` v0.2: 34 requisitos; la seguridad pasa a centrarse en autenticación, permisos y claves de servicio.
+- `05-matriz-trazabilidad.md` v0.2: 11 necesidades dentro del enfoque y 4 fuera con motivo; 36 casos de prueba; regla del aula de pruebas.
+- `06-especificacion.md` v0.2: especificación rehecha.
+- `entregas/`: resumen para la tutora v2 (4 páginas), guía del alumno v2 (con qué ha cambiado y por qué) y preguntas para Grupo ATU v2 (de 16 a 9). Los PDF y fuentes v1 se archivan.
+
 ## [0.1.2] — 2026-11-03
 
 ### Añadido

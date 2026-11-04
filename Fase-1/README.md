@@ -10,28 +10,28 @@
 | Entregable asociado | 01 — Diagnóstico inicial (situación actual, inventario, perfiles, necesidades, problemas y alcance preliminar) |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
-| Versión del paquete | 0.8 (borrador completo, entregado a la tutora sin validación formal) |
-| Estado | Entregada; hito abierto. La Fase 2 se inicia el 2026-11-03 por decisión del alumno (ver [registro de seguimiento](registro-seguimiento.md)) |
+| Versión del paquete | 0.9 (reorientado tras la respuesta de la tutora del 2026-11-04) |
+| Estado | Entregada; hito abierto. La Fase 2 se inicia el 2026-11-03 por decisión del alumno. El 2026-11-04 la tutora orienta el proyecto a la **gestión interna** de las aulas y se registra el cambio de alcance (ver [registro de seguimiento](registro-seguimiento.md)) |
 
 ## Índice de documentos
 
 | N.º | Documento | Versión | Estado | Última actualización |
 |---|---|---|---|---|
 | 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.4 | Revisión del propietario | 2026-10-30 |
-| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.8 | Revisión del propietario | 2026-10-30 |
+| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.9 | Revisión del propietario | 2026-11-04 |
 | 02 | [Fuentes y metodología de observación](02-fuentes-y-metodologia.md) | 0.5 | Revisión del propietario | 2026-10-30 |
 | 03 | [Inventario de los doce entornos Moodle](03-inventario-campus.md) | 0.5 | Revisión del propietario | 2026-10-30 |
-| 04 | [Mapa inicial de actores y perfiles](04-mapa-actores-perfiles.md) | 0.3 | Revisión del propietario | 2026-10-30 |
-| 05 | [Situación actual, necesidades y problemas](05-situacion-actual.md) | 0.2 | Revisión del propietario | 2026-10-30 |
-| 06 | [Registro de riesgos inicial](06-registro-riesgos.md) | 0.1 | Revisión del propietario | 2026-10-30 |
-| 07 | [Alcance preliminar](07-alcance-preliminar.md) (hito de la fase) | 0.2 | Revisión del propietario | 2026-10-30 |
-| 08 | [**Diagnóstico inicial (entregable 01)**](08-diagnostico-inicial.md) | 0.4 | Revisión del propietario | 2026-10-30 |
-| — | [Registro de seguimiento](registro-seguimiento.md) | — | Vivo | 2026-10-30 |
-| — | [Registro de cambios](CHANGELOG.md) | — | Vivo | 2026-10-30 |
-| — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-10-30 |
+| 04 | [Mapa inicial de actores y perfiles](04-mapa-actores-perfiles.md) | 0.4 | Revisión del propietario | 2026-11-04 |
+| 05 | [Situación actual, necesidades y problemas](05-situacion-actual.md) | 0.3 | Revisión del propietario | 2026-11-04 |
+| 06 | [Registro de riesgos inicial](06-registro-riesgos.md) | 0.2 | Revisión del propietario | 2026-11-04 |
+| 07 | [Alcance preliminar](07-alcance-preliminar.md) (hito de la fase) | 0.3 | Revisión del propietario | 2026-11-04 |
+| 08 | [**Diagnóstico inicial (entregable 01)**](08-diagnostico-inicial.md) | 0.5 | Revisión del propietario | 2026-11-04 |
+| — | [Registro de seguimiento](registro-seguimiento.md) | — | Vivo | 2026-11-04 |
+| — | [Registro de cambios](CHANGELOG.md) | — | Vivo | 2026-11-04 |
+| — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-11-04 |
 | — | [Evidencias](evidencias/) (capturas y registros de observación) | — | Vivo | 2026-10-30 |
-| — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-1_Plataforma-Moodle_v5.pdf). Fuente editable en Typst: [`entregas/resumen-fase-1-tutora.typ`](entregas/resumen-fase-1-tutora.typ) | v5 (basado en el paquete 0.8) | Revisión del alumno | 2026-10-30 |
-| — | [Guion de preguntas para reuniones con Grupo ATU](entregas/guion-reunion-grupo-atu.txt) (versión práctica del guion del documento 05) | 1 | Para uso del alumno | 2026-10-30 |
+| — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-1_Plataforma-Moodle_v5.pdf). Fuente editable en Typst: [`entregas/resumen-fase-1-tutora.typ`](entregas/resumen-fase-1-tutora.typ) | v5 (basado en el paquete 0.8) | Entregado a la tutora (no se actualiza: el cambio de enfoque se explica en el resumen de la Fase 2 v2) | 2026-10-30 |
+| — | [Guion de preguntas para reuniones con Grupo ATU](entregas/guion-reunion-grupo-atu.txt): Departamento de Pedagogía y e-learning, Informática y decisión de viabilidad | 2 | Para uso del alumno | 2026-11-04 |
 
 Estados posibles: Pendiente · En curso · Revisión del propietario · Revisión del tutor · Aprobado.
 
