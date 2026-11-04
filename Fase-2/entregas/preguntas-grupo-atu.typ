@@ -1,10 +1,10 @@
 // Preguntas para Grupo ATU · fuente Typst
-// Compilar: python3 -c "import typst; typst.compile('preguntas-grupo-atu.typ', output='Preguntas_Grupo-ATU_Plataforma-Moodle_v2.pdf')"
+// Compilar: python3 -c "import typst; typst.compile('preguntas-grupo-atu.typ', output='Preguntas_Grupo-ATU_Plataforma-Moodle_v3.pdf')"
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v2"
+#let version = "v3"
 
 #set document(title: "Preguntas para Grupo ATU — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -50,7 +50,7 @@
 #let pregunta(n, texto, motivo) = block(breakable: false, above: 0.9em, below: 0.4em)[
   #grid(columns: (1.4em, 1fr), column-gutter: 0.3em,
     text(weight: "bold", fill: azul)[#n.],
-    [#texto \ #text(9pt, fill: gris)[#motivo]],
+    texto,
   )
 ]
 
@@ -64,8 +64,6 @@
 ]
 
 #v(0.4cm)
-
-El proyecto estudia la viabilidad de una herramienta interna para que el Departamento de Pedagogía y e-learning gestione las doce aulas virtuales Moodle desde un único punto, sin tener que entrar y salir de cada una. Informática se encargaría de la implementación. Estas preguntas permitirían ajustar los requisitos y estudiar la viabilidad con datos reales. Bastan respuestas aproximadas y en ningún caso se necesitan datos personales ni contraseñas.
 
 = Departamento de Pedagogía y e-learning
 
@@ -84,7 +82,3 @@ El proyecto estudia la viabilidad de una herramienta interna para que el Departa
 = Viabilidad
 
 #pregunta(9, [¿Quién decidiría si el proyecto es viable, con qué criterios (coste, plazo, seguridad, esfuerzo) y con qué presupuesto orientativo?], [Para orientar el estudio de viabilidad a lo que se va a valorar.])
-
-#v(0.5cm)
-#line(length: 100%, stroke: 0.6pt + linea)
-#text(9pt, fill: gris)[Sustituye a la versión 1 (16 preguntas pensadas para el alumnado y la atención al usuario). Las respuestas se pueden enviar por correo o tratar en una conversación breve de 20 a 30 minutos. Documentación del proyecto: #link("https://github.com/Mingalonga/Plataforma-Moodle")[github.com/Mingalonga/Plataforma-Moodle]]

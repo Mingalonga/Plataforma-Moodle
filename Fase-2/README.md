@@ -29,7 +29,7 @@
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-11-04 |
 | — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-2_Plataforma-Moodle_v2.pdf). Fuente Typst: [`entregas/resumen-fase-2-tutora.typ`](entregas/resumen-fase-2-tutora.typ) | v2 (basado en el paquete 0.2) | Para enviar | 2026-11-04 |
 | — | [Guía de la Fase 2 para el alumno (PDF)](entregas/Guia-alumno_Fase-2_Plataforma-Moodle_v2.pdf), explicación detallada para uso interno, con qué ha cambiado y por qué. Fuente: [`entregas/guia-fase-2-alumno.typ`](entregas/guia-fase-2-alumno.typ) | v2 | Uso del alumno | 2026-11-04 |
-| — | [Preguntas para Grupo ATU (PDF)](entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v2.pdf): 9 preguntas para el Departamento de Pedagogía y e-learning, Informática y quien decida la viabilidad. Fuente: [`entregas/preguntas-grupo-atu.typ`](entregas/preguntas-grupo-atu.typ) | v2 | Para enviar a la organización | 2026-11-04 |
+| — | [Preguntas para Grupo ATU (PDF)](entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v3.pdf): 9 preguntas para el Departamento de Pedagogía y e-learning, Informática y quien decida la viabilidad, solo con las preguntas. Fuente: [`entregas/preguntas-grupo-atu.typ`](entregas/preguntas-grupo-atu.typ) | v3 | Para enviar a la organización | 2026-11-04 |
 
 ## Identificadores
 
