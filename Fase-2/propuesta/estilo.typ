@@ -1,4 +1,4 @@
-// Estilo común de los planos (documento ejecutivo, dosier y guía)
+// Estilo común de la propuesta (propuesta y viabilidad, dosier y guía)
 // Uso: #import "estilo.typ": *   y   #show: plantilla.with(pie: "…", portada: true)
 
 #let azul = rgb("#1f3a5f")

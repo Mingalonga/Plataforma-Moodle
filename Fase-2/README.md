@@ -29,9 +29,9 @@
 | — | [Histórico de versiones](historico/README.md) | — | Vivo | 2026-11-05 |
 | — | [**Resumen para la tutora (PDF)**](entregas/Resumen_Fase-2_Plataforma-Moodle_v3.pdf). Fuente Typst: [`entregas/resumen-fase-2-tutora.typ`](entregas/resumen-fase-2-tutora.typ) | v3 (basado en el paquete 0.3) | Para enviar | 2026-11-05 |
 | — | [Guía de la Fase 2 para el alumno (PDF)](entregas/Guia-alumno_Fase-2_Plataforma-Moodle_v3.pdf), explicación detallada para uso interno, con qué ha cambiado y por qué. Fuente: [`entregas/guia-fase-2-alumno.typ`](entregas/guia-fase-2-alumno.typ) | v3 | Uso del alumno | 2026-11-05 |
-| — | [**Planos: documento ejecutivo de viabilidad (PDF)**](planos/Planos_Documento-ejecutivo_Plataforma-Moodle_v1.pdf), 3 páginas para el DPE, Informática y Dirección | v1 | Para enviar a la organización | 2026-11-05 |
-| — | [**Planos: dosier de respaldo (PDF)**](planos/Planos_Dosier-respaldo_Plataforma-Moodle_v1.pdf), independiente, con el detalle técnico | v1 | Para enviar a la organización | 2026-11-05 |
-| — | [Guía del alumno para los planos (PDF)](planos/Guia-alumno_Planos_Plataforma-Moodle_v1.pdf): origen de cada dato, conceptos técnicos, qué es seguro y qué no, tablero de control. Fuentes Typst en [`planos/`](planos/) | v1 | Uso del alumno | 2026-11-05 |
+| — | [**Propuesta y viabilidad (PDF)**](propuesta/Propuesta-viabilidad_Plataforma-Moodle_v2.pdf), 3 páginas para el DPE, Informática y Dirección | v2 | Para enviar a la organización | 2026-11-05 |
+| — | [**Dosier de respaldo (PDF)**](propuesta/Dosier-respaldo_Plataforma-Moodle_v2.pdf), independiente, con el detalle técnico | v2 | Para enviar a la organización | 2026-11-05 |
+| — | [Guía del alumno para la propuesta (PDF)](propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v2.pdf): origen de cada dato, conceptos técnicos, qué es seguro y qué no, tablero de control. Fuentes Typst en [`propuesta/`](propuesta/); versiones v1 en [`propuesta/historico/`](propuesta/historico/) | v2 | Uso del alumno | 2026-11-05 |
 | — | [Preguntas para Grupo ATU (PDF)](entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v3.pdf): 9 preguntas para el Departamento de Pedagogía y e-learning, Informática y quien decida la viabilidad, solo con las preguntas. Fuente: [`entregas/preguntas-grupo-atu.typ`](entregas/preguntas-grupo-atu.typ) | v3 | Enviadas y respondidas el 2026-11-05 | 2026-11-04 |
 
 ## Identificadores
