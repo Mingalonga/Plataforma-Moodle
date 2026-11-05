@@ -2,6 +2,19 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.1] — 2026-11-05
+
+**Motivo:** el alumno pide «los planos» (T14), tal como los describió Grupo ATU: un documento breve y directo y un dosier de respaldo independiente.
+
+### Añadido
+- `planos/Planos_Documento-ejecutivo_Plataforma-Moodle_v1.pdf` (3 páginas): habitaciones, funcionamiento, viabilidad preliminar con cuatro condiciones, opciones por niveles A a D, riesgos, esfuerzo orientativo y decisión que se pide al DPE, a Informática y a Dirección.
+- `planos/Planos_Dosier-respaldo_Plataforma-Moodle_v1.pdf` (10 páginas): contexto, alcance, escenarios, requisitos, viabilidad técnica (funciones de Moodle por requisito, configuración por aula, decisión de permisos, versiones, pruebas V-01 a V-08), arquitectura conceptual, seguridad, pruebas, implantación por etapas, riesgos, alternativas y preguntas.
+- `planos/Guia-alumno_Planos_Plataforma-Moodle_v1.pdf` (uso interno): explicación completa para el alumno.
+- Fuentes Typst con un estilo común (`planos/estilo.typ`).
+
+### Cambiado
+- `00-plan-fase-2.md`: T14 hecha (sin cambio de versión).
+
 ## [0.3] — 2026-11-05
 
 **Motivo:** respuestas de Grupo ATU (Departamento de Pedagogía y e-learning e Informática) a las nueve preguntas. Lo esencial (pregunta 4): el DPE quiere **ver a los alumnos de forma global y por aula, controlar accesos y hacer cambios globales o individuales**, con un **estudio de viabilidad real**, más allá de los hipervínculos. Informática pide un documento **breve y directo** con un **dosier de respaldo independiente**. Se conservan los identificadores de la v0.2; las versiones 0.2 se archivan en `historico/`.

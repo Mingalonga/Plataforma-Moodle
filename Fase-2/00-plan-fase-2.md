@@ -70,7 +70,7 @@ Como en la Fase 1, esta fase **no** elige tecnología, arquitectura ni diseño v
 | T11 | Reorientar la fase al enfoque de gestión interna | Respuesta de la tutora del 2026-11-04 | Paquete 0.2 completo | Hecho |
 | T12 | Confirmar la interpretación con la tutora y aclarar P-T01 | T11 | Registro de seguimiento | Superada en parte: la organización ha confirmado el enfoque y P-T01 queda resuelta en parte (DO-06) |
 | T13 | Incorporar las respuestas de Grupo ATU | Respuestas del 2026-11-05 | Paquete 0.3, resumen v3, guía v3 | Hecho |
-| T14 | «Los planos»: documento ejecutivo de viabilidad (breve) y dosier de respaldo independiente | T13 | Por definir | **Propuesto**, pendiente de decisión del alumno |
+| T14 | «Los planos»: documento ejecutivo de viabilidad (breve) y dosier de respaldo independiente | T13 | [`planos/`](planos/) | Hecho (v1, 2026-11-05) a petición del alumno |
 | T15 | Confirmar con el DPE las interpretaciones SF-16 y SF-17 (P-G07, P-G08) | T13 | Registro de seguimiento | Pendiente |
 
 ## 6. Criterios de salida
