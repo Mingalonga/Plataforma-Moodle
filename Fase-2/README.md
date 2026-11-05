@@ -32,6 +32,7 @@
 | — | [**Propuesta y viabilidad (PDF)**](propuesta/Propuesta-viabilidad_Plataforma-Moodle_v2.pdf), 3 páginas para el DPE, Informática y Dirección | v2 | Para enviar a la organización | 2026-11-05 |
 | — | [**Dosier de respaldo (PDF)**](propuesta/Dosier-respaldo_Plataforma-Moodle_v2.pdf), independiente, con el detalle técnico | v2 | Para enviar a la organización | 2026-11-05 |
 | — | [Guía del alumno para la propuesta (PDF)](propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v2.pdf): origen de cada dato, conceptos técnicos, qué es seguro y qué no, tablero de control. Fuentes Typst en [`propuesta/`](propuesta/); versiones v1 en [`propuesta/historico/`](propuesta/historico/) | v2 | Uso del alumno | 2026-11-05 |
+| — | [**Preguntas sobre la propuesta (PDF)**](propuesta/Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v1.pdf): las 10 preguntas de la propuesta y del dosier, sin repetir, por departamento y sin comentarios. Fuente: [`propuesta/preguntas-propuesta.typ`](propuesta/preguntas-propuesta.typ) | v1 | Para enviar a la organización | 2026-11-05 |
 | — | [Preguntas para Grupo ATU (PDF)](entregas/Preguntas_Grupo-ATU_Plataforma-Moodle_v3.pdf): 9 preguntas para el Departamento de Pedagogía y e-learning, Informática y quien decida la viabilidad, solo con las preguntas. Fuente: [`entregas/preguntas-grupo-atu.typ`](entregas/preguntas-grupo-atu.typ) | v3 | Enviadas y respondidas el 2026-11-05 | 2026-11-04 |
 
 ## Identificadores

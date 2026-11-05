@@ -2,6 +2,11 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.3] — 2026-11-05
+
+### Añadido
+- `propuesta/Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v1.pdf` y su fuente: a petición del alumno, las preguntas de «Propuesta y viabilidad» (apartado 7) y del dosier (apartado 13) en un solo PDF, sin repetir, agrupadas por departamento y sin comentarios (mismo formato que las preguntas v3). 10 preguntas: 4 para el DPE, 4 para Informática y 2 para Dirección.
+
 ## [0.3.2] — 2026-11-05
 
 **Motivo:** revisión del alumno del documento breve.
