@@ -1,9 +1,9 @@
 // Dosier de respaldo de la propuesta · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('dosier-respaldo.typ', output='Dosier-respaldo_Plataforma-Moodle_v3.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('dosier-respaldo.typ', output='Dosier-respaldo_Plataforma-Moodle_v4.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Gestión centralizada de las aulas Moodle — Dosier de respaldo", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Dosier de respaldo (v3)])
+#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Dosier de respaldo (v4)])
 
 #portada(
   [GRUPO ATU · DOSIER DE RESPALDO DE LA PROPUESTA],
@@ -13,7 +13,7 @@
     text(fill: gris)[Para], [Departamento de Pedagogía y e-learning, Informática y Dirección],
     text(fill: gris)[Autor], [Carlos García Rallo (proyecto de prácticas, Ficha 01)],
     text(fill: gris)[Fecha], [5 de noviembre de 2026],
-    text(fill: gris)[Versión], [3. Basado en la especificación de la Fase 2, versión 0.3],
+    text(fill: gris)[Versión], [4. Basado en la especificación de la Fase 2, versión 0.4],
     text(fill: gris)[Relación], [Respalda el documento «Propuesta y viabilidad». Se puede leer por partes; cada sección es independiente],
   ),
 )
@@ -36,7 +36,7 @@ Grupo ATU gestiona doce aulas Moodle independientes, cada una en su dirección y
   [*Qué quieren*], [*Ver alumnos global y por aula, controles de accesos, cambios globales o individuales; viabilidad real; más allá de hipervínculos*], [*Los cuatro módulos principales*],
   [Versión], [La más actualizada, 4.1.18; no todas iguales; cambian], [Funcionar con versiones distintas (RNF-MAN-09)],
   [Pruebas], [Perfil de prueba posible cuando haya una base de qué hacer y cómo], [La propuesta y este dosier son esa base],
-  [Directorio y normas], [Microsoft 365; normas internas en la sede], [Acceso con cuenta corporativa; cumplir las normas (RNF-SEG-13)],
+  [Directorio y normas], [Microsoft 365; normas internas en la sede (recibidas: Política de Seguridad y Normas de uso)], [Acceso con cuenta corporativa; cumplir las normas (RNF-SEG-13 y apartado 8.1)],
   [Informática], [Puede asumirlo todo o delegar; poco tiempo; documento claro y directo], [Documento breve de propuesta + este dosier],
   [Decisión], [DPE valora; Informática y Dirección deciden], [La propuesta termina con la decisión que se pide a cada uno],
 )
@@ -130,7 +130,7 @@ Prioridad MoSCoW: *M* imprescindible · *S* conveniente · *C* futuro.
   [RNF-SEG-08], [Registros], [Entradas, permisos, consultas y cambios; 12 meses [R]; no modificables],
   [RNF-SEG-09], [Exposición], [No pública; si Informática lo decide, solo red corporativa],
   [RNF-SEG-12], [Permisos por aula], [Nunca más que con la cuenta propia en el aula],
-  [RNF-SEG-13], [Normas internas], [Lista de comprobación revisada con Informática],
+  [RNF-SEG-13], [Normas internas], [Cumple la lista de 8.1, revisada con Informática],
   [RNF-REN-05], [Si la herramienta cae], [Las aulas se gestionan como hoy],
   [RNF-REN-06], [Recuperación], [≤ 1 día laborable [R]],
   [RNF-REN-07], [Carga de las aulas], [Una petición simultánea por aula como máximo],
@@ -196,12 +196,12 @@ El departamento ha dicho que cada persona tiene roles distintos en cada aula por
 
 #table(columns: (0.9fr, 1.4fr, 1.1fr, 1.1fr),
   [Opción], [Cómo funciona], [A favor], [En contra],
-  [*1. Clave de servicio común*], [Una clave por aula. La herramienta guarda qué puede hacer cada persona en cada aula y lo comprueba antes de actuar.], [Pocas claves (12); fácil de administrar.], [La herramienta tiene que mantener los permisos al día; en el registro de Moodle todo aparece hecho por el usuario de servicio.],
+  [*1. Clave de servicio común*], [Una clave por aula. La herramienta guarda qué puede hacer cada persona en cada aula y lo comprueba antes de actuar.], [Pocas claves (12); fácil de administrar.], [La herramienta tiene que mantener los permisos al día; en el registro de Moodle todo aparece hecho por el usuario de servicio. Para escribir, choca con las normas de acceso personal e intransferible (8.1).],
   [*2. Clave personal*], [Una clave por persona y aula, creada por Informática para la cuenta de esa persona. Moodle aplica sus permisos reales.], [Respeta los roles sin copiarlos; el registro de Moodle muestra a la persona real.], [Hasta 30 × 12 = 360 claves que crear, renovar y retirar.],
   [*3. Mixta*], [Clave común de *lectura* para consultar y claves *personales de escritura* solo para quien haga cambios.], [El riesgo está en la escritura, y ahí se usan los permisos reales; menos claves.], [Algo más compleja de explicar y montar.],
 )
 
-#nota[Propuesta.][*Opción 3 (mixta)*, a validar con Informática. La decisión final se tomará con Informática una vez aceptada la propuesta, al concretar el diseño. Las claves nunca se obtienen a partir de la contraseña de la persona (W-03).]
+#nota[Propuesta.][*Opción 3 (mixta)*, a validar con Informática. Las Normas de uso de Grupo ATU piden que cada acceso sea personal e intransferible y que nadie use el de otra persona (4.4.2 y 4.4.6), lo que refuerza usar claves personales para escribir. La clave común de lectura, que no deja huella de la persona en Moodle, se compensa con el registro de la herramienta (RNF-SEG-08); su encaje lo confirmarán Informática y el Responsable de Seguridad. La decisión final se tomará con Informática una vez aceptada la propuesta, al concretar el diseño. Las claves nunca se obtienen a partir de la contraseña de la persona (W-03).]
 
 == 6.5 Versiones distintas de Moodle
 
@@ -256,10 +256,27 @@ Esta es la arquitectura sobre la que se valora la viabilidad. Describe las pieza
   [Claves de las aulas], [Funciones mínimas; lectura y escritura separadas; IP restringida; caducidad; custodia por Informática; nunca en el código],
   [Contraseñas], [Ninguna contraseña de las aulas pasa por la herramienta],
   [Datos del alumnado], [Solo los campos necesarios; lectura al consultar; sin copia permanente; registro de cada consulta],
-  [Base legal], [Misma finalidad con la que el DPE ya gestiona esos datos (gestión de la formación) [S]; a confirmar con el responsable del tratamiento],
-  [Normas internas], [Lista de comprobación de las normas de Grupo ATU (sede), revisada con Informática],
+  [Base legal], [Misma finalidad con la que el DPE ya gestiona esos datos (gestión de la formación) [S]. El responsable del tratamiento es Grupo ATU, que tiene Delegado de Protección de Datos [D]; falta que confirme que admite la consulta global],
+  [Normas internas], [Lista de comprobación de 8.1, revisada con Informática],
   [Pruebas], [Nunca sobre aulas reales; solo aulas de prueba sin datos reales],
 )
+
+== 8.1 Lista de comprobación de las normas de Grupo ATU
+
+Grupo ATU ha facilitado su *Política de Seguridad de la Información* (2025, basada en el Esquema Nacional de Seguridad) y sus *Normas de uso de recursos informáticos y deber de confidencialidad* (2026). Estas son las reglas que afectan a la herramienta y cómo las cumpliría:
+
+#block(breakable: false)[
+#table(columns: (auto, 1.3fr, 1.5fr),
+  [Origen], [Qué pide], [Cómo se cumple],
+  [Política (ENS)], [El Responsable del Sistema aprueba los cambios de configuración], [La activación de los servicios web y las claves en cada aula las aprueba él (etapa 0)],
+  [Política (ENS)], [Análisis de riesgos cada año y cuando cambian los servicios], [La herramienta entra en el análisis antes de la etapa 0; este dosier (apartado 11) sirve de base],
+  [Normas 4.2.2], [Solo el personal autorizado instala aplicaciones], [Informática instala la herramienta o autoriza a quien lo haga; en las aulas no se instala nada],
+  [Normas 4.3.4], [Acceso solo a los datos necesarios, con perfiles de acceso], [Tres roles, funciones mínimas por clave y nunca más permisos que en el aula (RNF-SEG-12)],
+  [Normas 4.3.10], [Los ficheros temporales con datos personales se borran cuando dejan de ser útiles], [Sin copia permanente; la copia temporal se borra sola en 24 h [R] (RNF-SEG-07)],
+  [Normas 4.4.2 y 4.4.6], [Acceso personal e intransferible; nunca usar el de otra persona], [Entrada con la cuenta personal; claves personales para escribir (6.4)],
+  [Normas 4.4.9], [Los accesos se pueden supervisar], [Registro de entradas, consultas y cambios, disponible para Informática (RNF-SEG-08)],
+  [Normas 4.5.3], [El personal externo necesita autorización del Responsable de Seguridad para conectar equipos propios], [El alumno en prácticas solo conecta su equipo a la red de Grupo ATU con esa autorización],
+)]
 
 = 9. Plan de pruebas
 
@@ -278,7 +295,7 @@ Esta es la arquitectura sobre la que se valora la viabilidad. Describe las pieza
 
 #table(columns: (auto, 1.4fr, 1.4fr),
   [Etapa], [Qué se hace], [Para pasar a la siguiente],
-  [0], [Aula o perfil de prueba y servicios web en ella (Informática)], [V-01 y V-02 superadas],
+  [0], [Análisis de riesgos de la herramienta (Responsable de Seguridad); aprobación del Responsable del Sistema; aula o perfil de prueba y servicios web en ella (Informática)], [Riesgos aceptados; V-01 y V-02 superadas],
   [A], [Consulta: vista de alumnos, control de accesos, inventario], [V-03; prueba con tareas con personal del DPE],
   [B], [Cambios individuales con vista previa, registro y deshacer], [V-04, V-06, V-07; visto bueno de Informática a la escritura],
   [C], [Cambios globales], [V-05, V-08; visto bueno del DPE],
@@ -294,7 +311,7 @@ Cada etapa es útil por sí sola y se puede detener sin perder lo anterior.
   [ID], [Riesgo], [Nivel], [Respuesta],
   [R1], [Cambio global equivocado], [Alto], [RF-21; confirmación reforzada; pruebas V-05],
   [R2], [Robo o mal uso de una clave], [Alto], [Claves limitadas, IP, caducidad, revocables],
-  [R3], [Tratamiento de datos sin base suficiente], [Medio], [Confirmación con el responsable del tratamiento; sin copias],
+  [R3], [Tratamiento de datos sin base suficiente], [Medio], [Confirmación con Grupo ATU y su Delegado de Protección de Datos; sin copias],
   [R4], [Informática no puede dedicar tiempo], [Medio], [Etapas cortas; documento breve; el alumno asume el prototipo],
   [R5], [Una actualización de Moodle rompe la conexión], [Medio], [Detección de versión; repetir pruebas],
   [R6], [Aulas sin soporte de seguridad (Moodle 4.1)], [Medio], [Funciones mínimas e IP restringida; comunicarlo a Informática],
@@ -324,9 +341,8 @@ Una vez aceptada la propuesta, se documentará una comparación formal con crite
   [P-C04], [¿Se pueden activar los servicios web, de lectura y de escritura limitada?], [Informática],
   [P-G07], [¿«Controles de accesos» es lo descrito en RF-19?], [DPE],
   [P-G08], [¿Qué cambios globales son los más útiles? ¿Se matricula siempre de forma manual?], [DPE],
-  [P-G09], [¿Dónde están las normas de seguridad (sede)?], [Informática],
   [P-I01], [¿Están las aulas conectadas a Microsoft 365?], [Informática],
-  [P-L01], [¿Quién es el responsable del tratamiento y admite la consulta global?], [Dirección],
+  [P-L01], [¿Admite Grupo ATU, como responsable del tratamiento y con su Delegado de Protección de Datos, la consulta global?], [Dirección],
   [—], [¿Opción 1, 2 o 3 para los permisos (6.4)?], [Informática],
 )
 

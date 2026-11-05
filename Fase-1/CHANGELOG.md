@@ -4,6 +4,13 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.9.2] — 2026-11-05
+
+**Motivo:** Grupo ATU facilita su Política de Seguridad de la Información y sus Normas de uso de recursos informáticos.
+
+### Cambiado
+- `01-registro-preguntas-supuestos.md` v0.11: P-G09 resuelta; P-L01 resuelta en parte (el responsable del tratamiento es Grupo ATU, con DPD; falta saber si admite la consulta global). La v0.10 se archiva.
+
 ## [0.9.1] — 2026-11-05
 
 **Motivo:** respuestas de Grupo ATU (DPE e Informática) a las nueve preguntas enviadas.

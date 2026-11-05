@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-11-05 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (rol Analista), a petición del alumno |
@@ -10,6 +10,8 @@
 | Tutor/a | *(en blanco)* |
 
 Este documento separa **lo que ha dicho la tutora** (DT), **lo que ha respondido la organización** (DO) y **lo que se da por supuesto** para poder escribir requisitos (SF). Para cada supuesto se indica en qué se basa, qué requisitos dependen de él y qué cambiaría si resultara falso. Cuando llega una respuesta, se actualiza aquí y en la [matriz de trazabilidad](05-matriz-trazabilidad.md).
+
+> **v0.4 (2026-11-05).** Grupo ATU ha facilitado su **Política de Seguridad de la Información** (ENS) y sus **Normas de uso de recursos informáticos** (confidenciales; solo se citan). Se añade DO-10, que resuelve P-G09 y en parte P-L01. La v0.3 está en el [histórico](historico/01-supuestos-de-partida_v0.3.md).
 
 > **v0.3 (2026-11-05).** Grupo ATU ha respondido a las nueve preguntas (Departamento de Pedagogía y e-learning e Informática). Se añaden los datos DO-01 a DO-09, se actualizan los supuestos que confirman o corrigen, **SF-12 cae** (el DPE quiere ver a los alumnos, no solo cifras) y se añaden SF-15 a SF-18. La v0.2 está en el [histórico](historico/01-supuestos-de-partida_v0.2.md).
 
@@ -41,6 +43,7 @@ Texto literal en el [registro de seguimiento](registro-seguimiento.md). Los núm
 | DO-07 | 7 · Directorio y normas | La herramienta corporativa es **Microsoft 365**. Hay **normas de seguridad** y protocolos (consultar en la sede) | Corrige SF-04. RF-16 (acceso con la cuenta corporativa) sube a *Should*. Nuevo RNF-SEG-13 |
 | DO-08 | 8 · Informática | Si lo ve viable, Informática **puede asumirlo todo o delegar** partes. Si no, tiene **muy poco tiempo**: el proyecto debe ser **claro y directo** («no van a leer 20 páginas»), con un **dosier de respaldo independiente** | Forma del entregable: documento breve + dosier (plan, T14) |
 | DO-09 | 9 · Decisión | Primero el **DPE** valora pros y contras; después se expone a **Informática y Dirección**, que deciden si se pone en marcha. Sin presupuesto orientativo | El documento de viabilidad debe servir a ese recorrido (SF-14) |
+| DO-10 | Respuesta a P-G09 (documentos) | **Política de Seguridad de la Información** (2025, pública, basada en el ENS): roles de Responsable de la Información, del Servicio, de Seguridad y del Sistema; el Responsable del Sistema aprueba los cambios de configuración; análisis de riesgos anual y cuando cambian los servicios; **Grupo ATU es responsable del tratamiento y tiene DPD**. **Normas de uso y deber de confidencialidad** (2026, confidencial): acceso solo a los datos necesarios (4.3.4), borrado de temporales con datos personales (4.3.10), acceso personal e intransferible (4.4.2, 4.4.6), supervisión de accesos (4.4.9), autorización para que el personal externo conecte equipos propios (4.5.3) | Concreta RNF-SEG-13 (lista de comprobación). Refuerza claves personales para escribir (SF-18). Resuelve P-G09; P-L01 pasa a «¿lo admite?». El análisis de riesgos y la aprobación del Responsable del Sistema entran en las condiciones de viabilidad |
 
 **Resumen de la petición, en palabras de la organización:** «te estamos pidiendo que nos hagas los planos de una casa en la que queremos meter ciertas habitaciones […] para poder gestionarlo todo desde un mismo espacio».
 
@@ -82,4 +85,5 @@ Para no ocultar supuestos (indicador de la ficha: «necesidades verificadas y no
 |---|---|---|---|
 | 0.1 | 2026-11-03 | Claude (Analista) | Primera versión: 14 supuestos de partida. [Archivada](historico/01-supuestos-de-partida_v0.1.md) |
 | 0.2 | 2026-11-04 | Claude (Analista) | Enfoque de gestión interna: 6 datos de la tutora (DT-01 a DT-06) y 14 supuestos nuevos (SF-01 a SF-14). [Archivada](historico/01-supuestos-de-partida_v0.2.md) |
-| 0.3 | 2026-11-05 | Claude (Analista) | Respuestas de Grupo ATU: datos DO-01 a DO-09; SF-01 a SF-05, SF-07, SF-13 y SF-14 actualizados; SF-12 descartado; nuevos SF-15 a SF-18 |
+| 0.3 | 2026-11-05 | Claude (Analista) | Respuestas de Grupo ATU: datos DO-01 a DO-09; SF-01 a SF-05, SF-07, SF-13 y SF-14 actualizados; SF-12 descartado; nuevos SF-15 a SF-18. [Archivada](historico/01-supuestos-de-partida_v0.3.md) |
+| 0.4 | 2026-11-05 | Claude (Analista) | Documentos de seguridad de Grupo ATU: nuevo DO-10 |
