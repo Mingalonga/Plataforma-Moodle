@@ -1,9 +1,9 @@
 // Guía del alumno para la propuesta · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v2.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v4.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Guía del alumno: la propuesta", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Guía del alumno · La propuesta (v2) · uso interno])
+#show: plantilla.with(pie: [Guía del alumno · La propuesta (v4) · uso interno])
 
 #portada(
   [FICHA DE PROYECTO 01 · DOCUMENTO DE TRABAJO DEL ALUMNO],
@@ -12,12 +12,96 @@
   (
     text(fill: gris)[Para], [Carlos García Rallo (uso interno, *no es para entregar*)],
     text(fill: gris)[Fecha], [5 de noviembre de 2026],
-    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v2 y dosier de respaldo v2],
+    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v2, dosier de respaldo v3 y preguntas sobre la propuesta v2],
     text(fill: gris)[Basada en], [Especificación de la Fase 2, versión 0.3, y guía de la Fase 2 v3],
   ),
 )
 
 #outline(title: [Contenido], depth: 1)
+
+#pagebreak()
+
+= Leyenda de siglas
+
+Todas las siglas e identificadores que aparecen en esta guía, en la propuesta, en el dosier y en la documentación del proyecto. Los identificadores llevan un número (por ejemplo, RF-17) y nunca se reutilizan: si algo se descarta, se tacha o se marca, pero su número no pasa a otra cosa.
+
+== Organización y personas
+
+#table(columns: (auto, 1fr, auto),
+  [Sigla], [Significado], [Dónde],
+  [DPE], [Departamento de Pedagogía y e-learning: gestiona las aulas y es el usuario principal], [—],
+  [CAU], [Centro de atención al usuario (soporte); en la herramienta, solo consulta], [—],
+  [A-xx], [Actor: persona, departamento o sistema relacionado con el proyecto (A-13 es el DPE, A-14 Informática)], [Fase 1, doc. 04],
+  [PU-xx], [Perfil de usuario: PU-08 gestor/a del DPE, PU-09 técnico/a de Informática, PU-10 responsable del DPE, PU-05 CAU], [Fase 1, doc. 04; Fase 2, doc. 02],
+)
+
+== Datos, supuestos y preguntas
+
+#table(columns: (auto, 1fr, auto),
+  [Sigla], [Significado], [Dónde],
+  [DT-xx], [Dato de la tutora (respuesta del 4-11). Es información confirmada], [Fase 2, doc. 01],
+  [DO-xx], [Dato de la organización (respuestas de Grupo ATU del 5-11). Es información confirmada], [Fase 2, doc. 01],
+  [SF-xx], [Supuesto de la Fase 2: lo que damos por cierto sin confirmar, con lo que cambiaría si fuera falso], [Fase 2, doc. 01],
+  [S-xx], [Supuesto de la Fase 1], [Fase 1, doc. 01],
+  [H-xx], [Hecho comprobado en la Fase 1 (por ejemplo, H-04: indicio de Moodle 4.1)], [Fase 1, docs. 03 y 05],
+  [P-xx], [Pregunta abierta. La letra indica a quién va: P-G gestión (DPE), P-C configuración de las aulas (Informática), P-I identidad y directorio, P-L legal y datos, P-T tutora, P-O organización, P-U usuarios, P-N necesidades, P-V verificación de las aulas, P-A alumno], [Fase 1, doc. 01],
+  [PG-xx], [Pregunta guía de la ficha del proyecto (página 4)], [Fase 1, doc. 01],
+  [D-xx], [Dependencia: algo de lo que depende el proyecto (por ejemplo, D-05: implementación por Informática)], [Fase 1, doc. 01],
+)
+
+== Necesidades, problemas, alcance y riesgos
+
+#table(columns: (auto, 1fr, auto),
+  [Sigla], [Significado], [Dónde],
+  [N-xx], [Necesidad: lo que hace falta resolver (N-16: gestionar alumnado y accesos con cambios globales o individuales)], [Fase 1, doc. 05; N-16 en Fase 2, doc. 05],
+  [PR-xx], [Problema detectado (PR-09: gestión dispersa, entrar y salir de cada aula)], [Fase 1, doc. 05],
+  [AL-xx], [Elemento del alcance preliminar], [Fase 1, doc. 07],
+  [RS-xx], [Riesgo del proyecto (por ejemplo, RS-10: la herramienta concentra el acceso a doce aulas)], [Fase 1, doc. 06],
+  [RP-xx], [Riesgo propio de una fase (RP-11: que no lean la propuesta por larga; RP-12: cambio global erróneo)], [Fase 2, doc. 00],
+  [R1 a R8], [Riesgos del dosier (sección 11)], [Dosier],
+  [OS-xx], [Observación de seguridad comunicada a la organización (por ejemplo, la versión sin soporte)], [Fase 1],
+)
+
+== Requisitos y pruebas
+
+#table(columns: (auto, 1fr, auto),
+  [Sigla], [Significado], [Dónde],
+  [ES-xx], [Escenario de uso: una situación concreta de trabajo (ES-17: suspender en tres aulas a una persona)], [Fase 2, doc. 02],
+  [RF-xx], [Requisito funcional: algo que la herramienta *hace*], [Fase 2, doc. 03],
+  [RNF-xx], [Requisito no funcional: *cómo* lo hace. Grupos: RNF-UX usabilidad y accesibilidad, RNF-SEG seguridad y privacidad, RNF-REN rendimiento y disponibilidad, RNF-MAN mantenimiento], [Fase 2, doc. 04],
+  [W-xx], [Descartado expresamente (*Won't*), con su motivo], [Fase 2, doc. 03],
+  [CP-xx], [Caso de prueba. Mismos grupos: CP-F funcional, CP-UX, CP-SEG, CP-REN, CP-MAN], [Fase 2, doc. 05],
+  [V-xx], [Prueba de viabilidad en el aula de prueba (V-01 a V-08)], [Dosier, 6.6],
+  [T-xx / Txx], [Tarea del plan de la fase (T14: la propuesta y el dosier)], [Fase 2, doc. 00],
+)
+
+== Prioridades, niveles y etiquetas
+
+#table(columns: (auto, 1fr),
+  [Sigla], [Significado],
+  [M / S / C / W], [Método *MoSCoW*: *Must* imprescindible, *Should* conveniente, *Could* futuro, *Won't* descartado],
+  [Nivel A a D], [Etapas de la propuesta: A consulta, B cambios individuales, C cambios globales, D Microsoft 365],
+  [[H]], [Hecho comprobado],
+  [[O]], [Observado en la web pública de las aulas],
+  [[D]], [Dato de la organización o de la tutora],
+  [[S]], [Supuesto],
+  [[R]], [Recomendación o propuesta razonada (por ejemplo, un valor numérico sin medir)],
+  [[P]], [Pendiente de autorización],
+)
+
+== Términos técnicos y normas
+
+#table(columns: (auto, 1fr),
+  [Sigla], [Significado],
+  [REST], [Forma de enviar peticiones a los servicios web de Moodle],
+  [Token], [Clave de servicio de Moodle],
+  [IP], [Dirección de red de un equipo; una clave puede limitarse a una IP],
+  [LTS], [Versión de Moodle con soporte extendido (la 4.1 lo fue hasta diciembre de 2025)],
+  [WCAG 2.2 AA], [Pautas internacionales de accesibilidad web, nivel intermedio],
+  [SUS], [Cuestionario estándar de usabilidad de 10 preguntas (68 es la media)],
+  [RGPD], [Reglamento General de Protección de Datos],
+  [PR], [En GitHub, *pull request*: propuesta de cambios en el repositorio que se revisa y se fusiona. No confundir con PR-xx (problema)],
+)
 
 #pagebreak()
 
@@ -29,11 +113,13 @@ La ficha divide el proyecto en fases. Esta tabla es tu mapa: qué está hecho, q
   [Fase], [Nombre], [Estado a 5 de noviembre],
   [1], [Descubrimiento], [Hecha (resumen v5). Registro de preguntas actualizado a la v0.10 con las respuestas de Grupo ATU.],
   [2], [Requisitos], [Especificación v0.3 hecha. *Hito «requisitos aprobados»: pendiente de la tutora.*],
-  [3], [Alternativas], [Sin empezar. El dosier ya *enumera* las alternativas (sección 12), pero no las compara ni puntúa.],
-  [4], [Diseño], [Sin empezar. El dosier da una *arquitectura conceptual* (sección 7), sin elegir tecnología.],
+  [3], [Alternativas], [Adelantada en parte: el dosier recoge las *alternativas consideradas* y por qué no se eligen (sección 12). La comparación formal con criterios y pesos se hará *después* de aceptar la propuesta.],
+  [4], [Diseño], [Adelantado en parte: el dosier da la *arquitectura propuesta* (sección 7). La tecnología se elegirá con Informática después de aceptar la propuesta.],
   [5], [Viabilidad], [*Adelantada en parte*: el documento «Propuesta y viabilidad» da una conclusión *preliminar*, basada en la documentación de Moodle, no en pruebas.],
   [6 a 8], [Prototipo, validación y cierre], [Sin empezar. Dependen del aula de prueba.],
 )
+
+#caja[El orden ha cambiado respecto a la ficha.][La ficha ordena las fases como alternativas (3), diseño (4) y viabilidad (5). Grupo ATU ha pedido la viabilidad primero, y por eso la propuesta adelanta lo necesario de las fases 3 y 4 (alternativas consideradas y arquitectura propuesta). Una vez aceptada la propuesta, la comparación formal y el diseño detallado solo afinarán la propuesta, sin volver a abrirla. Si la tutora pregunta por el orden, esta es la explicación.]
 
 #caja[Por qué se ha adelantado la viabilidad.][Grupo ATU lo pidió así: «es eso en lo que necesitamos que investigues y hagas una viabilidad real», e Informática no dará un perfil de prueba «sin antes tener un plano de trazabilidad». Sin esta propuesta el proyecto se paraba. Si la tutora pregunta, la respuesta es: *lo he adelantado porque la organización lo necesitaba para darme el entorno de prueba, y lo he marcado como preliminar*.]
 
@@ -87,12 +173,12 @@ Todo lo que dicen la propuesta y el dosier sale de algún sitio. Así puedes seg
   [4. Requisitos funcionales], [Los 22 con prioridad y su criterio principal.],
   [5. No funcionales], [18 de los 39, los que más pesan en la decisión.],
   [6. Viabilidad técnica], [*La parte más importante para Informática*: cómo funcionan los servicios web, qué función de Moodle cubre cada requisito, los pasos de configuración, la decisión de permisos, las versiones y las 8 pruebas de viabilidad.],
-  [7. Arquitectura conceptual], [Las piezas de la herramienta y el flujo de un cambio global. Sin tecnología concreta.],
+  [7. Arquitectura propuesta], [Las piezas de la herramienta y el flujo de un cambio global, sobre las que se valora la viabilidad. La tecnología se elige después.],
   [8. Seguridad y datos], [Todas las medidas en una tabla.],
   [9. Pruebas], [Los 47 casos resumidos por tipo.],
   [10. Implantación por etapas], [Etapas 0, A, B, C, D y real, con la condición para pasar de una a otra.],
   [11. Riesgos], [Ocho riesgos con nivel y respuesta.],
-  [12. Alternativas], [Las que se compararán en la Fase 3.],
+  [12. Alternativas], [Las alternativas consideradas y por qué no se eligen. La comparación formal (Fase 3) se hará después de aceptar la propuesta, para afinarla, no para reabrirla.],
   [13. Preguntas pendientes], [Lo que falta saber y a quién preguntarlo.],
   [14. Trazabilidad], [Resumen necesidad → requisito → prueba.],
 )
@@ -131,7 +217,7 @@ Una cuenta del aula que no es de ninguna persona, creada solo para la herramient
 
 == Matrícula manual
 
-Moodle tiene varios *métodos de matrícula*: manual (la gestión añade a las personas), autoinscripción, por cohortes, etc. Las funciones de matrícula de la propuesta actúan sobre la *manual*. Si alguna aula matricula de otra forma, esa parte se haría en el aula. Por eso está en la pregunta P-G08.
+Moodle tiene varios *métodos de matrícula*: manual (la gestión añade a las personas), autoinscripción, por cohortes, etc. Las funciones de matrícula de la propuesta actúan sobre la *manual*. Si algún aula matricula de otra forma, esa parte se haría en el aula. Por eso está en la pregunta P-G08.
 
 == Suspender frente a borrar
 

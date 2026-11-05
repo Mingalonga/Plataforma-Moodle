@@ -1,9 +1,9 @@
 // Dosier de respaldo de la propuesta · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('dosier-respaldo.typ', output='Dosier-respaldo_Plataforma-Moodle_v2.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('dosier-respaldo.typ', output='Dosier-respaldo_Plataforma-Moodle_v3.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Gestión centralizada de las aulas Moodle — Dosier de respaldo", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Dosier de respaldo (v2)])
+#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Dosier de respaldo (v3)])
 
 #portada(
   [GRUPO ATU · DOSIER DE RESPALDO DE LA PROPUESTA],
@@ -13,7 +13,7 @@
     text(fill: gris)[Para], [Departamento de Pedagogía y e-learning, Informática y Dirección],
     text(fill: gris)[Autor], [Carlos García Rallo (proyecto de prácticas, Ficha 01)],
     text(fill: gris)[Fecha], [5 de noviembre de 2026],
-    text(fill: gris)[Versión], [2. Basado en la especificación de la Fase 2, versión 0.3],
+    text(fill: gris)[Versión], [3. Basado en la especificación de la Fase 2, versión 0.3],
     text(fill: gris)[Relación], [Respalda el documento «Propuesta y viabilidad». Se puede leer por partes; cada sección es independiente],
   ),
 )
@@ -201,7 +201,7 @@ El departamento ha dicho que cada persona tiene roles distintos en cada aula por
   [*3. Mixta*], [Clave común de *lectura* para consultar y claves *personales de escritura* solo para quien haga cambios.], [El riesgo está en la escritura, y ahí se usan los permisos reales; menos claves.], [Algo más compleja de explicar y montar.],
 )
 
-#nota[Propuesta.][*Opción 3 (mixta)*, a validar con Informática. La decisión final se tomará al comparar alternativas y diseñar la solución (fases 3 y 4 del proyecto). Las claves nunca se obtienen a partir de la contraseña de la persona (W-03).]
+#nota[Propuesta.][*Opción 3 (mixta)*, a validar con Informática. La decisión final se tomará con Informática una vez aceptada la propuesta, al concretar el diseño. Las claves nunca se obtienen a partir de la contraseña de la persona (W-03).]
 
 == 6.5 Versiones distintas de Moodle
 
@@ -221,9 +221,9 @@ La herramienta preguntará a cada aula su versión y las funciones habilitadas (
   [V-08], [Tiempo de las consultas y los cambios; sin efecto apreciable en el aula], [Ajustar la frecuencia y los lotes],
 )
 
-= 7. Arquitectura conceptual
+= 7. Arquitectura propuesta
 
-Sin elegir todavía tecnología (eso se decide comparando alternativas), la herramienta tendría estas piezas:
+Esta es la arquitectura sobre la que se valora la viabilidad. Describe las piezas de la herramienta y cómo se relacionan; la tecnología concreta (lenguaje, servidor, librerías) se elegirá con Informática una vez aceptada la propuesta, y no cambia las conclusiones de este dosier.
 
 #table(columns: (0.9fr, 1.8fr),
   [Pieza], [Función],
@@ -302,15 +302,20 @@ Cada etapa es útil por sí sola y se puede detener sin perder lo anterior.
   [R8], [Interpretar mal «controles de accesos» o «cambios globales»], [Medio], [Confirmación con el DPE antes del prototipo],
 )
 
-= 12. Alternativas que se compararán
+= 12. Alternativas consideradas
 
-La comparación formal se hará en la siguiente fase del proyecto, con criterios y pesos fijados antes de puntuar:
+Antes de llegar a la propuesta se han considerado estas opciones:
 
-- *No hacer nada* y seguir entrando aula por aula (referencia).
-- *Solo enlaces* (bloque base): viable, pero insuficiente según el DPE.
-- *Herramienta propia conectada por servicios web* (la propuesta de este dosier).
-- *Productos existentes* para gestionar varios Moodle o con varios «inquilinos» (por ejemplo, Moodle Workplace), normalmente de pago y con migración.
-- *Unificar las aulas* en un único Moodle con categorías o inquilinos: referencia, fuera del alcance.
+#table(columns: (1fr, 1.8fr),
+  [Alternativa], [Por qué no se elige],
+  [No hacer nada], [Se sigue entrando y saliendo de cada aula, que es el problema de partida. Sirve como referencia para medir el ahorro.],
+  [Solo enlaces a cada aula], [Es viable y sencillo, pero el departamento ha dicho que no le basta: quiere ver a los alumnos, controlar accesos y hacer cambios. Se mantiene dentro de la propuesta como inventario y accesos directos.],
+  [Productos existentes para gestionar varios Moodle (por ejemplo, Moodle Workplace)], [Suelen ser de pago y exigir migrar las aulas a una nueva instalación, lo que cambia la forma de trabajar de todo el personal.],
+  [Unificar las aulas en un único Moodle], [Resolvería la dispersión, pero es una migración completa de doce aulas, fuera del alcance del encargo y de la decisión de este proyecto.],
+  [*Herramienta propia conectada por servicios web*], [*Es la propuesta*: aprovecha lo que Moodle ya incluye, no toca las aulas, se implanta por etapas y cada etapa es reversible.],
+)
+
+Una vez aceptada la propuesta, se documentará una comparación formal con criterios y pesos fijados antes de puntuar, como pide la ficha del proyecto. Esa comparación servirá para afinar la propuesta (por ejemplo, elegir la tecnología), no para volver a abrirla.
 
 = 13. Preguntas pendientes
 

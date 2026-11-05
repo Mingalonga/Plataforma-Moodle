@@ -123,7 +123,7 @@ Cada escenario describe una situación concreta, sin decidir pantallas ni tecnol
 - **Perfil:** todos · **Necesidades:** N-10 · **Base:** Ficha 01, «Continuidad» [D]
 - **Contexto:** la plataforma cae o se está actualizando.
 - **Pasos:** el personal entra en las aulas por su dirección directa, como hasta ahora (la guía incluye la lista de direcciones) → Informática restaura el servicio con el procedimiento documentado.
-- **Resultado esperado:** la caída **no impide** gestionar ninguna aula y el servicio se recupera en el plazo fijado (RNF-REN-06).
+- **Resultado esperado:** la caída **no impide** gestionar ningún aula y el servicio se recupera en el plazo fijado (RNF-REN-06).
 
 ### ES-14. Ver en qué aulas está una alumna
 
