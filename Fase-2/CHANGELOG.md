@@ -2,6 +2,11 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.4] — 2026-11-05
+
+### Cambiado
+- `propuesta/Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v2.pdf`: a petición del alumno se quita la pregunta sobre el tipo de clave (común, personal o mixta), por ser demasiado técnica para esta etapa; se planteará cuando se acepte la propuesta. Quedan 9 preguntas. La v1 se archiva en `propuesta/historico/`.
+
 ## [0.3.3] — 2026-11-05
 
 ### Añadido

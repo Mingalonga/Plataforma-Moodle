@@ -1,11 +1,11 @@
 // Preguntas sobre la propuesta para Grupo ATU · fuente Typst
 // Reúne, sin repetir, las preguntas de «Propuesta y viabilidad» v2 (apartado 7) y del dosier de respaldo v2 (apartado 13)
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('preguntas-propuesta.typ', output='Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v1.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('preguntas-propuesta.typ', output='Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v2.pdf')"
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v1"
+#let version = "v2"
 
 #set document(title: "Preguntas para Grupo ATU — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -76,11 +76,10 @@
 = Informática
 
 #pregunta(5, [¿Consideráis viable la propuesta con las condiciones indicadas, en especial activar los servicios web de Moodle con claves limitadas de lectura y, por separado, de escritura?], [])
-#pregunta(6, [Para los permisos, ¿qué opción preferís: una clave común por aula, una clave personal para cada persona y aula, o una combinación (clave común para consultar y claves personales para hacer cambios)?], [])
-#pregunta(7, [¿Están las aulas conectadas a Microsoft 365 para la identificación del personal?], [])
-#pregunta(8, [¿Dónde puedo consultar las normas de seguridad y los protocolos de la empresa?], [])
+#pregunta(6, [¿Están las aulas conectadas a Microsoft 365 para la identificación del personal?], [])
+#pregunta(7, [¿Dónde puedo consultar las normas de seguridad y los protocolos de la empresa?], [])
 
 = Dirección
 
-#pregunta(9, [¿Quién es el responsable del tratamiento de datos y admite que el departamento consulte desde la herramienta los datos del alumnado de todas las aulas?], [])
-#pregunta(10, [Si el departamento e Informática valoran bien la propuesta, ¿se autoriza seguir adelante con la validación?], [])
+#pregunta(8, [¿Quién es el responsable del tratamiento de datos y admite que el departamento consulte desde la herramienta los datos del alumnado de todas las aulas?], [])
+#pregunta(9, [Si el departamento e Informática valoran bien la propuesta, ¿se autoriza seguir adelante con la validación?], [])
