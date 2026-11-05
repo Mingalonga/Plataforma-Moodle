@@ -2,14 +2,16 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.2 |
-| Fecha | 2026-11-04 |
+| Versión | 0.3 |
+| Fecha | 2026-11-05 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (roles Analista y Redactor), a petición del alumno |
 | Alumno | Carlos García Rallo |
 | Tutor/a | *(en blanco)* |
 
 > **v0.2 (2026-11-04).** La tutora ha indicado que el enfoque es la **gestión interna** de las aulas: una herramienta para que el Departamento de Pedagogía y e-learning (DPE) no tenga que entrar y salir de cada aula. El alumnado no es usuario de la plataforma, porque ya entra en su curso con la URL que se le facilita. Informática haría la implementación, y antes hay que estudiar la viabilidad. Toda la Fase 2 se rehace sobre esa base (paquete 0.2). El paquete 0.1, pensado para el alumnado, se conserva en [`historico/`](historico/README.md).
+
+> **v0.3 (2026-11-05).** Grupo ATU responde a las nueve preguntas. Lo esencial: el DPE quiere **ver a los alumnos de todas las aulas, controlar accesos y hacer cambios globales o individuales**, con un **estudio de viabilidad real** («más allá de hipervínculos»). Informática pide un documento **breve, claro y directo**, con un **dosier de respaldo independiente**. La organización resume el encargo como **«los planos de la casa»**. Se actualiza el paquete a la 0.3 conservando los identificadores.
 
 ## 1. Objetivo de la fase
 
@@ -21,7 +23,8 @@ Como en la Fase 1, esta fase **no** elige tecnología, arquitectura ni diseño v
 
 - **Enfoque indicado por la tutora (2026-11-04):** gestión interna de las aulas, orientada al rol de administración y gestión; gestión del entorno por el DPE; implementación por Informática; estudio de viabilidad antes de implementar. Ver el [registro de seguimiento de la Fase 1](../Fase-1/registro-seguimiento.md) y el [alcance preliminar v0.3](../Fase-1/07-alcance-preliminar.md).
 - **La interpretación de esa respuesta está pendiente de confirmar** con la tutora: el grado de integración que se espera y la frase sobre el «entorno de pruebas» no son claros (P-T01, P-G04).
-- **La organización no ha respondido** a las preguntas. Los requisitos se apoyan en los supuestos explícitos del documento [01](01-supuestos-de-partida.md).
+- **La organización ha respondido (2026-11-05)** a las nueve preguntas (datos DO-01 a DO-09 del documento [01](01-supuestos-de-partida.md)). Quedan supuestos sobre lo que no se ha contestado: sobre todo, si se pueden habilitar los servicios web (SF-06), que Informática no valorará sin el plano.
+- **Forma del entregable (DO-08):** un documento breve para decidir y un dosier de respaldo aparte. **Proceso de decisión (DO-09):** el DPE valora pros y contras; después deciden Informática y Dirección.
 - Se mantienen los límites de la ficha: sin credenciales, sin datos personales, sin modificar las aulas en producción, sin pruebas intrusivas y sin presentar como real una integración simulada.
 
 ## 3. Alcance de la fase
@@ -39,7 +42,7 @@ Como en la Fase 1, esta fase **no** elige tecnología, arquitectura ni diseño v
 
 - Comparar alternativas o elegir tecnología (Fase 3).
 - Diseño de pantallas, flujos visuales o arquitectura (Fase 4).
-- Estudio de viabilidad (Fase 5). Esta fase sí señala qué requisitos dependen de él.
+- Estudio de viabilidad (Fase 5). Esta fase sí señala qué requisitos dependen de él. **v0.3:** la organización pide la viabilidad como entregable principal; se propone adelantar un documento ejecutivo de viabilidad (T14).
 - Ejecutar las pruebas: aquí solo se definen los casos; se ejecutan en la Fase 7.
 
 ## 4. Método
@@ -65,11 +68,14 @@ Como en la Fase 1, esta fase **no** elige tecnología, arquitectura ni diseño v
 | T9 | Revisión del alumno | T8 | Registro de seguimiento | Hecho para la v0.1; **pendiente para la v0.2** |
 | T10 | Presentación a la tutora (hito «requisitos aprobados») | T9 | Registro de seguimiento | Pendiente |
 | T11 | Reorientar la fase al enfoque de gestión interna | Respuesta de la tutora del 2026-11-04 | Paquete 0.2 completo | Hecho |
-| T12 | Confirmar la interpretación con la tutora y aclarar P-T01 | T11 | Registro de seguimiento | Pendiente |
+| T12 | Confirmar la interpretación con la tutora y aclarar P-T01 | T11 | Registro de seguimiento | Superada en parte: la organización ha confirmado el enfoque y P-T01 queda resuelta en parte (DO-06) |
+| T13 | Incorporar las respuestas de Grupo ATU | Respuestas del 2026-11-05 | Paquete 0.3, resumen v3, guía v3 | Hecho |
+| T14 | Documento breve «Propuesta y viabilidad» y dosier de respaldo independiente | T13 | [`propuesta/`](propuesta/) | Hecho (v2, 2026-11-05) a petición del alumno |
+| T15 | Confirmar con el DPE las interpretaciones SF-16 y SF-17 (P-G07, P-G08) | T13 | Registro de seguimiento | Pendiente |
 
 ## 6. Criterios de salida
 
-- Cada necesidad de la Fase 1 que sigue dentro del enfoque (N-03, N-05 a N-08 y N-10 a N-15) está cubierta por al menos un requisito, y las que quedan fuera (N-01, N-02, N-04 y N-09) tienen el motivo escrito.
+- Cada necesidad que sigue dentro del enfoque (N-03, N-05 a N-08, N-10 a N-15 y, desde la v0.3, N-16) está cubierta por al menos un requisito, y las que quedan fuera (N-01, N-02, N-04 y N-09) tienen el motivo escrito.
 - Cada requisito *Must* y *Should* tiene criterio de aceptación y al menos un caso de prueba.
 - Ningún requisito queda sin origen (necesidad, problema, escenario o restricción de la ficha).
 - Los grupos de requisitos de la ficha están cubiertos.
@@ -83,11 +89,14 @@ Como en la Fase 1, esta fase **no** elige tecnología, arquitectura ni diseño v
 | RP-07 | Requisitos construidos sobre supuestos que la organización desmienta (amplía RP-01) | Supuestos explícitos y enlazados a cada requisito; si uno cae, la matriz indica qué requisitos revisar |
 | RP-08 | Avanzar sin el hito de la Fase 1 validado (materializa RP-03) | Decisión registrada. **v0.2: materializado** el 2026-11-04; se ha rehecho la fase conservando la v0.1 |
 | RP-09 | Fijar valores numéricos sin datos reales (tiempos, carga, disponibilidad) | Cada valor se marca [S] o [R] con su justificación y se revisará cuando haya datos |
-| RP-10 | Interpretar mal el nuevo enfoque (ver el [registro de riesgos](../Fase-1/06-registro-riesgos.md)) | La interpretación está escrita como datos (DT) y supuestos (SF) separados; se pide confirmación a la tutora (T12) |
+| RP-10 | Interpretar mal el nuevo enfoque (ver el [registro de riesgos](../Fase-1/06-registro-riesgos.md)) | La interpretación está escrita como datos (DT) y supuestos (SF) separados; se pide confirmación a la tutora (T12). **v0.3: reducido** por las respuestas de la organización |
+| RP-11 | Que Informática no lea la propuesta por ser larga o técnica (DO-08) | Documento ejecutivo breve, con la decisión y los pros y contras al principio; todo el detalle en un dosier aparte (T14) |
+| RP-12 | Que un cambio global erróneo afecte a muchas personas o aulas a la vez | Vista previa, confirmación reforzada, registro y vuelta atrás (RF-21); permisos limitados (RNF-SEG-12); pruebas solo en aulas de prueba |
 
 ## 8. Control de versiones
 
 | Versión | Fecha | Autor | Cambios |
 |---|---|---|---|
 | 0.1 | 2026-11-03 | Claude (Analista / Redactor) | Primera versión. [Archivada](historico/00-plan-fase-2_v0.1.md) |
-| 0.2 | 2026-11-04 | Claude (Analista / Redactor) | Enfoque de gestión interna: condiciones de partida, alcance, nueva numeración, tareas T11 y T12, criterios de salida y RP-10 |
+| 0.2 | 2026-11-04 | Claude (Analista / Redactor) | Enfoque de gestión interna: condiciones de partida, alcance, nueva numeración, tareas T11 y T12, criterios de salida y RP-10. [Archivada](historico/00-plan-fase-2_v0.2.md) |
+| 0.3 | 2026-11-05 | Claude (Analista / Redactor) | Respuestas de Grupo ATU: condiciones de partida, tareas T13 a T15, N-16 en los criterios de salida, riesgos RP-11 y RP-12 |

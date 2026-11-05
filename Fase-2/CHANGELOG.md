@@ -2,6 +2,48 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.3] — 2026-11-05
+
+### Añadido
+- `propuesta/Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v1.pdf` y su fuente: a petición del alumno, las preguntas de «Propuesta y viabilidad» (apartado 7) y del dosier (apartado 13) en un solo PDF, sin repetir, agrupadas por departamento y sin comentarios (mismo formato que las preguntas v3). 10 preguntas: 4 para el DPE, 4 para Informática y 2 para Dirección.
+
+## [0.3.2] — 2026-11-05
+
+**Motivo:** revisión del alumno del documento breve.
+
+### Cambiado
+- La carpeta `planos/` pasa a llamarse `propuesta/`; las versiones v1 se archivan en `propuesta/historico/`.
+- `propuesta/Propuesta-viabilidad_Plataforma-Moodle_v2.pdf` (antes «documento ejecutivo»): nombre menos formal («Propuesta y viabilidad»); se quita el recuadro «En una frase» y queda un párrafo inicial; se abandona la analogía de la casa y las «habitaciones» pasan a ser **módulos**; el apartado 3 se divide en «Conclusión preliminar», «Condiciones para que sea viable en Grupo ATU» y «Qué supondría para Informática»; en el apartado 7 la pregunta al DPE se reformula y a Informática ya no se le pide el aula de prueba, sino si considera viable la propuesta (el perfil de prueba llegará después, como indicó en DO-06).
+- `propuesta/Dosier-respaldo_Plataforma-Moodle_v2.pdf` y `propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v2.pdf`: los mismos cambios de vocabulario y referencias.
+
+## [0.3.1] — 2026-11-05
+
+**Motivo:** el alumno pide «los planos» (T14), tal como los describió Grupo ATU: un documento breve y directo y un dosier de respaldo independiente.
+
+### Añadido
+- `planos/Planos_Documento-ejecutivo_Plataforma-Moodle_v1.pdf` (hoy en `propuesta/historico/`) (3 páginas): habitaciones, funcionamiento, viabilidad preliminar con cuatro condiciones, opciones por niveles A a D, riesgos, esfuerzo orientativo y decisión que se pide al DPE, a Informática y a Dirección.
+- `planos/Planos_Dosier-respaldo_Plataforma-Moodle_v1.pdf` (ídem) (10 páginas): contexto, alcance, escenarios, requisitos, viabilidad técnica (funciones de Moodle por requisito, configuración por aula, decisión de permisos, versiones, pruebas V-01 a V-08), arquitectura conceptual, seguridad, pruebas, implantación por etapas, riesgos, alternativas y preguntas.
+- `planos/Guia-alumno_Planos_Plataforma-Moodle_v1.pdf` (ídem) (uso interno): explicación completa para el alumno.
+- Fuentes Typst con un estilo común (`planos/estilo.typ`).
+
+### Cambiado
+- `00-plan-fase-2.md`: T14 hecha (sin cambio de versión).
+
+## [0.3] — 2026-11-05
+
+**Motivo:** respuestas de Grupo ATU (Departamento de Pedagogía y e-learning e Informática) a las nueve preguntas. Lo esencial (pregunta 4): el DPE quiere **ver a los alumnos de forma global y por aula, controlar accesos y hacer cambios globales o individuales**, con un **estudio de viabilidad real**, más allá de los hipervínculos. Informática pide un documento **breve y directo** con un **dosier de respaldo independiente**. Se conservan los identificadores de la v0.2; las versiones 0.2 se archivan en `historico/`.
+
+### Cambiado
+- `00-plan-fase-2.md` v0.3: condiciones de partida, tareas T13 a T15 (T14: documento ejecutivo de viabilidad y dosier, propuesto), N-16 en los criterios de salida, riesgos RP-11 y RP-12.
+- `01-supuestos-de-partida.md` v0.3: datos DO-01 a DO-09; supuestos confirmados o corregidos; SF-12 descartado; nuevos SF-15 a SF-18.
+- `02-usuarios-escenarios.md` v0.3: ES-03 cambia; nuevos ES-14 a ES-18 (vista global de alumnos, control de accesos, cambios individuales y globales, cuenta corporativa).
+- `03-requisitos-funcionales.md` v0.3: RF-15 y RF-17 suben a *Must*, RF-16 a *Should*; nuevos RF-19 (control de accesos), RF-20 (cambios globales), RF-21 (vista previa, confirmación, registro y vuelta atrás) y RF-22 (*Could*); W-07; cuatro bloques de viabilidad y funciones de Moodle candidatas. 22 requisitos (15 *Must*, 5 *Should*, 2 *Could*).
+- `04-requisitos-no-funcionales.md` v0.3: 39 requisitos; revisados SEG-06, SEG-07, SEG-08, REN-07, MAN-06 y MAN-08; nuevos UX-09, SEG-12 (nunca más permisos que en el aula), SEG-13 (normas internas), REN-08 y MAN-09 (versiones distintas de Moodle).
+- `05-matriz-trazabilidad.md` v0.3: necesidad N-16; 47 casos de prueba.
+- `06-especificacion.md` v0.3.
+- `entregas/`: resumen para la tutora v3 y guía del alumno v3. Los v2 se archivan.
+- Fase 1: `01-registro-preguntas-supuestos.md` v0.10 con las respuestas.
+
 ## [0.2.1] — 2026-11-04
 
 ### Cambiado
