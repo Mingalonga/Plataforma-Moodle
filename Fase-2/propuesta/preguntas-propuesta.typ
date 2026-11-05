@@ -1,11 +1,11 @@
 // Preguntas sobre la propuesta para Grupo ATU · fuente Typst
-// Reúne, sin repetir, las preguntas de «Propuesta y viabilidad» v2 (apartado 7) y del dosier de respaldo v2 (apartado 13)
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('preguntas-propuesta.typ', output='Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v2.pdf')"
+// Reúne, sin repetir, las preguntas de «Propuesta y viabilidad» v3 (apartado 7) y del dosier de respaldo v4 (apartado 13)
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('preguntas-propuesta.typ', output='Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v3.pdf')"
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v2"
+#let version = "v3"
 
 #set document(title: "Preguntas para Grupo ATU — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -77,9 +77,8 @@
 
 #pregunta(5, [¿Consideráis viable la propuesta con las condiciones indicadas, en especial activar los servicios web de Moodle con claves limitadas de lectura y, por separado, de escritura?], [])
 #pregunta(6, [¿Están las aulas conectadas a Microsoft 365 para la identificación del personal?], [])
-#pregunta(7, [¿Dónde puedo consultar las normas de seguridad y los protocolos de la empresa?], [])
 
 = Dirección
 
-#pregunta(8, [¿Quién es el responsable del tratamiento de datos y admite que el departamento consulte desde la herramienta los datos del alumnado de todas las aulas?], [])
-#pregunta(9, [Si el departamento e Informática valoran bien la propuesta, ¿se autoriza seguir adelante con la validación?], [])
+#pregunta(7, [Como responsable del tratamiento, ¿admite Grupo ATU, con el visto bueno de su Delegado de Protección de Datos, que el departamento consulte desde la herramienta los datos del alumnado de todas las aulas?], [])
+#pregunta(8, [Si el departamento e Informática valoran bien la propuesta, ¿se autoriza seguir adelante con la validación?], [])

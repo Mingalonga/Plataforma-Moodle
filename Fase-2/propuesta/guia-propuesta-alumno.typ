@@ -1,9 +1,9 @@
 // Guía del alumno para la propuesta · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v4.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v5.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Guía del alumno: la propuesta", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Guía del alumno · La propuesta (v4) · uso interno])
+#show: plantilla.with(pie: [Guía del alumno · La propuesta (v5) · uso interno])
 
 #portada(
   [FICHA DE PROYECTO 01 · DOCUMENTO DE TRABAJO DEL ALUMNO],
@@ -12,8 +12,8 @@
   (
     text(fill: gris)[Para], [Carlos García Rallo (uso interno, *no es para entregar*)],
     text(fill: gris)[Fecha], [5 de noviembre de 2026],
-    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v2, dosier de respaldo v3 y preguntas sobre la propuesta v2],
-    text(fill: gris)[Basada en], [Especificación de la Fase 2, versión 0.3, y guía de la Fase 2 v3],
+    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v3, dosier de respaldo v4 y preguntas sobre la propuesta v3],
+    text(fill: gris)[Basada en], [Especificación de la Fase 2, versión 0.4, y guía de la Fase 2 v3],
   ),
 )
 
@@ -100,6 +100,10 @@ Todas las siglas e identificadores que aparecen en esta guía, en la propuesta, 
   [WCAG 2.2 AA], [Pautas internacionales de accesibilidad web, nivel intermedio],
   [SUS], [Cuestionario estándar de usabilidad de 10 preguntas (68 es la media)],
   [RGPD], [Reglamento General de Protección de Datos],
+  [ENS], [Esquema Nacional de Seguridad (Real Decreto 311/2022). La Política de Seguridad de Grupo ATU se basa en él],
+  [DPD], [Delegado de Protección de Datos. Grupo ATU tiene uno designado],
+  [Resp. del Sistema], [En el ENS, quien gestiona los sistemas y aprueba los cambios de configuración],
+  [Resp. de Seguridad], [En el ENS, quien decide las medidas de seguridad y hace el análisis de riesgos],
   [PR], [En GitHub, *pull request*: propuesta de cambios en el repositorio que se revisa y se fusiona. No confundir con PR-xx (problema)],
 )
 
@@ -112,7 +116,7 @@ La ficha divide el proyecto en fases. Esta tabla es tu mapa: qué está hecho, q
 #table(columns: (auto, 1fr, 1.6fr),
   [Fase], [Nombre], [Estado a 5 de noviembre],
   [1], [Descubrimiento], [Hecha (resumen v5). Registro de preguntas actualizado a la v0.10 con las respuestas de Grupo ATU.],
-  [2], [Requisitos], [Especificación v0.3 hecha. *Hito «requisitos aprobados»: pendiente de la tutora.*],
+  [2], [Requisitos], [Especificación v0.4 hecha. *Hito «requisitos aprobados»: pendiente de la tutora.*],
   [3], [Alternativas], [Adelantada en parte: el dosier recoge las *alternativas consideradas* y por qué no se eligen (sección 12). La comparación formal con criterios y pesos se hará *después* de aceptar la propuesta.],
   [4], [Diseño], [Adelantado en parte: el dosier da la *arquitectura propuesta* (sección 7). La tecnología se elegirá con Informática después de aceptar la propuesta.],
   [5], [Viabilidad], [*Adelantada en parte*: el documento «Propuesta y viabilidad» da una conclusión *preliminar*, basada en la documentación de Moodle, no en pruebas.],
@@ -155,7 +159,7 @@ Todo lo que dicen la propuesta y el dosier sale de algún sitio. Así puedes seg
   [Párrafo inicial], [Herramienta interna; ver alumnos, controlar accesos, cambios; vía oficial de Moodle; viable técnicamente], [DO-04 + documento 03. «Viable técnicamente» significa *según la documentación*: está dicho que falta comprobarlo],
   [1. Módulos], [Siete filas con prioridad], [RF-15 a RF-21 (imprescindibles), RF-16 (conveniente), RF-18 y RF-22 (futuro). «Módulo» es solo una forma clara de agrupar requisitos; no implica decisión técnica],
   [2. Cómo funcionaría], [Diagrama y cuatro garantías], [RNF-SEG-02, RNF-SEG-07, RNF-SEG-12 y RF-21. *Son compromisos*: no los cambies sin cambiar los requisitos],
-  [3. Viabilidad], [Conclusión preliminar (técnicamente viable) y, con su propio título, las cuatro condiciones que dependen de Grupo ATU], [Condiciones = SF-06 (servicios web), SF-05 (validación en prueba, *una vez aceptada la propuesta*), decisión de escritura (SF-18), SF-15 (datos). Separar «posible técnicamente» de «viable en Grupo ATU» es lo que justifica las condiciones],
+  [3. Viabilidad], [Conclusión preliminar (técnicamente viable) y, con su propio título, las cinco condiciones que dependen de Grupo ATU], [Condiciones = SF-06 (servicios web, que aprueba el Responsable del Sistema), SF-05 (validación en prueba, *una vez aceptada la propuesta*), análisis de riesgos del ENS (DO-10), decisión de escritura con clave personal (SF-18 y Normas 4.4.2/4.4.6), SF-15 (datos, con Grupo ATU como responsable del tratamiento y su DPD). Separar «posible técnicamente» de «viable en Grupo ATU» es lo que justifica las condiciones],
   [3. Qué supondría para Informática], [≈ 1 h por aula], [Estimación [R] de los pasos del dosier 6.3. *No la ha validado Informática*],
   [4. Niveles A a D], [Opciones por etapas y recomendación A+B → C → D], [Bloques del documento 03, sección 5. La recomendación es tuya; pueden elegir otra],
   [5. Riesgos], [Cinco riesgos con su control], [Documento 00 (RP-12), riesgos de la Fase 1 (RS-10, RS-11) y DO-05],
@@ -279,6 +283,18 @@ Para que no te pillen en una afirmación demasiado fuerte:
 
 #caja[La frase que te protege.][«La conclusión es preliminar y se basa en la documentación de Moodle. Por eso pido un aula de prueba: para confirmarla antes de que nadie decida implantar nada.»]
 
+== Las normas de Grupo ATU, en claro
+
+Grupo ATU te ha pasado dos documentos (DO-10). Responden a la pregunta P-G09 y cambian algunas cosas de la propuesta:
+
+#table(columns: (0.9fr, 1.6fr),
+  [Documento], [Qué te importa],
+  [*Política de Seguridad de la Información* (2025, pública)], [Grupo ATU sigue el *ENS*. Hay roles fijos: el *Responsable del Sistema* aprueba los cambios de configuración (activar servicios web lo es) y el *Responsable de Seguridad* hace el análisis de riesgos, cada año y cuando cambian los servicios. Por eso la propuesta tiene ahora cinco condiciones y la etapa 0 empieza por ese análisis. El responsable del tratamiento de datos es *Grupo ATU*, con un *DPD* designado: la pregunta ya no es «quién», sino «¿lo admite?».],
+  [*Normas de uso y deber de confidencialidad* (2026, *confidencial*)], [Las reglas que más afectan: acceso solo a los datos necesarios (4.3.4); borrar los temporales con datos personales (4.3.10); acceso personal e intransferible, nunca el de otro (4.4.2 y 4.4.6); los accesos se supervisan (4.4.9); y, como externo, no conectar tu equipo a su red sin autorización del Responsable de Seguridad (4.5.3). La lista completa con cómo se cumple cada una está en el dosier, 8.1.],
+)
+
+#caja[Cuidado con el documento confidencial.][Las Normas de uso están marcadas como confidenciales. Puedes citar el número de cada norma, como hace el dosier, pero *no lo subas al repositorio ni lo reenvíes* a nadie de fuera de Grupo ATU (tampoco a la tutora sin preguntar antes). Aplica tú mismo la norma 4.5.3: pide autorización antes de conectar tu portátil a su red.]
+
 = 10. Riesgos para ti (cómo no perder el control)
 
 #table(columns: (1fr, 1.5fr),
@@ -321,7 +337,7 @@ Carlos
   [¿Por qué no usáis un producto ya hecho?], [Es una de las alternativas (dosier, 12). Suelen ser de pago y exigir migrar las aulas. Las compararé con criterios antes de decidir.],
   [¿Y si alguien roba la clave?], [Solo sirve desde la IP del servidor, para unas funciones, hasta una fecha, y se revoca en un minuto.],
   [¿Quién responde si un cambio global sale mal?], [La persona que lo confirma, como hoy en el aula. La herramienta muestra antes qué va a cambiar, lo registra y permite deshacerlo.],
-  [¿Esto cumple la protección de datos?], [No se guarda copia; se registra cada consulta; la finalidad es la misma de hoy. Debe confirmarlo el responsable del tratamiento: está en las condiciones.],
+  [¿Esto cumple la protección de datos?], [No se guarda copia; se registra cada consulta; la finalidad es la misma de hoy. El responsable del tratamiento es Grupo ATU, que tiene DPD; debe confirmar que admite la consulta global, y está en las condiciones. Además, la herramienta cumple la lista de normas del dosier (8.1).],
   [¿Cuánto cuesta?], [Sin licencias. Coste en horas: unas 12 h de configuración de Informática para las doce aulas, un servidor interno y menos de 8 h al mes de mantenimiento. Son estimaciones.],
   [¿Puedes programarlo ya?], [Primero el aula de prueba y la validación de los niveles A y B. Es lo que pide Informática y lo que permite la ficha.],
   [¿Por qué no borrar las cuentas inactivas?], [Borrar es irreversible y elimina historial y notas. Suspender consigue lo mismo y se puede deshacer.],
@@ -335,14 +351,14 @@ Carlos
 
 #table(columns: (auto, 1.5fr, 0.8fr, 0.7fr),
   [N.º], [Qué], [Quién], [Estado],
-  [1], [Revisar y fusionar la PR \#10 (paquete 0.3 y propuesta)], [Tú], [Pendiente],
+  [1], [Revisar y fusionar la PR de esta versión (normas incorporadas)], [Tú], [Pendiente],
   [2], [Enviar la propuesta y el dosier al DPE], [Tú], [Pendiente],
   [3], [Enviar el resumen v3 a la tutora], [Tú], [Pendiente],
   [4], [Confirmar «controles de accesos» y «cambios globales» (P-G07, P-G08)], [DPE], [Preguntado en la propuesta],
-  [5], [Buscar las normas de seguridad en la sede (P-G09)], [Tú], [Pendiente],
+  [5], [Normas de seguridad (P-G09)], [Informática], [*Hecho*: recibidas la Política de Seguridad y las Normas de uso (DO-10)],
   [6], [Aula o perfil de prueba con servicios web], [Informática], [Se pedirá cuando acepten la propuesta (DO-06)],
   [7], [Decisión sobre la escritura y la opción de permisos], [Informática y Dirección], [Pendiente],
-  [8], [Base legal de la consulta global (P-L01)], [Dirección / responsable del tratamiento], [Pendiente],
+  [8], [¿Admite Grupo ATU la consulta global? (P-L01)], [Dirección con el DPD], [Preguntado. Ya se sabe que el responsable es Grupo ATU],
   [9], [Hito «requisitos aprobados»], [Tutora], [Pendiente],
 )
 
@@ -354,6 +370,7 @@ Carlos
 - Todo se prueba en aulas de prueba → regla del documento 05.
 - Formato del entregable: documento breve + dosier → T14 del plan.
 - Sin analogía de «la casa» ni «habitaciones»: se habla de *módulos* (decisión del alumno, 5-11).
+- Para escribir en las aulas, claves personales: lo piden las Normas de uso (4.4.2 y 4.4.6) → dosier 6.4 y 8.1.
 
 == Lo que no debes hacer
 
@@ -378,9 +395,10 @@ Probar en aulas reales · guardar contraseñas · subir claves al repositorio ·
   [Dosier de respaldo (PDF)], [Ídem],
   [Esta guía (PDF)], [Ídem],
   [Fuentes Typst de los tres], [`Fase-2/propuesta/*.typ` (estilo común en `estilo.typ`); versiones anteriores en `Fase-2/propuesta/historico/`],
-  [Especificación completa], [`Fase-2/00` a `06` (versión 0.3)],
+  [Especificación completa], [`Fase-2/00` a `06` (versiones 0.3 y 0.4)],
   [Respuestas literales de Grupo ATU], [`Fase-2/registro-seguimiento.md`],
-  [Preguntas y su estado], [`Fase-1/01-registro-preguntas-supuestos.md` (v0.10)],
+  [Preguntas y su estado], [`Fase-1/01-registro-preguntas-supuestos.md` (v0.11)],
+  [Normas de Grupo ATU], [*No están en el repositorio.* Solo se citan. La Política de Seguridad es pública; las Normas de uso son confidenciales],
 )
 
 = Glosario rápido

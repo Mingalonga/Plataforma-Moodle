@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-11-05 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (roles UX, Seguridad y Arquitecto), a petición del alumno |
@@ -10,6 +10,8 @@
 | Tutor/a | *(en blanco)* |
 
 > **v0.2.** Requisitos rehechos para una **herramienta interna de gestión**. Cambios principales respecto a la v0.1: la plataforma deja de ser pública, así que la seguridad pasa a centrarse en la autenticación, los permisos y la custodia de claves; la eficiencia se mide en el trabajo del personal y no en que el alumnado encuentre su aula; el ordenador pasa a ser el dispositivo principal. La v0.1 está en el [histórico](historico/04-requisitos-no-funcionales_v0.1.md).
+
+> **v0.4 (2026-11-05).** Con la Política de Seguridad y las Normas de uso de Grupo ATU (DO-10), RNF-SEG-13 pasa de «normas por localizar» a una lista de comprobación concreta. La v0.3 está en el [histórico](historico/04-requisitos-no-funcionales_v0.3.md).
 
 > **v0.3 (2026-11-05).** Con las respuestas de Grupo ATU, la plataforma va a **leer datos del alumnado y hacer cambios en las aulas** (DO-04), las aulas tienen **versiones distintas** (DO-05) y la organización tiene **normas de seguridad** propias (DO-07). Se revisan RNF-SEG-06, RNF-SEG-07, RNF-SEG-08, RNF-REN-07 y RNF-MAN-06, y se añaden RNF-UX-09, RNF-SEG-12, RNF-SEG-13, RNF-REN-08 y RNF-MAN-09. La v0.2 está en el [histórico](historico/04-requisitos-no-funcionales_v0.2.md).
 
@@ -54,7 +56,7 @@ Cuatro grupos de la ficha, cada uno con su forma de comprobación:
 | RNF-SEG-10 | La plataforma debe aplicar las protecciones básicas del navegador | Cabeceras de seguridad (política de contenido, protección frente a incrustación) | S | Comprobación de cabeceras con una herramienta pública | RS-10 |
 | RNF-SEG-11 | No debe haber cookies ni rastreadores innecesarios | Solo la cookie técnica de sesión; sin recursos de terceros que rastreen | M | Revisión de cookies y peticiones de red | N-07 |
 | RNF-SEG-12 | La plataforma no debe permitir a nadie hacer en un aula lo que no podría hacer entrando en ella con su propia cuenta | Para cada persona y aula, los permisos de la plataforma son iguales o menores que los que tiene en esa aula; se revisan cuando cambian en el aula | M | Prueba con una cuenta de gestión sin permiso en un aula de prueba (CP-SEG-07) | DO-03 · RS-10 · RS-11 |
-| RNF-SEG-13 | La plataforma debe cumplir las normas de seguridad y los protocolos internos de Grupo ATU | Lista de comprobación de las normas publicadas en la sede, revisada con Informática antes de la viabilidad | M | Revisión con Informática (CP-SEG-08) | DO-07 |
+| RNF-SEG-13 | La plataforma debe cumplir las normas de seguridad y los protocolos internos de Grupo ATU | Lista de comprobación de la Política de Seguridad (ENS: aprobación del Responsable del Sistema y análisis de riesgos) y de las Normas de uso 4.2.2, 4.3.4, 4.3.10, 4.4.2, 4.4.6, 4.4.9 y 4.5.3 (dosier de respaldo, 8.1), revisada con Informática antes de la viabilidad | M | Revisión con Informática (CP-SEG-08) | DO-07 · DO-10 |
 
 ## 3. Rendimiento y disponibilidad
 
@@ -89,4 +91,5 @@ Cuatro grupos de la ficha, cada uno con su forma de comprobación:
 |---|---|---|---|
 | 0.1 | 2026-11-03 | Claude (UX / Seguridad / Arquitecto) | Primera versión: 30 requisitos no funcionales en cuatro grupos. [Archivada](historico/04-requisitos-no-funcionales_v0.1.md) |
 | 0.2 | 2026-11-04 | Claude (UX / Seguridad / Arquitecto) | Enfoque de gestión interna: 34 requisitos (8 de usabilidad y accesibilidad, 11 de seguridad, 7 de rendimiento y 8 de mantenimiento). [Archivada](historico/04-requisitos-no-funcionales_v0.2.md) |
-| 0.3 | 2026-11-05 | Claude (UX / Seguridad / Arquitecto) | Respuestas de Grupo ATU: 39 requisitos (9 de usabilidad, 13 de seguridad, 8 de rendimiento y 9 de mantenimiento). Revisados SEG-06, SEG-07, SEG-08 (sube a M), REN-07, MAN-06 y MAN-08 (sube a M); nuevos UX-09, SEG-12, SEG-13, REN-08 y MAN-09 |
+| 0.3 | 2026-11-05 | Claude (UX / Seguridad / Arquitecto) | Respuestas de Grupo ATU: 39 requisitos (9 de usabilidad, 13 de seguridad, 8 de rendimiento y 9 de mantenimiento). Revisados SEG-06, SEG-07, SEG-08 (sube a M), REN-07, MAN-06 y MAN-08 (sube a M); nuevos UX-09, SEG-12, SEG-13, REN-08 y MAN-09. [Archivada](historico/04-requisitos-no-funcionales_v0.3.md) |
+| 0.4 | 2026-11-05 | Claude (Seguridad) | RNF-SEG-13 concretado con las normas recibidas (DO-10); sigue habiendo 39 requisitos |

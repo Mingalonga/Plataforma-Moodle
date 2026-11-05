@@ -44,3 +44,4 @@ Aquí se guardan las versiones superadas de los documentos de la Fase 1, para qu
 | [08-diagnostico-inicial_v0.4.md](08-diagnostico-inicial_v0.4.md) | 0.4 | 2026-11-04 | Sustituida por la v0.5: enfoque de gestión interna |
 | [guion-reunion-grupo-atu_v1.txt](guion-reunion-grupo-atu_v1.txt) | Guion v1 | 2026-11-04 | Sustituido por el v2: dirigido al DPE y a Informática |
 | [01-registro-preguntas-supuestos_v0.9.md](01-registro-preguntas-supuestos_v0.9.md) | 0.9 | 2026-11-05 | Sustituida por la v0.10: respuestas de Grupo ATU |
+| [01-registro-preguntas-supuestos_v0.10.md](01-registro-preguntas-supuestos_v0.10.md) | 0.10 | 2026-11-05 | Sustituida por la v0.11: normas de seguridad de Grupo ATU |

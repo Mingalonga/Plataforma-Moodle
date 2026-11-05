@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.3 |
+| Versión | 0.4 |
 | Fecha | 2026-11-05 |
 | Estado | Revisión del propietario |
 | Redacción | Claude (rol Redactor, con revisión de todos los roles), a petición del alumno |
@@ -11,6 +11,8 @@
 | Entregable de la ficha | 02 — Especificación: requisitos priorizados, escenarios de uso, criterios de aceptación y trazabilidad |
 
 Este documento reúne la Fase 2. El detalle está en los documentos [01](01-supuestos-de-partida.md) a [05](05-matriz-trazabilidad.md).
+
+> **v0.4 (2026-11-05).** Se incorporan la Política de Seguridad y las Normas de uso de Grupo ATU (DO-10): RNF-SEG-13 se concreta, P-G09 queda resuelta y P-L01 se reduce a si Grupo ATU admite la consulta global. La v0.3 está en el [histórico](historico/06-especificacion_v0.3.md).
 
 > **v0.3 (2026-11-05).** Grupo ATU ha respondido a las preguntas. El Departamento de Pedagogía y e-learning quiere **ver a los alumnos de todas las aulas, controlar accesos y hacer cambios globales o individuales** desde un único sitio, y pide un **estudio de viabilidad real**: «si solo fuera consultarlo con un hipervínculo sería suficiente, pero queremos ir más allá». La especificación se actualiza en consecuencia. La v0.2 está en el [histórico](historico/06-especificacion_v0.2.md).
 
@@ -104,6 +106,7 @@ Los funcionales usan el formato *Dado / Cuando / Entonces* ([documento 03](03-re
 - **DO-05.** Moodle 4.1.18 la más actualizada; versiones distintas y cambiantes.
 - **DO-06.** Perfil de prueba posible, pero solo después del plano.
 - **DO-07.** Microsoft 365 y normas internas de seguridad.
+- **DO-10.** Política de Seguridad (ENS) y Normas de uso: aprobación del Responsable del Sistema, análisis de riesgos, acceso personal e intransferible, mínimos datos; Grupo ATU es responsable del tratamiento y tiene DPD.
 - **DO-08 y DO-09.** Documento breve y directo con dosier aparte; decide Informática con Dirección, tras la valoración del DPE.
 - **SF-06.** Informática puede habilitar los servicios web. **Es la incógnita principal.**
 - **SF-15.** Los datos del alumnado se consultan con la finalidad con la que ya se gestionan, sin copia permanente.
@@ -117,8 +120,7 @@ Los funcionales usan el formato *Dado / Cuando / Entonces* ([documento 03](03-re
 | P-G07 ¿Qué es exactamente «controles de accesos»? | El contenido de RF-19 |
 | P-G08 ¿Qué cambios globales son los más útiles? | Las operaciones priorizadas en RF-15 y RF-20 |
 | P-I01 ¿Están las aulas conectadas a Microsoft 365? | Lo fácil que es RF-16 |
-| P-L01 ¿Quién es el responsable del tratamiento y admite la consulta global de alumnos? | RF-17 y RNF-SEG-07 |
-| P-G09 ¿Dónde están las normas de seguridad internas? | RNF-SEG-13 |
+| P-L01 ¿Admite Grupo ATU, como responsable del tratamiento y con su DPD, la consulta global de alumnos? | RF-17 y RNF-SEG-07 |
 
 ## 10. Decisión que se pide
 
@@ -144,4 +146,5 @@ Los funcionales usan el formato *Dado / Cuando / Entonces* ([documento 03](03-re
 |---|---|---|---|
 | 0.1 | 2026-11-03 | Claude (Redactor) | Primera versión de la especificación. [Archivada](historico/06-especificacion_v0.1.md) |
 | 0.2 | 2026-11-04 | Claude (Redactor) | Especificación rehecha para el enfoque de gestión interna indicado por la tutora. [Archivada](historico/06-especificacion_v0.2.md) |
-| 0.3 | 2026-11-05 | Claude (Redactor) | Respuestas de Grupo ATU: núcleo de vista de alumnos, control de accesos y cambios; cuatro bloques de viabilidad; 22 requisitos funcionales, 39 no funcionales y 47 casos de prueba |
+| 0.3 | 2026-11-05 | Claude (Redactor) | Respuestas de Grupo ATU: núcleo de vista de alumnos, control de accesos y cambios; cuatro bloques de viabilidad; 22 requisitos funcionales, 39 no funcionales y 47 casos de prueba. [Archivada](historico/06-especificacion_v0.3.md) |
+| 0.4 | 2026-11-05 | Claude (Redactor) | Normas de seguridad de Grupo ATU (DO-10): RNF-SEG-13 concretado; P-G09 resuelta; P-L01 acotada |

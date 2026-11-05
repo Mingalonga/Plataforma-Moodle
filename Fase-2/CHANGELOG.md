@@ -2,6 +2,20 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.4.0] — 2026-11-05
+
+**Motivo:** Grupo ATU facilita su *Política de Seguridad de la Información* (2025, pública, basada en el ENS) y sus *Normas de uso de recursos informáticos y deber de confidencialidad* (2026, confidencial). Los documentos no se suben al repositorio; solo se citan.
+
+### Cambiado
+- `01-supuestos-de-partida.md` v0.4: nuevo DO-10 con lo que afecta a la herramienta.
+- `04-requisitos-no-funcionales.md` v0.4: RNF-SEG-13 se concreta en una lista de comprobación (aprobación del Responsable del Sistema, análisis de riesgos y Normas 4.2.2, 4.3.4, 4.3.10, 4.4.2, 4.4.6, 4.4.9 y 4.5.3).
+- `06-especificacion.md` v0.4: DO-10; P-G09 resuelta; P-L01 acotada a si Grupo ATU admite la consulta global.
+- `propuesta/Propuesta-viabilidad_Plataforma-Moodle_v3.pdf`: cinco condiciones en lugar de cuatro (aprobación del Responsable del Sistema, análisis de riesgos del ENS, escritura con clave personal y Grupo ATU con su DPD como responsable del tratamiento).
+- `propuesta/Dosier-respaldo_Plataforma-Moodle_v4.pdf`: nuevo apartado 8.1 con la lista de normas y cómo se cumple cada una; 6.4 refuerza las claves personales para escribir; la etapa 0 empieza por el análisis de riesgos; P-G09 sale de las preguntas pendientes y P-L01 se reformula.
+- `propuesta/Preguntas-propuesta_Grupo-ATU_Plataforma-Moodle_v3.pdf`: se quita la pregunta sobre dónde están las normas y la de Dirección pregunta solo si Grupo ATU admite la consulta global. Quedan 8 preguntas.
+- `propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v5.pdf`: apartado «Las normas de Grupo ATU, en claro», aviso sobre el documento confidencial, siglas ENS, DPD y responsables, tablero actualizado.
+- Las versiones anteriores se archivan en `historico/` y `propuesta/historico/`.
+
 ## [0.3.6] — 2026-11-05
 
 ### Cambiado

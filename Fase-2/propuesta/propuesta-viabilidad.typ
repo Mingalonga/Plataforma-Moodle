@@ -1,9 +1,9 @@
 // Propuesta y viabilidad (documento breve para decidir) · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('propuesta-viabilidad.typ', output='Propuesta-viabilidad_Plataforma-Moodle_v2.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('propuesta-viabilidad.typ', output='Propuesta-viabilidad_Plataforma-Moodle_v3.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Gestión centralizada de las aulas Moodle — Propuesta y viabilidad", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Propuesta y viabilidad (v2)], portada: false)
+#show: plantilla.with(pie: [Gestión centralizada de las aulas Moodle · Propuesta y viabilidad (v3)], portada: false)
 
 #text(9pt, fill: gris, tracking: 0.5pt)[GRUPO ATU · DEPARTAMENTO DE PEDAGOGÍA Y E-LEARNING · INFORMÁTICA · DIRECCIÓN]
 #v(0.1cm)
@@ -11,7 +11,7 @@
 #v(-0.2cm)
 #text(12pt, fill: gris)[Propuesta y viabilidad]
 #v(0.1cm)
-#text(9pt, fill: gris)[Carlos García Rallo · 5 de noviembre de 2026 · versión 2 · El detalle está en el dosier de respaldo, que se lee aparte.]
+#text(9pt, fill: gris)[Carlos García Rallo · 5 de noviembre de 2026 · versión 3 · El detalle está en el dosier de respaldo, que se lee aparte.]
 #line(length: 100%, stroke: 0.6pt + linea)
 
 Se propone una *herramienta interna* desde la que el Departamento de Pedagogía y e-learning pueda *ver a los alumnos de todas las aulas, controlar sus accesos y hacer cambios individuales o globales* sin entrar y salir de cada aula. La herramienta se conectaría a cada aula por la *vía oficial que Moodle ya incluye* (los servicios web), con los permisos limitados que decida Informática, y según la documentación de Moodle *es viable técnicamente*.
@@ -52,18 +52,20 @@ Fuera: acceso para alumnado o profesorado, diseño y programación de las aulas,
 
 *Sí es viable técnicamente.* Moodle 4.1 (la versión más actualizada en Grupo ATU es la 4.1.18) incluye de serie las funciones necesarias para leer usuarios y matrículas, suspender y reactivar cuentas, matricular y cambiar roles. No hace falta instalar nada en las aulas ni modificar su código. Esta conclusión se basa en la documentación de Moodle; antes de implantar nada, habría que confirmarla en un entorno de prueba.
 
+#block(breakable: false)[
 == Condiciones para que sea viable en Grupo ATU
 
-Que sea posible técnicamente no basta: también depende de decisiones que corresponden a Grupo ATU. La propuesta solo sería viable si se cumplen estas cuatro condiciones:
+Que sea posible técnicamente no basta: también depende de decisiones que corresponden a Grupo ATU. La propuesta solo sería viable si se cumplen estas cinco condiciones, que siguen la Política de Seguridad de la Información (ENS) y las Normas de uso de Grupo ATU:
 
-#block(breakable: false)[
+#block[
 #table(columns: (auto, 1.6fr, 0.9fr),
   [], [Condición], [Quién],
-  [1], [Activar los servicios web en cada aula, con un usuario y una clave *limitados a las funciones necesarias* (lectura y, por separado, escritura).], [Informática],
+  [1], [Activar los servicios web en cada aula, con un usuario y una clave *limitados a las funciones necesarias* (lectura y, por separado, escritura). Es un cambio de configuración, así que lo aprueba el *Responsable del Sistema*.], [Informática (Responsable del Sistema)],
   [2], [Validar la herramienta en un *aula o perfil de prueba* sin datos reales antes de usarla en las aulas reales.], [Informática, una vez aceptada la propuesta],
-  [3], [Decidir si se autoriza la *escritura* (cambios) o solo la lectura en una primera etapa.], [Informática y Dirección],
-  [4], [Confirmar que la consulta de datos del alumnado desde la herramienta cumple la protección de datos (misma finalidad que hoy).], [Responsable del tratamiento],
-)]
+  [3], [Incluir la herramienta en el *análisis de riesgos* del ENS, que se repite cuando cambian los servicios.], [Responsable de Seguridad],
+  [4], [Decidir si se autoriza la *escritura* (cambios) o solo la lectura en una primera etapa. Si se autoriza, cada cambio se haría con una *clave personal* de quien lo hace, porque las normas no permiten compartir accesos.], [Informática y Dirección],
+  [5], [Confirmar que la consulta de datos del alumnado desde la herramienta cumple la protección de datos: misma finalidad que hoy y acceso solo a los datos necesarios.], [Grupo ATU como responsable del tratamiento, con su Delegado de Protección de Datos],
+)]]
 
 == Qué supondría para Informática
 

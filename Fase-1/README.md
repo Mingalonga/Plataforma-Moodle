@@ -18,7 +18,7 @@
 | N.º | Documento | Versión | Estado | Última actualización |
 |---|---|---|---|---|
 | 00 | [Plan de la Fase 1](00-plan-fase-1.md) | 0.4 | Revisión del propietario | 2026-10-30 |
-| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.10 | Revisión del propietario | 2026-11-05 |
+| 01 | [Registro de preguntas, supuestos y dependencias](01-registro-preguntas-supuestos.md) | 0.11 | Revisión del propietario | 2026-11-05 |
 | 02 | [Fuentes y metodología de observación](02-fuentes-y-metodologia.md) | 0.5 | Revisión del propietario | 2026-10-30 |
 | 03 | [Inventario de los doce entornos Moodle](03-inventario-campus.md) | 0.5 | Revisión del propietario | 2026-10-30 |
 | 04 | [Mapa inicial de actores y perfiles](04-mapa-actores-perfiles.md) | 0.4 | Revisión del propietario | 2026-11-04 |

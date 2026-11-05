@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Versión | 0.10 |
+| Versión | 0.11 |
 | Fecha | 2026-11-05 |
 | Estado | Revisión del propietario |
 | Alumno | Carlos García Rallo |
@@ -150,7 +150,7 @@ Estas preguntas sustituyen en importancia a las del alumnado y la atención al u
 | P-G06 | ¿Qué parte asumiría Informática (instalación, servicios web de Moodle, seguridad, mantenimiento técnico) y con qué disponibilidad? | Informática | Media | **Resuelta en parte** (2026-11-05): si lo ve viable, Informática puede asumirlo todo o delegar partes; si no, tiene muy poco tiempo. Pide un documento breve y directo y un dosier aparte **[D]** |
 | P-G07 | Cuando el DPE habla de «controles de accesos», ¿se refiere a ver y gestionar quién entra en las aulas (últimos accesos, cuentas inactivas, suspender o reactivar cuentas) o a otra cosa? | DPE | Alta | Abierta (2026-11-05). Interpretación provisional en SF-16 de la Fase 2 |
 | P-G08 | ¿Qué cambios globales serían los más útiles (por ejemplo, suspender a una persona en todas las aulas, matricular a un grupo en el mismo curso de varias aulas, cambiar una fecha o un ajuste)? | DPE | Alta | Abierta (2026-11-05) |
-| P-G09 | ¿Dónde se consultan las normas de seguridad y los protocolos de la empresa («la sede»)? | Informática | Media | Abierta (2026-11-05) |
+| P-G09 | ¿Dónde se consultan las normas de seguridad y los protocolos de la empresa («la sede»)? | Informática | Media | **Resuelta (2026-11-05):** Grupo ATU facilita la Política de Seguridad de la Información (ENS) y las Normas de uso de recursos informáticos (confidenciales). Ver DO-10 en la [Fase 2](../Fase-2/01-supuestos-de-partida.md) |
 
 ### 3.1 bis Surgidas de la observación de los campus (v0.2)
 
@@ -220,7 +220,7 @@ Estas preguntas sustituyen en importancia a las del alumnado y la atención al u
 | ID | Pregunta | Para | Prioridad | Estado |
 |---|---|---|---|---|
 | P-I01 | ¿Existe un directorio de usuarios común a todos o a varios campus (por ejemplo, Google Workspace, Microsoft Entra ID, LDAP)? | Organización | Alta | **Resuelta en parte** (2026-11-05): la herramienta corporativa es Microsoft 365 **[D]**. Falta saber si las aulas están conectadas a ella |
-| P-L01 | ¿Quién es el responsable del tratamiento de datos de cada campus? ¿Hay delegado de protección de datos? | Organización | Media | Abierta |
+| P-L01 | ¿Quién es el responsable del tratamiento de datos de cada campus? ¿Hay delegado de protección de datos? | Organización | Media | **Resuelta en parte (2026-11-05):** el responsable del tratamiento es Grupo ATU y tiene DPD designado (Política de Seguridad). Falta saber si admite la consulta global de alumnos desde la herramienta |
 | P-L02 | ¿Hay política de cookies o de analítica web corporativa que la plataforma deba seguir? | Organización | Baja | Abierta |
 | P-L03 | ¿Hay restricciones de uso de logotipos o marcas de las entidades en la plataforma? | Organización | Media | **Pierde relevancia** (2026-11-04): herramienta interna |
 | P-L04 | ¿Alguna de las entidades tiene obligación legal específica de accesibilidad digital? (se investigará la normativa aplicable y se pedirá confirmación, sin emitir conclusiones jurídicas) | Organización | Media | Abierta |
@@ -277,4 +277,5 @@ Se usan para avanzar sin bloquear la fase. Cada uno se mantendrá, se confirmar�
 | 0.7 | 2026-10-30 | Claude (Analista) | Marcas verificadas con capturas (P-V01 en parte); nueva P-V11 sobre el idioma mezclado. [Archivada](historico/01-registro-preguntas-supuestos_v0.7.md) |
 | 0.8 | 2026-10-30 | Claude (Analista) | El alumno confirma que las doce aulas son de Grupo ATU: S-01 confirmado, P-O01 resuelta en parte. [Archivada](historico/01-registro-preguntas-supuestos_v0.8.md) |
 | 0.9 | 2026-11-04 | Claude (Analista) | Respuesta de la tutora: enfoque de gestión interna. PG-01, PG-03, PG-04, PG-05, PG-08 y PG-10 reorientadas; nuevas P-T01 y P-G01 a P-G06; estados de P-O, P-U, P-N, P-V, P-C y P-L actualizados; S-04 descartado; nuevos S-10 y S-11; nuevas D-05 y D-06. [Archivada](historico/01-registro-preguntas-supuestos_v0.9.md) |
-| 0.10 | 2026-11-05 | Claude (Analista) | Respuestas de Grupo ATU: P-G01, P-G03, P-G04 y P-G05 resueltas; P-T01, P-G02, P-G06, P-C01, P-C05 y P-I01 resueltas en parte; S-05, S-08, S-09 y S-11 actualizados; nuevas P-G07 a P-G09 |
+| 0.10 | 2026-11-05 | Claude (Analista) | Respuestas de Grupo ATU: P-G01, P-G03, P-G04 y P-G05 resueltas; P-T01, P-G02, P-G06, P-C01, P-C05 y P-I01 resueltas en parte; S-05, S-08, S-09 y S-11 actualizados; nuevas P-G07 a P-G09. [Archivada](historico/01-registro-preguntas-supuestos_v0.10.md) |
+| 0.11 | 2026-11-05 | Claude (Analista) | Documentos de seguridad de Grupo ATU: P-G09 resuelta; P-L01 resuelta en parte |
