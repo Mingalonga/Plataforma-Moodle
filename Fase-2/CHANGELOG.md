@@ -2,6 +2,13 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.6] — 2026-11-05
+
+### Cambiado
+- `propuesta/Dosier-respaldo_Plataforma-Moodle_v3.pdf`: el apartado 7 pasa a «Arquitectura propuesta», sobre la que se valora la viabilidad; la tecnología se elegirá con Informática una vez aceptada la propuesta. El apartado 12 pasa de «Alternativas que se compararán» a «Alternativas consideradas», con el motivo por el que no se elige cada una; la comparación formal se hará después, para afinar la propuesta y no para reabrirla. Así queda claro que la viabilidad va primero, como pidió Grupo ATU.
+- `propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v4.pdf`: los mismos matices y una nota sobre el cambio de orden de las fases respecto a la ficha.
+- Las versiones anteriores se archivan en `propuesta/historico/`.
+
 ## [0.3.5] — 2026-11-05
 
 ### Cambiado

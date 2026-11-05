@@ -1,9 +1,9 @@
 // Guía del alumno para la propuesta · fuente Typst
-// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v3.pdf')"
+// Compilar desde Fase-2/propuesta: python3 -c "import typst; typst.compile('guia-propuesta-alumno.typ', output='Guia-alumno_Propuesta_Plataforma-Moodle_v4.pdf')"
 
 #import "estilo.typ": *
 #set document(title: "Guía del alumno: la propuesta", author: "Carlos García Rallo")
-#show: plantilla.with(pie: [Guía del alumno · La propuesta (v3) · uso interno])
+#show: plantilla.with(pie: [Guía del alumno · La propuesta (v4) · uso interno])
 
 #portada(
   [FICHA DE PROYECTO 01 · DOCUMENTO DE TRABAJO DEL ALUMNO],
@@ -12,7 +12,7 @@
   (
     text(fill: gris)[Para], [Carlos García Rallo (uso interno, *no es para entregar*)],
     text(fill: gris)[Fecha], [5 de noviembre de 2026],
-    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v2, dosier de respaldo v2 y preguntas sobre la propuesta v2],
+    text(fill: gris)[Acompaña a], [«Propuesta y viabilidad» v2, dosier de respaldo v3 y preguntas sobre la propuesta v2],
     text(fill: gris)[Basada en], [Especificación de la Fase 2, versión 0.3, y guía de la Fase 2 v3],
   ),
 )
@@ -113,11 +113,13 @@ La ficha divide el proyecto en fases. Esta tabla es tu mapa: qué está hecho, q
   [Fase], [Nombre], [Estado a 5 de noviembre],
   [1], [Descubrimiento], [Hecha (resumen v5). Registro de preguntas actualizado a la v0.10 con las respuestas de Grupo ATU.],
   [2], [Requisitos], [Especificación v0.3 hecha. *Hito «requisitos aprobados»: pendiente de la tutora.*],
-  [3], [Alternativas], [Sin empezar. El dosier ya *enumera* las alternativas (sección 12), pero no las compara ni puntúa.],
-  [4], [Diseño], [Sin empezar. El dosier da una *arquitectura conceptual* (sección 7), sin elegir tecnología.],
+  [3], [Alternativas], [Adelantada en parte: el dosier recoge las *alternativas consideradas* y por qué no se eligen (sección 12). La comparación formal con criterios y pesos se hará *después* de aceptar la propuesta.],
+  [4], [Diseño], [Adelantado en parte: el dosier da la *arquitectura propuesta* (sección 7). La tecnología se elegirá con Informática después de aceptar la propuesta.],
   [5], [Viabilidad], [*Adelantada en parte*: el documento «Propuesta y viabilidad» da una conclusión *preliminar*, basada en la documentación de Moodle, no en pruebas.],
   [6 a 8], [Prototipo, validación y cierre], [Sin empezar. Dependen del aula de prueba.],
 )
+
+#caja[El orden ha cambiado respecto a la ficha.][La ficha ordena las fases como alternativas (3), diseño (4) y viabilidad (5). Grupo ATU ha pedido la viabilidad primero, y por eso la propuesta adelanta lo necesario de las fases 3 y 4 (alternativas consideradas y arquitectura propuesta). Una vez aceptada la propuesta, la comparación formal y el diseño detallado solo afinarán la propuesta, sin volver a abrirla. Si la tutora pregunta por el orden, esta es la explicación.]
 
 #caja[Por qué se ha adelantado la viabilidad.][Grupo ATU lo pidió así: «es eso en lo que necesitamos que investigues y hagas una viabilidad real», e Informática no dará un perfil de prueba «sin antes tener un plano de trazabilidad». Sin esta propuesta el proyecto se paraba. Si la tutora pregunta, la respuesta es: *lo he adelantado porque la organización lo necesitaba para darme el entorno de prueba, y lo he marcado como preliminar*.]
 
@@ -171,12 +173,12 @@ Todo lo que dicen la propuesta y el dosier sale de algún sitio. Así puedes seg
   [4. Requisitos funcionales], [Los 22 con prioridad y su criterio principal.],
   [5. No funcionales], [18 de los 39, los que más pesan en la decisión.],
   [6. Viabilidad técnica], [*La parte más importante para Informática*: cómo funcionan los servicios web, qué función de Moodle cubre cada requisito, los pasos de configuración, la decisión de permisos, las versiones y las 8 pruebas de viabilidad.],
-  [7. Arquitectura conceptual], [Las piezas de la herramienta y el flujo de un cambio global. Sin tecnología concreta.],
+  [7. Arquitectura propuesta], [Las piezas de la herramienta y el flujo de un cambio global, sobre las que se valora la viabilidad. La tecnología se elige después.],
   [8. Seguridad y datos], [Todas las medidas en una tabla.],
   [9. Pruebas], [Los 47 casos resumidos por tipo.],
   [10. Implantación por etapas], [Etapas 0, A, B, C, D y real, con la condición para pasar de una a otra.],
   [11. Riesgos], [Ocho riesgos con nivel y respuesta.],
-  [12. Alternativas], [Las que se compararán en la Fase 3.],
+  [12. Alternativas], [Las alternativas consideradas y por qué no se eligen. La comparación formal (Fase 3) se hará después de aceptar la propuesta, para afinarla, no para reabrirla.],
   [13. Preguntas pendientes], [Lo que falta saber y a quién preguntarlo.],
   [14. Trazabilidad], [Resumen necesidad → requisito → prueba.],
 )
