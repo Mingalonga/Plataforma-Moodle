@@ -2,6 +2,21 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3] — 2026-11-05
+
+**Motivo:** respuestas de Grupo ATU (Departamento de Pedagogía y e-learning e Informática) a las nueve preguntas. Lo esencial (pregunta 4): el DPE quiere **ver a los alumnos de forma global y por aula, controlar accesos y hacer cambios globales o individuales**, con un **estudio de viabilidad real**, más allá de los hipervínculos. Informática pide un documento **breve y directo** con un **dosier de respaldo independiente**. Se conservan los identificadores de la v0.2; las versiones 0.2 se archivan en `historico/`.
+
+### Cambiado
+- `00-plan-fase-2.md` v0.3: condiciones de partida, tareas T13 a T15 (T14: documento ejecutivo de viabilidad y dosier, propuesto), N-16 en los criterios de salida, riesgos RP-11 y RP-12.
+- `01-supuestos-de-partida.md` v0.3: datos DO-01 a DO-09; supuestos confirmados o corregidos; SF-12 descartado; nuevos SF-15 a SF-18.
+- `02-usuarios-escenarios.md` v0.3: ES-03 cambia; nuevos ES-14 a ES-18 (vista global de alumnos, control de accesos, cambios individuales y globales, cuenta corporativa).
+- `03-requisitos-funcionales.md` v0.3: RF-15 y RF-17 suben a *Must*, RF-16 a *Should*; nuevos RF-19 (control de accesos), RF-20 (cambios globales), RF-21 (vista previa, confirmación, registro y vuelta atrás) y RF-22 (*Could*); W-07; cuatro bloques de viabilidad y funciones de Moodle candidatas. 22 requisitos (15 *Must*, 5 *Should*, 2 *Could*).
+- `04-requisitos-no-funcionales.md` v0.3: 39 requisitos; revisados SEG-06, SEG-07, SEG-08, REN-07, MAN-06 y MAN-08; nuevos UX-09, SEG-12 (nunca más permisos que en el aula), SEG-13 (normas internas), REN-08 y MAN-09 (versiones distintas de Moodle).
+- `05-matriz-trazabilidad.md` v0.3: necesidad N-16; 47 casos de prueba.
+- `06-especificacion.md` v0.3.
+- `entregas/`: resumen para la tutora v3 y guía del alumno v3. Los v2 se archivan.
+- Fase 1: `01-registro-preguntas-supuestos.md` v0.10 con las respuestas.
+
 ## [0.2.1] — 2026-11-04
 
 ### Cambiado

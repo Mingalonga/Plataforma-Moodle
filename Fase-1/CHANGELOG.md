@@ -4,6 +4,13 @@ Todas las modificaciones de la documentación de la Fase 1 se anotan aquí, de l
 
 Formato de cada entrada: fecha, versión del paquete de la fase, documentos afectados, qué cambia y por qué.
 
+## [0.9.1] — 2026-11-05
+
+**Motivo:** respuestas de Grupo ATU (DPE e Informática) a las nueve preguntas enviadas.
+
+### Cambiado
+- `01-registro-preguntas-supuestos.md` v0.10: respuestas registradas como datos; P-G01, P-G03, P-G04, P-G05 y P-N01 resueltas; P-T01, P-G02, P-G06, P-C01, P-C05 y P-I01 resueltas en parte; S-05, S-08, S-09, S-10 y S-11 actualizados; nuevas P-G07 a P-G09. El efecto en los requisitos está en la [Fase 2, paquete 0.3](../Fase-2/CHANGELOG.md).
+
 ## [0.9] — 2026-11-04
 
 **Motivo:** respuesta de la tutora. El enfoque pasa a ser la **gestión interna** de las aulas por parte del Departamento de Pedagogía y e-learning, con implementación de Informática y estudio de viabilidad previo. El alumnado ya entra en su curso con la URL que se le facilita. Se registra como cambio de alcance.

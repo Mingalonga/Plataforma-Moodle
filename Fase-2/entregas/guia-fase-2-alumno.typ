@@ -1,10 +1,10 @@
 // Guía de la Fase 2 para el alumno · fuente Typst
-// Compilar: python3 -c "import typst; typst.compile('guia-fase-2-alumno.typ', output='Guia-alumno_Fase-2_Plataforma-Moodle_v2.pdf')"  (o: typst compile ...)
+// Compilar: python3 -c "import typst; typst.compile('guia-fase-2-alumno.typ', output='Guia-alumno_Fase-2_Plataforma-Moodle_v3.pdf')"  (o: typst compile ...)
 
 #let azul = rgb("#1f3a5f")
 #let gris = rgb("#5b6470")
 #let linea = rgb("#c9ced6")
-#let version = "v2"
+#let version = "v3"
 
 #set document(title: "Guía de la Fase 2 para el alumno — Plataforma centralizada Moodle", author: "Carlos García Rallo")
 #set page(
@@ -59,14 +59,14 @@
   #v(0.4cm)
   #text(24pt, weight: "bold", fill: azul)[Guía de la Fase 2: \ Requisitos]
   #v(0.5cm)
-  #text(13pt, fill: gris)[Qué se ha hecho, por qué y cómo defenderlo \ Versión 2: enfoque de gestión interna]
+  #text(13pt, fill: gris)[Qué se ha hecho, por qué y cómo defenderlo \ Versión 3: respuestas de Grupo ATU]
   #v(1fr)
   #line(length: 100%, stroke: 0.6pt + linea)
   #v(0.2cm)
   #grid(columns: (3.2cm, 1fr), row-gutter: 0.55em,
     text(fill: gris)[Para], [Carlos García Rallo (uso interno, no es para entregar)],
-    text(fill: gris)[Fecha], [4 de noviembre de 2026],
-    text(fill: gris)[Basada en], [Documentación de la Fase 2, versión 0.2. Sustituye a la guía v1],
+    text(fill: gris)[Fecha], [5 de noviembre de 2026],
+    text(fill: gris)[Basada en], [Documentación de la Fase 2, versión 0.3. Sustituye a la guía v2],
   )
   #v(1.5cm)
 ]
@@ -75,151 +75,148 @@
 
 #pagebreak()
 
-= 1. Qué ha cambiado y por qué
+= 1. Qué han respondido y qué significa
 
-La tutora contestó el 4 de noviembre. En resumen, dijo cinco cosas:
+Grupo ATU contestó el 5 de noviembre. La mayoría de las respuestas confirman lo que ya suponíamos; *la pregunta 4 lo cambia casi todo*.
 
 #table(columns: (0.9fr, 1.1fr),
-  [Lo que dijo], [Lo que significa para el proyecto],
-  [«El enfoque es la gestión de las plataformas a nivel interno, para no andar saliendo y entrando en una página y otra»], [La plataforma es para *el personal que gestiona las aulas*, no para el alumnado.],
-  [«Ya que estos […] lo hacen mediante una URL que se les facilita»], [El alumnado no tiene el problema de encontrar su aula. *El catálogo para el alumnado se descarta.*],
-  [«Lo llevaría el Departamento de Pedagogía y e-learning»], [El *DPE* es el usuario principal y mantiene la información.],
-  [«La parte de implementación […] la ejecutaría informática»], [*Informática* es el perfil técnico: instala, da permisos, custodia claves.],
-  [«Antes de todo esto habría que ver […] si es viable»], [Lo que dependa de conectar con Moodle queda *condicionado a la viabilidad* (Fase 5).],
+  [Lo que dijeron], [Lo que significa para el proyecto],
+  [*P1.* El DPE hace «todo» en Moodle, salvo diseño y programación], [Confirmado. El diseño y la programación de las aulas quedan fuera (W-07).],
+  [*P2.* Entre 20 y 30 personas], [Más usuarios de los que suponíamos (5 a 20). Más importancia de los roles y permisos.],
+  [*P3.* Cada aula por separado, en su URL; cada persona con roles distintos «para salvaguardar los peligros»], [Confirmado. Nueva regla de oro: *la plataforma no puede dar más permisos de los que cada persona tiene en cada aula* (RNF-SEG-12).],
+  [*P4.* Ver alumnos de forma global e independiente, controles de accesos, cambios globales o individuales; «si solo fuera un hipervínculo sería suficiente, pero queremos ir más allá»; «esta sí es la parte en la que queremos que trabajes»], [*El cambio principal.* Lo que en la v2 era «futuro» (cambios desde la plataforma, buscar personas) pasa a *imprescindible*. Los accesos directos dejan de ser el núcleo.],
+  [*P5.* La más actualizada es la 4.1.18; no todas son iguales y cambian], [La plataforma debe funcionar con versiones distintas a la vez (RNF-MAN-09).],
+  [*P6.* Perfil de prueba sí, pero «sin antes tener un plano de trazabilidad no sería viable»], [Primero el plano, después la prueba. No vas a tocar nada real hasta entonces.],
+  [*P7.* Microsoft 365; hay normas («consúltalo en la sede»)], [El acceso con la cuenta corporativa sube a conveniente (RF-16). Hay que buscar las normas en la sede (P-G09).],
+  [*P8.* Informática puede asumirlo todo o delegar; poco tiempo; «no van a leer 20 páginas»; dosier aparte], [La forma del entregable: *documento breve y directo + dosier independiente*.],
+  [*P9.* El DPE valora pros y contras; luego Informática y Dirección deciden], [El documento breve tiene que servir a ese recorrido: pros y contras claros al principio.],
 )
 
-Hay una frase que no está clara: «y ya estaría, por así decirlo, lo del tema de entorno de pruebas». La he interpretado como que, para el alumnado, no hace falta nada más. Pero *el proyecto sí necesita un aula de pruebas* para demostrar cualquier conexión con Moodle, así que conviene preguntárselo (P-T01).
-
-#caja[Lo más importante que debes saber.][Esto *no* es un fallo del proyecto. La ficha dice que una revisión puede cambiar el enfoque, y lo que valora es que el cambio quede registrado y justificado. Está todo: la respuesta literal en el registro de seguimiento, el cambio de alcance anotado, las versiones antiguas guardadas en `historico/` y una tabla de correspondencia entre los requisitos viejos y los nuevos.]
+#caja[La frase clave.][«Te estamos pidiendo que nos hagas *los planos de una casa* en la que queremos meter ciertas habitaciones.» Traducido: no quieren que construyas la casa, sino el proyecto completo (qué habitaciones, cómo se conectan, qué hace falta para construirlas y si es viable). Las «habitaciones» son la vista de alumnos, el control de accesos y los cambios globales o individuales.]
 
 = 2. Qué documentos han cambiado
 
 #table(columns: (0.9fr, 1.1fr),
   [Documento], [Cambio],
-  [Fase 1: registro de preguntas (0.9)], [La respuesta de la tutora como dato. Preguntas nuevas P-T01 y P-G01 a P-G06. Las del alumnado, marcadas como «pierde relevancia».],
-  [Fase 1: actores y perfiles (0.4)], [Nuevos actores: DPE (A-13) e Informática (A-14). Nuevos perfiles PU-08 a PU-10. El alumnado pasa a afectado indirecto.],
-  [Fase 1: situación actual (0.3)], [Necesidades nuevas N-11 a N-15 y problema principal PR-09 (gestión dispersa).],
-  [Fase 1: riesgos (0.2)], [Suben los de seguridad: la plataforma concentra accesos a doce aulas (RS-10).],
-  [Fase 1: alcance (0.3) y diagnóstico (0.5)], [Alcance rehecho (AL-15 a AL-27) y registrado como cambio de alcance.],
-  [Fase 1: guion de reunión (v2)], [Preguntas para el DPE, Informática y quien decida la viabilidad.],
-  [Fase 2: todo el paquete (0.2)], [Rehecho. Los identificadores se han renumerado.],
-  [Entregas], [Resumen para la tutora v2, esta guía v2 y preguntas v2 (de 16 a 9).],
-  [Sin cambios], [El resumen de la Fase 1 (v5), porque ya está entregado. El inventario de las aulas sigue siendo válido.],
+  [Fase 1: registro de preguntas (0.10)], [Respuestas registradas. P-G01, P-G03, P-G04 y P-G05 resueltas; otras en parte. Nuevas P-G07 (qué es «controles de accesos»), P-G08 (qué cambios globales) y P-G09 (normas en la sede).],
+  [Fase 2: supuestos (0.3)], [Nuevos datos DO-01 a DO-09. SF-12 («solo cifras») cae. Nuevos SF-15 a SF-18.],
+  [Fase 2: escenarios (0.3)], [ES-03 cambia; nuevos ES-14 a ES-18.],
+  [Fase 2: requisitos funcionales (0.3)], [RF-15 y RF-17 suben a *Must*; RF-16 a *Should*; nuevos RF-19 a RF-22 y W-07. *Se mantienen los números de la v2.*],
+  [Fase 2: no funcionales (0.3)], [De 34 a 39. Nuevos sobre permisos por aula, normas internas, cambios globales y versiones distintas.],
+  [Fase 2: trazabilidad (0.3)], [Nueva necesidad N-16; de 36 a 47 pruebas.],
+  [Fase 2: plan y especificación (0.3)], [Tareas T13 a T15 y riesgos RP-11 y RP-12.],
+  [Entregas], [Resumen para la tutora v3 y esta guía v3. Las preguntas v3 no cambian: ya están respondidas.],
 )
 
-= 3. La idea en una frase
+= 3. La idea en una frase (actualizada)
 
-#caja[][Una *herramienta interna*, solo para personal autorizado, con la *lista de las doce aulas* y *accesos directos a la gestión de cada una* (cursos, usuarios, matriculaciones, informes), mantenida por el DPE e instalada por Informática. Si resulta viable, además permitiría *consultar datos de varias aulas a la vez* sin entrar en ellas.]
+#caja[][Una *herramienta interna* para el DPE que, desde un único sitio, permita *ver a los alumnos* de todas las aulas, *controlar sus accesos* y *hacer cambios individuales o globales* en ellas, siempre con vista previa, confirmación y registro, y sin dar a nadie más permisos de los que ya tiene en cada aula. Todo, primero, como *plano* y *estudio de viabilidad*; después, si se aprueba, lo construye Informática.]
 
-Piensa en ello como un «panel de mandos»: no sustituye a Moodle (la gestión se sigue haciendo en cada aula), pero te ahorra buscar la dirección, navegar por el menú y confundirte de aula.
+Ya no es solo un «panel de mandos» con enlaces: es un *centro de gestión* que habla con las doce aulas.
 
-== Los tres bloques
+== Los cuatro bloques
 
-#table(columns: (0.5fr, 1fr, 0.6fr),
-  [Bloque], [Qué incluye], [¿Necesita tocar Moodle?],
-  [Base (*Must*)], [Acceso restringido y roles, inventario de aulas, accesos directos, búsqueda, mantenimiento, registros.], [*No.* Solo son enlaces y una lista. Siempre es viable.],
-  [Consulta (*Should*)], [Datos agregados de varias aulas, buscar un curso en todas, estado técnico.], [*Sí, para leer.* Necesita los servicios web de Moodle activados por Informática.],
-  [Acciones (*Could*)], [Crear cursos o matricular desde el panel, entrar una vez en todas, buscar personas.], [*Sí, para escribir* o cambiar la autenticación. Más riesgo.],
+#table(columns: (0.5fr, 1fr, 0.7fr),
+  [Bloque], [Qué incluye], [¿Qué necesita de Moodle?],
+  [Base (*Must*)], [Acceso restringido y roles, inventario de aulas, accesos directos, registros.], [Nada. Siempre viable, *pero la organización ha dicho que no basta*.],
+  [Consulta (*Must* / *Should*)], [*Vista de alumnos* (RF-17) y *control de accesos* (RF-19), imprescindibles; cifras, cursos y estado técnico, convenientes.], [Servicios web *de lectura*.],
+  [Cambios (*Must*)], [*Cambios individuales* (RF-15), *globales* (RF-20) y su *seguridad* (RF-21). Cambiar ajustes en varias aulas queda como futuro (RF-22).], [Servicios web *con escritura limitada*, aprobada por Informática.],
+  [Acceso único (*Should*)], [Entrar con la cuenta de Microsoft 365.], [Activar la identificación con Microsoft en cada aula.],
 )
 
-Este reparto es tu mejor defensa ante «¿y si no es viable?»: el bloque base funciona siempre. La viabilidad decide hasta dónde se llega.
+#caja[Ojo con la defensa de la v2.][En la v2 decíamos «si no es viable, el bloque base funciona igual». Eso sigue siendo cierto, pero *ya no es un buen argumento*: la organización ha dicho que los enlaces no le bastan. Ahora la respuesta correcta es: «el estudio de viabilidad dice, aula por aula, hasta qué bloque se puede llegar».]
 
-= 4. Conceptos clave (repaso)
+= 4. Por qué es técnicamente plausible
 
-- *Requisito funcional:* algo que la plataforma *hace* («ofrecer un acceso directo a la gestión de cursos de cada aula»).
-- *Requisito no funcional:* *cómo* lo hace («con doble factor», «en 2 segundos»).
-- *MoSCoW:* M imprescindible (prototipo), S conveniente (aquí, si es viable), C futuro, W descartado con motivo.
-- *Criterio de aceptación:* condición de sí o no. Formato *Dado / Cuando / Entonces*.
-- *Trazabilidad:* poder seguir cada requisito hasta su necesidad y hasta su prueba.
-- *Servicios web de Moodle:* la vía oficial de Moodle para que otro programa lea o cambie datos sin entrar en el aula. Funciona con una *clave de servicio* (token). Por eso hay requisitos sobre quién guarda esas claves.
-- *Aula de pruebas:* un Moodle sin datos reales. Si la empresa no tiene, se monta uno en tu ordenador. La ficha prohíbe probar sobre las aulas reales y presentar como real algo simulado.
+Sin elegir todavía la solución (eso es la Fase 3), Moodle 4.1 trae de serie funciones de servicios web que cubren lo que pide el DPE. El estudio de viabilidad tiene que comprobar si están habilitadas, o si Informática las puede habilitar, en cada aula:
 
-#caja[Un hilo de principio a fin.][
-*Problema PR-09* (hay que entrar y salir de cada aula) → *necesidad N-11* (gestionar cualquier aula desde un único punto) → *escenario ES-02* (Ana tiene que crear un curso en el aula de Tierra Más Ecológica) → *requisito RF-04* (accesos directos a la gestión de cada aula) → *caso de prueba CP-UX-01* (personas del DPE hacen la tarea con la plataforma y por el camino actual, y se comparan pasos y tiempo).
-]
+#table(columns: (0.9fr, 1.1fr),
+  [Lo que pide el DPE], [Funciones estándar de Moodle (a comprobar)],
+  [Saber la versión y qué permite cada aula], [`core_webservice_get_site_info`],
+  [Ver alumnos, cursos y último acceso], [`core_user_get_users_by_field`, `core_enrol_get_enrolled_users`, `core_enrol_get_users_courses`],
+  [Suspender o reactivar], [`core_user_update_users`],
+  [Matricular o desmatricular], [`enrol_manual_enrol_users`, `enrol_manual_unenrol_users`],
+  [Cambiar el rol], [`core_role_assign_roles`, `core_role_unassign_roles`],
+)
 
-= 5. Datos de la tutora y supuestos
+#caja[Cómo explicarlo sin tecnicismos.][Cada aula Moodle tiene una «ventanilla» oficial (los servicios web) por la que otro programa puede pedir datos o hacer cambios, con una llave (clave de servicio) que solo abre las puertas que Informática decida. La plataforma sería quien va de ventanilla en ventanilla por ti. *Nunca* usa tus contraseñas.]
 
-Ahora se separan dos cosas: lo que *ha dicho la tutora* (DT-01 a DT-06, son datos) y lo que *suponemos* (SF-01 a SF-14). Los supuestos que más pesan:
+= 5. Conceptos nuevos
+
+- *Cambio individual:* una operación sobre una persona en un aula (suspender, reactivar, matricular, cambiar el rol).
+- *Cambio global:* la misma operación sobre varias personas o varias aulas en una sola orden.
+- *Vista previa:* antes de aplicar nada, la plataforma enseña qué va a cambiar, dónde y a cuántas personas.
+- *Confirmación reforzada:* si el cambio afecta a más de un aula o a más de 10 personas, hay que hacer un paso extra (por ejemplo, escribir el número de aulas).
+- *Vuelta atrás:* la operación contraria (reactivar, volver a matricular) lanzada desde el registro.
+- *Permisos por aula:* la plataforma comprueba que lo que haces lo podrías hacer entrando en el aula con tu cuenta.
+
+= 6. Datos y supuestos
+
+Ahora hay tres tipos: lo que dijo la tutora (DT), *lo que ha respondido la organización (DO-01 a DO-09)* y lo que seguimos suponiendo (SF). Los supuestos que más pesan ahora:
 
 #table(columns: (auto, 0.9fr, 0.8fr, 0.9fr),
   [ID], [Qué suponemos], [Por qué], [Si es falso…],
-  [SF-02], [Las tareas que más se repiten son las típicas de Moodle: cursos, matrículas, usuarios, informes, copias], [Son las funciones de administración estándar], [Cambian los accesos directos],
-  [SF-03], [Cada persona del DPE tiene una cuenta distinta en cada aula], [No se ve ningún acceso común en las aulas], [Si ya hay acceso común, el panel se centra en la lista y la consulta],
-  [SF-05], [No se tocan las aulas reales; se prueba en un aula de pruebas], [Límite de la ficha], [Si no hay aula de pruebas de la empresa, se monta una propia],
-  [SF-06], [Informática puede activar los servicios web en modo lectura], [Moodle los trae de serie], [El panel se queda en el bloque base],
-  [SF-07], [Las aulas usan Moodle 4.1 sin soporte], [Indicio de la Fase 1], [Si están actualizadas, conectar es menos arriesgado],
-  [SF-12], [Basta con cifras agregadas, sin datos del alumnado], [Menos riesgo legal (RGPD)], [Hay que justificar el tratamiento (RF-17)],
-  [SF-14], [El proyecto acaba en viabilidad, prototipo y recomendación], [La implementación es de Informática], [Cambia el plan de las fases 5 a 8],
+  [SF-06], [Informática puede habilitar los servicios web], [Moodle los trae de serie; *no lo han contestado*], [No se llega a consulta ni a cambios. Es *la* incógnita],
+  [SF-15], [Los datos del alumnado se pueden consultar con la misma finalidad con la que ya se gestionan, sin guardar copia], [Ya los gestionan en cada aula], [La vista global se queda en cifras],
+  [SF-16], [«Controles de accesos» = revisar quién entra (inactivos, nunca entraron, suspendidos)], [Interpretación nuestra], [Se rehace RF-19 (P-G07)],
+  [SF-17], [«Cambios globales» = misma operación en varias personas o aulas; primero usuarios y matrículas], [Menos riesgo que tocar ajustes], [Cambian las operaciones (P-G08)],
+  [SF-18], [Cada aula admite claves limitadas, de lectura y de escritura por separado], [Funcionamiento estándar de Moodle], [Si una clave abre todo, sube el riesgo],
 )
 
-= 6. Usuarios y escenarios
+#caja[SF-12 ha caído, y está bien.][En la v2 suponíamos que bastaban cifras sin datos de alumnos. La organización ha dicho que quiere ver a los alumnos. No es un error: era un supuesto explícito con su «si es falso», y ahora lo sustituye SF-15. Eso es exactamente lo que valora la ficha.]
 
-*Usuarios:* gestor/a de e-learning del DPE (PU-08, el principal), técnico/a de Informática (PU-09), responsable del DPE (PU-10) y el CAU solo para consultar (PU-05). El alumnado, el profesorado y las empresas quedan fuera.
+= 7. Escenarios nuevos
 
 #table(columns: (auto, 1fr, 1fr),
-  [ID], [Escenario], [Por qué está],
-  [ES-01], [Vista de conjunto al empezar la jornada], [Saber qué aulas funcionan sin abrir ninguna],
-  [ES-02], [Ir directamente a la gestión de cursos de un aula], [Es el núcleo del enfoque (PR-09)],
-  [ES-03], [Matricular a un grupo], [Muestra el límite: la matrícula se sigue haciendo en el aula],
-  [ES-04], [No confundir aulas con el mismo título], [Cinco aulas se llaman igual (PR-03)],
-  [ES-05], [Saber en qué aula está un curso], [Depende de los servicios web],
-  [ES-06], [Resumen de varias aulas], [Ídem; solo cifras agregadas],
-  [ES-07, ES-08], [Alta, cambio o retirada de un aula], [El inventario hay que mantenerlo (DPE + Informática)],
-  [ES-09, ES-10], [Aula caída y estado técnico], [Lo necesita Informática],
-  [ES-11], [Altas y bajas de personal], [Una herramienta con acceso a la gestión debe controlar quién entra],
-  [ES-12], [Lector de pantalla o teclado], [La ficha lo exige para cualquier usuario],
-  [ES-13], [La plataforma se cae], [Si se cae, se gestiona como hoy],
+  [ID], [Escenario], [Requisitos],
+  [ES-03], [Matricular a 15 personas *desde la plataforma* (antes, en el aula)], [RF-15, RF-20, RF-21],
+  [ES-14], [En qué aulas y cursos está una alumna], [RF-17],
+  [ES-15], [Revisar cuentas que no han entrado en 90 días], [RF-19],
+  [ES-16], [Reactivar a un alumno suspendido por error], [RF-15, RF-21],
+  [ES-17], [Suspender en tres aulas a una trabajadora que ha dejado la empresa cliente], [RF-20, RF-21],
+  [ES-18], [Entrar con la cuenta corporativa], [RF-16],
 )
 
-= 7. Los requisitos funcionales
+= 8. Requisitos: qué ha subido y qué es nuevo
 
-== Imprescindibles (10)
+#table(columns: (auto, 1fr, auto),
+  [ID], [Requisito], [Prioridad],
+  [RF-15], [Cambios individuales en un aula], [C → *M*],
+  [RF-17], [Ver a los alumnos de cada aula y de todas], [C → *M*],
+  [RF-16], [Entrar con la cuenta de Microsoft 365], [C → *S*],
+  [RF-19], [Control de accesos], [*M* (nuevo)],
+  [RF-20], [Cambios globales], [*M* (nuevo)],
+  [RF-21], [Vista previa, confirmación, registro y vuelta atrás], [*M* (nuevo)],
+  [RF-22], [Cambiar ajustes en varias aulas], [C (nuevo)],
+  [W-07], [Diseño y programación de las aulas], [Descartado (otro departamento)],
+)
 
-RF-01 solo entra el personal autorizado · RF-02 roles (gestión, técnico, consulta) · RF-03 inventario de aulas con nombre propio, estado y responsables · RF-04 *accesos directos a la gestión* · RF-05 búsqueda y filtros · RF-06 altas y cambios con dominios permitidos · RF-07 ocultar sin borrar · RF-08 registro de cambios · RF-09 aviso a los 90 días sin revisar · RF-10 registro de entradas y permisos.
+Totales: 22 funcionales (15 *Must*, 5 *Should*, 2 *Could*) y 7 descartes. *Los números de la v2 se mantienen*, así que lo que ya conoces sigue llamándose igual.
 
-#caja[Detalle importante de RF-04.][El acceso directo te lleva a la página de gestión del aula, pero *no te mete dentro*: si no tienes la sesión abierta en esa aula, el aula te pedirá usuario y contraseña, como hoy. Meterte dentro automáticamente sería el inicio de sesión único (RF-16, futuro), y guardar tus contraseñas para hacerlo está prohibido (W-03). Si te preguntan «¿entonces qué ahorra?», la respuesta es: buscar la dirección, navegar por el menú y equivocarte de aula. Y es la base sobre la que se añadiría lo demás.]
-
-== Convenientes (4), si es viable
-
-RF-11 datos agregados de varias aulas · RF-12 buscar un curso en todas · RF-13 estado técnico (versión) · RF-14 comprobar que las aulas responden.
-
-== Futuros (4) y descartados (6)
-
-Futuros: acciones desde el panel (RF-15), acceso único (RF-16), buscar personas (RF-17), indicadores (RF-18). Descartados: tocar las aulas reales (W-01), unificarlas (W-02), contraseñas (W-03), portal para el alumnado (W-04), hacer un «segundo Moodle» (W-05) y arreglar la versión de Moodle (W-06).
-
-= 8. Los requisitos no funcionales (34)
-
-Lo que más ha cambiado respecto a la v1:
-
-- *Seguridad (11):* antes era una página pública sin datos; ahora es una herramienta que da acceso a la gestión de doce aulas. Por eso: doble factor, permisos mínimos, claves de servicio custodiadas por Informática y nunca en el repositorio, nada público y registro de quién entra.
-- *Privacidad:* nada de datos del alumnado guardados; en la consulta, solo cifras.
-- *Eficiencia (RNF-UX-03):* el 90 % de las tareas llega a la página de gestión en 3 acciones y 20 segundos o menos, *y más rápido que hoy*. La comparación con la forma actual es lo que demuestra el valor. Los números son propuesta nuestra [R].
-- *SUS 70:* el cuestionario SUS es un estándar de 10 preguntas; 68 es la media habitual, así que 70 es «por encima de la media».
-- *Dispositivos:* el ordenador pasa a ser el principal; en el móvil basta con consultar.
-- *Carga de las aulas (RNF-REN-07):* si el panel consulta las aulas, que sea poco y espaciado, para no ralentizarlas.
-- *Mantenimiento:* 4 h/mes entre el DPE e Informática (antes 2 h, porque ahora puede haber integración).
+*No funcionales (39):* lo más importante es que la seguridad sube otra vez: ahora la plataforma lee datos personales y hace cambios. Por eso se añaden la regla de permisos por aula (RNF-SEG-12), las normas internas de Grupo ATU (RNF-SEG-13), el registro de consultas y cambios (RNF-SEG-08 pasa a *Must*), las claves con lectura y escritura separadas (RNF-SEG-06) y que no se guarde copia de los datos del alumnado (RNF-SEG-07). También: un cambio en 5 aulas en menos de la cuarta parte del tiempo actual (RNF-UX-09) y funcionar con versiones distintas de Moodle (RNF-MAN-09).
 
 = 9. Trazabilidad y pruebas
 
-- 11 necesidades dentro del enfoque, todas cubiertas. 4 fuera (N-01, N-02, N-04, N-09), con motivo.
-- 36 casos de prueba: 14 funcionales, 5 de usabilidad, 6 de seguridad, 5 de rendimiento y 6 de mantenimiento.
-- *Regla de oro:* todo lo que exija entrar en un aula o usar sus servicios web se prueba en el aula de pruebas, nunca en las reales.
+- 12 necesidades dentro del enfoque, todas cubiertas, con la nueva *N-16* (gestionar el alumnado y sus accesos con cambios globales o individuales). N-13 y N-16 dependen de la viabilidad.
+- 47 casos de prueba: 20 funcionales, 6 de usabilidad, 8 de seguridad, 6 de rendimiento y 7 de mantenimiento.
+- *Regla de oro, reforzada:* todo lo que lea o cambie datos de un aula se prueba en aulas de prueba sin datos reales; para los cambios globales y las versiones distintas hacen falta al menos dos.
 
-= 10. Preguntas que te puede hacer la tutora
+= 10. Preguntas que te pueden hacer
 
 #table(columns: (0.8fr, 1.2fr),
   [Pregunta], [Respuesta posible],
-  [¿Por qué has rehecho todo?], [Porque me indicaste que el enfoque era la gestión interna. He guardado la versión anterior y hay una tabla que dice qué pasa con cada requisito antiguo.],
-  [¿Qué gana el departamento con unos enlaces?], [No tener que buscar direcciones, navegar por doce menús ni equivocarse de aula. Y es la base: si Informática activa los servicios web, se puede consultar información de todas las aulas sin entrar.],
-  [¿Por qué no entrar una sola vez en todas las aulas?], [Porque exige un directorio común y cambiar la autenticación de cada aula, lo que hace Informática y depende de la versión de Moodle. Lo dejo como futuro y lo estudio en la viabilidad.],
-  [¿Y si no es viable conectar con Moodle?], [El bloque base funciona igual. La viabilidad decide hasta dónde se llega, no si hay proyecto.],
-  [¿Cómo vas a probarlo sin tocar las aulas?], [Con un aula de pruebas sin datos reales. Por eso le pregunto si existe una.],
-  [¿Qué pasa con la seguridad?], [Es lo que más ha crecido: doble factor, permisos por rol, claves custodiadas por Informática, nada público y registro de accesos.],
+  [¿Por qué has cambiado otra vez las prioridades?], [Porque la organización ha respondido y ha dicho qué quiere. Los supuestos estaban escritos con su «si es falso», y la matriz dice qué revisar. He mantenido los números de los requisitos.],
+  [¿No es peligroso hacer cambios en doce aulas desde un sitio?], [Sí, por eso hay vista previa, confirmación reforzada, registro y vuelta atrás, nunca más permisos que en el aula, claves limitadas por aula, y todo se prueba antes en aulas de prueba.],
+  [¿Y los datos de los alumnos?], [Se consultan cuando hacen falta, no se guarda copia y queda registrado quién los consulta. La finalidad es la misma con la que el departamento ya los gestiona; lo confirmaría con el responsable del tratamiento.],
+  [¿Es viable?], [Moodle 4.1 trae de serie las funciones necesarias. Lo que hay que comprobar es si Informática puede habilitarlas en cada aula. Eso es justo el estudio de viabilidad.],
+  [¿Qué pasa si las aulas tienen versiones distintas?], [La plataforma pregunta a cada aula qué versión tiene y qué permite, y desactiva en ella lo que no esté disponible.],
+  [¿Por qué no lo programas directamente?], [Porque Informática pide primero el plano, y la ficha no permite tocar las aulas reales sin autorización.],
 )
 
-= 11. Qué viene ahora
+= 11. Qué viene ahora (propuesta)
 
-+ *Enviar a la tutora* el resumen v2, preguntándole si la interpretación es correcta y qué quería decir con lo del entorno de pruebas.
-+ *Pedir una conversación* con el DPE y con Informática (preguntas v2 y guion de reunión v2).
-+ *Fase 3 — Alternativas:* comparar al menos dos opciones, incluida la de no desarrollar nada, con criterios y pesos fijados antes de puntuar. Las apuntadas: no hacer nada y organizar mejor los accesos; una página interna en una herramienta ya contratada (por ejemplo, SharePoint); una aplicación web interna; un panel conectado a los servicios web; acceso único con el directorio corporativo; herramientas existentes para gestionar varios Moodle; unificar las aulas (solo como referencia); o una combinación por etapas.
++ *Documento ejecutivo de viabilidad* («los planos»): 2 o 3 páginas, para el DPE, Informática y Dirección. Qué se propone, las «habitaciones», qué necesita Informática, riesgos y cómo se controlan, opciones por niveles, pros y contras, esfuerzo aproximado y la decisión que se pide.
++ *Dosier de respaldo independiente:* la especificación, la trazabilidad, las funciones de Moodle por requisito y el plan de pruebas, para quien quiera el detalle.
++ *Confirmar con el DPE* qué significan «controles de accesos» y «cambios globales» (P-G07, P-G08) y *buscar las normas de seguridad en la sede* (P-G09).
++ *Enviar a la tutora* el resumen v3.
++ Con el plano aprobado, pedir a Informática el *perfil de prueba* y pasar a comparar alternativas (Fase 3).
