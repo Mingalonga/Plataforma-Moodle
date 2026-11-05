@@ -2,6 +2,12 @@
 
 Todas las modificaciones de la documentación de la Fase 2 se anotan aquí, de la más reciente a la más antigua. Las versiones anteriores de cada documento se conservan en [`historico/`](historico/README.md) y en el historial de Git.
 
+## [0.3.5] — 2026-11-05
+
+### Cambiado
+- `propuesta/Guia-alumno_Propuesta_Plataforma-Moodle_v3.pdf`: nueva «Leyenda de siglas» al principio con todos los identificadores y etiquetas del proyecto (DT, DO, SF, S, H, P, PG, D, N, PR, AL, RS, RP, OS, ES, RF, RNF, W, CP, V, T, MoSCoW, niveles A a D, etiquetas de origen y términos técnicos). «alguna aula» pasa a «algún aula». La v2 se archiva.
+- `02-usuarios-escenarios.md`: «ninguna aula» pasa a «ningún aula» (sin cambio de versión).
+
 ## [0.3.4] — 2026-11-05
 
 ### Cambiado
