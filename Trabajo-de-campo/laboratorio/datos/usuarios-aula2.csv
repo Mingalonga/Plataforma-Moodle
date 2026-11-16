@@ -1,0 +1,8 @@
+username,firstname,lastname,email,password,suspended,course1,role1,course2,role2
+ana.lopez,Ana,López,ana.lopez@example.com,Prueba.2026,0,PRL-01,student,,
+fernando.gil,Fernando,Gil,fernando.gil@example.com,Prueba.2026,0,MAN-ALI,student,PAUX-01,student
+marcos.vidal,Marcos,Vidal,marcos.vidal@example.com,Prueba.2026,0,MAN-ALI,student,,
+cruiz,Carmen,Ruiz,carmen.ruiz@example.com,Prueba.2026,0,PAUX-01,student,,
+irene.campos,Irene,Campos,irene.campos@example.com,Prueba.2026,0,PRL-01,student,MAN-ALI,student
+jorge.pena,Jorge,Peña,jorge.pena@example.com,Prueba.2026,0,PAUX-01,student,,
+olga.serrano,Olga,Serrano,olga.serrano@example.com,Prueba.2026,0,MAN-ALI,editingteacher,PAUX-01,editingteacher

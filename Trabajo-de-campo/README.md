@@ -18,7 +18,7 @@ Cada nivel se apoya en el anterior. El resultado del estudio será el último ni
 | Nivel | Objetivo | Estado |
 |---|---|---|
 | 1 | Montar en local un aula Moodle 4.1.18 (la misma versión que Grupo ATU) con Docker | Hecho (2026-11-12) |
-| 2 | Crear datos ficticios (cursos, alumnos, matrículas) y una segunda aula | Pendiente |
+| 2 | Crear datos ficticios (cursos, alumnos, matrículas) y una segunda aula | Hecho (2026-11-16): aula 2 con Moodle 4.1.2 |
 | 3 | Activar los servicios web y hacer las primeras llamadas a mano | Pendiente |
 | 4 | Script que junte los alumnos de varias aulas y detecte cuentas inactivas | Pendiente |
 | 5 | Pequeña web con inicio de sesión que muestre esa vista centralizada | Pendiente |

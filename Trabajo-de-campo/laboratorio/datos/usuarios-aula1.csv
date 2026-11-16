@@ -1,0 +1,13 @@
+username,firstname,lastname,email,password,suspended,course1,role1,course2,role2
+ana.lopez,Ana,López,ana.lopez@example.com,Prueba.2026,0,PRL-01,student,EXCEL-01,student
+bruno.diaz,Bruno,Díaz,bruno.diaz@example.com,Prueba.2026,0,PRL-01,student,,
+carmen.ruiz,Carmen,Ruiz,carmen.ruiz@example.com,Prueba.2026,0,EXCEL-01,student,ATC-01,student
+david.moreno,David,Moreno,david.moreno@example.com,Prueba.2026,0,ATC-01,student,,
+elena.santos,Elena,Santos,elena.santos@example.com,Prueba.2026,0,ING-A2,student,,
+fernando.gil,Fernando,Gil,fernando.gil@example.com,Prueba.2026,0,PRL-01,student,ING-A2,student
+lucia.romero,Lucía,Romero,lucia.romero@example.com,Prueba.2026,0,EXCEL-01,student,,
+marcos.vidal,Marcos,Vidal,marcos.vidal@example.com,Prueba.2026,1,ATC-01,student,ING-A2,student
+nuria.ortega,Nuria,Ortega,nuria.ortega@example.com,Prueba.2026,0,PRL-01,student,,
+pablo.navarro,Pablo,Navarro,pablo.navarro@example.com,Prueba.2026,0,EXCEL-01,student,ATC-01,student
+rosa.molina,Rosa,Molina,rosa.molina@example.com,Prueba.2026,0,ING-A2,student,,
+sergio.castro,Sergio,Castro,sergio.castro@example.com,Prueba.2026,0,PRL-01,editingteacher,EXCEL-01,editingteacher
