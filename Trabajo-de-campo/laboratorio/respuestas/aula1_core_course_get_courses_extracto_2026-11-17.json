@@ -1,0 +1,30 @@
+[
+    {
+        "id": 2,
+        "shortname": "PRL-01",
+        "categoryid": 1,
+        "fullname": "Prevención de riesgos laborales",
+        "displayname": "Prevención de riesgos laborales",
+        "summary": "Curso ficticio de prueba",
+        "summaryformat": 1,
+        "format": "topics",
+        "startdate": 1794680220,
+        "enddate": 1826216220,
+        "showactivitydates": true,
+        "showcompletionconditions": true
+    },
+    {
+        "id": 3,
+        "shortname": "EXCEL-01",
+        "categoryid": 1,
+        "fullname": "Excel básico",
+        "displayname": "Excel básico",
+        "summary": "Curso ficticio de prueba",
+        "summaryformat": 1,
+        "format": "topics",
+        "startdate": 1794680220,
+        "enddate": 1826216220,
+        "showactivitydates": true,
+        "showcompletionconditions": true
+    }
+]

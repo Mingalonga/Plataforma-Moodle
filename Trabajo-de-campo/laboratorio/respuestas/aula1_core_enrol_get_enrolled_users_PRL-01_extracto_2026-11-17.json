@@ -1,0 +1,22 @@
+[
+    {
+        "id": 3,
+        "username": "ana.lopez",
+        "fullname": "Ana López",
+        "department": "",
+        "firstaccess": 1794842126,
+        "lastaccess": 1794842160,
+        "lastcourseaccess": 0,
+        "description": "",
+        "descriptionformat": 1,
+        "profileimageurlsmall": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f2",
+        "profileimageurl": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f1",
+        "roles": [
+            {"roleid": 5, "name": "", "shortname": "student", "sortorder": 0}
+        ],
+        "enrolledcourses": [
+            {"id": 3, "fullname": "Excel básico", "shortname": "EXCEL-01"},
+            {"id": 2, "fullname": "Prevención de riesgos laborales", "shortname": "PRL-01"}
+        ]
+    }
+]

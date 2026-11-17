@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "id": 5,
+            "username": "carmen.ruiz",
+            "fullname": "Carmen Ruiz",
+            "email": "carmen.ruiz@example.com",
+            "department": "",
+            "firstaccess": 1794842211,
+            "lastaccess": 1794842255,
+            "auth": "manual",
+            "suspended": false,
+            "confirmed": true,
+            "lang": "en",
+            "theme": "",
+            "timezone": "99",
+            "mailformat": 1,
+            "description": "",
+            "descriptionformat": 1,
+            "profileimageurlsmall": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f2",
+            "profileimageurl": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f1"
+        }
+    ],
+    "warnings": []
+}
