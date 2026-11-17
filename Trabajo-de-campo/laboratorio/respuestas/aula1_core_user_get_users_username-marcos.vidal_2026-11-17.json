@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 10,
+            "username": "marcos.vidal",
+            "fullname": "Marcos Vidal",
+            "department": "",
+            "firstaccess": 0,
+            "lastaccess": 0,
+            "auth": "manual",
+            "suspended": true,
+            "confirmed": true,
+            "lang": "en",
+            "theme": "",
+            "timezone": "99",
+            "mailformat": 1,
+            "description": "",
+            "descriptionformat": 1,
+            "profileimageurlsmall": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f2",
+            "profileimageurl": "http://localhost:8000/theme/image.php/boost/core/1794505938/u/f1"
+        }
+    ],
+    "warnings": []
+}
