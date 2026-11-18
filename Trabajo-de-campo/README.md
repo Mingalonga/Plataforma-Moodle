@@ -19,7 +19,7 @@ Cada nivel se apoya en el anterior. El resultado del estudio será el último ni
 |---|---|---|
 | 1 | Montar en local un aula Moodle 4.1.18 (la misma versión que Grupo ATU) con Docker | Hecho (2026-11-12) |
 | 2 | Crear datos ficticios (cursos, alumnos, matrículas) y una segunda aula | Hecho (2026-11-16): aula 2 con Moodle 4.1.2 |
-| 3 | Activar los servicios web y hacer las primeras llamadas a mano | En curso: aula 1 hecha (2026-11-17), falta el aula 2 |
+| 3 | Activar los servicios web y hacer las primeras llamadas a mano | Hecho (2026-11-18): las dos aulas; el aula 2 en ≈ 15 min con la receta |
 | 4 | Script que junte los alumnos de varias aulas y detecte cuentas inactivas | Pendiente |
 | 5 | Pequeña web con inicio de sesión que muestre esa vista centralizada | Pendiente |
 | 6 | Cambios reales (suspender, reactivar, matricular) con vista previa, confirmación y registro | Pendiente |
