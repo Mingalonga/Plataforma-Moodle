@@ -1,0 +1,8 @@
+{
+  "dias_inactividad": 90,
+  "ignorar": ["guest", "admin", "ws_lectura"],
+  "aulas": [
+    {"nombre": "Aula 1", "url": "http://localhost:8000", "token": "~/moodle-lab/token-aula1.txt"},
+    {"nombre": "Aula 2", "url": "http://localhost:8001", "token": "~/moodle-lab/token-aula2.txt"}
+  ]
+}
