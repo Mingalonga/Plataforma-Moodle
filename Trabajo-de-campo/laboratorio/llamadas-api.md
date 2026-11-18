@@ -8,6 +8,8 @@ TOKEN=$(cat ~/moodle-lab/token-aula1.txt)
 
 Base de todas las llamadas (aula 1): `http://localhost:8000/webservice/rest/server.php`
 
+**Aula 2:** las mismas llamadas, cambiando el puerto a `8001` y usando su token: `TOKEN2=$(cat ~/moodle-lab/token-aula2.txt)` y `wstoken=$TOKEN2`.
+
 | Opción | Para qué |
 |---|---|
 | `curl -s` | Sin barra de progreso. Ojo: también oculta los errores |
