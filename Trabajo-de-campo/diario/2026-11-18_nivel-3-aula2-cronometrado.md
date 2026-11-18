@@ -37,9 +37,9 @@ Para comparar, el aula 1 llevó ayer unos 80 minutos, pero aquello incluía apre
 |---|---|---|
 | El rol nuevo no salía en *Assign system roles*, solo Manager y Course creator | Lo más probable es que al crearlo no quedara marcada la casilla **System** en los contextos donde se puede asignar | Editar el rol en *Define roles*, marcar **System** y guardar |
 | Al autorizar al usuario sale *Missing capabilities: 5* | Moodle avisa de los permisos que las 4 funciones *podrían* usar y el rol no tiene: `course:update`, `course:viewhiddencourses`, `course:useremail`, `user:update` y `site:accessallgroups` | Nada: se dejaron fuera a propósito (escritura o más privacidad que la necesaria) |
-| El token se vio en una captura de la terminal | Pegué la captura entera con el `echo` del token | Borrar el token en *Manage tokens* y crear uno nuevo. Esa captura no se sube |
+| El token se vio en una captura de la terminal | Pegué la captura entera con el `echo` del token | Esa captura no se sube. Al ser un aula de laboratorio, decidí no renovar el token |
 
-Lección del último punto: un token que se ha visto se da por **quemado**, aunque aquí el riesgo era mínimo (aula solo en mi ordenador, solo lectura, datos inventados). En la herramienta real, revocar y crear un token nuevo debería ser rápido y estar documentado.
+Lección del último punto: aquí el riesgo era mínimo (aula solo en mi ordenador, solo lectura, datos inventados), así que lo dejé así. En un aula real, un token que se ha visto se da por **quemado**: hay que borrarlo en *Manage tokens* y crear otro, y la herramienta debería hacer ese cambio fácil.
 
 ## Resultado de la prueba
 
@@ -56,7 +56,7 @@ Esto confirma algo importante para el nivel 4: **el nombre de usuario no sirve p
 
 ## Evidencias
 
-- Respuesta de la prueba final descrita arriba (la captura no se sube porque mostraba el token).
+- TC-21 en [`capturas/`](../capturas/): respuesta de la prueba final, recortada para que no salga el token.
 - Recetas de llamadas en [`laboratorio/llamadas-api.md`](../laboratorio/llamadas-api.md).
 
 ## Ayuda de la IA en esta sesión
