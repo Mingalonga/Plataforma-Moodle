@@ -17,7 +17,11 @@ CAMPOS_USUARIO = ("username", "fullname", "email", "lastaccess", "suspended")
 
 
 class ErrorMoodle(Exception):
-    """Cualquier problema al hablar con un aula."""
+    """Cualquier problema al hablar con un aula. `codigo` es el código de error de Moodle, si lo hay."""
+
+    def __init__(self, mensaje, codigo=None):
+        super().__init__(mensaje)
+        self.codigo = codigo
 
 
 def leer_token(ruta):
@@ -61,7 +65,8 @@ def llamar(aula, funcion, parametros=None):
     except ValueError:
         raise ErrorMoodle("la respuesta no es JSON (¿es un Moodle?)") from None
     if isinstance(respuesta, dict) and "exception" in respuesta:
-        raise ErrorMoodle(f"Moodle responde: {respuesta.get('message')} ({respuesta.get('errorcode')})")
+        raise ErrorMoodle(f"Moodle responde: {respuesta.get('message')} ({respuesta.get('errorcode')})",
+                          codigo=respuesta.get("errorcode"))
     return respuesta
 
 
@@ -82,10 +87,17 @@ def obtener_cursos(aula):
     for curso in llamar(aula, "core_course_get_courses"):
         if curso.get("format") == "site":  # la portada de Moodle también cuenta como "curso"
             continue
-        matriculados = llamar(aula, "core_enrol_get_enrolled_users", {"courseid": curso["id"]})
+        try:
+            participantes = len(llamar(aula, "core_enrol_get_enrolled_users", {"courseid": curso["id"]}))
+        except ErrorMoodle as error:
+            if error.codigo != "errorcoursecontextnotvalid":
+                raise
+            # Curso oculto: el rol de solo lectura no tiene permiso para entrar en él.
+            # Se enseña el curso igualmente, avisando, en vez de romper toda el aula.
+            participantes = None
         cursos.append({
             "nombre_corto": curso.get("shortname"),
             "nombre": curso.get("fullname"),
-            "participantes": len(matriculados),
+            "participantes": participantes,
         })
     return sorted(cursos, key=lambda c: c["nombre_corto"] or "")

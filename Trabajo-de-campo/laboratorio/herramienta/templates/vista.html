@@ -43,7 +43,7 @@
   <tr>
     {% if loop.first %}<td rowspan="{{ cursos|length }}">{{ aula }}</td>{% endif %}
     <td class="usuario">{{ curso.nombre_corto }}</td><td>{{ curso.nombre }}</td>
-    <td class="numero">{{ curso.participantes }}</td>
+    <td class="numero">{% if curso.participantes is none %}<span class="estado cortado nunca">oculto: sin permiso</span>{% else %}{{ curso.participantes }}{% endif %}</td>
   </tr>
   {% else %}
   <tr><td>{{ aula }}</td><td colspan="3" class="nota">Sin cursos</td></tr>
