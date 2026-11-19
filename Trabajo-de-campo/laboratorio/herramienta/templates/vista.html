@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% block contenido %}
+<nav class="filtro" aria-label="Filtrar por aula">
+  <a href="{{ url_for('vista') }}" class="cortado{% if not elegida %} activo{% endif %}">Todas</a>
+  {% for nombre in nombres_aulas %}
+  <a href="{{ url_for('vista', aula=nombre) }}" class="cortado{% if elegida == nombre %} activo{% endif %}">{{ nombre }}</a>
+  {% endfor %}
+</nav>
+
 <div class="resumen cortado">
-  <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>Aulas consultadas</span></div>
+  <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>{{ 'Aula consultada' if elegida else 'Aulas consultadas' }}</span></div>
   <div><b>{{ filas|length }}</b><span>Personas</span></div>
   <div><b>{{ revisar|length }}</b><span>Para revisar</span></div>
 </div>
@@ -23,7 +30,30 @@
   </tbody>
 </table>
 
-<h2>Todas las personas</h2>
+<h2>Cursos</h2>
+<p class="nota">Participantes: todas las personas matriculadas (alumnado y profesorado).</p>
+<table>
+  <thead><tr><th>Aula</th><th>Código</th><th>Curso</th><th class="numero">Participantes</th></tr></thead>
+  {% for aula, cursos in cursos_por_aula.items() %}
+  <tbody>
+  {% if cursos is string %}
+  <tr><td>{{ aula }}</td><td colspan="3"><span class="estado cortado inactiva">{{ cursos }}</span></td></tr>
+  {% else %}
+  {% for curso in cursos %}
+  <tr>
+    {% if loop.first %}<td rowspan="{{ cursos|length }}">{{ aula }}</td>{% endif %}
+    <td class="usuario">{{ curso.nombre_corto }}</td><td>{{ curso.nombre }}</td>
+    <td class="numero">{{ curso.participantes }}</td>
+  </tr>
+  {% else %}
+  <tr><td>{{ aula }}</td><td colspan="3" class="nota">Sin cursos</td></tr>
+  {% endfor %}
+  {% endif %}
+  </tbody>
+  {% endfor %}
+</table>
+
+<h2>{{ 'Personas de ' ~ elegida if elegida else 'Todas las personas' }}</h2>
 <p class="nota">Agrupadas por correo, aunque tengan un usuario distinto en cada aula.</p>
 <table>
   <thead><tr><th>Persona</th><th>Correo</th><th>Aula</th><th>Usuario</th><th>Estado</th></tr></thead>
