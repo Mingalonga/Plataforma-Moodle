@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block contenido %}
+<div class="resumen cortado">
+  <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>Aulas consultadas</span></div>
+  <div><b>{{ filas|length }}</b><span>Personas</span></div>
+  <div><b>{{ revisar|length }}</b><span>Para revisar</span></div>
+</div>
+{% for fallo in fallos %}<p class="error cortado">Error en {{ fallo }}. La vista está incompleta.</p>{% endfor %}
+
+<h2>Para revisar</h2>
+<p class="nota">Más de {{ limite }} días sin entrar, suspendidas o sin estrenar.</p>
+<table>
+  <thead><tr><th>Persona</th><th>Aula</th><th>Usuario</th><th>Estado</th></tr></thead>
+  <tbody>
+  {% for estado, nombre, aula, usuario, texto in revisar %}
+  <tr><td>{{ nombre }}</td><td>{{ aula }}</td><td class="usuario">{{ usuario }}</td>
+      <td><span class="estado cortado {{ estado }}">{{ texto }}</span></td></tr>
+  {% endfor %}
+  {% for aula, usuario in sin_correo %}
+  <tr><td>—</td><td>{{ aula }}</td><td class="usuario">{{ usuario.username }}</td>
+      <td><span class="estado cortado suspendida">sin correo: no se puede cruzar</span></td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>Todas las personas</h2>
+<p class="nota">Agrupadas por correo, aunque tengan un usuario distinto en cada aula.</p>
+<table>
+  <thead><tr><th>Persona</th><th>Correo</th><th>Aula</th><th>Usuario</th><th>Estado</th></tr></thead>
+  {% for fila in filas %}
+  <tbody>
+  {% for cuenta in fila.cuentas %}
+  <tr>
+    {% if loop.first %}<td rowspan="{{ fila.cuentas|length }}">{{ fila.nombre }}</td>
+    <td rowspan="{{ fila.cuentas|length }}" class="correo">{{ fila.correo }}</td>{% endif %}
+    <td>{{ cuenta.aula }}</td><td class="usuario">{{ cuenta.usuario }}</td>
+    <td><span class="estado cortado {{ cuenta.estado }}">{{ cuenta.texto }}</span></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+  {% endfor %}
+</table>
+{% endblock %}

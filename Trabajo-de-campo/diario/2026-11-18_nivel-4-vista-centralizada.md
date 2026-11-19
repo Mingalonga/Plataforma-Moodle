@@ -19,7 +19,7 @@
 
 4. **Juntar por correo y clasificar** cada cuenta: suspendida, nunca ha entrado, inactiva (más de 90 días) o activa.
 
-El código y sus medidas de seguridad están en [`laboratorio/scripts/nivel4/`](../laboratorio/scripts/nivel4/).
+El código y sus medidas de seguridad están en [`laboratorio/herramienta/`](../laboratorio/herramienta/) (en su día, `scripts/nivel4/`).
 
 ## Cómo cumple las tres características
 
@@ -61,7 +61,7 @@ Dudas para el estudio:
 ## Evidencias
 
 - TC-22 en [`capturas/`](../capturas/): salida del programa con las dos aulas.
-- Código en [`laboratorio/scripts/nivel4/`](../laboratorio/scripts/nivel4/).
+- Código en [`laboratorio/herramienta/`](../laboratorio/herramienta/) (en su día, `scripts/nivel4/`).
 
 ## Ayuda de la IA en esta sesión
 

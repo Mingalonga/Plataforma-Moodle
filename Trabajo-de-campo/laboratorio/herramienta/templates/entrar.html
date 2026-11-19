@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contenido %}
+<form method="post" class="entrar cortado">
+  <h1>Entrar</h1>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <input type="hidden" name="csrf" value="{{ token_formulario() }}">
+  <label>Usuario <input name="usuario" autocomplete="username" required autofocus></label>
+  <label>Contraseña <input name="contrasena" type="password" autocomplete="current-password" required></label>
+  <button class="cortado">Entrar</button>
+</form>
+{% endblock %}
