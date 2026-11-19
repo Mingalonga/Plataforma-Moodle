@@ -1,6 +1,6 @@
 # La herramienta (niveles 4, 5 y 6)
 
-Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5). Desde la web se puede suspender y reactivar cuentas, con vista previa, confirmación y registro (nivel 6).
+Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5). Desde la web se puede abrir cada curso para ver su alumnado y profesorado, y suspender y reactivar cuentas, con vista previa, confirmación y registro (nivel 6).
 
 | Archivo | Qué hace |
 |---|---|

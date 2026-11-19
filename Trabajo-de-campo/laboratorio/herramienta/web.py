@@ -17,7 +17,7 @@ import cambios
 import cuentas_web
 from centralizar import CONFIGURACION, cargar_configuracion, consultar_aulas
 from informe import estado_cuenta, juntar_por_correo, para_revisar
-from moodle_api import ErrorMoodle, obtener_cursos
+from moodle_api import ROLES, ErrorMoodle, obtener_curso, obtener_cursos, obtener_participantes, obtener_usuarios
 
 ARCHIVO_CLAVE = Path("~/moodle-lab/clave-web.txt").expanduser()
 INTENTOS_MAXIMOS = 5          # fallos seguidos antes de bloquear
@@ -180,6 +180,62 @@ def buscar_aula(config, nombre):
     abort(404)
 
 
+# Filtro de la página de un curso: qué roles entran en cada pestaña.
+GRUPOS_ROL = {
+    "alumnado": {"student"},
+    "profesorado": {"editingteacher", "teacher"},
+}
+
+
+@app.route("/curso")
+@requiere_sesion
+def ver_curso():
+    """Las personas de un curso, con su rol, su estado y la acción. Solo lectura hasta pulsar una acción."""
+    config = cargar_configuracion(CONFIGURACION)
+    aula = buscar_aula(config, request.args.get("aula", ""))
+    id_curso = request.args.get("curso", "")
+    if not id_curso.isdigit():  # solo números: nada raro llega a Moodle
+        abort(404)
+    grupo = request.args.get("rol", "todos")
+    if grupo != "todos" and grupo not in GRUPOS_ROL:
+        abort(404)
+
+    limite, ahora = config["dias_inactividad"], time.time()
+    try:
+        curso = obtener_curso(aula, id_curso)
+        if curso is None:
+            abort(404)
+        participantes = obtener_participantes(aula, id_curso)
+        # El estado (suspendida, último acceso) y el correo salen de la lista de usuarios del aula.
+        usuarios = {u["id"]: u for u in obtener_usuarios(aula, config["ignorar"])}
+    except ErrorMoodle as error:
+        session["aviso"] = {"ok": False, "texto": f"No se pudo abrir el curso: {error}"}
+        return redirect(url_for("vista", aula=aula["nombre"]))
+
+    filas, cuenta = [], {"todos": 0, **{g: 0 for g in GRUPOS_ROL}}
+    for p in participantes:
+        usuario = usuarios.get(p["id"])
+        if usuario is None:  # cuentas técnicas o ignoradas
+            continue
+        roles = set(p["roles"])
+        cuenta["todos"] += 1
+        for g, incluidos in GRUPOS_ROL.items():
+            if roles & incluidos:
+                cuenta[g] += 1
+        if grupo != "todos" and not roles & GRUPOS_ROL[grupo]:
+            continue
+        estado, texto = estado_cuenta(usuario, limite, ahora)
+        filas.append({
+            "nombre": usuario["fullname"], "correo": usuario["email"], "usuario": usuario["username"],
+            "roles": ", ".join(ROLES.get(r, r) for r in p["roles"]) or "sin rol",
+            "estado": estado, "texto": texto, "suspendida": bool(usuario["suspended"]),
+        })
+    filas.sort(key=lambda f: f["nombre"] or "")
+    return render_template("curso.html", aula=aula["nombre"], curso=curso, filas=filas, grupo=grupo,
+                           cuenta=cuenta, con_cambios=bool(aula.get("token_cambios")),
+                           aviso=session.pop("aviso", None))
+
+
 @app.route("/cambio")
 @requiere_sesion
 def vista_previa():
@@ -192,9 +248,12 @@ def vista_previa():
     except (cambios.CambioNoPermitido, ErrorMoodle) as error:
         session["aviso"] = {"ok": False, "texto": f"No se puede preparar el cambio: {error}"}
         return redirect(url_for("vista", aula=aula["nombre"]))
+    curso = request.args.get("curso", "")
+    plan["curso"] = int(curso) if curso.isdigit() else None  # para volver al curso después
     plan["codigo"] = secrets.token_urlsafe(16)  # liga la confirmación a ESTA vista previa
     session["plan"] = plan
-    return render_template("cambio.html", plan=plan, efecto=cambios.ACCIONES[plan["accion"]]["efecto"])
+    return render_template("cambio.html", plan=plan, efecto=cambios.ACCIONES[plan["accion"]]["efecto"],
+                           volver=volver_de(plan))
 
 
 @app.route("/cambio/confirmar", methods=["POST"])
@@ -213,7 +272,14 @@ def confirmar_cambio():
                   plan["accion"], plan["username"], plan["aula"], session["usuario"], detalle)
     texto = f"{plan['nombre']} ({plan['username']}, {plan['aula']}): {detalle}"
     session["aviso"] = {"ok": ok, "texto": ("Hecho. " if ok else "No se ha hecho. ") + texto}
-    return redirect(url_for("vista", aula=plan["aula"]))
+    return redirect(volver_de(plan))
+
+
+def volver_de(plan):
+    """Después de un cambio (o al cancelarlo) se vuelve a donde se empezó: el curso o la vista."""
+    if plan.get("curso"):
+        return url_for("ver_curso", aula=plan["aula"], curso=plan["curso"])
+    return url_for("vista", aula=plan["aula"])
 
 
 @app.route("/registro")
