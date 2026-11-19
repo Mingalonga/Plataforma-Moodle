@@ -74,3 +74,18 @@ def obtener_usuarios(aula, ignorar):
         for u in respuesta.get("users", [])
         if u.get("username") not in ignorar
     ]
+
+
+def obtener_cursos(aula):
+    """Cursos de un aula (sin la portada del sitio) con su número de participantes."""
+    cursos = []
+    for curso in llamar(aula, "core_course_get_courses"):
+        if curso.get("format") == "site":  # la portada de Moodle también cuenta como "curso"
+            continue
+        matriculados = llamar(aula, "core_enrol_get_enrolled_users", {"courseid": curso["id"]})
+        cursos.append({
+            "nombre_corto": curso.get("shortname"),
+            "nombre": curso.get("fullname"),
+            "participantes": len(matriculados),
+        })
+    return sorted(cursos, key=lambda c: c["nombre_corto"] or "")

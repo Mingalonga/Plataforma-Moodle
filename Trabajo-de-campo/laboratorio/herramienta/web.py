@@ -13,6 +13,7 @@ from flask import Flask, abort, redirect, render_template, request, session, url
 import cuentas_web
 from centralizar import CONFIGURACION, cargar_configuracion, consultar_aulas
 from informe import estado_cuenta, juntar_por_correo, para_revisar
+from moodle_api import ErrorMoodle, obtener_cursos
 
 ARCHIVO_CLAVE = Path("~/moodle-lab/clave-web.txt").expanduser()
 INTENTOS_MAXIMOS = 5          # fallos seguidos antes de bloquear
@@ -121,8 +122,25 @@ def salir():
 def vista():
     config = cargar_configuracion(CONFIGURACION)
     limite, ahora = config["dias_inactividad"], time.time()
+    nombres_aulas = [aula["nombre"] for aula in config["aulas"]]
+
+    # Filtro por aula: solo se acepta un nombre que esté en aulas.json.
+    elegida = request.args.get("aula")
+    if elegida is not None and elegida not in nombres_aulas:
+        abort(404)
+    if elegida:
+        config["aulas"] = [aula for aula in config["aulas"] if aula["nombre"] == elegida]
+
     usuarios_por_aula, fallos_aulas = consultar_aulas(config)
     personas, sin_correo = juntar_por_correo(usuarios_por_aula)
+
+    cursos_por_aula = {}  # nombre del aula -> lista de cursos (o texto del error)
+    for aula in config["aulas"]:
+        if aula["nombre"] in usuarios_por_aula:
+            try:
+                cursos_por_aula[aula["nombre"]] = obtener_cursos(aula)
+            except ErrorMoodle as error:
+                cursos_por_aula[aula["nombre"]] = f"No se pudieron leer los cursos: {error}"
 
     filas = []
     for correo, persona in sorted(personas.items(), key=lambda par: par[1]["nombre"] or ""):
@@ -141,6 +159,9 @@ def vista():
         aulas_ok=len(usuarios_por_aula),
         aulas_total=len(config["aulas"]),
         limite=limite,
+        nombres_aulas=nombres_aulas,
+        elegida=elegida,
+        cursos_por_aula=cursos_por_aula,
     )
 
 
