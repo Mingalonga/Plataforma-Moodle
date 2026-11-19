@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Pieza 5: la web. Solo enseña: los datos los traen moodle_api.py e informe.py."""
+"""Pieza 5: la web. Enseña la vista centralizada y pide confirmación para cada cambio.
+
+No habla con Moodle directamente: lo hacen moodle_api.py, informe.py y cambios.py.
+"""
 import functools
 import logging
 import os
@@ -10,6 +13,7 @@ from pathlib import Path
 
 from flask import Flask, abort, redirect, render_template, request, session, url_for
 
+import cambios
 import cuentas_web
 from centralizar import CONFIGURACION, cargar_configuracion, consultar_aulas
 from informe import estado_cuenta, juntar_por_correo, para_revisar
@@ -147,7 +151,8 @@ def vista():
         cuentas = []
         for aula, usuario in persona["cuentas"]:
             estado, texto = estado_cuenta(usuario, limite, ahora)
-            cuentas.append({"aula": aula, "usuario": usuario["username"], "estado": estado, "texto": texto})
+            cuentas.append({"aula": aula, "usuario": usuario["username"], "estado": estado, "texto": texto,
+                            "suspendida": bool(usuario["suspended"])})
         filas.append({"nombre": persona["nombre"], "correo": correo, "cuentas": cuentas})
 
     return render_template(
@@ -162,7 +167,59 @@ def vista():
         nombres_aulas=nombres_aulas,
         elegida=elegida,
         cursos_por_aula=cursos_por_aula,
+        aulas_con_cambios={a["nombre"] for a in config["aulas"] if a.get("token_cambios")},
+        aviso=session.pop("aviso", None),
     )
+
+
+
+def buscar_aula(config, nombre):
+    for aula in config["aulas"]:
+        if aula["nombre"] == nombre:
+            return aula
+    abort(404)
+
+
+@app.route("/cambio")
+@requiere_sesion
+def vista_previa():
+    """Paso 1 de un cambio: enseña qué va a pasar. No cambia nada."""
+    config = cargar_configuracion(CONFIGURACION)
+    aula = buscar_aula(config, request.args.get("aula", ""))
+    try:
+        plan = cambios.preparar(aula, request.args.get("usuario", ""), request.args.get("accion", ""),
+                                config["ignorar"])
+    except (cambios.CambioNoPermitido, ErrorMoodle) as error:
+        session["aviso"] = {"ok": False, "texto": f"No se puede preparar el cambio: {error}"}
+        return redirect(url_for("vista", aula=aula["nombre"]))
+    plan["codigo"] = secrets.token_urlsafe(16)  # liga la confirmación a ESTA vista previa
+    session["plan"] = plan
+    return render_template("cambio.html", plan=plan, efecto=cambios.ACCIONES[plan["accion"]]["efecto"])
+
+
+@app.route("/cambio/confirmar", methods=["POST"])
+@requiere_sesion
+def confirmar_cambio():
+    """Paso 2 de un cambio: solo se ejecuta lo que se vio en la vista previa, y una sola vez."""
+    comprobar_token_formulario()
+    plan = session.pop("plan", None)
+    if not plan or not secrets.compare_digest(request.form.get("codigo", ""), plan["codigo"]):
+        session["aviso"] = {"ok": False, "texto": "La vista previa ha caducado o ya se usó. Vuelve a empezar."}
+        return redirect(url_for("vista"))
+    config = cargar_configuracion(CONFIGURACION)
+    aula = buscar_aula(config, plan["aula"])
+    ok, detalle = cambios.ejecutar(aula, plan, session["usuario"])
+    registro.info("CAMBIO %s: %s %s en %s por %s (%s)", "correcto" if ok else "ERROR",
+                  plan["accion"], plan["username"], plan["aula"], session["usuario"], detalle)
+    texto = f"{plan['nombre']} ({plan['username']}, {plan['aula']}): {detalle}"
+    session["aviso"] = {"ok": ok, "texto": ("Hecho. " if ok else "No se ha hecho. ") + texto}
+    return redirect(url_for("vista", aula=plan["aula"]))
+
+
+@app.route("/registro")
+@requiere_sesion
+def ver_registro():
+    return render_template("registro.html", lineas=cambios.leer_registro())
 
 
 if __name__ == "__main__":

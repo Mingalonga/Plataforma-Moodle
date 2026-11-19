@@ -1,19 +1,25 @@
-"""Pieza 1: hablar con la API de Moodle (servicios web REST), solo lectura."""
+"""Pieza 1: hablar con la API de Moodle (servicios web REST).
+
+Dos llaves separadas: el token de lectura solo puede leer y el de cambios solo puede cambiar.
+"""
 import json
 import stat
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
-# Lista blanca: la herramienta solo puede llamar a estas funciones de lectura.
-FUNCIONES_PERMITIDAS = {
+# Listas blancas: con cada token solo se puede llamar a sus funciones.
+FUNCIONES_LECTURA = {
     "core_webservice_get_site_info",
     "core_course_get_courses",
     "core_enrol_get_enrolled_users",
     "core_user_get_users",
 }
+FUNCIONES_CAMBIOS = {
+    "core_user_update_users",
+}
 TIEMPO_MAXIMO = 10  # segundos de espera antes de dar un aula por caída
-CAMPOS_USUARIO = ("username", "fullname", "email", "lastaccess", "suspended")
+CAMPOS_USUARIO = ("id", "username", "fullname", "email", "lastaccess", "suspended")
 
 
 class ErrorMoodle(Exception):
@@ -47,12 +53,19 @@ def comprobar_direccion(url):
     raise ErrorMoodle(f"{url}: hay que usar https (http solo vale en localhost)")
 
 
-def llamar(aula, funcion, parametros=None):
-    """Llama a una función de la API de un aula y devuelve la respuesta ya leída."""
-    if funcion not in FUNCIONES_PERMITIDAS:
-        raise ErrorMoodle(f"la función {funcion} no está en la lista blanca")
+def llamar(aula, funcion, parametros=None, para_cambios=False):
+    """Llama a una función de la API de un aula y devuelve la respuesta ya leída.
+
+    Con para_cambios=True usa el token de cambios y solo admite FUNCIONES_CAMBIOS;
+    si no, el de lectura y solo FUNCIONES_LECTURA. Nunca se mezclan.
+    """
+    permitidas, clave_token = (FUNCIONES_CAMBIOS, "token_cambios") if para_cambios else (FUNCIONES_LECTURA, "token")
+    if funcion not in permitidas:
+        raise ErrorMoodle(f"la función {funcion} no está en la lista blanca de este token")
+    if not aula.get(clave_token):
+        raise ErrorMoodle(f"el aula no tiene configurado {clave_token} en aulas.json")
     comprobar_direccion(aula["url"])
-    datos = {"wstoken": leer_token(aula["token"]), "wsfunction": funcion, "moodlewsrestformat": "json"}
+    datos = {"wstoken": leer_token(aula[clave_token]), "wsfunction": funcion, "moodlewsrestformat": "json"}
     datos.update(parametros or {})
     direccion = aula["url"].rstrip("/") + "/webservice/rest/server.php"
     cuerpo = urllib.parse.urlencode(datos).encode()
@@ -101,3 +114,24 @@ def obtener_cursos(aula):
             "participantes": participantes,
         })
     return sorted(cursos, key=lambda c: c["nombre_corto"] or "")
+
+
+def obtener_usuario(aula, username):
+    """Un usuario concreto, leído en el momento (con el token de lectura). None si no existe."""
+    respuesta = llamar(aula, "core_user_get_users",
+                       {"criteria[0][key]": "username", "criteria[0][value]": username})
+    usuarios = respuesta.get("users", [])
+    if len(usuarios) != 1:
+        return None
+    return {campo: usuarios[0].get(campo) for campo in CAMPOS_USUARIO}
+
+
+def cambiar_suspension(aula, id_usuario, suspender):
+    """Suspende (True) o reactiva (False) una cuenta. Solo se envía el campo `suspended`."""
+    respuesta = llamar(aula, "core_user_update_users", {
+        "users[0][id]": int(id_usuario),
+        "users[0][suspended]": 1 if suspender else 0,
+    }, para_cambios=True)
+    avisos = respuesta.get("warnings") if isinstance(respuesta, dict) else None
+    if avisos:
+        raise ErrorMoodle("Moodle avisa: " + "; ".join(a.get("message", "?") for a in avisos))

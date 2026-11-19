@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Registro de cambios</h2>
+<p class="nota">Los 100 últimos, del más reciente al más antiguo. El registro solo crece: no se puede editar desde aquí.</p>
+<table>
+  <thead><tr><th>Fecha</th><th>Quién</th><th>Aula</th><th>Usuario</th><th>Acción</th><th>Resultado</th></tr></thead>
+  <tbody>
+  {% for l in lineas %}
+  <tr><td class="usuario">{{ l.fecha }}</td><td>{{ l.quien }}</td><td>{{ l.aula }}</td><td class="usuario">{{ l.usuario }}</td>
+      <td>{{ l.accion }}</td>
+      <td><span class="estado cortado {{ 'activa' if l.resultado == 'correcto' else 'inactiva' }}">{{ l.resultado }}</span> {{ l.detalle }}</td></tr>
+  {% else %}
+  <tr><td colspan="6" class="nota">Todavía no hay cambios.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

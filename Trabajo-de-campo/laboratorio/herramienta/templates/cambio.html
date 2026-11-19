@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block contenido %}
+<div class="previa cortado">
+  <h1>Vista previa del cambio</h1>
+  <p class="nota">Todavía no ha cambiado nada. Revisa y confirma.</p>
+  <dl>
+    <dt>Acción</dt><dd><strong class="accion-texto {{ plan.accion }}">{{ plan.accion|upper }}</strong></dd>
+    <dt>Persona</dt><dd>{{ plan.nombre }} <span class="usuario">({{ plan.username }})</span></dd>
+    <dt>Aula</dt><dd>{{ plan.aula }}</dd>
+    <dt>Estado</dt><dd>{{ plan.antes }} → <strong>{{ plan.despues }}</strong></dd>
+    <dt>Qué supone</dt><dd>{{ efecto }}</dd>
+  </dl>
+  <form method="post" action="{{ url_for('confirmar_cambio') }}">
+    <input type="hidden" name="csrf" value="{{ token_formulario() }}">
+    <input type="hidden" name="codigo" value="{{ plan.codigo }}">
+    <button class="cortado">Confirmar: {{ plan.accion }}</button>
+    <a class="cancelar" href="{{ url_for('vista', aula=plan.aula) }}">Cancelar</a>
+  </form>
+  <p class="nota">El cambio quedará apuntado en el registro con tu usuario, la fecha y el resultado.</p>
+</div>
+{% endblock %}

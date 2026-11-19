@@ -19,6 +19,8 @@ def cargar_configuracion(ruta):
             for clave in ("nombre", "url", "token"):
                 if not isinstance(aula.get(clave), str):
                     raise KeyError(clave)
+            if "token_cambios" in aula and not isinstance(aula["token_cambios"], str):
+                raise KeyError("token_cambios")
         if not isinstance(config.get("dias_inactividad"), int):
             raise KeyError("dias_inactividad")
         config["ignorar"] = set(config.get("ignorar", []))
