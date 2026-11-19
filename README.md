@@ -11,7 +11,7 @@ Proyecto de análisis, diseño, viabilidad, prototipo y validación de una plata
 | 1 | Descubrimiento | **Entregada** a la tutora (paquete 0.8, resumen v5). Reorientada tras su respuesta (paquete 0.9, cambio de alcance registrado); hito abierto |
 | 2 | Requisitos | **Borrador completo** (paquete 0.2, enfoque de gestión interna). Iniciada el 2026-11-03 por decisión del alumno, sobre supuestos explícitos |
 | 3–8 | Alternativas, Diseño, Viabilidad, Prototipo, Validación, Cierre | No iniciadas |
-| — | Trabajo de campo (petición de la tutora, 2026-11-12) | **En curso.** Niveles 1 a 4 de 7 hechos: dos aulas Moodle en local con datos ficticios, acceso por servicios web y un programa que junta a los alumnos de las dos aulas |
+| — | Trabajo de campo (petición de la tutora, 2026-11-12) | **En curso.** Niveles 1 a 5 de 7 hechos: dos aulas Moodle en local con datos ficticios, acceso por servicios web y una web con inicio de sesión que junta a los alumnos de las dos aulas |
 
 ## Dónde está cada cosa
 

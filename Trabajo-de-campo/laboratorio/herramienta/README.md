@@ -1,18 +1,26 @@
-# Nivel 4: vista centralizada por la API
+# La herramienta (niveles 4 y 5)
 
-Programa en Python (solo biblioteca estándar) que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar.
+Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5).
 
 | Archivo | Qué hace |
 |---|---|
 | `aulas.json` | Configuración: aulas (nombre, dirección, **ruta** del archivo del token), cuentas a ignorar y días de inactividad. No contiene secretos. |
 | `moodle_api.py` | Lo único que habla con Moodle: lee el token, comprueba la dirección y llama a la API por POST. |
 | `informe.py` | Junta por correo y clasifica cada cuenta (activa, inactiva, suspendida, nunca ha entrado). No usa la red. |
-| `centralizar.py` | Programa principal: une las piezas y escribe el informe en pantalla. |
+| `centralizar.py` | Programa de terminal: une las piezas y escribe el informe en pantalla. |
+| `cuentas_web.py` | Cuentas de la web: guarda solo la huella (hash) de cada contraseña, en `~/moodle-lab/usuarios-web.json` con permisos 600. |
+| `crear_usuario.py` | Crea o cambia una cuenta de la web (mínimo 12 caracteres). |
+| `web.py` | La web (Flask): inicio de sesión y vista centralizada. Solo enseña; los datos vienen de las piezas anteriores. |
+| `templates/`, `static/` | HTML (Jinja), estilo y fuentes. El logo (`static/logo.png`) no se publica: hay que copiarlo en local. |
+| `requirements.txt` | Versiones exactas de Flask y sus dependencias. |
 
-Uso, con los cuatro archivos en la misma carpeta:
+Uso:
 
 ```bash
-python3 centralizar.py
+python3 centralizar.py                      # informe en la terminal (sin dependencias)
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python crear_usuario.py           # una vez
+.venv/bin/python web.py                     # http://127.0.0.1:5000
 ```
 
 ## Medidas de seguridad
@@ -26,4 +34,15 @@ python3 centralizar.py
 7. Tiempo máximo de 10 s por aula; si un aula falla, el informe sigue y se marca como INCOMPLETO.
 8. Sin dependencias externas.
 
-Pendiente para un entorno real: guardar los tokens cifrados o en un gestor de secretos, y decidir dónde se ejecuta y quién puede ver el informe, que contiene datos personales.
+### Además, en la web
+
+1. Contraseñas guardadas como huella (scrypt), nunca en claro, y comparación de igual duración exista o no el usuario.
+2. Mismo mensaje de error si falla el usuario o la contraseña; 5 intentos fallidos bloquean 5 minutos.
+3. Sesión en cookie firmada con una clave aleatoria (`~/moodle-lab/clave-web.txt`, 600), `HttpOnly`, `SameSite=Strict`, caduca a los 30 minutos y se renueva al entrar.
+4. Token anti-CSRF en todos los formularios (también en «Salir»).
+5. Cabeceras: `Content-Security-Policy` (nada de fuera, ni dentro de otra web), `nosniff`, `no-referrer` y `no-store` (las páginas con datos personales no se guardan).
+6. Jinja escapa todos los datos: un nombre con HTML se muestra como texto.
+7. Solo escucha en `127.0.0.1`, sin modo depuración. Registro de entradas y salidas en la terminal.
+8. Fuentes incluidas en la herramienta (licencia OFL), sin cargar nada de Google ni de otros servidores.
+
+Pendiente para un entorno real: HTTPS (y `SESSION_COOKIE_SECURE=True`), un servidor de verdad en vez del de desarrollo de Flask, guardar los tokens cifrados o en un gestor de secretos, que el bloqueo de intentos no se pierda al reiniciar, entrar con Microsoft 365 (nivel 7) y decidir dónde se ejecuta y quién puede ver la vista, que contiene datos personales.
