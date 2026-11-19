@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block contenido %}
+<a class="volver" href="{{ url_for('vista', aula=aula) }}">← Volver a {{ aula }}</a>
+<h2>{{ curso.nombre }}</h2>
+<p class="nota">{{ aula }} · <span class="usuario">{{ curso.nombre_corto }}</span> · {{ cuenta.todos }} personas matriculadas</p>
+
+{% if aviso %}<p class="aviso cortado {{ 'bien' if aviso.ok else 'mal' }}">{{ aviso.texto }}</p>{% endif %}
+
+<nav class="filtro" aria-label="Filtrar por rol">
+  <a href="{{ url_for('ver_curso', aula=aula, curso=curso.id) }}" class="cortado{% if grupo == 'todos' %} activo{% endif %}">Todos ({{ cuenta.todos }})</a>
+  <a href="{{ url_for('ver_curso', aula=aula, curso=curso.id, rol='alumnado') }}" class="cortado{% if grupo == 'alumnado' %} activo{% endif %}">Alumnado ({{ cuenta.alumnado }})</a>
+  <a href="{{ url_for('ver_curso', aula=aula, curso=curso.id, rol='profesorado') }}" class="cortado{% if grupo == 'profesorado' %} activo{% endif %}">Profesorado ({{ cuenta.profesorado }})</a>
+</nav>
+
+<table>
+  <thead><tr><th>Persona</th><th>Correo</th><th>Usuario</th><th>Rol en el curso</th><th>Estado</th><th>Acción</th></tr></thead>
+  <tbody>
+  {% for fila in filas %}
+  <tr>
+    <td>{{ fila.nombre }}</td><td class="correo">{{ fila.correo }}</td><td class="usuario">{{ fila.usuario }}</td>
+    <td>{{ fila.roles }}</td>
+    <td><span class="estado cortado {{ fila.estado }}">{{ fila.texto }}</span></td>
+    <td>{% if con_cambios %}
+      {% set accion = 'reactivar' if fila.suspendida else 'suspender' %}
+      <a class="accion {{ accion }}" href="{{ url_for('vista_previa', aula=aula, usuario=fila.usuario, accion=accion, curso=curso.id) }}">{{ accion|capitalize }}</a>
+    {% endif %}</td>
+  </tr>
+  {% else %}
+  <tr><td colspan="6" class="nota">Nadie con este rol en el curso.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p class="nota">Suspender una cuenta la bloquea en toda el aula, no solo en este curso.</p>
+{% endblock %}

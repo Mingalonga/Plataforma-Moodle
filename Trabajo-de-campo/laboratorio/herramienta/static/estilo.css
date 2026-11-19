@@ -131,3 +131,5 @@ a.volver { display: inline-block; margin-bottom: 14px; color: var(--gris); font:
            letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
 a.volver:hover { color: var(--azul); }
 .previa .nota { margin-left: 0; }
+a.curso { color: var(--marino); text-decoration: none; border-bottom: 1px solid var(--azul); }
+a.curso:hover { color: var(--azul); }

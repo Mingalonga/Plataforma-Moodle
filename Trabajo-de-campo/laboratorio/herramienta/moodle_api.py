@@ -109,11 +109,43 @@ def obtener_cursos(aula):
             # Se enseña el curso igualmente, avisando, en vez de romper toda el aula.
             participantes = None
         cursos.append({
+            "id": curso["id"],
             "nombre_corto": curso.get("shortname"),
             "nombre": curso.get("fullname"),
             "participantes": participantes,
         })
     return sorted(cursos, key=lambda c: c["nombre_corto"] or "")
+
+
+# Nombres de los roles estándar de Moodle. Un rol que no esté aquí se enseña con su nombre corto.
+ROLES = {
+    "student": "Alumno/a",
+    "editingteacher": "Profesor/a",
+    "teacher": "Profesor/a sin edición",
+    "manager": "Gestor/a",
+}
+
+
+def obtener_curso(aula, id_curso):
+    """Un curso concreto (id, código y nombre). None si no existe en el aula."""
+    respuesta = llamar(aula, "core_course_get_courses", {"options[ids][0]": int(id_curso)})
+    for curso in respuesta:
+        if curso.get("id") == int(id_curso) and curso.get("format") != "site":
+            return {"id": curso["id"], "nombre_corto": curso.get("shortname"), "nombre": curso.get("fullname")}
+    return None
+
+
+def obtener_participantes(aula, id_curso):
+    """Personas matriculadas en un curso con sus roles en ese curso (solo los campos necesarios)."""
+    return [
+        {
+            "id": u.get("id"),
+            "username": u.get("username"),
+            "fullname": u.get("fullname"),
+            "roles": [r.get("shortname") for r in u.get("roles", [])],
+        }
+        for u in llamar(aula, "core_enrol_get_enrolled_users", {"courseid": int(id_curso)})
+    ]
 
 
 def obtener_usuario(aula, username):

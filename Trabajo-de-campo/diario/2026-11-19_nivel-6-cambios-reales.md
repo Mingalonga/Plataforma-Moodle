@@ -21,6 +21,8 @@
 3. En la web: una columna **Acción** en la tabla de personas (Suspender o Reactivar) y una página **Registro de cambios**, con botón para volver a la vista.
 4. **Prueba completa en el aula 1:** suspender a Bruno Díaz, comprobarlo en la lista de usuarios de Moodle (sale en gris, TC-29), reactivarlo y revisar el registro.
 
+5. **Página de cada curso** (añadida al usarla): en la tabla de Cursos, cada curso es un enlace. Al pulsarlo salen sus personas con el rol en el curso, el estado y la acción, y se puede filtrar por **Todos, Alumnado y Profesorado** (TC-31, TC-32). No hizo falta ningún permiso nuevo en Moodle, porque `core_enrol_get_enrolled_users` ya devuelve el rol de cada persona. El número del curso solo se acepta si es un número y existe en esa aula. La página avisa de que suspender bloquea la cuenta en toda el aula, no solo en ese curso.
+
 ## Seguridad de los cambios
 
 | Riesgo | Medida |
@@ -60,10 +62,11 @@
 - TC-28: tabla del aula 1 con Bruno Díaz ya suspendido y el botón Reactivar.
 - TC-29: lista de usuarios del propio Moodle, con Bruno Díaz en gris (suspendido).
 - TC-30: registro de cambios con la suspensión y la reactivación, las dos correctas.
+- TC-31 y TC-32: página de un curso (Atención al cliente y Excel básico) con sus personas, su rol y las pestañas Todos, Alumnado y Profesorado.
 
 ## Ayuda de la IA en esta sesión
 
-Claude propuso separar la identidad de cambios y me guió paso a paso para crearla en las dos aulas. También escribió `cambios.py` y las páginas nuevas y los probó antes contra un Moodle simulado. Yo creé los usuarios, roles, servicios y tokens en las dos aulas, bajé el código, hice la prueba real y pedí el botón de volver. Este borrador lo ha redactado Claude a partir de la sesión y yo lo he revisado.
+Claude propuso separar la identidad de cambios y me guió paso a paso para crearla en las dos aulas. También escribió `cambios.py` y las páginas nuevas y los probó antes contra un Moodle simulado. Yo creé los usuarios, roles, servicios y tokens en las dos aulas, bajé el código, hice la prueba real y pedí el botón de volver y la página de cada curso. Este borrador lo ha redactado Claude a partir de la sesión y yo lo he revisado.
 
 ## Siguiente paso
 

@@ -33,7 +33,7 @@
 </table>
 
 <h2>Cursos</h2>
-<p class="nota">Participantes: todas las personas matriculadas (alumnado y profesorado).</p>
+<p class="nota">Participantes: todas las personas matriculadas (alumnado y profesorado). Pulsa un curso para ver quién está.</p>
 <table>
   <thead><tr><th>Aula</th><th>Código</th><th>Curso</th><th class="numero">Participantes</th></tr></thead>
   {% for aula, cursos in cursos_por_aula.items() %}
@@ -44,7 +44,8 @@
   {% for curso in cursos %}
   <tr>
     {% if loop.first %}<td rowspan="{{ cursos|length }}">{{ aula }}</td>{% endif %}
-    <td class="usuario">{{ curso.nombre_corto }}</td><td>{{ curso.nombre }}</td>
+    <td class="usuario">{{ curso.nombre_corto }}</td>
+    <td>{% if curso.participantes is none %}{{ curso.nombre }}{% else %}<a class="curso" href="{{ url_for('ver_curso', aula=aula, curso=curso.id) }}">{{ curso.nombre }}</a>{% endif %}</td>
     <td class="numero">{% if curso.participantes is none %}<span class="estado cortado nunca">oculto: sin permiso</span>{% else %}{{ curso.participantes }}{% endif %}</td>
   </tr>
   {% else %}
