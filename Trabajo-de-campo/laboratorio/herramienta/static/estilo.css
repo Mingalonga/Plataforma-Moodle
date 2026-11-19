@@ -127,4 +127,7 @@ a.accion.reactivar { color: var(--azul); }
 .accion-texto.reactivar { color: var(--azul); }
 .previa form { display: flex; align-items: center; gap: 18px; }
 .previa .cancelar { color: var(--gris); font-weight: 600; }
+a.volver { display: inline-block; margin-bottom: 14px; color: var(--gris); font: 600 13px/1 var(--rotulo);
+           letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
+a.volver:hover { color: var(--azul); }
 .previa .nota { margin-left: 0; }
