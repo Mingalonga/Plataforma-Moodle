@@ -26,6 +26,8 @@
 
 ## Rol final de solo lectura (7 capacidades)
 
+> **Actualización 19/11:** se añadió una octava, `moodle/course:viewhiddencourses`, porque un curso oculto hacía fallar la lista de cursos entera (ver el diario del nivel 5).
+
 | Capacidad | Por qué |
 |---|---|
 | `webservice/rest:use` | Usar REST |
