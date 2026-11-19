@@ -1,16 +1,17 @@
-# La herramienta (niveles 4 y 5)
+# La herramienta (niveles 4, 5 y 6)
 
-Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5).
+Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5). Desde la web se puede suspender y reactivar cuentas, con vista previa, confirmación y registro (nivel 6).
 
 | Archivo | Qué hace |
 |---|---|
-| `aulas.json` | Configuración: aulas (nombre, dirección, **ruta** del archivo del token), cuentas a ignorar y días de inactividad. No contiene secretos. |
+| `aulas.json` | Configuración: aulas (nombre, dirección, **rutas** de los archivos de los tokens de lectura y de cambios), cuentas a ignorar y días de inactividad. No contiene secretos. |
 | `moodle_api.py` | Lo único que habla con Moodle: lee el token, comprueba la dirección y llama a la API por POST. |
 | `informe.py` | Junta por correo y clasifica cada cuenta (activa, inactiva, suspendida, nunca ha entrado). No usa la red. |
 | `centralizar.py` | Programa de terminal: une las piezas y escribe el informe en pantalla. |
 | `cuentas_web.py` | Cuentas de la web: guarda solo la huella (hash) de cada contraseña, en `~/moodle-lab/usuarios-web.json` con permisos 600. |
 | `crear_usuario.py` | Crea o cambia una cuenta de la web (mínimo 12 caracteres). |
-| `web.py` | La web (Flask): inicio de sesión y vista centralizada. Solo enseña; los datos vienen de las piezas anteriores. |
+| `cambios.py` | Cambios reales (nivel 6): prepara el plan, lo ejecuta, comprueba el resultado en Moodle y lo apunta en `~/moodle-lab/registro-cambios.jsonl`. |
+| `web.py` | La web (Flask): inicio de sesión, vista centralizada, vista previa y confirmación de cambios y registro. Los datos y los cambios vienen de las piezas anteriores. |
 | `templates/`, `static/` | HTML (Jinja), estilo y fuentes. El logo (`static/logo.png`) no se publica: hay que copiarlo en local. |
 | `requirements.txt` | Versiones exactas de Flask y sus dependencias. |
 
@@ -45,4 +46,14 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 7. Solo escucha en `127.0.0.1`, sin modo depuración. Registro de entradas y salidas en la terminal.
 8. Fuentes incluidas en la herramienta (licencia OFL), sin cargar nada de Google ni de otros servidores.
 
-Pendiente para un entorno real: HTTPS (y `SESSION_COOKIE_SECURE=True`), un servidor de verdad en vez del de desarrollo de Flask, guardar los tokens cifrados o en un gestor de secretos, que el bloqueo de intentos no se pierda al reiniciar, entrar con Microsoft 365 (nivel 7) y decidir dónde se ejecuta y quién puede ver la vista, que contiene datos personales.
+### Además, en los cambios (nivel 6)
+
+1. **Dos identidades por aula.** La lectura usa `ws_lectura`; los cambios, un usuario aparte (`ws_cambios`) con un rol de solo 2 capacidades (`webservice/rest:use` y `moodle/user:update`), un servicio con una única función (`core_user_update_users`) y su propio token. Si se filtra el token de lectura, no se puede cambiar nada.
+2. **Dos cerrojos:** Moodle solo deja usar esa función con ese token y, además, el código tiene su propia lista blanca de cambios y nunca mezcla los dos tokens.
+3. Solo se envían dos campos (`id` y `suspended`): la petición no puede tocar nada más de la cuenta.
+4. **Vista previa** obligatoria: nada cambia hasta confirmar. La confirmación es un formulario POST con token CSRF y un código de un solo uso, así que no se puede repetir ni provocar con un enlace.
+5. Antes de cambiar se vuelve a leer la cuenta (por si ha cambiado entre la vista previa y la confirmación) y después se vuelve a leer para **comprobar** que Moodle lo ha aplicado.
+6. Se niega a tocar las cuentas técnicas y del administrador, y a hacer cambios que no cambian nada.
+7. **Registro** de cada intento, salga bien o mal (fecha, quién, aula, usuario, acción, resultado), en un archivo que solo crece y con permisos 600.
+
+Pendiente para un entorno real: HTTPS (y `SESSION_COOKIE_SECURE=True`), un servidor de verdad en vez del de desarrollo de Flask, guardar los tokens cifrados o en un gestor de secretos, que el bloqueo de intentos no se pierda al reiniciar, restringir el token de cambios por IP y con fecha de caducidad, que solo algunas personas puedan hacer cambios (ahora puede cualquiera que entre en la web; es el nivel 7), entrar con Microsoft 365 (nivel 7) y decidir dónde se ejecuta y quién puede ver la vista, que contiene datos personales.

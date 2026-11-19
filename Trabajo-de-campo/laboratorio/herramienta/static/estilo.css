@@ -99,3 +99,35 @@ td.correo, td.usuario { font-variant-numeric: tabular-nums; color: var(--gris); 
 .filtro a.activo { color: var(--blanco); background: var(--azul); }
 .filtro a:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
 th.numero, td.numero { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Menú de la cabecera */
+header .menu { display: flex; gap: 18px; margin-left: 28px; }
+header .menu a { font: 600 14px/1 var(--rotulo); letter-spacing: .05em; text-transform: uppercase;
+  color: var(--marino); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; }
+header .menu a:hover { border-bottom-color: var(--azul); }
+
+/* Avisos tras un cambio */
+.aviso { padding: 10px 14px; font-weight: 600; }
+.aviso.bien { color: var(--marino); background: #e6eafa; border-left: 6px solid var(--azul); }
+.aviso.mal { color: var(--blanco); background: var(--alerta); }
+
+/* Botones de acción en la tabla: texto con subrayado grueso, no cajas */
+a.accion { font: 600 13px/1 var(--rotulo); letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+  padding-bottom: 2px; border-bottom: 2px solid currentColor; }
+a.accion.suspender { color: var(--aviso); }
+a.accion.reactivar { color: var(--azul); }
+
+/* Vista previa de un cambio */
+.previa { max-width: 620px; margin: 30px auto; padding: 28px 32px; background: var(--fondo-suave); border-left: 6px solid var(--aviso); }
+.previa h1 { margin: 0 0 4px; font: 700 24px/1.1 var(--rotulo); color: var(--marino); text-transform: uppercase; }
+.previa dl { display: grid; grid-template-columns: 130px 1fr; gap: 10px 16px; margin: 20px 0 24px; }
+.previa dt { font: 600 12px/1.6 var(--rotulo); letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
+.previa dd { margin: 0; }
+.accion-texto.suspender { color: var(--aviso); }
+.accion-texto.reactivar { color: var(--azul); }
+.previa form { display: flex; align-items: center; gap: 18px; }
+.previa .cancelar { color: var(--gris); font-weight: 600; }
+a.volver { display: inline-block; margin-bottom: 14px; color: var(--gris); font: 600 13px/1 var(--rotulo);
+           letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
+a.volver:hover { color: var(--azul); }
+.previa .nota { margin-left: 0; }

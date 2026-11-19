@@ -11,6 +11,7 @@
     <img src="{{ url_for('static', filename='logo.png') }}" alt="ATU">
     <span class="titulo">Gestión centralizada de aulas</span>
     {% if session.usuario %}
+    <nav class="menu"><a href="{{ url_for('vista') }}">Vista</a><a href="{{ url_for('ver_registro') }}">Registro de cambios</a></nav>
     <form method="post" action="{{ url_for('salir') }}">
       <input type="hidden" name="csrf" value="{{ token_formulario() }}">
       <span>{{ session.usuario }}</span>

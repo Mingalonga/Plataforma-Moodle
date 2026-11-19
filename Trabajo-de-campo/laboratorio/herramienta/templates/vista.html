@@ -7,6 +7,8 @@
   {% endfor %}
 </nav>
 
+{% if aviso %}<p class="aviso cortado {{ 'bien' if aviso.ok else 'mal' }}">{{ aviso.texto }}</p>{% endif %}
+
 <div class="resumen cortado">
   <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>{{ 'Aula consultada' if elegida else 'Aulas consultadas' }}</span></div>
   <div><b>{{ filas|length }}</b><span>Personas</span></div>
@@ -56,7 +58,7 @@
 <h2>{{ 'Personas de ' ~ elegida if elegida else 'Todas las personas' }}</h2>
 <p class="nota">Agrupadas por correo, aunque tengan un usuario distinto en cada aula.</p>
 <table>
-  <thead><tr><th>Persona</th><th>Correo</th><th>Aula</th><th>Usuario</th><th>Estado</th></tr></thead>
+  <thead><tr><th>Persona</th><th>Correo</th><th>Aula</th><th>Usuario</th><th>Estado</th><th>Acción</th></tr></thead>
   {% for fila in filas %}
   <tbody>
   {% for cuenta in fila.cuentas %}
@@ -65,6 +67,10 @@
     <td rowspan="{{ fila.cuentas|length }}" class="correo">{{ fila.correo }}</td>{% endif %}
     <td>{{ cuenta.aula }}</td><td class="usuario">{{ cuenta.usuario }}</td>
     <td><span class="estado cortado {{ cuenta.estado }}">{{ cuenta.texto }}</span></td>
+    <td>{% if cuenta.aula in aulas_con_cambios %}
+      {% set accion = 'reactivar' if cuenta.suspendida else 'suspender' %}
+      <a class="accion {{ accion }}" href="{{ url_for('vista_previa', aula=cuenta.aula, usuario=cuenta.usuario, accion=accion) }}">{{ accion|capitalize }}</a>
+    {% endif %}</td>
   </tr>
   {% endfor %}
   </tbody>
