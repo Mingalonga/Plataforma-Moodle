@@ -74,10 +74,41 @@ def comprobar_token_formulario():
 def requiere_sesion(vista):
     @functools.wraps(vista)
     def envoltorio(*args, **kwargs):
-        if "usuario" not in session:
+        # Si la cuenta se ha borrado mientras tenía la sesión abierta, la sesión deja de valer.
+        if "usuario" not in session or not cuentas_web.existe(session["usuario"]):
+            session.clear()
             return redirect(url_for("entrar"))
         return vista(*args, **kwargs)
     return envoltorio
+
+
+# --- Permisos (nivel 7) -------------------------------------------------------------
+# Se leen en cada petición, así que quitar un permiso tiene efecto inmediato.
+# Un aula sin permiso se trata como si no existiera (404): ni siquiera se confirma que existe.
+
+def mis_permisos():
+    return cuentas_web.permisos(session["usuario"])
+
+
+def aulas_visibles(config):
+    permisos = mis_permisos()
+    return [aula for aula in config["aulas"] if aula["nombre"] in permisos]
+
+
+def puede_cambiar(nombre_aula):
+    return mis_permisos().get(nombre_aula) == "cambiar"
+
+
+def aula_permitida(config, nombre, para_cambiar=False):
+    """El aula pedida, solo si existe y la persona tiene permiso. Si no, 404 o 403."""
+    aula = buscar_aula(config, nombre)
+    permiso = mis_permisos().get(aula["nombre"])
+    if permiso is None:
+        abort(404)
+    if para_cambiar and permiso != "cambiar":
+        registro.warning("PERMISO denegado: %s quiso cambiar en %s", session["usuario"], aula["nombre"])
+        abort(403)
+    return aula
 
 
 def bloqueado(ip):
@@ -126,7 +157,10 @@ def salir():
 def vista():
     config = cargar_configuracion(CONFIGURACION)
     limite, ahora = config["dias_inactividad"], time.time()
+    config["aulas"] = aulas_visibles(config)  # solo las aulas en las que tiene permiso
     nombres_aulas = [aula["nombre"] for aula in config["aulas"]]
+    if not nombres_aulas:
+        return render_template("sin_permisos.html")
 
     # Filtro por aula: solo se acepta un nombre que esté en aulas.json.
     elegida = request.args.get("aula")
@@ -167,7 +201,8 @@ def vista():
         nombres_aulas=nombres_aulas,
         elegida=elegida,
         cursos_por_aula=cursos_por_aula,
-        aulas_con_cambios={a["nombre"] for a in config["aulas"] if a.get("token_cambios")},
+        aulas_con_cambios={a["nombre"] for a in config["aulas"]
+                           if a.get("token_cambios") and puede_cambiar(a["nombre"])},
         aviso=session.pop("aviso", None),
     )
 
@@ -192,7 +227,7 @@ GRUPOS_ROL = {
 def ver_curso():
     """Las personas de un curso, con su rol, su estado y la acción. Solo lectura hasta pulsar una acción."""
     config = cargar_configuracion(CONFIGURACION)
-    aula = buscar_aula(config, request.args.get("aula", ""))
+    aula = aula_permitida(config, request.args.get("aula", ""))
     id_curso = request.args.get("curso", "")
     if not id_curso.isdigit():  # solo números: nada raro llega a Moodle
         abort(404)
@@ -232,7 +267,7 @@ def ver_curso():
         })
     filas.sort(key=lambda f: f["nombre"] or "")
     return render_template("curso.html", aula=aula["nombre"], curso=curso, filas=filas, grupo=grupo,
-                           cuenta=cuenta, con_cambios=bool(aula.get("token_cambios")),
+                           cuenta=cuenta, con_cambios=bool(aula.get("token_cambios")) and puede_cambiar(aula["nombre"]),
                            aviso=session.pop("aviso", None))
 
 
@@ -241,7 +276,7 @@ def ver_curso():
 def vista_previa():
     """Paso 1 de un cambio: enseña qué va a pasar. No cambia nada."""
     config = cargar_configuracion(CONFIGURACION)
-    aula = buscar_aula(config, request.args.get("aula", ""))
+    aula = aula_permitida(config, request.args.get("aula", ""), para_cambiar=True)
     try:
         plan = cambios.preparar(aula, request.args.get("usuario", ""), request.args.get("accion", ""),
                                 config["ignorar"])
@@ -266,7 +301,8 @@ def confirmar_cambio():
         session["aviso"] = {"ok": False, "texto": "La vista previa ha caducado o ya se usó. Vuelve a empezar."}
         return redirect(url_for("vista"))
     config = cargar_configuracion(CONFIGURACION)
-    aula = buscar_aula(config, plan["aula"])
+    # Se vuelve a comprobar: el permiso se ha podido quitar entre la vista previa y la confirmación.
+    aula = aula_permitida(config, plan["aula"], para_cambiar=True)
     ok, detalle = cambios.ejecutar(aula, plan, session["usuario"])
     registro.info("CAMBIO %s: %s %s en %s por %s (%s)", "correcto" if ok else "ERROR",
                   plan["accion"], plan["username"], plan["aula"], session["usuario"], detalle)
@@ -285,7 +321,10 @@ def volver_de(plan):
 @app.route("/registro")
 @requiere_sesion
 def ver_registro():
-    return render_template("registro.html", lineas=cambios.leer_registro())
+    # Cada persona solo ve los cambios de las aulas que puede ver.
+    permisos = mis_permisos()
+    lineas = [linea for linea in cambios.leer_registro() if linea.get("aula") in permisos]
+    return render_template("registro.html", lineas=lineas)
 
 
 if __name__ == "__main__":

@@ -17,3 +17,4 @@ try:
 except ValueError as error:
     sys.exit(f"No se ha creado: {error}.")
 print(f"Usuario {usuario} guardado en {cuentas_web.ARCHIVO}")
+print("Si es nuevo no tiene acceso a ninguna aula: dáselo con permisos.py")

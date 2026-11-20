@@ -71,7 +71,7 @@
     <td>{% if cuenta.aula in aulas_con_cambios %}
       {% set accion = 'reactivar' if cuenta.suspendida else 'suspender' %}
       <a class="accion {{ accion }}" href="{{ url_for('vista_previa', aula=cuenta.aula, usuario=cuenta.usuario, accion=accion) }}">{{ accion|capitalize }}</a>
-    {% endif %}</td>
+    {% else %}<span class="nota">solo ver</span>{% endif %}</td>
   </tr>
   {% endfor %}
   </tbody>
