@@ -10,7 +10,7 @@
 {% if aviso %}<p class="aviso cortado {{ 'bien' if aviso.ok else 'mal' }}">{{ aviso.texto }}</p>{% endif %}
 
 <div class="resumen cortado">
-  <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>{{ 'Aula consultada' if elegida else 'Aulas consultadas' }}</span></div>
+  <div><b>{{ aulas_ok }}/{{ aulas_total }}</b><span>{{ 'Aula consultada' if aulas_total == 1 else 'Aulas consultadas' }}</span></div>
   <div><b>{{ filas|length }}</b><span>Personas</span></div>
   <div><b>{{ revisar|length }}</b><span>Para revisar</span></div>
 </div>

@@ -3,7 +3,7 @@
 - **Horario:** 16:30 a 17:15, aproximadamente.
 - **Objetivo:** decidir quién puede ver y cambiar cada aula, y entrar en la herramienta con la cuenta de Microsoft 365 de la organización en vez de con una contraseña propia.
 - **Resultado:** conseguido.
-  - Cada persona tiene un permiso por aula: nada, ver, o ver y cambiar (TC-33 a TC-35).
+  - Cada persona tiene un permiso por aula: nada, ver, o ver y cambiar (TC-33 a TC-35, TC-37).
   - Entré con mi cuenta de Microsoft 365 de Grupo ATU. La herramienta no llegó a ver mi contraseña de Microsoft (TC-36).
   - Con esto están hechos los 7 niveles.
 
@@ -29,7 +29,7 @@
    - un secreto de cliente con la caducidad más corta, guardado en `~/moodle-lab/m365-secreto.txt` (600) sin que se viera en pantalla ni quedara en el historial (`read -s`).
 3. **`configurar_m365.py`** guarda los dos identificadores (organización y aplicación) en `~/moodle-lab/m365.json` (600), fuera del repositorio.
 4. **`acceso_microsoft.py`** hace el inicio de sesión con OpenID Connect usando **MSAL**, la librería oficial de Microsoft (versión fijada en `requirements.txt`).
-5. **Primera entrada:** Microsoft pidió consentimiento para "iniciar sesión y leer tu perfil". Al volver, la herramienta me dio de alta **sin permisos** y me enseñó "Sin aulas asignadas" (TC-36). Luego me di permisos con `permisos.py`, al revés que al usuario local: Aula 1 nada y Aula 2 ver y cambiar.
+5. **Primera entrada:** Microsoft pidió consentimiento para "iniciar sesión y leer tu perfil". Al volver, la herramienta me dio de alta **sin permisos** y me enseñó "Sin aulas asignadas" (TC-36). Luego me di permisos con `permisos.py`, al revés que al usuario local: Aula 1 nada y Aula 2 ver y cambiar. Sin volver a entrar, la vista pasó a enseñar solo el Aula 2, con botones de Suspender (TC-37).
 
 ## Cómo funciona entrar con Microsoft
 
@@ -81,6 +81,7 @@ En [`capturas/`](../capturas/):
 - TC-34: Aula 2 con permiso de solo ver.
 - TC-35: vista "Todas" con el Aula 1 para cambiar y el Aula 2 para ver.
 - TC-36: entrada con Microsoft 365, cuenta nueva sin aulas (correo tapado).
+- TC-37: la misma cuenta de Microsoft con permiso para cambiar solo en el Aula 2; el Aula 1 no aparece (correo tapado).
 
 ## Ayuda de la IA en esta sesión
 
