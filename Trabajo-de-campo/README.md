@@ -23,7 +23,7 @@ Cada nivel se apoya en el anterior. El resultado del estudio será el último ni
 | 4 | Script que junte los alumnos de varias aulas y detecte cuentas inactivas | Hecho (2026-11-18): programa en Python, junta por correo |
 | 5 | Pequeña web con inicio de sesión que muestre esa vista centralizada | Hecho (2026-11-19): Flask, estilo propio de ATU |
 | 6 | Cambios reales (suspender, reactivar, matricular) con vista previa, confirmación y registro | Hecho (2026-11-19) para suspender y reactivar, con un usuario de cambios aparte; matricular, pendiente |
-| 7 | Acceso con Microsoft 365, permisos por persona y aula | Pendiente |
+| 7 | Acceso con Microsoft 365, permisos por persona y aula | Hecho (2026-11-20): permisos ver o cambiar por aula, nada por defecto; entrada con Microsoft 365 (OpenID Connect, MSAL) |
 
 ## Cómo se documenta
 

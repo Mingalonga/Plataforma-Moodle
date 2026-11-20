@@ -1,6 +1,6 @@
-# La herramienta (niveles 4, 5 y 6)
+# La herramienta (niveles 4 a 7)
 
-Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5). Desde la web se puede abrir cada curso para ver su alumnado y profesorado, y suspender y reactivar cuentas, con vista previa, confirmación y registro (nivel 6).
+Programa en Python que pregunta a varias aulas Moodle, junta a las personas por correo y marca las cuentas que hay que revisar. Se puede usar desde la terminal (`centralizar.py`, nivel 4) o desde una web con inicio de sesión (`web.py`, nivel 5). Desde la web se puede abrir cada curso para ver su alumnado y profesorado, y suspender y reactivar cuentas, con vista previa, confirmación y registro (nivel 6). Cada persona solo ve y cambia las aulas que se le permiten, y se puede entrar con Microsoft 365 (nivel 7).
 
 | Archivo | Qué hace |
 |---|---|
@@ -9,7 +9,10 @@ Programa en Python que pregunta a varias aulas Moodle, junta a las personas por 
 | `informe.py` | Junta por correo y clasifica cada cuenta (activa, inactiva, suspendida, nunca ha entrado). No usa la red. |
 | `centralizar.py` | Programa de terminal: une las piezas y escribe el informe en pantalla. |
 | `cuentas_web.py` | Cuentas de la web: guarda solo la huella (hash) de cada contraseña, en `~/moodle-lab/usuarios-web.json` con permisos 600. |
-| `crear_usuario.py` | Crea o cambia una cuenta de la web (mínimo 12 caracteres). |
+| `crear_usuario.py` | Crea o cambia una cuenta local de la web (mínimo 12 caracteres). Cambiar la contraseña no toca los permisos. |
+| `permisos.py` | Da a cada persona, aula por aula, "nada", "ver" o "ver y cambiar". Por defecto, nada. |
+| `acceso_microsoft.py` | Entrar con Microsoft 365 (OpenID Connect con MSAL). La contraseña se escribe en Microsoft, nunca aquí. |
+| `configurar_m365.py` | Guarda los identificadores de la aplicación registrada en Microsoft en `~/moodle-lab/m365.json` (600). |
 | `cambios.py` | Cambios reales (nivel 6): prepara el plan, lo ejecuta, comprueba el resultado en Moodle y lo apunta en `~/moodle-lab/registro-cambios.jsonl`. |
 | `web.py` | La web (Flask): inicio de sesión, vista centralizada, vista previa y confirmación de cambios y registro. Los datos y los cambios vienen de las piezas anteriores. |
 | `templates/`, `static/` | HTML (Jinja), estilo y fuentes. El logo (`static/logo.png`) no se publica: hay que copiarlo en local. |
@@ -21,6 +24,8 @@ Uso:
 python3 centralizar.py                      # informe en la terminal (sin dependencias)
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python crear_usuario.py           # una vez
+.venv/bin/python permisos.py                # qué aulas puede ver o cambiar
+.venv/bin/python configurar_m365.py         # opcional: entrar con Microsoft 365
 .venv/bin/python web.py                     # http://127.0.0.1:5000
 ```
 
@@ -56,4 +61,13 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 6. Se niega a tocar las cuentas técnicas y del administrador, y a hacer cambios que no cambian nada.
 7. **Registro** de cada intento, salga bien o mal (fecha, quién, aula, usuario, acción, resultado), en un archivo que solo crece y con permisos 600.
 
-Pendiente para un entorno real: HTTPS (y `SESSION_COOKIE_SECURE=True`), un servidor de verdad en vez del de desarrollo de Flask, guardar los tokens cifrados o en un gestor de secretos, que el bloqueo de intentos no se pierda al reiniciar, restringir el token de cambios por IP y con fecha de caducidad, que solo algunas personas puedan hacer cambios (ahora puede cualquiera que entre en la web; es el nivel 7), entrar con Microsoft 365 (nivel 7) y decidir dónde se ejecuta y quién puede ver la vista, que contiene datos personales.
+### Además, en permisos y Microsoft 365 (nivel 7)
+
+1. Nada por defecto: una cuenta nueva (local o de Microsoft) no ve ninguna aula hasta que se le da permiso.
+2. Un aula sin permiso responde "no encontrado", como si no existiera; intentar cambiar con permiso de solo ver responde "prohibido" y se apunta.
+3. Los permisos se leen en cada petición y se vuelven a comprobar al confirmar un cambio.
+4. Microsoft: aplicación *single tenant* y comprobación del identificador de organización en la respuesta; solo se piden `openid` y `profile`.
+5. Código de un solo uso con PKCE, canjeado con el secreto; ida por POST con CSRF y vuelta ligada al navegador con una cookie de 10 minutos.
+6. Secreto e identificadores fuera del repositorio, con permisos 600; el código de vuelta no se escribe en el registro.
+
+Pendiente para un entorno real: HTTPS (y `SESSION_COOKIE_SECURE=True`), un servidor de verdad en vez del de desarrollo de Flask, guardar los tokens cifrados o en un gestor de secretos, que el bloqueo de intentos no se pierda al reiniciar, restringir el token de cambios por IP y con fecha de caducidad, usar `form_post` con HTTPS para que el código de Microsoft no viaje en la dirección, guardar los permisos y las cuentas en una base de datos y decidir dónde se ejecuta y quién puede ver la vista, que contiene datos personales.

@@ -90,6 +90,9 @@ td.correo, td.usuario { font-variant-numeric: tabular-nums; color: var(--gris); 
 .entrar input { font: inherit; font-weight: 400; padding: 9px 10px; border: 0;
   border-bottom: 2px solid var(--marino); background: var(--blanco); }
 .entrar button { justify-self: start; }
+.entrar form { display: grid; gap: 16px; margin: 0; }
+.entrar button.microsoft { justify-self: stretch; background: var(--marino); }
+.entrar .separador { margin: 0; color: var(--gris); font-size: 13px; text-align: center; }
 
 /* Filtro por aula: pestañas con el mismo corte que los botones */
 .filtro { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
@@ -133,3 +136,4 @@ a.volver:hover { color: var(--azul); }
 .previa .nota { margin-left: 0; }
 a.curso { color: var(--marino); text-decoration: none; border-bottom: 1px solid var(--azul); }
 a.curso:hover { color: var(--azul); }
+.entrar button.microsoft:hover { background: var(--azul); }

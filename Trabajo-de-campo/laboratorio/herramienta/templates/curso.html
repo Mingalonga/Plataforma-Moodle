@@ -23,7 +23,7 @@
     <td>{% if con_cambios %}
       {% set accion = 'reactivar' if fila.suspendida else 'suspender' %}
       <a class="accion {{ accion }}" href="{{ url_for('vista_previa', aula=aula, usuario=fila.usuario, accion=accion, curso=curso.id) }}">{{ accion|capitalize }}</a>
-    {% endif %}</td>
+    {% else %}<span class="nota">solo ver</span>{% endif %}</td>
   </tr>
   {% else %}
   <tr><td colspan="6" class="nota">Nadie con este rol en el curso.</td></tr>
