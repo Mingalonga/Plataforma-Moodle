@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block contenido %}
-<form method="post" class="entrar cortado">
+<div class="entrar cortado">
   <h1>Entrar</h1>
   {% if error %}<p class="error">{{ error }}</p>{% endif %}
-  <input type="hidden" name="csrf" value="{{ token_formulario() }}">
-  <label>Usuario <input name="usuario" autocomplete="username" required autofocus></label>
-  <label>Contraseña <input name="contrasena" type="password" autocomplete="current-password" required></label>
-  <button class="cortado">Entrar</button>
-</form>
+  {% if con_microsoft %}
+  <form method="post" action="{{ url_for('entrar_microsoft') }}">
+    <input type="hidden" name="csrf" value="{{ token_formulario() }}">
+    <button class="cortado microsoft">Entrar con Microsoft 365</button>
+  </form>
+  <p class="separador">o con usuario de la herramienta</p>
+  {% endif %}
+  <form method="post" action="{{ url_for('entrar') }}">
+    <input type="hidden" name="csrf" value="{{ token_formulario() }}">
+    <label>Usuario <input name="usuario" autocomplete="username" required {% if not con_microsoft %}autofocus{% endif %}></label>
+    <label>Contraseña <input name="contrasena" type="password" autocomplete="current-password" required></label>
+    <button class="cortado">Entrar</button>
+  </form>
+</div>
 {% endblock %}

@@ -69,8 +69,24 @@ def poner_permisos(usuario, nuevos):
 
 
 def comprobar(usuario, contrasena):
-    """True si usuario y contraseña son correctos."""
+    """True si usuario y contraseña son correctos.
+
+    Las cuentas de Microsoft no tienen huella: con contraseña local no se puede entrar en ellas.
+    """
     cuenta = cargar().get(usuario)
-    huella = cuenta["huella"] if cuenta else _HUELLA_FALSA
-    correcta = check_password_hash(huella, contrasena)
-    return bool(cuenta) and correcta
+    huella = cuenta.get("huella") if cuenta else None
+    correcta = check_password_hash(huella or _HUELLA_FALSA, contrasena)
+    return bool(huella) and correcta
+
+
+def alta_microsoft(usuario, nombre):
+    """La primera vez que alguien entra con Microsoft se apunta, SIN permisos.
+
+    Así aparece en permisos.py y el administrador decide qué puede ver. Devuelve True si es nueva.
+    """
+    cuentas = cargar()
+    if usuario in cuentas:
+        return False
+    cuentas[usuario] = {"tipo": "microsoft", "nombre": nombre, "permisos": {}}
+    guardar(cuentas)
+    return True

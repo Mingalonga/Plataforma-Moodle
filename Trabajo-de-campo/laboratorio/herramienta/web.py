@@ -11,8 +11,11 @@ import time
 from datetime import timedelta
 from pathlib import Path
 
-from flask import Flask, abort, redirect, render_template, request, session, url_for
+from urllib.parse import urlsplit
 
+from flask import Flask, abort, make_response, redirect, render_template, request, session, url_for
+
+import acceso_microsoft
 import cambios
 import cuentas_web
 from centralizar import CONFIGURACION, cargar_configuracion, consultar_aulas
@@ -66,8 +69,9 @@ app.jinja_env.globals["token_formulario"] = token_formulario
 
 
 def comprobar_token_formulario():
-    enviado = request.form.get("csrf", "")
-    if not secrets.compare_digest(enviado, session.get("csrf", "")):
+    enviado, esperado = request.form.get("csrf", ""), session.get("csrf", "")
+    # Vacío nunca vale: sin esta comprobación, "" == "" dejaría pasar un formulario sin sesión.
+    if not esperado or not secrets.compare_digest(enviado, esperado):
         abort(400)
 
 
@@ -141,7 +145,72 @@ def entrar():
             fallos[ip] = (numero + 1, time.time())
             registro.warning("ENTRADA fallida: %r desde %s", usuario[:30], ip)
             error = "Usuario o contraseña incorrectos."  # el mismo mensaje en los dos casos
-    return render_template("entrar.html", error=error)
+    return render_template("entrar.html", error=error, con_microsoft=microsoft_configurado())
+
+
+# --- Entrar con Microsoft 365 (nivel 7) -------------------------------------------------
+COOKIE_VINCULO = "vinculo_m365"
+
+
+def microsoft_configurado():
+    try:
+        return acceso_microsoft.configuracion() is not None
+    except acceso_microsoft.ErrorAcceso as error:
+        registro.warning("Microsoft 365 mal configurado: %s", error)
+        return False
+
+
+@app.route("/auth/microsoft", methods=["POST"])
+def entrar_microsoft():
+    """Ida a Microsoft. Es POST con token CSRF: otra web no puede lanzar el inicio de sesión."""
+    comprobar_token_formulario()
+    config = acceso_microsoft.configuracion()
+    if config is None:
+        abort(404)
+    # La vuelta llega a la dirección registrada en Microsoft (localhost). Si se ha entrado por
+    # 127.0.0.1, el navegador no llevaría la cookie de vínculo: se pide entrar por localhost.
+    destino = urlsplit(config["redireccion"])
+    if request.host != destino.netloc:
+        return redirect(f"{destino.scheme}://{destino.netloc}{url_for('entrar')}")
+    try:
+        direccion, vinculo = acceso_microsoft.empezar(config)
+    except Exception as error:  # red, configuración...: se enseña sin detalles internos
+        registro.warning("Microsoft: no se pudo empezar: %s", error)
+        return render_template("entrar.html", error="No se ha podido contactar con Microsoft.",
+                               con_microsoft=True)
+    respuesta = redirect(direccion)
+    # Cookie aparte, Lax (la sesión es Strict y no viajaría en la vuelta desde Microsoft).
+    respuesta.set_cookie(COOKIE_VINCULO, vinculo, max_age=acceso_microsoft.MINUTOS_PARA_VOLVER * 60,
+                         httponly=True, samesite="Lax", secure=app.config["SESSION_COOKIE_SECURE"])
+    return respuesta
+
+
+@app.route("/auth/callback")
+def vuelta_microsoft():
+    """Vuelta de Microsoft con el código. Si todo cuadra, se abre la sesión."""
+    config = acceso_microsoft.configuracion()
+    if config is None:
+        abort(404)
+    try:
+        usuario, nombre = acceso_microsoft.terminar(config, request.args.to_dict(),
+                                                    request.cookies.get(COOKIE_VINCULO, ""))
+    except acceso_microsoft.ErrorAcceso as error:
+        registro.warning("ENTRADA Microsoft fallida desde %s: %s", request.remote_addr, error)
+        respuesta = make_response(render_template("entrar.html", error=f"No se ha podido entrar: {error}.",
+                                                  con_microsoft=True))
+        respuesta.delete_cookie(COOKIE_VINCULO)
+        return respuesta
+    if cuentas_web.alta_microsoft(usuario, nombre):
+        registro.info("ALTA Microsoft: %s (sin permisos hasta que se le den)", usuario)
+    session.clear()
+    session.permanent = True
+    session["usuario"] = usuario
+    registro.info("ENTRADA Microsoft correcta: %s desde %s", usuario, request.remote_addr)
+    # Página intermedia que salta a la vista: con una redirección directa, el navegador
+    # trataría la llegada como "desde Microsoft" y no enviaría la cookie de sesión (Strict).
+    respuesta = make_response(render_template("saltar.html", destino=url_for("vista")))
+    respuesta.delete_cookie(COOKIE_VINCULO)
+    return respuesta
 
 
 @app.route("/salir", methods=["POST"])
