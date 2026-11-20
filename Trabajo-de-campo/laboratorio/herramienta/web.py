@@ -6,6 +6,7 @@ No habla con Moodle directamente: lo hacen moodle_api.py, informe.py y cambios.p
 import functools
 import logging
 import os
+import re
 import secrets
 import time
 from datetime import timedelta
@@ -27,6 +28,21 @@ INTENTOS_MAXIMOS = 5          # fallos seguidos antes de bloquear
 MINUTOS_BLOQUEO = 5
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
 registro = logging.getLogger("web")
+
+
+class OcultarCodigo(logging.Filter):
+    """El registro de peticiones apuntaría la vuelta de Microsoft con su código de un solo uso.
+
+    Ya no sirve una vez canjeado, pero no hay por qué dejarlo escrito: se oculta.
+    """
+    def filter(self, entrada):
+        if "/auth/callback?" in entrada.getMessage():
+            entrada.msg, entrada.args = "%s", (re.sub(r"/auth/callback\?\S*", "/auth/callback?[oculto]",
+                                                       entrada.getMessage()),)
+        return True
+
+
+logging.getLogger("werkzeug").addFilter(OcultarCodigo())
 
 
 def clave_secreta():
