@@ -1,0 +1,4 @@
+# El logo de ATU no se publica en el repositorio: cada uno lo copia en local.
+static/logo.png
+.venv/
+__pycache__/

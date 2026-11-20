@@ -1,63 +1,75 @@
 GUION DE PREGUNTAS PARA REUNIONES CON GRUPO ATU
-Proyecto: Plataforma centralizada para los entornos Moodle (Fase 1 -> Fase 2)
-Alumno: Carlos García Rallo · Versión 1 · 30/10/2026
+Proyecto: Plataforma centralizada para los entornos Moodle (enfoque de gestión interna)
+Alumno: Carlos García Rallo · Versión 2 · 04/11/2026
+(Sustituye a la versión 1 del 30/10/2026, que estaba pensada para el alumnado y el CAU.)
+
+Por qué cambia
+- La tutora indica que la plataforma es para la GESTIÓN INTERNA de las aulas:
+  que el personal no tenga que andar entrando y saliendo de una aula a otra.
+- El alumnado ya entra en su curso con la URL que se le da, así que no hace
+  falta preguntarle.
+- Gestiona el Departamento de Pedagogía y e-learning; implementa Informática.
+- Antes de nada hay que ver si es viable.
 
 Consejos rápidos
-- Duración: 20-30 minutos por persona. Empieza explicando el objetivo en una frase:
-  "Estoy estudiando si tendría sentido un punto de acceso común a las aulas virtuales."
-- Pide cifras aproximadas, nunca datos de alumnos concretos (nombres, correos, etc.).
+- Duración: 20-30 minutos por persona. Empieza con una frase:
+  "Estoy estudiando si es viable gestionar las doce aulas desde un único sitio,
+   para no tener que entrar y salir de cada una."
+- Pide cifras aproximadas. Nunca datos de alumnos ni contraseñas.
 - Apunta quién responde (cargo, no hace falta nombre) y la fecha.
 - Si no saben algo, pregunta quién lo sabría.
 
 
-1. RESPONSABLE DEL CAU / TUTORÍA VIRTUAL (900 922 254, tutoriavirtual@grupoatu.com)
-----------------------------------------------------------------------------------
-1.1 ¿Cuáles son las 5 consultas que más recibís?
-1.2 Aproximadamente, ¿cuántas consultas al mes son del tipo "no sé cuál es mi aula"
-    o "no encuentro la dirección para entrar"?
-1.3 ¿Y del tipo "no puedo entrar / he olvidado la contraseña"?
-1.4 Cuando alguien no sabe cuál es su aula, ¿cómo lo averiguáis vosotros?
-    ¿Tenéis una lista de aulas? ¿Quién la mantiene?
-1.5 ¿Hay alumnos que estudien en más de un aula a la vez? ¿Es frecuente?
-1.6 ¿Cómo recibe el alumno la dirección de su aula? (correo de bienvenida, empresa, web...)
-1.7 Si existiera una página con todas las aulas y un buscador, ¿os ayudaría? ¿Qué echaríais en falta?
+1. DEPARTAMENTO DE PEDAGOGÍA Y E-LEARNING (quien gestiona las aulas)
+--------------------------------------------------------------------
+1.1 ¿Qué tareas hacéis en las aulas? (crear cursos, matricular, dar de alta
+    usuarios, revisar informes o calificaciones, copias de cursos...)
+    ¿Cuáles se repiten más?
+1.2 ¿Cuántas personas gestionáis las aulas? ¿Cada una lleva todas o unas concretas?
+1.3 En un día normal, ¿en cuántas aulas tenéis que entrar? ¿Cuánto tiempo se va
+    en buscar la dirección, iniciar sesión y salir?
+1.4 ¿Tenéis una cuenta distinta en cada aula o la misma? ¿Con qué permisos
+    (administrador, gestor, creador de cursos)?
+1.5 ¿Qué os gustaría ver de todas las aulas a la vez, sin entrar en cada una?
+    (cursos activos, matrículas, actividad, avisos...)
+1.6 ¿Os bastaría con consultar, o querríais hacer cambios desde ese sitio único
+    (por ejemplo, crear un curso o matricular sin entrar en el aula)?
+1.7 ¿Cómo os organizáis hoy? (marcadores, una hoja con las direcciones, otra cosa)
+1.8 Las cinco aulas que se llaman "AULA VIRTUAL CENTRE LEARNING": ¿os confunden?
 
 
-2. RESPONSABLE TÉCNICO DE LAS AULAS MOODLE
------------------------------------------
+2. INFORMÁTICA (quien implementaría)
+------------------------------------
 2.1 ¿Las doce aulas son instalaciones separadas o comparten servidor?
-2.2 ¿Qué versión de Moodle tienen y cuándo se actualizaron por última vez?
-    (las páginas sugieren la 4.1; preguntar con tacto, solo para confirmar)
-2.3 ¿Cómo entran los usuarios? ¿Cuentas creadas a mano, importadas, otro sistema?
-2.4 ¿Existe algún directorio común de usuarios (por ejemplo, Microsoft 365)?
-2.5 ¿Con qué frecuencia se crea, cambia de dirección o se cierra un aula?
-2.6 ¿El aula 4 (Index Business Intelligent, en inglés y con registro abierto) está en uso?
-2.7 ¿Las páginas mezclan inglés y español a propósito? ¿El "no indexar en Google" es intencionado?
-2.8 ¿Hay algún entorno de pruebas? ¿Hay más aulas aparte de estas doce?
+    ¿Dónde están alojadas?
+2.2 ¿Qué versión de Moodle tienen? (las páginas sugieren la 4.1, sin soporte
+    desde diciembre de 2025; preguntar con tacto, solo para confirmar)
+2.3 ¿Están activados los servicios web de Moodle? ¿Se podrían activar,
+    al menos en modo solo lectura?
+2.4 ¿Hay un aula o un entorno de pruebas que se pueda usar en el proyecto?
+2.5 ¿Existe un directorio común de usuarios para el personal (por ejemplo,
+    Microsoft 365)? ¿Se usa para entrar en las aulas?
+2.6 ¿Qué parte podría asumir Informática (instalación, seguridad, claves de
+    acceso, mantenimiento) y con qué disponibilidad?
+2.7 ¿Hay normas internas de seguridad que deba cumplir una herramienta interna
+    (acceso solo desde la red de la empresa, doble factor, etc.)?
+2.8 ¿Hay más aulas o plataformas de formación aparte de estas doce?
 
 
-3. DIRECCIÓN / PERSONA QUE IMPULSA EL PROYECTO
----------------------------------------------
-3.1 ¿Por qué surge ahora la idea de una plataforma común? ¿Ha pasado algo concreto?
-3.2 ¿Qué esperaríais de ella: solo un sitio con enlaces y buscador, o algo más
-    (entrar una sola vez en todas, ver los cursos...)?
-3.3 ¿Qué relación tiene cada marca con Grupo ATU (Takin, MoveOut, Estudi@,
-    Tierra Más Ecológica, Centre Learning, Almería Formación...)? ¿Pueden aparecer juntas?
-3.4 ¿Debería ser pública o solo para alumnos identificados?
-3.5 ¿Bajo qué imagen se presentaría: Grupo ATU o algo neutro?
-3.6 ¿Quién podría encargarse de mantener la lista de aulas actualizada?
-3.7 ¿Hay presupuesto orientativo o algún plazo que condicione el proyecto?
-3.8 ¿Qué tendría que pasar dentro de un año para considerarlo un éxito?
+3. QUIEN DECIDE LA VIABILIDAD (tutora, dirección o responsable del departamento)
+-------------------------------------------------------------------------------
+3.1 ¿Quién decidiría si el proyecto sigue adelante?
+3.2 ¿Qué tendría que demostrar el estudio de viabilidad? (coste, tiempo,
+    seguridad, esfuerzo de Informática...)
+3.3 ¿Hay presupuesto orientativo o algún plazo que condicione el proyecto?
+3.4 ¿Qué tendría que pasar dentro de un año para considerarlo un éxito?
 
 
-4. ALUMNADO O PROFESORADO (si se puede hablar con 3-5 personas)
---------------------------------------------------------------
-4.1 ¿Cómo llegaste la última vez a tu aula? (marcador, correo, Google, te lo dijeron...)
-4.2 ¿Alguna vez has dudado de si estabas en el aula correcta?
-4.3 ¿Tienes cursos en más de un aula? ¿Con la misma contraseña?
-4.4 ¿Desde dónde entras normalmente: ordenador o móvil?
-4.5 Pequeña prueba: "Busca el aula de [marca] empezando desde Google".
-    Anota cuánto tarda, si lo consigue y dónde duda.
+4. DUDA PARA LA TUTORA
+----------------------
+4.1 Cuando dijo "y ya estaría, por así decirlo, lo del tema de entorno de
+    pruebas", ¿se refería a que no hace falta un entorno de pruebas para el
+    alumnado, o a que el proyecto puede trabajar con un aula de pruebas?
 
 
 5. AL TERMINAR CADA REUNIÓN, ANOTAR
